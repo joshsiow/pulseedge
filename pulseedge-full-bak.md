@@ -1,0 +1,23401 @@
+This file is a merged representation of a subset of the codebase, containing files not matching ignore patterns, combined into a single document by Repomix.
+
+<file_summary>
+This section contains a summary of this file.
+
+<purpose>
+This file contains a packed representation of a subset of the repository's contents that is considered the most important context.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+</purpose>
+
+<file_format>
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Repository files (if enabled)
+5. Multiple file entries, each consisting of:
+  - File path as an attribute
+  - Full contents of the file
+</file_format>
+
+<usage_guidelines>
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+</usage_guidelines>
+
+<notes>
+- Some files may have been excluded based on .gitignore rules and Repomix's configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Files matching these patterns are excluded: node_modules, build, .dart_tool, .git, ios/Pods, android/.gradle
+- Files matching patterns in .gitignore are excluded
+- Files matching default ignore patterns are excluded
+- Files are sorted by Git change count (files with more changes are at the bottom)
+</notes>
+
+</file_summary>
+
+<directory_structure>
+android/
+  app/
+    src/
+      debug/
+        AndroidManifest.xml
+      main/
+        kotlin/
+          com/
+            example/
+              pulseedge/
+                MainActivity.kt
+        res/
+          drawable/
+            launch_background.xml
+          drawable-v21/
+            launch_background.xml
+          mipmap-hdpi/
+            ic_launcher.png
+          mipmap-mdpi/
+            ic_launcher.png
+          mipmap-xhdpi/
+            ic_launcher.png
+          mipmap-xxhdpi/
+            ic_launcher.png
+          mipmap-xxxhdpi/
+            ic_launcher.png
+          values/
+            styles.xml
+          values-night/
+            styles.xml
+        AndroidManifest.xml
+      profile/
+        AndroidManifest.xml
+    build.gradle.kts
+  gradle/
+    wrapper/
+      gradle-wrapper.properties
+  .gitignore
+  build.gradle.kts
+  gradle.properties
+  settings.gradle.kts
+assets/
+  icons/
+    patek_logo.png
+    pulseedge_logo_black.png
+ios/
+  Flutter/
+    AppFrameworkInfo.plist
+    Debug.xcconfig
+    Release.xcconfig
+  Runner/
+    Assets.xcassets/
+      AppIcon.appiconset/
+        Contents.json
+        Icon-App-1024x1024@1x.png
+        Icon-App-20x20@1x.png
+        Icon-App-20x20@2x.png
+        Icon-App-20x20@3x.png
+        Icon-App-29x29@1x.png
+        Icon-App-29x29@2x.png
+        Icon-App-29x29@3x.png
+        Icon-App-40x40@1x.png
+        Icon-App-40x40@2x.png
+        Icon-App-40x40@3x.png
+        Icon-App-60x60@2x.png
+        Icon-App-60x60@3x.png
+        Icon-App-76x76@1x.png
+        Icon-App-76x76@2x.png
+        Icon-App-83.5x83.5@2x.png
+      LaunchImage.imageset/
+        Contents.json
+        LaunchImage.png
+        LaunchImage@2x.png
+        LaunchImage@3x.png
+        README.md
+    Base.lproj/
+      LaunchScreen.storyboard
+      Main.storyboard
+    AppDelegate.swift
+    Info.plist
+    Runner-Bridging-Header.h
+  Runner.xcodeproj/
+    project.xcworkspace/
+      xcshareddata/
+        IDEWorkspaceChecks.plist
+        WorkspaceSettings.xcsettings
+      contents.xcworkspacedata
+    xcshareddata/
+      xcschemes/
+        Runner.xcscheme
+    project.pbxproj
+  Runner.xcworkspace/
+    xcshareddata/
+      IDEWorkspaceChecks.plist
+      WorkspaceSettings.xcsettings
+    contents.xcworkspacedata
+  RunnerTests/
+    RunnerTests.swift
+  .gitignore
+  Podfile
+lib/
+  core/
+    ai/
+      backends/
+        ai_backend.dart
+        groq_ai_backend.dart
+        hybrid_ai_backend.dart
+        local_ai_backend.dart
+      models/
+        trends_7d.dart
+      ai_intent.dart
+      ai_query.dart
+      ai_service.dart
+      ai_tool_response.dart
+      ai_tools.dart
+      analytics_engine.dart
+      intake_draft.dart
+      intake_tools.dart
+      model_downloader.dart
+      model_manager.dart
+      model_store.dart
+      pulse_ai_client.dart
+      pulse_ai_formatter.dart
+      pulse_ai_providers.dart
+      time_range.dart
+    auth/
+      auth_service.dart
+      password_hasher.dart
+      session_store.dart
+    database/
+      app_database.dart
+      app_database.g.dart
+    di/
+      providers.dart
+    encounters/
+      encounter_repo.dart
+    intake/
+      intake_parser.dart
+    patients/
+      incomplete_registration_queue_screen.dart
+      patient_edit_screen.dart
+      patient_encounter_service.dart
+      patient_repo.dart
+    security/
+      device_identity.dart
+    session/
+      session_context_store.dart
+    app_bootstrap.dart
+  theme/
+    app_theme.dart
+  ui/
+    auth/
+      unit_select_screen.dart
+    encounters/
+      modules/
+        encounter_documents_module.dart
+        encounter_notes_module.dart
+        encounter_orders_module.dart
+        encounter_sync_module.dart
+      encounter_registration_screen.dart
+      encounter_workspace_screen.dart
+    login/
+      login_screen.dart
+      unit_select_screen.dart
+    patients/
+      patient_create_sheet.dart
+      patient_search_screen.dart
+      patient_timeline_screen.dart
+    setting/
+      settings_screen.dart
+    workspace/
+      modules/
+        patient_demographics_module.dart
+        patient_documents_module.dart
+        patient_encounters_module.dart
+        patient_overview_module.dart
+        patient_sync_audit_module.dart
+      patient_workspace_screen.dart
+    home_screen.dart
+    splash_screen.dart
+  utils/
+    pdf_generator.dart
+  main-grok.dart
+  main.dart
+linux/
+  flutter/
+    CMakeLists.txt
+    generated_plugin_registrant.cc
+    generated_plugin_registrant.h
+    generated_plugins.cmake
+  runner/
+    CMakeLists.txt
+    main.cc
+    my_application.cc
+    my_application.h
+  .gitignore
+  CMakeLists.txt
+macos/
+  Flutter/
+    Flutter-Debug.xcconfig
+    Flutter-Release.xcconfig
+    GeneratedPluginRegistrant.swift
+  Runner/
+    Assets.xcassets/
+      AppIcon.appiconset/
+        app_icon_1024.png
+        app_icon_128.png
+        app_icon_16.png
+        app_icon_256.png
+        app_icon_32.png
+        app_icon_512.png
+        app_icon_64.png
+        Contents.json
+    Base.lproj/
+      MainMenu.xib
+    Configs/
+      AppInfo.xcconfig
+      Debug.xcconfig
+      Release.xcconfig
+      Warnings.xcconfig
+    AppDelegate.swift
+    DebugProfile.entitlements
+    Info.plist
+    MainFlutterWindow.swift
+    Release.entitlements
+  Runner.xcodeproj/
+    project.xcworkspace/
+      xcshareddata/
+        IDEWorkspaceChecks.plist
+    xcshareddata/
+      xcschemes/
+        Runner.xcscheme
+    project.pbxproj
+  Runner.xcworkspace/
+    xcshareddata/
+      IDEWorkspaceChecks.plist
+    contents.xcworkspacedata
+  RunnerTests/
+    RunnerTests.swift
+  .gitignore
+  Podfile
+test/
+  widget_test.dart
+web/
+  icons/
+    Icon-192.png
+    Icon-512.png
+    Icon-maskable-192.png
+    Icon-maskable-512.png
+  favicon.png
+  index.html
+  manifest.json
+windows/
+  flutter/
+    CMakeLists.txt
+    generated_plugin_registrant.cc
+    generated_plugin_registrant.h
+    generated_plugins.cmake
+  runner/
+    resources/
+      app_icon.ico
+    CMakeLists.txt
+    flutter_window.cpp
+    flutter_window.h
+    main.cpp
+    resource.h
+    runner.exe.manifest
+    Runner.rc
+    utils.cpp
+    utils.h
+    win32_window.cpp
+    win32_window.h
+  .gitignore
+  CMakeLists.txt
+.gitignore
+.metadata
+analysis_options.yaml
+pubspec.lock
+pubspec.yaml
+README.md
+</directory_structure>
+
+<files>
+This section contains the contents of the repository's files.
+
+<file path="android/app/src/debug/AndroidManifest.xml">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- The INTERNET permission is required for development. Specifically,
+         the Flutter tool needs it to communicate with the running application
+         to allow setting breakpoints, to provide hot reload, etc.
+    -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+</manifest>
+</file>
+
+<file path="android/app/src/main/kotlin/com/example/pulseedge/MainActivity.kt">
+package com.example.pulseedge
+
+import io.flutter.embedding.android.FlutterActivity
+
+class MainActivity : FlutterActivity()
+</file>
+
+<file path="android/app/src/main/res/drawable/launch_background.xml">
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Modify this file to customize your launch splash screen -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@android:color/white" />
+
+    <!-- You can insert your own image assets here -->
+    <!-- <item>
+        <bitmap
+            android:gravity="center"
+            android:src="@mipmap/launch_image" />
+    </item> -->
+</layer-list>
+</file>
+
+<file path="android/app/src/main/res/drawable-v21/launch_background.xml">
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Modify this file to customize your launch splash screen -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="?android:colorBackground" />
+
+    <!-- You can insert your own image assets here -->
+    <!-- <item>
+        <bitmap
+            android:gravity="center"
+            android:src="@mipmap/launch_image" />
+    </item> -->
+</layer-list>
+</file>
+
+<file path="android/app/src/main/res/values/styles.xml">
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Theme applied to the Android Window while the process is starting when the OS's Dark Mode setting is off -->
+    <style name="LaunchTheme" parent="@android:style/Theme.Light.NoTitleBar">
+        <!-- Show a splash screen on the activity. Automatically removed when
+             the Flutter engine draws its first frame -->
+        <item name="android:windowBackground">@drawable/launch_background</item>
+    </style>
+    <!-- Theme applied to the Android Window as soon as the process has started.
+         This theme determines the color of the Android Window while your
+         Flutter UI initializes, as well as behind your Flutter UI while its
+         running.
+
+         This Theme is only used starting with V2 of Flutter's Android embedding. -->
+    <style name="NormalTheme" parent="@android:style/Theme.Light.NoTitleBar">
+        <item name="android:windowBackground">?android:colorBackground</item>
+    </style>
+</resources>
+</file>
+
+<file path="android/app/src/main/res/values-night/styles.xml">
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Theme applied to the Android Window while the process is starting when the OS's Dark Mode setting is on -->
+    <style name="LaunchTheme" parent="@android:style/Theme.Black.NoTitleBar">
+        <!-- Show a splash screen on the activity. Automatically removed when
+             the Flutter engine draws its first frame -->
+        <item name="android:windowBackground">@drawable/launch_background</item>
+    </style>
+    <!-- Theme applied to the Android Window as soon as the process has started.
+         This theme determines the color of the Android Window while your
+         Flutter UI initializes, as well as behind your Flutter UI while its
+         running.
+
+         This Theme is only used starting with V2 of Flutter's Android embedding. -->
+    <style name="NormalTheme" parent="@android:style/Theme.Black.NoTitleBar">
+        <item name="android:windowBackground">?android:colorBackground</item>
+    </style>
+</resources>
+</file>
+
+<file path="android/app/src/main/AndroidManifest.xml">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <application
+        android:label="pulseedge"
+        android:name="${applicationName}"
+        android:icon="@mipmap/ic_launcher">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:taskAffinity=""
+            android:theme="@style/LaunchTheme"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+            android:hardwareAccelerated="true"
+            android:windowSoftInputMode="adjustResize">
+            <!-- Specifies an Android theme to apply to this Activity as soon as
+                 the Android process has started. This theme is visible to the user
+                 while the Flutter UI initializes. After that, this theme continues
+                 to determine the Window background behind the Flutter UI. -->
+            <meta-data
+              android:name="io.flutter.embedding.android.NormalTheme"
+              android:resource="@style/NormalTheme"
+              />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <!-- Don't delete the meta-data below.
+             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java -->
+        <meta-data
+            android:name="flutterEmbedding"
+            android:value="2" />
+    </application>
+    <!-- Required to query activities that can process text, see:
+         https://developer.android.com/training/package-visibility and
+         https://developer.android.com/reference/android/content/Intent#ACTION_PROCESS_TEXT.
+
+         In particular, this is used by the Flutter engine in io.flutter.plugin.text.ProcessTextPlugin. -->
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.PROCESS_TEXT"/>
+            <data android:mimeType="text/plain"/>
+        </intent>
+    </queries>
+</manifest>
+</file>
+
+<file path="android/app/src/profile/AndroidManifest.xml">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- The INTERNET permission is required for development. Specifically,
+         the Flutter tool needs it to communicate with the running application
+         to allow setting breakpoints, to provide hot reload, etc.
+    -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+</manifest>
+</file>
+
+<file path="android/app/build.gradle.kts">
+plugins {
+    id("com.android.application")
+    id("kotlin-android")
+    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
+    id("dev.flutter.flutter-gradle-plugin")
+}
+
+android {
+    namespace = "com.example.pulseedge"
+    compileSdk = flutter.compileSdkVersion
+    ndkVersion = flutter.ndkVersion
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_17.toString()
+    }
+
+    defaultConfig {
+        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
+        applicationId = "com.example.pulseedge"
+        // You can update the following values to match your application needs.
+        // For more information, see: https://flutter.dev/to/review-gradle-config.
+        minSdk = flutter.minSdkVersion
+        targetSdk = flutter.targetSdkVersion
+        versionCode = flutter.versionCode
+        versionName = flutter.versionName
+    }
+
+    buildTypes {
+        release {
+            // TODO: Add your own signing config for the release build.
+            // Signing with the debug keys for now, so `flutter run --release` works.
+            signingConfig = signingConfigs.getByName("debug")
+        }
+    }
+}
+
+flutter {
+    source = "../.."
+}
+</file>
+
+<file path="android/gradle/wrapper/gradle-wrapper.properties">
+distributionBase=GRADLE_USER_HOME
+distributionPath=wrapper/dists
+zipStoreBase=GRADLE_USER_HOME
+zipStorePath=wrapper/dists
+distributionUrl=https\://services.gradle.org/distributions/gradle-8.14-all.zip
+</file>
+
+<file path="android/.gitignore">
+gradle-wrapper.jar
+/.gradle
+/captures/
+/gradlew
+/gradlew.bat
+/local.properties
+GeneratedPluginRegistrant.java
+.cxx/
+
+# Remember to never publicly share your keystore.
+# See https://flutter.dev/to/reference-keystore
+key.properties
+**/*.keystore
+**/*.jks
+</file>
+
+<file path="android/build.gradle.kts">
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+val newBuildDir: Directory =
+    rootProject.layout.buildDirectory
+        .dir("../../build")
+        .get()
+rootProject.layout.buildDirectory.value(newBuildDir)
+
+subprojects {
+    val newSubprojectBuildDir: Directory = newBuildDir.dir(project.name)
+    project.layout.buildDirectory.value(newSubprojectBuildDir)
+}
+subprojects {
+    project.evaluationDependsOn(":app")
+}
+
+tasks.register<Delete>("clean") {
+    delete(rootProject.layout.buildDirectory)
+}
+</file>
+
+<file path="android/gradle.properties">
+org.gradle.jvmargs=-Xmx8G -XX:MaxMetaspaceSize=4G -XX:ReservedCodeCacheSize=512m -XX:+HeapDumpOnOutOfMemoryError
+android.useAndroidX=true
+</file>
+
+<file path="android/settings.gradle.kts">
+pluginManagement {
+    val flutterSdkPath =
+        run {
+            val properties = java.util.Properties()
+            file("local.properties").inputStream().use { properties.load(it) }
+            val flutterSdkPath = properties.getProperty("flutter.sdk")
+            require(flutterSdkPath != null) { "flutter.sdk not set in local.properties" }
+            flutterSdkPath
+        }
+
+    includeBuild("$flutterSdkPath/packages/flutter_tools/gradle")
+
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
+plugins {
+    id("dev.flutter.flutter-plugin-loader") version "1.0.0"
+    id("com.android.application") version "8.11.1" apply false
+    id("org.jetbrains.kotlin.android") version "2.2.20" apply false
+}
+
+include(":app")
+</file>
+
+<file path="ios/Flutter/AppFrameworkInfo.plist">
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>CFBundleDevelopmentRegion</key>
+  <string>en</string>
+  <key>CFBundleExecutable</key>
+  <string>App</string>
+  <key>CFBundleIdentifier</key>
+  <string>io.flutter.flutter.app</string>
+  <key>CFBundleInfoDictionaryVersion</key>
+  <string>6.0</string>
+  <key>CFBundleName</key>
+  <string>App</string>
+  <key>CFBundlePackageType</key>
+  <string>FMWK</string>
+  <key>CFBundleShortVersionString</key>
+  <string>1.0</string>
+  <key>CFBundleSignature</key>
+  <string>????</string>
+  <key>CFBundleVersion</key>
+  <string>1.0</string>
+  <key>MinimumOSVersion</key>
+  <string>13.0</string>
+</dict>
+</plist>
+</file>
+
+<file path="ios/Flutter/Debug.xcconfig">
+#include? "Pods/Target Support Files/Pods-Runner/Pods-Runner.debug.xcconfig"
+#include "Generated.xcconfig"
+</file>
+
+<file path="ios/Flutter/Release.xcconfig">
+#include? "Pods/Target Support Files/Pods-Runner/Pods-Runner.release.xcconfig"
+#include "Generated.xcconfig"
+</file>
+
+<file path="ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json">
+{
+  "images" : [
+    {
+      "size" : "20x20",
+      "idiom" : "iphone",
+      "filename" : "Icon-App-20x20@2x.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "20x20",
+      "idiom" : "iphone",
+      "filename" : "Icon-App-20x20@3x.png",
+      "scale" : "3x"
+    },
+    {
+      "size" : "29x29",
+      "idiom" : "iphone",
+      "filename" : "Icon-App-29x29@1x.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "29x29",
+      "idiom" : "iphone",
+      "filename" : "Icon-App-29x29@2x.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "29x29",
+      "idiom" : "iphone",
+      "filename" : "Icon-App-29x29@3x.png",
+      "scale" : "3x"
+    },
+    {
+      "size" : "40x40",
+      "idiom" : "iphone",
+      "filename" : "Icon-App-40x40@2x.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "40x40",
+      "idiom" : "iphone",
+      "filename" : "Icon-App-40x40@3x.png",
+      "scale" : "3x"
+    },
+    {
+      "size" : "60x60",
+      "idiom" : "iphone",
+      "filename" : "Icon-App-60x60@2x.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "60x60",
+      "idiom" : "iphone",
+      "filename" : "Icon-App-60x60@3x.png",
+      "scale" : "3x"
+    },
+    {
+      "size" : "20x20",
+      "idiom" : "ipad",
+      "filename" : "Icon-App-20x20@1x.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "20x20",
+      "idiom" : "ipad",
+      "filename" : "Icon-App-20x20@2x.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "29x29",
+      "idiom" : "ipad",
+      "filename" : "Icon-App-29x29@1x.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "29x29",
+      "idiom" : "ipad",
+      "filename" : "Icon-App-29x29@2x.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "40x40",
+      "idiom" : "ipad",
+      "filename" : "Icon-App-40x40@1x.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "40x40",
+      "idiom" : "ipad",
+      "filename" : "Icon-App-40x40@2x.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "76x76",
+      "idiom" : "ipad",
+      "filename" : "Icon-App-76x76@1x.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "76x76",
+      "idiom" : "ipad",
+      "filename" : "Icon-App-76x76@2x.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "83.5x83.5",
+      "idiom" : "ipad",
+      "filename" : "Icon-App-83.5x83.5@2x.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "1024x1024",
+      "idiom" : "ios-marketing",
+      "filename" : "Icon-App-1024x1024@1x.png",
+      "scale" : "1x"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}
+</file>
+
+<file path="ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json">
+{
+  "images" : [
+    {
+      "idiom" : "universal",
+      "filename" : "LaunchImage.png",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "filename" : "LaunchImage@2x.png",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "filename" : "LaunchImage@3x.png",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}
+</file>
+
+<file path="ios/Runner/Assets.xcassets/LaunchImage.imageset/README.md">
+# Launch Screen Assets
+
+You can customize the launch screen with your own desired assets by replacing the image files in this directory.
+
+You can also do it by opening your Flutter project's Xcode project with `open ios/Runner.xcworkspace`, selecting `Runner/Assets.xcassets` in the Project Navigator and dropping in the desired images.
+</file>
+
+<file path="ios/Runner/Base.lproj/LaunchScreen.storyboard">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ydg-fD-yQy"/>
+                        <viewControllerLayoutGuide type="bottom" id="xbc-2k-c8Z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="LaunchImage" translatesAutoresizingMaskIntoConstraints="NO" id="YRO-k0-Ey4">
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="YRO-k0-Ey4" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="1a2-6s-vTC"/>
+                            <constraint firstItem="YRO-k0-Ey4" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="4X2-HB-R7a"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="LaunchImage" width="168" height="185"/>
+    </resources>
+</document>
+</file>
+
+<file path="ios/Runner/Base.lproj/Main.storyboard">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Flutter View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="FlutterViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
+</file>
+
+<file path="ios/Runner/AppDelegate.swift">
+import Flutter
+import UIKit
+
+@main
+@objc class AppDelegate: FlutterAppDelegate {
+  override func application(
+    _ application: UIApplication,
+    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
+  ) -> Bool {
+    GeneratedPluginRegistrant.register(with: self)
+    return super.application(application, didFinishLaunchingWithOptions: launchOptions)
+  }
+}
+</file>
+
+<file path="ios/Runner/Info.plist">
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>Pulseedge</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>pulseedge</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>$(FLUTTER_BUILD_NAME)</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>$(FLUTTER_BUILD_NUMBER)</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UIMainStoryboardFile</key>
+	<string>Main</string>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>CADisableMinimumFrameDurationOnPhone</key>
+	<true/>
+	<key>UIApplicationSupportsIndirectInputEvents</key>
+	<true/>
+</dict>
+</plist>
+</file>
+
+<file path="ios/Runner/Runner-Bridging-Header.h">
+#import "GeneratedPluginRegistrant.h"
+</file>
+
+<file path="ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist">
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDEDidComputeMac32BitWarning</key>
+	<true/>
+</dict>
+</plist>
+</file>
+
+<file path="ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings">
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PreviewsEnabled</key>
+	<false/>
+</dict>
+</plist>
+</file>
+
+<file path="ios/Runner.xcodeproj/project.xcworkspace/contents.xcworkspacedata">
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "self:">
+   </FileRef>
+</Workspace>
+</file>
+
+<file path="ios/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme">
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   LastUpgradeVersion = "1510"
+   version = "1.3">
+   <BuildAction
+      parallelizeBuildables = "YES"
+      buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "97C146ED1CF9000F007C117D"
+               BuildableName = "Runner.app"
+               BlueprintName = "Runner"
+               ReferencedContainer = "container:Runner.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <TestAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      customLLDBInitFile = "$(SRCROOT)/Flutter/ephemeral/flutter_lldbinit"
+      shouldUseLaunchSchemeArgsEnv = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "97C146ED1CF9000F007C117D"
+            BuildableName = "Runner.app"
+            BlueprintName = "Runner"
+            ReferencedContainer = "container:Runner.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+      <Testables>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "331C8080294A63A400263BE5"
+               BuildableName = "RunnerTests.xctest"
+               BlueprintName = "RunnerTests"
+               ReferencedContainer = "container:Runner.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+      </Testables>
+   </TestAction>
+   <LaunchAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      customLLDBInitFile = "$(SRCROOT)/Flutter/ephemeral/flutter_lldbinit"
+      launchStyle = "0"
+      useCustomWorkingDirectory = "NO"
+      ignoresPersistentStateOnLaunch = "NO"
+      debugDocumentVersioning = "YES"
+      debugServiceExtension = "internal"
+      enableGPUValidationMode = "1"
+      allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "97C146ED1CF9000F007C117D"
+            BuildableName = "Runner.app"
+            BlueprintName = "Runner"
+            ReferencedContainer = "container:Runner.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+   </LaunchAction>
+   <ProfileAction
+      buildConfiguration = "Profile"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      savedToolIdentifier = ""
+      useCustomWorkingDirectory = "NO"
+      debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "97C146ED1CF9000F007C117D"
+            BuildableName = "Runner.app"
+            BlueprintName = "Runner"
+            ReferencedContainer = "container:Runner.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+   </ProfileAction>
+   <AnalyzeAction
+      buildConfiguration = "Debug">
+   </AnalyzeAction>
+   <ArchiveAction
+      buildConfiguration = "Release"
+      revealArchiveInOrganizer = "YES">
+   </ArchiveAction>
+</Scheme>
+</file>
+
+<file path="ios/Runner.xcodeproj/project.pbxproj">
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */ = {isa = PBXBuildFile; fileRef = 1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */; };
+		331C808B294A63AB00263BE5 /* RunnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331C807B294A618700263BE5 /* RunnerTests.swift */; };
+		3B3967161E833CAA004F5970 /* AppFrameworkInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */; };
+		74858FAF1ED2DC5600515810 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74858FAE1ED2DC5600515810 /* AppDelegate.swift */; };
+		97C146FC1CF9000F007C117D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FA1CF9000F007C117D /* Main.storyboard */; };
+		97C146FE1CF9000F007C117D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FD1CF9000F007C117D /* Assets.xcassets */; };
+		97C147011CF9000F007C117D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FF1CF9000F007C117D /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		331C8085294A63A400263BE5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 97C146E61CF9000F007C117D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 97C146ED1CF9000F007C117D;
+			remoteInfo = Runner;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9705A1C41CF9048500538489 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1498D2321E8E86230040F4C2 /* GeneratedPluginRegistrant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneratedPluginRegistrant.h; sourceTree = "<group>"; };
+		1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneratedPluginRegistrant.m; sourceTree = "<group>"; };
+		331C807B294A618700263BE5 /* RunnerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunnerTests.swift; sourceTree = "<group>"; };
+		331C8081294A63A400263BE5 /* RunnerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RunnerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = AppFrameworkInfo.plist; path = Flutter/AppFrameworkInfo.plist; sourceTree = "<group>"; };
+		74858FAD1ED2DC5600515810 /* Runner-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Runner-Bridging-Header.h"; sourceTree = "<group>"; };
+		74858FAE1ED2DC5600515810 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7AFA3C8E1D35360C0083082E /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = Flutter/Release.xcconfig; sourceTree = "<group>"; };
+		9740EEB21CF90195004384FC /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = Flutter/Debug.xcconfig; sourceTree = "<group>"; };
+		9740EEB31CF90195004384FC /* Generated.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Generated.xcconfig; path = Flutter/Generated.xcconfig; sourceTree = "<group>"; };
+		97C146EE1CF9000F007C117D /* Runner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Runner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		97C146FB1CF9000F007C117D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		97C146FD1CF9000F007C117D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		97C147001CF9000F007C117D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		97C147021CF9000F007C117D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		97C146EB1CF9000F007C117D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		331C8082294A63A400263BE5 /* RunnerTests */ = {
+			isa = PBXGroup;
+			children = (
+				331C807B294A618700263BE5 /* RunnerTests.swift */,
+			);
+			path = RunnerTests;
+			sourceTree = "<group>";
+		};
+		9740EEB11CF90186004384FC /* Flutter */ = {
+			isa = PBXGroup;
+			children = (
+				3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */,
+				9740EEB21CF90195004384FC /* Debug.xcconfig */,
+				7AFA3C8E1D35360C0083082E /* Release.xcconfig */,
+				9740EEB31CF90195004384FC /* Generated.xcconfig */,
+			);
+			name = Flutter;
+			sourceTree = "<group>";
+		};
+		97C146E51CF9000F007C117D = {
+			isa = PBXGroup;
+			children = (
+				9740EEB11CF90186004384FC /* Flutter */,
+				97C146F01CF9000F007C117D /* Runner */,
+				97C146EF1CF9000F007C117D /* Products */,
+				331C8082294A63A400263BE5 /* RunnerTests */,
+			);
+			sourceTree = "<group>";
+		};
+		97C146EF1CF9000F007C117D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				97C146EE1CF9000F007C117D /* Runner.app */,
+				331C8081294A63A400263BE5 /* RunnerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		97C146F01CF9000F007C117D /* Runner */ = {
+			isa = PBXGroup;
+			children = (
+				97C146FA1CF9000F007C117D /* Main.storyboard */,
+				97C146FD1CF9000F007C117D /* Assets.xcassets */,
+				97C146FF1CF9000F007C117D /* LaunchScreen.storyboard */,
+				97C147021CF9000F007C117D /* Info.plist */,
+				1498D2321E8E86230040F4C2 /* GeneratedPluginRegistrant.h */,
+				1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */,
+				74858FAE1ED2DC5600515810 /* AppDelegate.swift */,
+				74858FAD1ED2DC5600515810 /* Runner-Bridging-Header.h */,
+			);
+			path = Runner;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		331C8080294A63A400263BE5 /* RunnerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 331C8087294A63A400263BE5 /* Build configuration list for PBXNativeTarget "RunnerTests" */;
+			buildPhases = (
+				331C807D294A63A400263BE5 /* Sources */,
+				331C807F294A63A400263BE5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				331C8086294A63A400263BE5 /* PBXTargetDependency */,
+			);
+			name = RunnerTests;
+			productName = RunnerTests;
+			productReference = 331C8081294A63A400263BE5 /* RunnerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		97C146ED1CF9000F007C117D /* Runner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 97C147051CF9000F007C117D /* Build configuration list for PBXNativeTarget "Runner" */;
+			buildPhases = (
+				9740EEB61CF901F6004384FC /* Run Script */,
+				97C146EA1CF9000F007C117D /* Sources */,
+				97C146EB1CF9000F007C117D /* Frameworks */,
+				97C146EC1CF9000F007C117D /* Resources */,
+				9705A1C41CF9048500538489 /* Embed Frameworks */,
+				3B06AD1E1E4923F5004D2608 /* Thin Binary */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Runner;
+			productName = Runner;
+			productReference = 97C146EE1CF9000F007C117D /* Runner.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		97C146E61CF9000F007C117D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1510;
+				ORGANIZATIONNAME = "";
+				TargetAttributes = {
+					331C8080294A63A400263BE5 = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = 97C146ED1CF9000F007C117D;
+					};
+					97C146ED1CF9000F007C117D = {
+						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 1100;
+					};
+				};
+			};
+			buildConfigurationList = 97C146E91CF9000F007C117D /* Build configuration list for PBXProject "Runner" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 97C146E51CF9000F007C117D;
+			productRefGroup = 97C146EF1CF9000F007C117D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				97C146ED1CF9000F007C117D /* Runner */,
+				331C8080294A63A400263BE5 /* RunnerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		331C807F294A63A400263BE5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97C146EC1CF9000F007C117D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97C147011CF9000F007C117D /* LaunchScreen.storyboard in Resources */,
+				3B3967161E833CAA004F5970 /* AppFrameworkInfo.plist in Resources */,
+				97C146FE1CF9000F007C117D /* Assets.xcassets in Resources */,
+				97C146FC1CF9000F007C117D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3B06AD1E1E4923F5004D2608 /* Thin Binary */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}",
+			);
+			name = "Thin Binary";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/bin/sh \"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" embed_and_thin";
+		};
+		9740EEB61CF901F6004384FC /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/bin/sh \"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" build";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		331C807D294A63A400263BE5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				331C808B294A63AB00263BE5 /* RunnerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97C146EA1CF9000F007C117D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74858FAF1ED2DC5600515810 /* AppDelegate.swift in Sources */,
+				1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		331C8086294A63A400263BE5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 97C146ED1CF9000F007C117D /* Runner */;
+			targetProxy = 331C8085294A63A400263BE5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		97C146FA1CF9000F007C117D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				97C146FB1CF9000F007C117D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		97C146FF1CF9000F007C117D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				97C147001CF9000F007C117D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		249021D3217E4FDB00AE95B9 /* Profile */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Profile;
+		};
+		249021D4217E4FDB00AE95B9 /* Profile */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7AFA3C8E1D35360C0083082E /* Release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = Runner/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.pulseedge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Profile;
+		};
+		331C8088294A63A400263BE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.pulseedge.RunnerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Runner.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Runner";
+			};
+			name = Debug;
+		};
+		331C8089294A63A400263BE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.pulseedge.RunnerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Runner.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Runner";
+			};
+			name = Release;
+		};
+		331C808A294A63A400263BE5 /* Profile */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.pulseedge.RunnerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Runner.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Runner";
+			};
+			name = Profile;
+		};
+		97C147031CF9000F007C117D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		97C147041CF9000F007C117D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		97C147061CF9000F007C117D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9740EEB21CF90195004384FC /* Debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = Runner/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.pulseedge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		97C147071CF9000F007C117D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7AFA3C8E1D35360C0083082E /* Release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = Runner/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.pulseedge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		331C8087294A63A400263BE5 /* Build configuration list for PBXNativeTarget "RunnerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				331C8088294A63A400263BE5 /* Debug */,
+				331C8089294A63A400263BE5 /* Release */,
+				331C808A294A63A400263BE5 /* Profile */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		97C146E91CF9000F007C117D /* Build configuration list for PBXProject "Runner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97C147031CF9000F007C117D /* Debug */,
+				97C147041CF9000F007C117D /* Release */,
+				249021D3217E4FDB00AE95B9 /* Profile */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		97C147051CF9000F007C117D /* Build configuration list for PBXNativeTarget "Runner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97C147061CF9000F007C117D /* Debug */,
+				97C147071CF9000F007C117D /* Release */,
+				249021D4217E4FDB00AE95B9 /* Profile */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 97C146E61CF9000F007C117D /* Project object */;
+}
+</file>
+
+<file path="ios/Runner.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist">
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDEDidComputeMac32BitWarning</key>
+	<true/>
+</dict>
+</plist>
+</file>
+
+<file path="ios/Runner.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings">
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PreviewsEnabled</key>
+	<false/>
+</dict>
+</plist>
+</file>
+
+<file path="ios/Runner.xcworkspace/contents.xcworkspacedata">
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:Runner.xcodeproj">
+   </FileRef>
+</Workspace>
+</file>
+
+<file path="ios/RunnerTests/RunnerTests.swift">
+import Flutter
+import UIKit
+import XCTest
+
+class RunnerTests: XCTestCase {
+
+  func testExample() {
+    // If you add code to the Runner application, consider adding tests here.
+    // See https://developer.apple.com/documentation/xctest for more information about using XCTest.
+  }
+
+}
+</file>
+
+<file path="ios/.gitignore">
+**/dgph
+*.mode1v3
+*.mode2v3
+*.moved-aside
+*.pbxuser
+*.perspectivev3
+**/*sync/
+.sconsign.dblite
+.tags*
+**/.vagrant/
+**/DerivedData/
+Icon?
+**/Pods/
+**/.symlinks/
+profile
+xcuserdata
+**/.generated/
+Flutter/App.framework
+Flutter/Flutter.framework
+Flutter/Flutter.podspec
+Flutter/Generated.xcconfig
+Flutter/ephemeral/
+Flutter/app.flx
+Flutter/app.zip
+Flutter/flutter_assets/
+Flutter/flutter_export_environment.sh
+ServiceDefinitions.json
+Runner/GeneratedPluginRegistrant.*
+
+# Exceptions to above rules.
+!default.mode1v3
+!default.mode2v3
+!default.pbxuser
+!default.perspectivev3
+</file>
+
+<file path="ios/Podfile">
+# Uncomment this line to define a global platform for your project
+# platform :ios, '13.0'
+
+# CocoaPods analytics sends network stats synchronously affecting flutter build latency.
+ENV['COCOAPODS_DISABLE_STATS'] = 'true'
+
+project 'Runner', {
+  'Debug' => :debug,
+  'Profile' => :release,
+  'Release' => :release,
+}
+
+def flutter_root
+  generated_xcode_build_settings_path = File.expand_path(File.join('..', 'Flutter', 'Generated.xcconfig'), __FILE__)
+  unless File.exist?(generated_xcode_build_settings_path)
+    raise "#{generated_xcode_build_settings_path} must exist. If you're running pod install manually, make sure flutter pub get is executed first"
+  end
+
+  File.foreach(generated_xcode_build_settings_path) do |line|
+    matches = line.match(/FLUTTER_ROOT\=(.*)/)
+    return matches[1].strip if matches
+  end
+  raise "FLUTTER_ROOT not found in #{generated_xcode_build_settings_path}. Try deleting Generated.xcconfig, then run flutter pub get"
+end
+
+require File.expand_path(File.join('packages', 'flutter_tools', 'bin', 'podhelper'), flutter_root)
+
+flutter_ios_podfile_setup
+
+target 'Runner' do
+  use_frameworks!
+
+  flutter_install_all_ios_pods File.dirname(File.realpath(__FILE__))
+  target 'RunnerTests' do
+    inherit! :search_paths
+  end
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    flutter_additional_ios_build_settings(target)
+  end
+end
+</file>
+
+<file path="lib/core/ai/backends/ai_backend.dart">
+// lib/core/ai/backends/ai_backend.dart
+
+/// Unified AI backend interface for all use-cases (intake extraction + note drafting).
+///
+/// This allows easy swapping/hybrid between:
+/// - Local embedded (fllama GGUF on-device)
+/// - Local server (llama-server HTTP)
+/// - Cloud (Groq)
+abstract class AiBackend {
+  /// Extract structured intake JSON from free text.
+  Future<Map<String, dynamic>> extractIntake({
+    required String freeText,
+    List<String> missingFields = const [],
+  });
+
+  /// Stream assistive clinical note draft.
+  Stream<String> draftNote({
+    required String transcript,
+    required String patientContext,
+  });
+}
+</file>
+
+<file path="lib/core/ai/backends/groq_ai_backend.dart">
+// lib/core/ai/backends/groq_ai_backend.dart
+
+import 'dart:convert';
+
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+import 'package:http/http.dart' as http;
+
+import 'ai_backend.dart';
+
+/// GroqAiBackend
+///
+/// Cloud-based AI backend using Groq OpenAI-compatible API.
+/// Used ONLY for assistive drafting and intake extraction (never deterministic logic).
+///
+/// This backend is OPTIONAL and should be disabled when offline.
+class GroqAiBackend implements AiBackend {
+  static const _baseUrl = 'https://api.groq.com/openai/v1/chat/completions';
+
+  static const _model = 'llama-3.1-70b-versatile'; // Swap to 8B for lower latency if needed
+
+  final FlutterSecureStorage _storage;
+
+  GroqAiBackend({
+    FlutterSecureStorage? storage,
+  }) : _storage = storage ?? const FlutterSecureStorage();
+
+  Future<String?> _getApiKey() async {
+    return _storage.read(key: 'groq_api_key');
+  }
+
+  // ---------------------------------------------------------------------------
+  // Structured intake extraction (strict JSON only)
+  // ---------------------------------------------------------------------------
+  @override
+  Future<Map<String, dynamic>> extractIntake({
+    required String freeText,
+    List<String> missingFields = const [],
+  }) async {
+    final apiKey = await _getApiKey();
+    if (apiKey == null || apiKey.isEmpty) {
+      throw Exception('Groq API key missing. Set it in app settings.');
+    }
+
+    final missingHint = missingFields.isEmpty
+        ? ''
+        : '\nNote: The following fields were missing in previous attempts - try harder to find them: ${missingFields.join(', ')}';
+
+    final prompt = '''
+You are Pulse AI. Extract patient registration fields from the text.
+Return ONLY valid JSON with keys:
+fullName, nric, address, phone, allergies.
+Use null if missing. No extra keys. No markdown. No explanations.
+
+TEXT:
+$freeText$missingHint
+''';
+
+    final client = http.Client();
+    try {
+      final res = await client.post(
+        Uri.parse(_baseUrl),
+        headers: {
+          'Authorization': 'Bearer $apiKey',
+          'Content-Type': 'application/json',
+        },
+        body: jsonEncode({
+          'model': _model,
+          'messages': [
+            {'role': 'system', 'content': 'You output strict JSON only.'},
+            {'role': 'user', 'content': prompt},
+          ],
+          'temperature': 0.0,
+        }),
+      );
+
+      if (res.statusCode != 200) {
+        throw Exception('Groq API error ${res.statusCode}: ${res.body}');
+      }
+
+      final decoded = jsonDecode(res.body);
+      final content = decoded['choices']?[0]?['message']?['content'];
+
+      if (content is! String || content.trim().isEmpty) {
+        throw Exception('Empty model response');
+      }
+
+      // Recover first JSON object
+      final start = content.indexOf('{');
+      final end = content.lastIndexOf('}');
+      if (start == -1 || end == -1 || end <= start) {
+        throw Exception('No JSON object in model output');
+      }
+
+      final jsonText = content.substring(start, end + 1).trim();
+      final obj = jsonDecode(jsonText);
+
+      if (obj is Map<String, dynamic>) return obj;
+      throw Exception('Model did not return a JSON object');
+    } finally {
+      client.close();
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // Assistive clinical note drafting (streaming)
+  // ---------------------------------------------------------------------------
+  @override
+  Stream<String> draftNote({
+    required String transcript,
+    required String patientContext,
+  }) async* {
+    final apiKey = await _getApiKey();
+    if (apiKey == null || apiKey.isEmpty) {
+      yield 'Error: Groq API key missing. Set it in app settings.';
+      return;
+    }
+
+    final prompt = '''
+You are a strictly ASSISTIVE clinical documentation aide (medico-legal safe).
+Draft a concise SOAP note from the clinician's voice transcript.
+Never make diagnoses or decisions.
+Highlight allergies and medications clearly.
+Output ONLY the draft text.
+
+Patient context:
+$patientContext
+
+Clinician dictation:
+$transcript
+''';
+
+    final client = http.Client();
+    try {
+      final request = http.Request('POST', Uri.parse(_baseUrl));
+      request.headers.addAll({
+        'Authorization': 'Bearer $apiKey',
+        'Content-Type': 'application/json',
+      });
+      request.body = jsonEncode({
+        'model': _model,
+        'messages': [
+          {'role': 'system', 'content': prompt},
+        ],
+        'temperature': 0.2,
+        'stream': true,
+      });
+
+      final response = await client.send(request);
+
+      if (response.statusCode != 200) {
+        yield 'Error: API returned ${response.statusCode}';
+        return;
+      }
+
+      await for (final chunk in response.stream.transform(utf8.decoder)) {
+        for (final line in chunk.split('\n')) {
+          if (!line.startsWith('data: ') || line.contains('[DONE]')) {
+            continue;
+          }
+
+          try {
+            final data = jsonDecode(line.substring(6));
+            final token = data['choices']?[0]?['delta']?['content'];
+
+            if (token is String && token.isNotEmpty) {
+              yield token;
+            }
+          } catch (_) {
+            // Ignore malformed streaming lines
+          }
+        }
+      }
+
+      yield '\n\n---\n'
+          'AI-assisted draft (Groq Llama-3.1) — '
+          'clinician reviewed & approved.';
+    } catch (e) {
+      yield 'Network error: $e';
+    } finally {
+      client.close();
+    }
+  }
+}
+</file>
+
+<file path="lib/core/ai/backends/hybrid_ai_backend.dart">
+// lib/core/ai/backends/hybrid_ai_backend.dart (combines local + cloud)
+
+import 'ai_backend.dart';
+import 'local_ai_backend.dart';
+import 'groq_ai_backend.dart';
+import '../pulse_ai_providers.dart'; // For shared AiMode
+
+//enum AiMode { auto, localOnly, cloudOnly }
+
+class HybridAiBackend implements AiBackend {
+  final LocalAiBackend? local;
+  final GroqAiBackend? cloud;
+  final AiMode mode;
+
+  HybridAiBackend({
+    this.local,
+    this.cloud,
+    this.mode = AiMode.auto,
+  });
+
+  AiBackend? _selectBackend() {
+    if (mode == AiMode.cloudOnly) return cloud;
+    if (mode == AiMode.localOnly) return local;
+    // Auto: local first, fallback cloud
+    return local ?? cloud;
+  }
+
+  AiBackend? _fallbackBackend() {
+    if (mode == AiMode.auto && local != null && cloud != null) {
+      return cloud;
+    }
+    return null;
+  }
+
+  @override
+  Future<Map<String, dynamic>> extractIntake({
+    required String freeText,
+    List<String> missingFields = const [],
+  }) async {
+    final primary = _selectBackend();
+    if (primary == null) throw Exception('No AI backend available');
+
+    try {
+      return await primary.extractIntake(
+        freeText: freeText,
+        missingFields: missingFields,
+      );
+    } catch (e) {
+      final fallback = _fallbackBackend();
+      if (fallback != null) {
+        print('Local failed, falling back to cloud: $e');
+        return await fallback.extractIntake(
+          freeText: freeText,
+          missingFields: missingFields,
+        );
+      }
+      rethrow;
+    }
+  }
+
+  @override
+  Stream<String> draftNote({
+    required String transcript,
+    required String patientContext,
+  }) async* {
+    final primary = _selectBackend();
+    if (primary == null) {
+      yield 'No AI backend available (check model download and Groq key)';
+      return;
+    }
+
+    try {
+      await for (final token in primary.draftNote(
+        transcript: transcript,
+        patientContext: patientContext,
+      )) {
+        yield token;
+      }
+    } catch (e) {
+      final fallback = _fallbackBackend();
+      if (fallback != null) {
+        print('Local draft failed, falling back to cloud: $e');
+        await for (final token in fallback.draftNote(
+          transcript: transcript,
+          patientContext: patientContext,
+        )) {
+          yield token;
+        }
+      } else {
+        yield 'AI draft failed: $e';
+      }
+    }
+  }
+}
+</file>
+
+<file path="lib/core/ai/backends/local_ai_backend.dart">
+// lib/core/ai/backends/local_ai_backend.dart (embedded fllama)
+
+import 'package:fllama/fllama.dart';
+import 'ai_backend.dart';
+import '../model_manager.dart'; // For model path
+
+class LocalAiBackend implements AiBackend {
+  final String modelPath;
+  bool _loaded = false;
+
+  LocalAiBackend(this.modelPath);
+
+  Future<void> _ensureLoaded() async {
+    if (_loaded) return;
+    final success = await fllamaLoadModel(FllamaConfig(
+      modelPath: modelPath,
+      nGpuLayers: -1, // All on GPU
+      contextSize: 4096,
+      nThreads: 4,
+      useMlock: true,
+    ));
+    if (!success) throw Exception('Local model failed to load');
+    _loaded = true;
+  }
+
+  @override
+  Future<Map<String, dynamic>> extractIntake({
+    required String freeText,
+    List<String> missingFields = const [],
+  }) async {
+    await _ensureLoaded();
+
+    final missingHint = missingFields.isEmpty
+        ? ''
+        : '\nFocus on missing fields: ${missingFields.join(', ')}';
+
+    final prompt = '''
+You are Pulse AI. Extract patient registration fields from the text.
+Return ONLY valid JSON with keys: fullName, nric, address, phone, allergies.
+Use null if missing. No extra text.
+
+TEXT:
+$freeText$missingHint
+''';
+
+    final response = await fllamaGenerate(prompt, temperature: 0.0, maxTokens: 512);
+
+    // JSON recovery
+    final start = response.indexOf('{');
+    final end = response.lastIndexOf('}');
+    if (start == -1 || end == -1 || end <= start) throw Exception('No JSON in response');
+    final jsonText = response.substring(start, end + 1).trim();
+
+    return jsonDecode(jsonText) as Map<String, dynamic>;
+  }
+
+  @override
+  Stream<String> draftNote({
+    required String transcript,
+    required String patientContext,
+  }) async* {
+    await _ensureLoaded();
+
+    final prompt = '''
+Draft a clinical note from this transcript.
+Patient: $patientContext
+
+Transcript:
+$transcript
+
+Note:
+- SOAP format
+- Concise
+- Professional
+''';
+
+    await for (final token in fllamaGenerateStream(prompt, maxTokens: 1024, temperature: 0.7)) {
+      yield token;
+    }
+
+    yield '\n\n---\nAI-assisted draft (local LLM) — clinician review required.';
+  }
+}
+</file>
+
+<file path="lib/core/ai/models/trends_7d.dart">
+
+</file>
+
+<file path="lib/core/ai/ai_intent.dart">
+// lib/core/ai/ai_intent.dart
+
+import 'time_range.dart';
+
+/// ---------------------------------------------------------------------------
+/// Intent classification layer
+/// ---------------------------------------------------------------------------
+///
+/// AiIntent (ENUM)
+///
+/// Represents the high-level intent classified from user input.
+/// Used for:
+/// - routing
+/// - telemetry
+/// - analytics gating
+/// - GGUF / prompt classification
+///
+/// This answers: "What does the user want?"
+enum AiIntent {
+  encountersThisMorning,
+  encountersToday,
+  topChiefComplaintsToday,
+  topTriageToday,
+  trends7d,
+  intakeCopilot,
+  unknown,
+}
+
+extension AiIntentX on AiIntent {
+  /// Stable identifier (safe for telemetry & persistence).
+  String get name {
+    switch (this) {
+      case AiIntent.encountersThisMorning:
+        return 'encountersThisMorning';
+      case AiIntent.encountersToday:
+        return 'encountersToday';
+      case AiIntent.topChiefComplaintsToday:
+        return 'topChiefComplaintsToday';
+      case AiIntent.topTriageToday:
+        return 'topTriageToday';
+      case AiIntent.trends7d:
+        return 'trends7d';
+      case AiIntent.intakeCopilot:
+        return 'intakeCopilot';
+      case AiIntent.unknown:
+        return 'unknown';
+    }
+  }
+
+  static AiIntent fromName(String? value) {
+    switch (value) {
+      case 'encountersThisMorning':
+        return AiIntent.encountersThisMorning;
+      case 'encountersToday':
+        return AiIntent.encountersToday;
+      case 'topChiefComplaintsToday':
+        return AiIntent.topChiefComplaintsToday;
+      case 'topTriageToday':
+        return AiIntent.topTriageToday;
+      case 'trends7d':
+        return AiIntent.trends7d;
+      case 'intakeCopilot':
+        return AiIntent.intakeCopilot;
+      default:
+        return AiIntent.unknown;
+    }
+  }
+
+  bool get requiresAnalytics {
+    switch (this) {
+      case AiIntent.encountersThisMorning:
+      case AiIntent.encountersToday:
+      case AiIntent.topChiefComplaintsToday:
+      case AiIntent.topTriageToday:
+      case AiIntent.trends7d:
+        return true;
+      case AiIntent.intakeCopilot:
+      case AiIntent.unknown:
+        return false;
+    }
+  }
+}
+
+/// ---------------------------------------------------------------------------
+/// Intent execution layer
+/// ---------------------------------------------------------------------------
+///
+/// These enums + class define the *executable* form of an intent.
+/// Used AFTER classification to perform deterministic computation.
+///
+/// This answers: "Exactly how do we compute it?"
+
+/// Deterministic metrics we support offline.
+enum AiMetric {
+  count,
+  top,
+  trend,
+  intake,
+}
+
+/// Domain entities.
+enum AiEntity {
+  encounters,
+  patients,
+  diagnoses,
+  triage,
+  chiefComplaints,
+}
+
+/// Fully-resolved, executable intent.
+///
+/// This object is passed to analytics engines and tools.
+/// It is deterministic, explicit, and offline-safe.
+class AiResolvedIntent {
+  final AiMetric metric;
+  final AiEntity entity;
+
+  final TimeRange? timeRange;
+  final int? windowDays;
+  final int? limit;
+
+  /// Analytics scoping
+  final String? unitId;
+
+  /// Encounter scoping (required for encounter-intake tools)
+  final String? encounterId;
+
+  const AiResolvedIntent({
+    required this.metric,
+    required this.entity,
+    this.timeRange,
+    this.windowDays,
+    this.limit,
+    this.unitId,
+    this.encounterId,
+  });
+
+  // ---------------------------------------------------------------------------
+  // Convenience builders
+  // ---------------------------------------------------------------------------
+
+  /// Count encounters in an explicit range (today / this morning / custom).
+  const AiResolvedIntent.countEncounters({
+    required TimeRange range,
+    String? unitId,
+  }) : this(
+          metric: AiMetric.count,
+          entity: AiEntity.encounters,
+          timeRange: range,
+          unitId: unitId,
+        );
+
+  /// Top N chief complaints in an explicit range.
+  const AiResolvedIntent.topChiefComplaints({
+    required TimeRange range,
+    int limit = 5,
+    String? unitId,
+  }) : this(
+          metric: AiMetric.top,
+          entity: AiEntity.chiefComplaints,
+          timeRange: range,
+          limit: limit,
+          unitId: unitId,
+        );
+
+  /// Top N triage categories in an explicit range.
+  const AiResolvedIntent.topTriage({
+    required TimeRange range,
+    int limit = 5,
+    String? unitId,
+  }) : this(
+          metric: AiMetric.top,
+          entity: AiEntity.triage,
+          timeRange: range,
+          limit: limit,
+          unitId: unitId,
+        );
+
+  /// Trends over the last 7 days for encounters.
+  const AiResolvedIntent.trends7dEncounters({
+    required String unitId,
+  }) : this(
+          metric: AiMetric.trend,
+          entity: AiEntity.encounters,
+          windowDays: 7,
+          unitId: unitId,
+        );
+
+  /// Trends over the last N days for encounters.
+  const AiResolvedIntent.trendEncountersLastNDays({
+    required int days,
+    required String unitId,
+  }) : this(
+          metric: AiMetric.trend,
+          entity: AiEntity.encounters,
+          windowDays: days,
+          unitId: unitId,
+        );
+
+  /// Encounter intake / registration assistance.
+  const AiResolvedIntent.encounterIntake({
+    required String encounterId,
+  }) : this(
+          metric: AiMetric.intake,
+          entity: AiEntity.patients,
+          encounterId: encounterId,
+        );
+}
+</file>
+
+<file path="lib/core/ai/ai_query.dart">
+// lib/core/ai/ai_query.dart
+
+import 'ai_intent.dart';
+import 'time_range.dart';
+
+/// AiQuery
+///
+/// Deterministic bridge between:
+///   Free text → Classified intent → Resolved executable intent → AiTools
+///
+/// This parser is intentionally:
+/// - rule-based
+/// - offline-first
+/// - auditable
+class AiQuery {
+  /// High-level classified intent (routing / telemetry).
+  final AiIntent intent;
+
+  /// Fully resolved, executable intent (analytics / tools).
+  final AiResolvedIntent? resolved;
+
+  /// Raw original user input.
+  final String rawText;
+
+  /// Optional unit scoping (from SessionContext).
+  final String? unitId;
+
+  /// Optional encounter scoping (for intake).
+  final String? encounterId;
+
+  const AiQuery({
+    required this.intent,
+    required this.rawText,
+    this.resolved,
+    this.unitId,
+    this.encounterId,
+  });
+
+  // ---------------------------------------------------------------------------
+  // Factory: parse free text into structured intent
+  // ---------------------------------------------------------------------------
+
+  factory AiQuery.fromFreeText(
+    String input, {
+    String? unitId,
+    String? encounterId,
+  }) {
+    final text = input.trim().toLowerCase();
+
+    // -----------------------------------------------------------------------
+    // 1️⃣ Intake / Registration assist (encounter-scoped)
+    // -----------------------------------------------------------------------
+    if (encounterId != null &&
+        (text.contains('intake') ||
+            text.contains('register') ||
+            text.contains('registration') ||
+            text.contains('daftar') ||
+            text.contains('alamat') ||
+            text.contains('nric'))) {
+      return AiQuery(
+        rawText: input,
+        unitId: unitId,
+        encounterId: encounterId,
+        intent: AiIntent.intakeCopilot,
+        resolved: AiResolvedIntent.encounterIntake(
+          encounterId: encounterId,
+        ),
+      );
+    }
+
+    // -----------------------------------------------------------------------
+    // 2️⃣ Encounters this morning
+    // -----------------------------------------------------------------------
+    if (text.contains('this morning') ||
+        text.contains('pagi ini') ||
+        text.contains('morning encounter')) {
+      final range = TimeRange.thisMorning();
+      return AiQuery(
+        rawText: input,
+        unitId: unitId,
+        intent: AiIntent.encountersThisMorning,
+        resolved: AiResolvedIntent.countEncounters(
+          range: range,
+          unitId: unitId,
+        ),
+      );
+    }
+
+    // -----------------------------------------------------------------------
+    // 3️⃣ Encounters today
+    // -----------------------------------------------------------------------
+    if (text.contains('encounters today') ||
+        text.contains('how many encounters today') ||
+        text.contains('today encounter') ||
+        text.contains('hari ini')) {
+      final range = TimeRange.today();
+      return AiQuery(
+        rawText: input,
+        unitId: unitId,
+        intent: AiIntent.encountersToday,
+        resolved: AiResolvedIntent.countEncounters(
+          range: range,
+          unitId: unitId,
+        ),
+      );
+    }
+
+    // -----------------------------------------------------------------------
+    // 4️⃣ Top chief complaints today
+    // -----------------------------------------------------------------------
+    if (text.contains('top diagnosis') ||
+        text.contains('top complaint') ||
+        text.contains('chief complaint')) {
+      final range = TimeRange.today();
+      return AiQuery(
+        rawText: input,
+        unitId: unitId,
+        intent: AiIntent.topChiefComplaintsToday,
+        resolved: AiResolvedIntent.topChiefComplaints(
+          range: range,
+          unitId: unitId,
+          limit: 5,
+        ),
+      );
+    }
+
+    // -----------------------------------------------------------------------
+    // 5️⃣ Top triage today
+    // -----------------------------------------------------------------------
+    if (text.contains('top triage') ||
+        text.contains('triage today') ||
+        text.contains('kategori triage')) {
+      final range = TimeRange.today();
+      return AiQuery(
+        rawText: input,
+        unitId: unitId,
+        intent: AiIntent.topTriageToday,
+        resolved: AiResolvedIntent.topTriage(
+          range: range,
+          unitId: unitId,
+          limit: 5,
+        ),
+      );
+    }
+
+    // -----------------------------------------------------------------------
+    // 6️⃣ Trends (last 7 days)
+    // -----------------------------------------------------------------------
+    if ((text.contains('trend') ||
+            text.contains('trends') ||
+            text.contains('7d') ||
+            text.contains('7 days') ||
+            text.contains('minggu')) &&
+        unitId != null) {
+      return AiQuery(
+        rawText: input,
+        unitId: unitId,
+        intent: AiIntent.trends7d,
+        resolved: AiResolvedIntent.trends7dEncounters(
+          unitId: unitId,
+        ),
+      );
+    }
+
+    // -----------------------------------------------------------------------
+    // 7️⃣ Fallback → Unknown
+    // -----------------------------------------------------------------------
+    return AiQuery(
+      rawText: input,
+      unitId: unitId,
+      intent: AiIntent.unknown,
+      resolved: null,
+    );
+  }
+
+  /// Immutable update helper.
+  AiQuery copyWith({
+    AiIntent? intent,
+    AiResolvedIntent? resolved,
+    String? rawText,
+    String? unitId,
+    String? encounterId,
+  }) {
+    return AiQuery(
+      intent: intent ?? this.intent,
+      resolved: resolved ?? this.resolved,
+      rawText: rawText ?? this.rawText,
+      unitId: unitId ?? this.unitId,
+      encounterId: encounterId ?? this.encounterId,
+    );
+  }
+
+  @override
+  String toString() {
+    return 'AiQuery(intent: ${intent.name}, rawText: "$rawText")';
+  }
+}
+</file>
+
+<file path="lib/core/ai/ai_service.dart">
+// lib/core/ai/ai_service.dart
+
+import 'ai_query.dart';
+import 'ai_tool_response.dart';
+import 'ai_tools.dart';
+//import 'ai_backend.dart';
+//import 'package:pulseedge/core/ai/ai_tool_response.dart';
+import 'backends/ai_backend.dart';
+
+
+/// AiService
+///
+/// Central AI orchestration layer for PulseEdge.
+///
+/// Responsibilities:
+/// - Accept free-text input
+/// - Run deterministic, offline-first tools
+/// - Optionally delegate to cloud AI backend (Groq)
+/// - Keep UI and storage layers decoupled
+///
+/// Design rules:
+/// - Deterministic tools FIRST
+/// - Cloud AI is assistive-only
+/// - Offline-safe by default
+class AiService {
+  final AiTools tools;
+  final AiBackend? backend;
+
+  /// Optional formatter for UI / chat rendering.
+  final AiResponseFormatter? formatter;
+
+  /// Optional auth/session references (future use).
+  final Object? auth;
+  final Object? sessionStore;
+
+  AiService({
+    required this.tools,
+    this.backend,
+    this.formatter,
+    this.auth,
+    this.sessionStore,
+  });
+
+  // ---------------------------------------------------------------------------
+  // Deterministic pipeline
+  // ---------------------------------------------------------------------------
+
+  /// Run AI pipeline from raw user input.
+  ///
+  /// This ALWAYS tries deterministic tools first.
+  Future<AiToolResponse> runRawPrompt(
+    String input, {
+    String? unitId,
+    String? encounterId,
+  }) async {
+    final query = AiQuery.fromFreeText(
+      input,
+      unitId: unitId,
+      encounterId: encounterId,
+    );
+
+    return run(query);
+  }
+
+  /// Run AI pipeline from a prepared query.
+  Future<AiToolResponse> run(AiQuery query) async {
+    final AiToolResponse response = await tools.run(query);
+
+    // Apply optional formatting (UI polish only)
+    if (formatter != null && response.handled) {
+      return formatter!.format(response);
+    }
+
+    return response;
+  }
+  // ---------------------------------------------------------------------------
+  // Assistive cloud drafting (optional)
+  // ---------------------------------------------------------------------------
+
+  /// Stream an assistive clinical note draft.
+  ///
+  /// This is NEVER used for analytics or decisions.
+  /// If backend is unavailable, emits a single error message.
+  Stream<String> draftNote({
+    required String transcript,
+    required String patientContext,
+  }) {
+    final b = backend;
+
+    if (b == null) {
+      return Stream.value(
+        'Cloud AI backend not configured.',
+      );
+    }
+
+    return b.draftNote(
+      transcript: transcript,
+      patientContext: patientContext,
+    );
+  }
+}
+
+/// Optional response formatter interface.
+///
+/// Keeps [AiService] UI-agnostic.
+abstract class AiResponseFormatter {
+  AiToolResponse format(AiToolResponse response);
+}
+</file>
+
+<file path="lib/core/ai/ai_tool_response.dart">
+// lib/core/ai/ai_tool_response.dart
+
+/// Standard response contract returned by deterministic AI tools (AiTools).
+///
+/// This object serves TWO audiences:
+///
+/// 1. UI / Chat layer
+///    - `handled`: whether a tool handled the query (vs fallback)
+///    - `toolName`: stable identifier for telemetry/debugging
+///    - `answer`: human-readable response text
+///    - `debug`: optional structured payload for UI rendering
+///
+/// 2. Tool execution semantics
+///    - success/error are inferred from `handled` + `error`
+///
+/// Design goals:
+/// - Deterministic
+/// - JSON-safe
+/// - Offline-first
+/// - Telemetry-friendly
+class AiToolResponse {
+  const AiToolResponse({
+    required this.handled,
+    required this.toolName,
+    required this.answer,
+    this.debug,
+    this.error,
+  });
+
+  /// Whether a deterministic tool handled the request.
+  /// If false, caller may fallback to LLM / cloud / help text.
+  final bool handled;
+
+  /// Stable tool identifier (e.g. `encountersToday`, `intakeCopilot`).
+  final String toolName;
+
+  /// Human-readable text returned to UI / chat.
+  final String answer;
+
+  /// Optional structured payload for UI rendering, charts, ids, etc.
+  final Map<String, Object?>? debug;
+
+  /// Optional error message when tool execution failed.
+  /// If non-null, `handled` SHOULD be false.
+  final String? error;
+
+  /* ---------------- Factory helpers ---------------- */
+
+  /// Successful tool execution.
+  factory AiToolResponse.ok({
+    required String toolName,
+    required String answer,
+    Map<String, Object?>? debug,
+  }) {
+    return AiToolResponse(
+      handled: true,
+      toolName: toolName,
+      answer: answer,
+      debug: debug,
+      error: null,
+    );
+  }
+
+  /// Tool recognized the intent but failed during execution.
+  factory AiToolResponse.fail({
+    required String toolName,
+    required String message,
+    Map<String, Object?>? debug,
+  }) {
+    return AiToolResponse(
+      handled: false,
+      toolName: toolName,
+      answer: message,
+      debug: debug,
+      error: message,
+    );
+  }
+
+  /// Tool did not handle the request at all (unknown intent).
+  factory AiToolResponse.unhandled({
+    String toolName = 'unknown',
+    String answer = '',
+  }) {
+    return AiToolResponse(
+      handled: false,
+      toolName: toolName,
+      answer: answer,
+      debug: null,
+      error: null,
+    );
+  }
+
+  /* ---------------- Serialization ---------------- */
+
+  Map<String, Object?> toJson() => {
+        'handled': handled,
+        'toolName': toolName,
+        'answer': answer,
+        if (debug != null) 'debug': debug,
+        if (error != null) 'error': error,
+      };
+
+  factory AiToolResponse.fromJson(Map<String, dynamic> json) {
+    return AiToolResponse(
+      handled: json['handled'] as bool? ?? false,
+      toolName: json['toolName'] as String? ?? 'unknown',
+      answer: json['answer'] as String? ?? '',
+      debug: (json['debug'] is Map)
+          ? (json['debug'] as Map).cast<String, Object?>()
+          : null,
+      error: json['error'] as String?,
+    );
+  }
+
+  /* ---------------- Utilities ---------------- */
+
+  bool get isSuccess => handled && error == null;
+
+  AiToolResponse copyWith({
+    bool? handled,
+    String? toolName,
+    String? answer,
+    Map<String, Object?>? debug,
+    String? error,
+  }) {
+    return AiToolResponse(
+      handled: handled ?? this.handled,
+      toolName: toolName ?? this.toolName,
+      answer: answer ?? this.answer,
+      debug: debug ?? this.debug,
+      error: error ?? this.error,
+    );
+  }
+
+  @override
+  String toString() {
+    return 'AiToolResponse(handled: $handled, toolName: $toolName, answer: $answer, error: $error)';
+  }
+}
+</file>
+
+<file path="lib/core/ai/ai_tools.dart">
+// lib/core/ai/ai_tools.dart
+import 'dart:convert';
+
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:intl/intl.dart';
+import 'package:drift/drift.dart' as drift;
+import 'package:uuid/uuid.dart';
+
+import '../auth/auth_service.dart';
+import '../database/app_database.dart';
+
+import 'analytics_engine.dart';
+import 'ai_query.dart';
+import 'intake_draft.dart';
+//import 'intake_tools.dart';
+import 'ai_intent.dart';
+import 'ai_tool_response.dart';
+
+/*
+class AiToolResponse {
+  AiToolResponse({
+    required this.handled,
+    required this.toolName,
+    required this.answer,
+    this.debug,
+  });
+
+  final bool handled;
+  final String toolName;
+  final String answer;
+  final Map<String, Object?>? debug;
+}*/
+
+class AiTools {
+  /// `ref` is OPTIONAL so existing AiService(engine) continues to work.
+  /// DB-write tools (intake) will error gracefully if ref is missing.
+  //AiTools(this.engine, {Ref? ref}) : ref = ref;
+  AiTools(this.engine, {this.ref});
+  
+  final AnalyticsEngine engine;
+  final Ref? ref;
+
+  Future<AiToolResponse> run(AiQuery query) async {
+    switch (query.intent) {
+      case AiIntent.encountersThisMorning:
+        return _encountersThisMorning(query);
+      case AiIntent.encountersToday:
+        return _encountersToday(query);
+
+      case AiIntent.topChiefComplaintsToday:
+        return _topChiefComplaintsToday(query);
+
+      case AiIntent.topTriageToday:
+        return _topTriageToday(query);
+
+      case AiIntent.trends7d:
+        return _trends7d(query);
+
+      case AiIntent.intakeCopilot:
+        return _intakeAssist(query);
+
+      case AiIntent.unknown:
+        return AiToolResponse(
+          handled: false,
+          toolName: 'help',
+          answer: _helpText(),
+        );
+    }
+  }
+
+  /* ------------------------------------------------------------------
+   * ANALYTICS TOOLS
+   * ------------------------------------------------------------------ */
+
+  Future<AiToolResponse> _encountersThisMorning(AiQuery q) async {
+    final now = DateTime.now();
+    final start = DateTime(now.year, now.month, now.day, 0, 0);
+    final end = DateTime(now.year, now.month, now.day, 12, 0);
+
+    final count = await engine.countEncounters(
+      start: start,
+      end: end,
+      unitId: q.unitId,
+    );
+
+    final label = DateFormat('d MMM, HH:mm').format(end);
+    return AiToolResponse(
+      handled: true,
+      toolName: 'encounters_this_morning',
+      answer: 'Encounters this morning (until $label): **$count**',
+      debug: {
+        'start': start.toIso8601String(),
+        'end': end.toIso8601String(),
+        'unitId': q.unitId,
+      },
+    );
+  }
+
+  Future<AiToolResponse> _encountersToday(AiQuery q) async {
+    final now = DateTime.now();
+    final start = DateTime(now.year, now.month, now.day, 0, 0);
+    final end = start.add(const Duration(days: 1));
+
+    final count = await engine.countEncounters(
+      start: start,
+      end: end,
+      unitId: q.unitId,
+    );
+
+    return AiToolResponse(
+      handled: true,
+      toolName: 'encounters_today',
+      answer: 'Encounters today: **$count**',
+    );
+  }
+
+  Future<AiToolResponse> _topChiefComplaintsToday(AiQuery q) async {
+    final now = DateTime.now();
+    final start = DateTime(now.year, now.month, now.day, 0, 0);
+    final end = start.add(const Duration(days: 1));
+
+    final top = await engine.topChiefComplaints(
+      start: start,
+      end: end,
+      unitId: q.unitId,
+      limit: 5,
+    );
+
+    if (top.isEmpty) {
+      return const AiToolResponse(
+        handled: true,
+        toolName: 'top_chief_complaints_today',
+        answer: 'No chief-complaint data found for today yet.',
+      );
+    }
+
+    final lines = top.map((x) => '• ${x.label} — **${x.count}**').join('\n');
+    return AiToolResponse(
+      handled: true,
+      toolName: 'top_chief_complaints_today',
+      answer: 'Top chief complaints today:\n$lines',
+    );
+  }
+
+  Future<AiToolResponse> _topTriageToday(AiQuery q) async {
+    final now = DateTime.now();
+    final start = DateTime(now.year, now.month, now.day, 0, 0);
+    final end = start.add(const Duration(days: 1));
+
+    final top = await engine.topTriageCategories(
+      start: start,
+      end: end,
+      unitId: q.unitId,
+      limit: 5,
+    );
+
+    if (top.isEmpty) {
+      return const AiToolResponse(
+        handled: true,
+        toolName: 'top_triage_today',
+        answer: 'No triage-category data found for today yet.',
+      );
+    }
+
+    final lines = top.map((x) => '• ${x.label} — **${x.count}**').join('\n');
+    return AiToolResponse(
+      handled: true,
+      toolName: 'top_triage_today',
+      answer: 'Top triage categories today:\n$lines',
+    );
+  }
+
+  Future<AiToolResponse> _trends7d(AiQuery q) async {
+    final unitId = q.unitId;
+    if (unitId == null || unitId.isEmpty) {
+      return const AiToolResponse(
+        handled: true,
+        toolName: 'session_required',
+        answer: 'Start a Session (select a medical unit) before running trends.',
+      );
+    }
+
+    final res = await engine.trends7dByTriage(unitId: unitId);
+    final total = res.totalCounts.fold<int>(0, (a, b) => a + b);
+
+    if (total == 0) {
+      return const AiToolResponse(
+        handled: true,
+        toolName: 'trends_7d',
+        answer: 'No encounter data for the last 7 days.',
+      );
+    }
+
+    final topNames = res.byTriage.entries
+        .map((e) => MapEntry(e.key, e.value.fold<int>(0, (a, b) => a + b)))
+        .toList()
+      ..sort((a, b) => b.value.compareTo(a.value));
+
+    return AiToolResponse(
+      handled: true,
+      toolName: 'trends_7d',
+      answer:
+          'Trends (7d): Top triage — ${topNames.take(3).map((e) => e.key).join(', ')}',
+      debug: res.toJson(),
+    );
+  }
+
+  /* ------------------------------------------------------------------
+   * INTAKE TOOLS
+   * ------------------------------------------------------------------ */
+
+  Future<AiToolResponse> _intakeAssist(AiQuery q) async {
+    return const AiToolResponse(
+      handled: true,
+      toolName: 'intake_assist',
+      answer:
+          'I can help with intake. You can tell me the chief complaint, '
+          'allergies, medications, or medical history.',
+    );
+  }
+
+  Future<AiToolResponse> saveIntakeDraft(SaveIntakeDraftRequest req) async {
+    if (ref == null) {
+      return const AiToolResponse(
+        handled: false,
+        toolName: 'save_intake_draft',
+        answer: 'Internal error: AI tools not initialised with session context.',
+        debug: {'error': 'missing_ref'},
+      );
+    }
+
+    final currentUser = ref!.read(authServiceProvider).currentUser;
+    if (currentUser == null) {
+      return const AiToolResponse(
+        handled: false,
+        toolName: 'save_intake_draft',
+        answer: 'Not signed in. Please log in again.',
+        debug: {'error': 'no_current_user'},
+      );
+    }
+
+    final db = AppDatabase.instance;
+    final now = DateTime.now();
+    final eventId = const Uuid().v4();
+
+    await db.into(db.events).insert(
+      EventsCompanion.insert(
+        id: eventId,
+        encounterId: req.encounterId,
+        kind: 'DOC',
+        title: 'Intake Draft',
+        createdAt: now,
+        status: const drift.Value('draft'),
+        bodyText: drift.Value(req.draft.toNoteText()),
+        payloadJson: drift.Value(jsonEncode(req.draft.toJson())),
+        createdBy: drift.Value(currentUser.id),
+        synced: const drift.Value(0),
+        syncState: const drift.Value('pending'),
+      ),
+    );
+
+    return AiToolResponse(
+      handled: true,
+      toolName: 'save_intake_draft',
+      answer: 'Saved intake draft to timeline.',
+      debug: {
+        'eventId': eventId,
+        'encounterId': req.encounterId,
+      },
+    );
+  }
+
+  String _helpText() {
+    return 'I can answer offline analytics queries like:\n'
+        '• How many encounters today?\n'
+        '• Encounters this morning\n'
+        '• Top triage today\n'
+        '• Trends 7d';
+  }
+}
+</file>
+
+<file path="lib/core/ai/analytics_engine.dart">
+// lib/core/ai/analytics_engine.dart
+import 'dart:convert';
+
+import 'package:drift/drift.dart' as drift;
+
+import '../database/app_database.dart';
+
+/// Simple (label,count) row for "top N" analytics.
+class TopCountRow {
+  final String label;
+  final int count;
+
+  const TopCountRow({
+    required this.label,
+    required this.count,
+  });
+
+  Map<String, Object?> toJson() => {'label': label, 'count': count};
+}
+
+/// Chart-ready 7-day trend output.
+///
+/// - days: ["2026-02-01", ...]
+/// - totalCounts: [12, 9, ...]
+/// - byTriage: { "P1": [1,0, ...], "P2": [...] }
+class Trends7dResult {
+  final List<String> days;
+  final List<int> totalCounts;
+  final Map<String, List<int>> byTriage;
+
+  const Trends7dResult({
+    required this.days,
+    required this.totalCounts,
+    required this.byTriage,
+  });
+
+  Map<String, Object?> toJson() => {
+        'days': days,
+        'totalCounts': totalCounts,
+        'byTriage': byTriage,
+      };
+
+  @override
+  String toString() => jsonEncode(toJson());
+}
+
+/// DB-backed analytics queries (offline-first).
+///
+/// IMPORTANT:
+/// - Uses raw SQL via drift.customSelect for portability.
+/// - SQL assumes drift default table/column naming:
+///   encounters.patient_id, encounters.unit_id, encounters.triage_category, etc.
+///
+/// If your generated SQL names differ, adjust the SQL strings only
+/// (the Dart API can remain stable).
+class AnalyticsEngine {
+  final AppDatabase db;
+
+  AnalyticsEngine(this.db);
+
+  // ---------------------------------------------------------------------------
+  // Encounters
+  // ---------------------------------------------------------------------------
+
+  Future<int> countEncounters({
+    required DateTime start,
+    required DateTime end,
+    String? unitId,
+  }) async {
+    final rows = await db.customSelect(
+      '''
+      SELECT COUNT(*) AS c
+      FROM encounters
+      WHERE start_at >= ?1 AND start_at < ?2
+        AND (?3 IS NULL OR ?3 = '' OR unit_id = ?3)
+      ''',
+      variables: [
+        drift.Variable.withDateTime(start),
+        drift.Variable.withDateTime(end),
+        drift.Variable.withString(unitId ?? ''),
+      ],
+      readsFrom: {db.encounters},
+    ).getSingle();
+
+    final v = rows.data['c'];
+    return (v is int) ? v : int.tryParse('$v') ?? 0;
+  }
+
+  Future<List<TopCountRow>> topChiefComplaints({
+    required DateTime start,
+    required DateTime end,
+    String? unitId,
+    int limit = 5,
+  }) async {
+    final rows = await db.customSelect(
+      '''
+      SELECT
+        COALESCE(NULLIF(TRIM(chief_complaint), ''), '(empty)') AS label,
+        COUNT(*) AS c
+      FROM encounters
+      WHERE start_at >= ?1 AND start_at < ?2
+        AND (?3 IS NULL OR ?3 = '' OR unit_id = ?3)
+      GROUP BY COALESCE(NULLIF(TRIM(chief_complaint), ''), '(empty)')
+      ORDER BY c DESC
+      LIMIT ?4
+      ''',
+      variables: [
+        drift.Variable.withDateTime(start),
+        drift.Variable.withDateTime(end),
+        drift.Variable.withString(unitId ?? ''),
+        drift.Variable.withInt(limit),
+      ],
+      readsFrom: {db.encounters},
+    ).get();
+
+    return rows.map((r) {
+      final d = r.data;
+      final label = (d['label'] as String?) ?? '(empty)';
+      final cRaw = d['c'];
+      final c = (cRaw is int) ? cRaw : int.tryParse('$cRaw') ?? 0;
+      return TopCountRow(label: label, count: c);
+    }).toList();
+  }
+
+  Future<List<TopCountRow>> topTriageCategories({
+    required DateTime start,
+    required DateTime end,
+    String? unitId,
+    int limit = 5,
+  }) async {
+    final rows = await db.customSelect(
+      '''
+      SELECT
+        COALESCE(NULLIF(TRIM(triage_category), ''), '(empty)') AS label,
+        COUNT(*) AS c
+      FROM encounters
+      WHERE start_at >= ?1 AND start_at < ?2
+        AND (?3 IS NULL OR ?3 = '' OR unit_id = ?3)
+      GROUP BY COALESCE(NULLIF(TRIM(triage_category), ''), '(empty)')
+      ORDER BY c DESC
+      LIMIT ?4
+      ''',
+      variables: [
+        drift.Variable.withDateTime(start),
+        drift.Variable.withDateTime(end),
+        drift.Variable.withString(unitId ?? ''),
+        drift.Variable.withInt(limit),
+      ],
+      readsFrom: {db.encounters},
+    ).get();
+
+    return rows.map((r) {
+      final d = r.data;
+      final label = (d['label'] as String?) ?? '(empty)';
+      final cRaw = d['c'];
+      final c = (cRaw is int) ? cRaw : int.tryParse('$cRaw') ?? 0;
+      return TopCountRow(label: label, count: c);
+    }).toList();
+  }
+
+  // ---------------------------------------------------------------------------
+  // Trends (7d)
+  // ---------------------------------------------------------------------------
+
+  /// Returns 7-day trend series (inclusive of today), grouped by day + triage.
+  ///
+  /// The output is chart-ready:
+  /// - `days` is the canonical x-axis ordering
+  /// - `totalCounts[i]` aligns with `days[i]`
+  /// - `byTriage[k][i]` aligns with `days[i]`
+  Future<Trends7dResult> trends7dByTriage({required String unitId}) async {
+    final now = DateTime.now();
+    final todayStart = DateTime(now.year, now.month, now.day);
+    final start = todayStart.subtract(const Duration(days: 6));
+    final end = todayStart.add(const Duration(days: 1));
+
+    // Build canonical day keys for the x-axis
+    final days = List<String>.generate(7, (i) {
+      final d = start.add(Duration(days: i));
+      return _dayKey(d);
+    });
+
+    // Initialize series
+    final totalCounts = List<int>.filled(7, 0);
+    final byTriage = <String, List<int>>{};
+
+    // SQLite day grouping: date(start_at) returns "YYYY-MM-DD"
+    final rows = await db.customSelect(
+      '''
+      SELECT
+        date(start_at) AS day,
+        COALESCE(NULLIF(TRIM(triage_category), ''), '(empty)') AS triage,
+        COUNT(*) AS c
+      FROM encounters
+      WHERE start_at >= ?1 AND start_at < ?2
+        AND unit_id = ?3
+      GROUP BY day, triage
+      ORDER BY day ASC
+      ''',
+      variables: [
+        drift.Variable.withDateTime(start),
+        drift.Variable.withDateTime(end),
+        drift.Variable.withString(unitId),
+      ],
+      readsFrom: {db.encounters},
+    ).get();
+
+    for (final r in rows) {
+      final d = r.data;
+      final day = (d['day'] as String?) ?? '';
+      final triage = (d['triage'] as String?) ?? '(empty)';
+      final cRaw = d['c'];
+      final c = (cRaw is int) ? cRaw : int.tryParse('$cRaw') ?? 0;
+
+      final idx = days.indexOf(day);
+      if (idx < 0) continue;
+
+      totalCounts[idx] += c;
+
+      final series = byTriage.putIfAbsent(triage, () => List<int>.filled(7, 0));
+      series[idx] += c;
+    }
+
+    return Trends7dResult(
+      days: days,
+      totalCounts: totalCounts,
+      byTriage: byTriage,
+    );
+  }
+
+  // ---------------------------------------------------------------------------
+  // Session / Units
+  // ---------------------------------------------------------------------------
+
+  /// Returns units assigned to a user (for SessionContext selection).
+  ///
+  /// Assumes tables:
+  /// - user_units(user_id, unit_id)
+  /// - units(id, name, ...)
+  Future<List<Unit>> unitsForUser(String userId) async {
+    // Prefer typed drift query if you already have relations set up,
+    // but raw SQL keeps it robust across schema changes.
+    final rows = await db.customSelect(
+      '''
+      SELECT u.*
+      FROM units u
+      JOIN user_units uu ON uu.unit_id = u.id
+      WHERE uu.user_id = ?1
+      ORDER BY u.name ASC
+      ''',
+      variables: [drift.Variable.withString(userId)],
+      readsFrom: {db.units, db.userUnits},
+    ).get();
+
+    // Convert QueryRow → Unit data class via generated mapping.
+    // We re-select by IDs to keep it type-safe without relying on internal mappers.
+    final ids = rows
+        .map((r) => r.data['id'] as String?)
+        .whereType<String>()
+        .toList();
+
+    if (ids.isEmpty) return [];
+
+    return (db.select(db.units)..where((t) => t.id.isIn(ids))).get();
+  }
+
+  // ---------------------------------------------------------------------------
+  // Helpers
+  // ---------------------------------------------------------------------------
+
+  String _dayKey(DateTime d) {
+    // "YYYY-MM-DD"
+    final y = d.year.toString().padLeft(4, '0');
+    final m = d.month.toString().padLeft(2, '0');
+    final dd = d.day.toString().padLeft(2, '0');
+    return '$y-$m-$dd';
+  }
+}
+</file>
+
+<file path="lib/core/ai/intake_draft.dart">
+// lib/core/ai/intake_draft.dart
+
+class IntakeDraft {
+  final String? fullName;
+  final String? nric;
+  final String? address;
+  final String? phone;
+  final String? allergies;
+
+  const IntakeDraft({
+    this.fullName,
+    this.nric,
+    this.address,
+    this.phone,
+    this.allergies,
+  });
+  
+
+  // ---------------------------------------------------------------------------
+  // Merge helper (useful when LLM returns partial fields)
+  // ---------------------------------------------------------------------------
+
+  IntakeDraft merge(IntakeDraft other) {
+    return IntakeDraft(
+      fullName: other.fullName ?? fullName,
+      nric: other.nric ?? nric,
+      address: other.address ?? address,
+      phone: other.phone ?? phone,
+      allergies: other.allergies ?? allergies,
+    );
+  }
+
+  // ---------------------------------------------------------------------------
+  // Validation helpers
+  // ---------------------------------------------------------------------------
+
+  bool get hasAnyField =>
+      (fullName?.trim().isNotEmpty ?? false) ||
+      (nric?.trim().isNotEmpty ?? false) ||
+      (address?.trim().isNotEmpty ?? false) ||
+      (phone?.trim().isNotEmpty ?? false) ||
+      (allergies?.trim().isNotEmpty ?? false);
+
+  bool get isComplete =>
+      (fullName?.trim().isNotEmpty ?? false) &&
+      (nric?.trim().isNotEmpty ?? false) &&
+      (address?.trim().isNotEmpty ?? false);
+
+  // ---------------------------------------------------------------------------
+  // Serialization
+  // ---------------------------------------------------------------------------
+
+  Map<String, Object?> toJson() => {
+        'fullName': fullName,
+        'nric': nric,
+        'address': address,
+        'phone': phone,
+        'allergies': allergies,
+      };
+
+  factory IntakeDraft.fromJson(Map<String, dynamic> json) {
+    return IntakeDraft(
+      fullName: json['fullName'] as String?,
+      nric: json['nric'] as String?,
+      address: json['address'] as String?,
+      phone: json['phone'] as String?,
+      allergies: json['allergies'] as String?,
+    );
+  }
+
+  /// Converts intake data into readable note body
+  /// (used for Events.bodyText for quick display)
+  String toNoteText() {
+    final lines = <String>[];
+
+    if (fullName?.trim().isNotEmpty ?? false) {
+      lines.add('Full name: $fullName');
+    }
+    if (nric?.trim().isNotEmpty ?? false) {
+      lines.add('NRIC: $nric');
+    }
+    if (address?.trim().isNotEmpty ?? false) {
+      lines.add('Address: $address');
+    }
+    if (phone?.trim().isNotEmpty ?? false) {
+      lines.add('Phone: $phone');
+    }
+    if (allergies?.trim().isNotEmpty ?? false) {
+      lines.add('Allergies: $allergies');
+    }
+
+    return lines.join('\n');
+  }
+
+  // ---------------------------------------------------------------------------
+  // Deterministic free-text parsing (MVP offline parser)
+  // ---------------------------------------------------------------------------
+
+  factory IntakeDraft.fromFreeText(String input) {
+    final t = input.trim();
+
+    // 1️⃣ NRIC (12 consecutive digits)
+    final nricMatch = RegExp(r'(\d{12})').firstMatch(t);
+    final nric = nricMatch?.group(1);
+
+    // 2️⃣ Phone (Malaysia tolerant pattern)
+    final phoneMatch =
+        RegExp(r'(\+?6?0?1\d[\d\- ]{7,10})').firstMatch(t);
+    final phone = phoneMatch
+        ?.group(1)
+        ?.replaceAll(RegExp(r'[^0-9+]'), '');
+
+    // 3️⃣ Allergies keyword detection
+    String? allergies;
+    final allergyMatch = RegExp(
+      r'(allergy|allergic|alahan)\s*[:\-]?\s*([^,;\n]+)',
+      caseSensitive: false,
+    ).firstMatch(t);
+    if (allergyMatch != null) {
+      allergies = allergyMatch.group(2)?.trim();
+    }
+
+    // 4️⃣ Address keyword detection
+    String? address;
+    final addrMatch = RegExp(
+      r'(address|alamat)\s*[:\-]?\s*([^;\n]+)',
+      caseSensitive: false,
+    ).firstMatch(t);
+    if (addrMatch != null) {
+      address = addrMatch.group(2)?.trim();
+    }
+
+    // 5️⃣ Name keyword detection
+    String? fullName;
+    final nameMatch = RegExp(
+      r'(name|nama)\s*[:\-]?\s*([^,;\n]+)',
+      caseSensitive: false,
+    ).firstMatch(t);
+    if (nameMatch != null) {
+      fullName = nameMatch.group(2)?.trim();
+    }
+
+    return IntakeDraft(
+      fullName: fullName,
+      nric: nric,
+      address: address,
+      phone: phone,
+      allergies: allergies,
+    );
+  }
+
+  @override
+  String toString() {
+    return 'IntakeDraft(fullName: $fullName, nric: $nric, '
+        'address: $address, phone: $phone, allergies: $allergies)';
+  }
+}
+
+class SaveIntakeDraftRequest {
+  final String encounterId;
+  final IntakeDraft draft;
+
+  final String? unitId;
+  final String? authorUserId;
+
+  const SaveIntakeDraftRequest({
+    required this.encounterId,
+    required this.draft,
+    this.unitId,
+    this.authorUserId,
+  });
+
+  Map<String, Object?> toJson() => {
+        'encounterId': encounterId,
+        'draft': draft.toJson(),
+        if (unitId != null) 'unitId': unitId,
+        if (authorUserId != null) 'authorUserId': authorUserId,
+      };
+}
+</file>
+
+<file path="lib/core/ai/intake_tools.dart">
+// lib/core/ai/intake_tools.dart
+import 'dart:convert';
+
+import 'ai_tool_response.dart';
+import 'time_range.dart';
+
+/// IntakeTools
+///
+/// Deterministic extraction helpers for Intake Copilot.
+/// These tools MUST return structured, non-hallucinatory output.
+/// If data is missing, fields must be null or empty.
+class IntakeTools {
+  /// Extract structured intake information from free text.
+  ///
+  /// Expected use:
+  /// - chief complaint intake
+  /// - triage note parsing
+  /// - walk-in registration assistance
+  static AiToolResponse extractIntake(String rawText) {
+    if (rawText.trim().isEmpty) {
+        return AiToolResponse.fail(
+        toolName: 'intakeCopilot',
+        message: 'Empty intake text',
+      );
+    }
+
+    final Map<String, dynamic> result = {
+      'chiefComplaint': null,
+      'onset': null,
+      'duration': null,
+      'severity': null,
+      'associatedSymptoms': <String>[],
+      'redFlags': <String>[],
+      'notes': null,
+    };
+
+    // VERY conservative heuristics.
+    // This keeps behavior deterministic and safe offline.
+    final lower = rawText.toLowerCase();
+
+    if (lower.contains('pain')) {
+      result['chiefComplaint'] = 'Pain';
+    }
+
+    if (lower.contains('fever')) {
+      (result['associatedSymptoms'] as List).add('Fever');
+    }
+
+    if (lower.contains('bleeding') || lower.contains('collapse')) {
+      (result['redFlags'] as List).add('Potential emergency symptom');
+    }
+
+    result['notes'] = rawText.trim();
+
+    return AiToolResponse.ok(
+      toolName: 'intakeCopilot',
+      answer: 'Intake information extracted.',
+      debug: result,
+    );
+  }
+
+  /// Normalize a time-related phrase into a TimeRange.
+  ///
+  /// Example:
+  /// - "this morning"
+  /// - "today"
+  /// - "last 7 days"
+  static TimeRange? parseTimeRange(String text) {
+    final lower = text.toLowerCase();
+
+    if (lower.contains('this morning')) {
+      return TimeRange.thisMorning();
+    }
+
+    if (lower.contains('today')) {
+      return TimeRange.today();
+    }
+
+    if (lower.contains('7 days') || lower.contains('week')) {
+      return TimeRange.lastDays(7);
+    }
+
+    return null;
+  }
+
+  /// Helper for strict JSON parsing from LLM output.
+  ///
+  /// This should be used when you later wire GGUF inference.
+  static Map<String, dynamic>? safeParseJson(String raw) {
+    try {
+      final decoded = jsonDecode(raw);
+      if (decoded is Map<String, dynamic>) {
+        return decoded;
+      }
+      return null;
+    } catch (_) {
+      return null;
+    }
+  }
+}
+</file>
+
+<file path="lib/core/ai/model_downloader.dart">
+// lib/core/ai/model_downloader.dart
+
+import 'dart:async';
+import 'dart:io';
+
+import 'package:crypto/crypto.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:http/http.dart' as http;
+import 'package:logger/logger.dart';
+import 'package:path/path.dart' as p;
+import 'package:path_provider/path_provider.dart';
+
+class ModelDownloader extends StatefulWidget {
+  final String modelUrl;
+  final String modelFileName;
+  final String expectedSha256;
+  final int expectedSize;
+  final String id;
+  final String version;
+
+  final VoidCallback onComplete;
+  final void Function(String error)? onError; // Optional enhanced error callback
+
+  const ModelDownloader({
+    super.key,
+    required this.modelUrl,
+    required this.modelFileName,
+    required this.expectedSha256,
+    required this.expectedSize,
+    required this.id,
+    required this.version,
+    required this.onComplete,
+    this.onError,
+  });
+
+  @override
+  State<ModelDownloader> createState() => _ModelDownloaderState();
+}
+
+class _ModelDownloaderState extends State<ModelDownloader> {
+  final Logger _logger = Logger();
+  static const _methodChannel = MethodChannel('com.yourapp/modelmanager'); // Must match AppDelegate.swift
+
+  double _progress = 0.0;
+  String _status = 'Ready';
+  bool _isDownloading = false;
+  bool _isCancelled = false;
+  String? _error;
+
+  Future<String> _getModelPath() async {
+    final dir = await getApplicationSupportDirectory(); // Better than Documents for large assets
+    return p.join(dir.path, widget.modelFileName);
+  }
+
+  Future<void> _startDownload() async {
+    if (_isDownloading) return;
+
+    setState(() {
+      _isDownloading = true;
+      _isCancelled = false;
+      _status = 'Connecting...';
+      _error = null;
+      _progress = 0.0;
+    });
+
+    http.Client? client;
+    RandomAccessFile? sink;
+    try {
+      final modelPath = await _getModelPath();
+      final file = File(modelPath);
+      var startByte = 0;
+
+      if (await file.exists()) {
+        startByte = await file.length();
+        if (startByte > 0) {
+          _logger.i('Partial file found: $startByte bytes - attempting resume');
+          setState(() => _status = 'Resuming from ${(startByte / (1024 * 1024)).toStringAsFixed(1)} MB');
+        }
+      }
+
+      // Head request for total size and resume support
+      final headResponse = await http.head(Uri.parse(widget.modelUrl));
+      final totalBytes = int.tryParse(headResponse.headers['content-length'] ?? '') ?? widget.expectedSize;
+      final acceptsRanges = headResponse.headers['accept-ranges'] == 'bytes';
+
+      if (startByte >= totalBytes && totalBytes > 0) {
+        setState(() {
+          _progress = 1.0;
+          _status = 'Already complete - verifying...';
+        });
+        await _verifyAndFinalize(modelPath);
+        return;
+      }
+
+      client = http.Client();
+      final request = http.Request('GET', Uri.parse(widget.modelUrl));
+
+      if (startByte > 0 && acceptsRanges) {
+        request.headers['Range'] = 'bytes=$startByte-';
+        _logger.i('Requesting resume from byte $startByte');
+      }
+
+      var streamedResponse = await client.send(request);
+
+      // Handle range not satisfiable - restart from beginning
+      if (streamedResponse.statusCode == 416 && startByte > 0) {
+        _logger.w('Server rejected range - restarting from beginning');
+        await file.delete();
+        startByte = 0;
+        final newRequest = http.Request('GET', Uri.parse(widget.modelUrl));
+        streamedResponse = await client.send(newRequest);
+      }
+
+      if (streamedResponse.statusCode != 200 && streamedResponse.statusCode != 206) {
+        throw Exception('HTTP ${streamedResponse.statusCode}');
+      }
+
+      sink = await file.open(mode: startByte > 0 ? FileMode.append : FileMode.write);
+      var received = startByte;
+
+      await for (final chunk in streamedResponse.stream) {
+        if (_isCancelled) {
+          throw Exception('Download cancelled by user');
+        }
+        await sink.writeFrom(chunk);
+        received += chunk.length;
+
+        if (totalBytes > 0) {
+          setState(() {
+            _progress = received / totalBytes;
+            _status = 'Downloading: ${(received / (1024 * 1024)).toStringAsFixed(1)} MB '
+                '/ ${(totalBytes / (1024 * 1024)).toStringAsFixed(1)} MB';
+          });
+        }
+      }
+
+      setState(() {
+        _progress = 1.0;
+        _status = 'Download complete - verifying...';
+      });
+
+      await _verifyAndFinalize(modelPath);
+    } catch (e) {
+      if (!_isCancelled) {
+        setState(() {
+          _error = e.toString();
+          _status = 'Failed - tap Retry';
+        });
+        _logger.e('Download error: $e');
+        widget.onError?.call(e.toString());
+      }
+    } finally {
+      await sink?.close();
+      client?.close();
+      setState(() => _isDownloading = false);
+    }
+  }
+
+  Future<void> _verifyAndFinalize(String path) async {
+    final file = File(path);
+
+    // Size check
+    final actualSize = await file.length();
+    if (actualSize != widget.expectedSize) {
+      throw Exception('Size mismatch: expected ${widget.expectedSize}, got $actualSize');
+    }
+
+    // SHA-256 check (slow on large files - consider optional or background)
+    setState(() => _status = 'Computing SHA-256...');
+    final computedHash = await _computeSha256(file);
+    if (computedHash != widget.expectedSha256.toLowerCase()) {
+      throw Exception('SHA-256 mismatch');
+    }
+
+    // iOS do-not-backup flag
+    if (Platform.isIOS) {
+      await _methodChannel.invokeMethod('setDoNotBackup', {'path': path});
+    }
+
+    setState(() => _status = 'Verified & ready!');
+    widget.onComplete();
+  }
+
+  Future<String> _computeSha256(File file) async {
+    final stream = file.openRead();
+    final digest = await sha256.bind(stream).first;
+    return digest.toString();
+  }
+
+  void _cancelDownload() {
+    setState(() {
+      _isCancelled = true;
+      _isDownloading = false;
+      _status = 'Cancelled';
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('Offline AI Model Setup')),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Icon(Icons.cloud_download, size: 80, color: Colors.blue),
+            const SizedBox(height: 24),
+            const Text(
+              'One-time download of offline AI model (~2.3 GB) for rural use.',
+              textAlign: TextAlign.center,
+              style: TextStyle(fontSize: 18),
+            ),
+            const SizedBox(height: 32),
+            LinearProgressIndicator(value: _progress > 0 ? _progress : null),
+            const SizedBox(height: 16),
+            Text(_status, textAlign: TextAlign.center),
+            if (_error != null)
+              Padding(
+                padding: const EdgeInsets.only(top: 16),
+                child: Text('Error: $_error', style: const TextStyle(color: Colors.red)),
+              ),
+            const SizedBox(height: 32),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton(
+                  onPressed: _isDownloading ? null : _startDownload,
+                  child: Text(_isDownloading ? 'Downloading...' : 'Start / Resume'),
+                ),
+                const SizedBox(width: 16),
+                if (_isDownloading)
+                  ElevatedButton(
+                    onPressed: _cancelDownload,
+                    style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
+                    child: const Text('Cancel'),
+                  ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+</file>
+
+<file path="lib/core/ai/model_manager.dart">
+import 'dart:async';
+import 'dart:convert';
+import 'dart:io';
+
+import 'package:crypto/crypto.dart';
+import 'package:dio/dio.dart';
+import 'package:file_picker/file_picker.dart';
+import 'package:flutter/services.dart' show MethodChannel, rootBundle;
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:path/path.dart' as p;
+import 'package:path_provider/path_provider.dart';
+import 'package:flutter/foundation.dart';
+
+class ModelInfo {
+  final String id;
+  final String version;
+  final String sha256;
+  final int size;
+  final String path;
+
+  ModelInfo({
+    required this.id,
+    required this.version,
+    required this.sha256,
+    required this.size,
+    required this.path,
+  });
+
+  Map<String, dynamic> toJson() => {
+        'id': id,
+        'version': version,
+        'sha256': sha256,
+        'size': size,
+        'path': path,
+      };
+
+  factory ModelInfo.fromJson(Map<String, dynamic> json) => ModelInfo(
+        id: json['id'],
+        version: json['version'],
+        sha256: json['sha256'],
+        size: json['size'],
+        path: json['path'],
+      );
+}
+
+class ModelManager extends StateNotifier<AsyncValue<ModelInfo?>> {
+  ModelManager() : super(const AsyncLoading()) {
+    _init();
+  }
+
+  static const _methodChannel = MethodChannel('com.yourapp/modelmanager'); // Must match AppDelegate.swift
+  late Directory _appDir;
+  late String _manifestPath;
+  ModelInfo? _currentModel;
+  CancelToken? _cancelToken;
+
+  // Exposed for UI progress bar
+  double downloadProgress = 0.0;
+
+  Future<void> _init() async {
+    try {
+      _appDir = await getApplicationSupportDirectory();
+      _manifestPath = p.join(_appDir.path, 'model_manifest.json');
+      await _loadManifest();
+
+      // Auto-preload bundled model if present and no manifest exists
+      if (_currentModel == null) {
+        await _preloadBundledModelIfAvailable();
+      }
+    } catch (e, stack) {
+      state = AsyncError(e, stack);
+    }
+  }
+
+  Future<void> _loadManifest() async {
+    final file = File(_manifestPath);
+    if (await file.exists()) {
+      final json = jsonDecode(await file.readAsString());
+      _currentModel = ModelInfo.fromJson(json);
+      if (await File(_currentModel!.path).exists()) {
+        state = AsyncData(_currentModel);
+        return;
+      }
+    }
+    state = const AsyncData(null);
+  }
+
+  // Optional auto-preload from assets (great for dev/testing with your large bundled GGUF)
+  Future<void> _preloadBundledModelIfAvailable() async {
+    const bundledAssetPath = 'assets/model/Llama-3.2-3B-Instruct-Q5_K_M.gguf'; // Match your pubspec assets entry
+    try {
+      final byteData = await rootBundle.load(bundledAssetPath);
+      final targetPath = p.join(_appDir.path, 'Llama-3.2-3B-Instruct-Q5_K_M.gguf');
+      final file = File(targetPath);
+      await file.writeAsBytes(byteData.buffer.asUint8List());
+
+      // Bundled model is trusted — skip full verification, but set do-not-backup
+      if (Platform.isIOS) {
+        await _methodChannel.invokeMethod('setDoNotBackup', {'path': targetPath});
+      }
+
+      // Hardcoded metadata (update SHA256/size if you want strict check later)
+      // You can compute real SHA256 in Terminal: shasum -a 256 path/to/your.gguf
+      // Example placeholder values — replace with real ones for production
+      _currentModel = ModelInfo(
+        id: 'llama-3.2-3b-instruct',
+        version: 'q5_k_m',
+        sha256: 'replace_with_actual_sha256_if_verifying', // Optional: leave as placeholder if skipping check
+        size: byteData.lengthInBytes,
+        path: targetPath,
+      );
+
+      await File(_manifestPath).writeAsString(jsonEncode(_currentModel!.toJson()));
+      state = AsyncData(_currentModel);
+    } catch (e) {
+      // No bundled asset or error — ignore and stay in "missing" state
+      debugPrint('No bundled model found or preload failed: $e');
+    }
+  }
+
+  Future<void> downloadModel({
+    required String url,
+    required String expectedSha256,
+    required String id,
+    required String version,
+    required int expectedSize,
+  }) async {
+    state = const AsyncLoading();
+    downloadProgress = 0.0;
+    _cancelToken = CancelToken();
+
+    try {
+      final modelPath = p.join(_appDir.path, 'model_$id.gguf');
+      await Dio().download(
+        url,
+        modelPath,
+        cancelToken: _cancelToken,
+        onReceiveProgress: (received, total) {
+          if (total > 0) {
+            downloadProgress = received / total;
+            state = const AsyncLoading(); // Notify UI of progress
+          }
+        },
+      );
+
+      await _verifyAndSave(modelPath, expectedSha256, expectedSize, id, version);
+    } on DioException catch (e) {
+      if (CancelToken.isCancel(e)) {
+        state = const AsyncData(null);
+      } else {
+        state = AsyncError(e, StackTrace.current);
+      }
+    } catch (e) {
+      state = AsyncError(e, StackTrace.current);
+    }
+  }
+
+  Future<void> _verifyAndSave(String path, String expectedSha256, int expectedSize, String id, String version) async {
+    final file = File(path);
+
+    // Size check
+    if (await file.length() != expectedSize) {
+      throw Exception('File size mismatch');
+    }
+
+    // SHA-256 check (slow on large files — optional in production if trusted source)
+    final computedHash = await _computeSha256(file);
+    if (computedHash != expectedSha256.toLowerCase()) {
+      throw Exception('SHA-256 mismatch');
+    }
+
+    // iOS do-not-backup
+    if (Platform.isIOS) {
+      await _methodChannel.invokeMethod('setDoNotBackup', {'path': path});
+    }
+
+    _currentModel = ModelInfo(
+      id: id,
+      version: version,
+      sha256: expectedSha256,
+      size: expectedSize,
+      path: path,
+    );
+    await File(_manifestPath).writeAsString(jsonEncode(_currentModel!.toJson()));
+    state = AsyncData(_currentModel);
+  }
+
+  Future<String> _computeSha256(File file) async {
+    final stream = file.openRead();
+    final digest = await sha256.bind(stream).first;
+    return digest.toString();
+  }
+
+  // Import from file picker (verification required — fill in known values or temporarily comment checks)
+  Future<void> importModel() async {
+    state = const AsyncLoading();
+    final result = await FilePicker.platform.pickFiles(type: FileType.any);
+    if (result == null || result.files.isEmpty) {
+      state = AsyncData(_currentModel);
+      return;
+    }
+
+    final pickedPath = result.files.single.path!;
+    final fileName = p.basename(pickedPath);
+    final newPath = p.join(_appDir.path, fileName);
+    await File(pickedPath).copy(newPath);
+
+    // TODOFor your Llama-3.2-3B file, replace these with real values
+    // SHA256: Run in Terminal → shasum -a 256 /path/to/Llama-3.2-3B-Instruct-Q5_K_M.gguf
+    // Size: Get Info in Finder → exact bytes
+    try {
+      await _verifyAndSave(
+        newPath,
+        'replace_with_actual_sha256', // e.g., 'a1b2c3d4e5...'
+        1234567890, // e.g., 2823456789
+        'llama-3.2-3b-instruct',
+        'q5_k_m',
+      );
+    } catch (e) {
+      // For quick testing, you can temporarily bypass verification here
+      state = AsyncError(e, StackTrace.current);
+    }
+  }
+
+  Future<void> deleteModel() async {
+    if (_currentModel == null) return;
+    await File(_currentModel!.path).delete();
+    await File(_manifestPath).delete();
+    _currentModel = null;
+    state = const AsyncData(null);
+  }
+
+  void cancelDownload() {
+    _cancelToken?.cancel();
+  }
+}
+
+// Riverpod provider
+final modelManagerProvider = StateNotifierProvider<ModelManager, AsyncValue<ModelInfo?>>((ref) => ModelManager());
+</file>
+
+<file path="lib/core/ai/model_store.dart">
+// lib/core/ai/model_store.dart
+//
+// Offline-first GGUF model management:
+// - Stores model outside APK/IPA (in Application Support dir)
+// - Downloads via streamed HTTP (no huge RAM spikes)
+// - Verifies SHA-256 integrity (optional but strongly recommended)
+// - Supports simple progress reporting
+//
+// Requires pubspec.yaml:
+//   dependencies:
+//     http: ^1.2.2
+//     path: ^1.9.0
+//     path_provider: ^2.1.3
+//     crypto: ^3.0.3
+//
+// Notes:
+// - Use Application Support (not Documents) for “app-internal assets”.
+// - The model can be delivered via:
+//   a) signed URL (recommended), or
+//   b) MDM/IT copy into the directory (then ensureModelReady just verifies).
+//
+// Usage (example):
+//   final store = ModelStore(
+//     modelFileName: 'Llama-3.2-3B-Instruct-Q5_K_M.gguf',
+//     downloadUrl: '<SIGNED_URL>',
+//     sha256Hex: '<EXPECTED_SHA256_HEX>',
+//   );
+//   final path = await store.ensureModelReady(
+//     onProgress: (p) => debugPrint('download: ${(p * 100).toStringAsFixed(1)}%'),
+//   );
+
+import 'dart:async';
+import 'dart:io';
+
+import 'package:crypto/crypto.dart';
+import 'package:flutter/foundation.dart';
+import 'package:http/http.dart' as http;
+import 'package:path/path.dart' as p;
+import 'package:path_provider/path_provider.dart';
+
+typedef ProgressCallback = void Function(double progress0to1);
+
+class ModelStoreException implements Exception {
+  ModelStoreException(this.message, {this.cause});
+  final String message;
+  final Object? cause;
+
+  @override
+  String toString() =>
+      'ModelStoreException: $message${cause == null ? '' : ' ($cause)'}';
+}
+
+class ModelStore {
+  ModelStore({
+    required this.modelFileName,
+    this.downloadUrl,
+    this.sha256Hex,
+    http.Client? httpClient,
+    this.subdir = 'models',
+  }) : _http = httpClient ?? http.Client();
+
+  /// Filename on disk (e.g. Llama-3.2-3B-Instruct-Q5_K_M.gguf)
+  final String modelFileName;
+
+  /// Optional remote URL. Prefer short-lived signed URL (or MDM).
+  final String? downloadUrl;
+
+  /// Optional integrity check (hex string, lowercase recommended).
+  /// If provided, the store verifies file integrity after download and on reuse.
+  final String? sha256Hex;
+
+  /// Subdirectory under Application Support dir.
+  final String subdir;
+
+  final http.Client _http;
+
+  /// Close HTTP client when you're done (or rely on provider dispose).
+  void dispose() => _http.close();
+
+  /// Returns the directory where models are stored.
+  Future<Directory> _modelDir() async {
+    final base = await getApplicationSupportDirectory();
+    final dir = Directory(p.join(base.path, subdir));
+    if (!await dir.exists()) {
+      await dir.create(recursive: true);
+    }
+    return dir;
+  }
+
+  /// Returns the full path to the model file location.
+  Future<String> modelPath() async {
+    final dir = await _modelDir();
+    return p.join(dir.path, modelFileName);
+  }
+
+  /// Checks if the model exists (and passes sha256 if configured).
+  Future<bool> isModelReady() async {
+    final path = await modelPath();
+    final f = File(path);
+    if (!await f.exists()) return false;
+
+    if (sha256Hex != null && sha256Hex!.trim().isNotEmpty) {
+      final ok = await _verifySha256File(f, sha256Hex!.trim());
+      return ok;
+    }
+    return true;
+  }
+
+  /// Ensure model is available locally and (optionally) verified.
+  ///
+  /// Returns the model file path if ready, otherwise throws.
+  ///
+  /// - If file exists and verifies: returns path.
+  /// - If missing and downloadUrl present: downloads to a temp file, verifies,
+  ///   then atomically renames.
+  /// - If missing and no downloadUrl: throws.
+  Future<String> ensureModelReady({
+    ProgressCallback? onProgress,
+    Duration timeout = const Duration(minutes: 30),
+    bool deleteCorruptFile = true,
+  }) async {
+    final path = await modelPath();
+    final f = File(path);
+
+    // 1) If exists, verify (optional) and return.
+    if (await f.exists()) {
+      if (await _verifyIfNeeded(f, deleteCorruptFile: deleteCorruptFile)) {
+        return path;
+      }
+      // If verification failed and deleteCorruptFile=false, we fall through.
+    }
+
+    // 2) If missing, must have downloadUrl.
+    final url = downloadUrl;
+    if (url == null || url.trim().isEmpty) {
+      throw ModelStoreException(
+        'Model file not found locally and no downloadUrl provided.',
+      );
+    }
+
+    // 3) Download to temp file and atomically move.
+    final dir = await _modelDir();
+    final tmpPath = p.join(dir.path, '.$modelFileName.download');
+    final tmpFile = File(tmpPath);
+
+    // Cleanup any previous partial download.
+    if (await tmpFile.exists()) {
+      try {
+        await tmpFile.delete();
+      } catch (_) {/* ignore */}
+    }
+
+    await _downloadFileStreamed(
+      url: url,
+      outFile: tmpFile,
+      onProgress: onProgress,
+      timeout: timeout,
+    );
+
+    // 4) Verify downloaded file if expected hash is provided.
+    if (sha256Hex != null && sha256Hex!.trim().isNotEmpty) {
+      final ok = await _verifySha256File(tmpFile, sha256Hex!.trim());
+      if (!ok) {
+        try {
+          await tmpFile.delete();
+        } catch (_) {/* ignore */}
+        throw ModelStoreException('SHA-256 verification failed after download.');
+      }
+    }
+
+    // 5) Atomically replace target.
+    try {
+      // Ensure parent dir exists (already created).
+      if (await f.exists()) {
+        await f.delete();
+      }
+      await tmpFile.rename(path);
+    } catch (e) {
+      // If rename fails across filesystems, fallback to copy+delete.
+      try {
+        await tmpFile.copy(path);
+        await tmpFile.delete();
+      } catch (e2) {
+        throw ModelStoreException(
+          'Failed to finalize model file.',
+          cause: e2,
+        );
+      }
+    }
+
+    return path;
+  }
+
+  /// Deletes the stored model file (useful for reset / force upgrade).
+  Future<void> deleteModelIfExists() async {
+    final path = await modelPath();
+    final f = File(path);
+    if (await f.exists()) {
+      await f.delete();
+    }
+  }
+
+  /// Returns stored model size in bytes if present, else null.
+  Future<int?> modelSizeBytes() async {
+    final path = await modelPath();
+    final f = File(path);
+    if (!await f.exists()) return null;
+    return f.length();
+  }
+
+  // --------------------------------------------------------------------------
+  // Internals
+  // --------------------------------------------------------------------------
+
+  Future<bool> _verifyIfNeeded(
+    File f, {
+    required bool deleteCorruptFile,
+  }) async {
+    final expected = sha256Hex;
+    if (expected == null || expected.trim().isEmpty) return true;
+
+    final ok = await _verifySha256File(f, expected.trim());
+    if (!ok && deleteCorruptFile) {
+      try {
+        await f.delete();
+      } catch (_) {/* ignore */}
+    }
+    return ok;
+  }
+
+  Future<void> _downloadFileStreamed({
+    required String url,
+    required File outFile,
+    ProgressCallback? onProgress,
+    required Duration timeout,
+  }) async {
+    final uri = Uri.parse(url);
+
+    // Ensure parent dir exists
+    await outFile.parent.create(recursive: true);
+
+    http.StreamedResponse res;
+    try {
+      final req = http.Request('GET', uri);
+      res = await _http.send(req).timeout(timeout);
+    } catch (e) {
+      throw ModelStoreException('Failed to start download.', cause: e);
+    }
+
+    if (res.statusCode < 200 || res.statusCode >= 300) {
+      throw ModelStoreException('Download failed: HTTP ${res.statusCode}.');
+    }
+
+    final contentLen = res.contentLength; // may be null
+    final sink = outFile.openWrite(mode: FileMode.writeOnly);
+
+    int received = 0;
+    final completer = Completer<void>();
+
+    StreamSubscription<List<int>>? sub;
+    Timer? progressTimer;
+
+    void emitProgress() {
+      if (onProgress == null) return;
+      if (contentLen == null || contentLen <= 0) {
+        // Unknown size: emit -1? We'll emit 0 until end, then 1.
+        onProgress(received == 0 ? 0.0 : 0.01);
+      } else {
+        final p = received / contentLen;
+        onProgress(p.clamp(0.0, 1.0));
+      }
+    }
+
+    // Throttle progress callbacks to avoid UI spam
+    progressTimer = Timer.periodic(const Duration(milliseconds: 250), (_) {
+      emitProgress();
+    });
+
+    sub = res.stream.listen(
+      (chunk) {
+        received += chunk.length;
+        sink.add(chunk);
+      },
+      onError: (e) async {
+        progressTimer?.cancel();
+        try {
+          await sink.close();
+        } catch (_) {/* ignore */}
+        try {
+          await outFile.delete();
+        } catch (_) {/* ignore */}
+        if (!completer.isCompleted) {
+          completer.completeError(ModelStoreException('Download stream error.', cause: e));
+        }
+      },
+      onDone: () async {
+        progressTimer?.cancel();
+        try {
+          await sink.flush();
+          await sink.close();
+        } catch (e) {
+          try {
+            await outFile.delete();
+          } catch (_) {/* ignore */}
+          if (!completer.isCompleted) {
+            completer.completeError(ModelStoreException('Failed to finalize download file.', cause: e));
+          }
+          return;
+        }
+
+        // Emit final progress as 1.0 if known, else still signal completion.
+        if (onProgress != null) onProgress(1.0);
+
+        if (!completer.isCompleted) completer.complete();
+      },
+      cancelOnError: true,
+    );
+
+    // Await completion
+    try {
+      await completer.future;
+    } finally {
+      await sub.cancel();
+      progressTimer.cancel();
+    }
+  }
+
+  Future<bool> _verifySha256File(File f, String expectedHex) async {
+    // Normalize
+    final expected = expectedHex.toLowerCase().trim();
+
+    // For big files, streaming hash is essential.
+    Digest digest;
+    try {
+      final input = f.openRead();
+      digest = await sha256.bind(input).first;
+    } catch (e) {
+      throw ModelStoreException('Failed to compute SHA-256.', cause: e);
+    }
+
+    final actual = digest.toString().toLowerCase();
+    if (kDebugMode) {
+      debugPrint('ModelStore sha256 actual=$actual expected=$expected');
+    }
+    return actual == expected;
+  }
+}
+</file>
+
+<file path="lib/core/ai/pulse_ai_client.dart">
+// lib/core/ai/pulse_ai_client.dart
+//
+// Lightweight client for PulseAI extraction.
+// Phase 3A uses llama-server over HTTP.
+//
+// Later you can swap this implementation to embedded gguf runtime
+// without changing your UI code.
+
+import 'dart:convert';
+
+import 'package:http/http.dart' as http;
+
+class PulseAiClient {
+  PulseAiClient({
+    this.baseUrl = 'http://127.0.0.1:8080',
+    http.Client? httpClient,
+  }) : _http = httpClient ?? http.Client();
+
+  final String baseUrl;
+  final http.Client _http;
+
+  void dispose() => _http.close();
+
+  /// Returns a JSON map with keys:
+  /// fullName, nric, address, phone, allergies
+  ///
+  /// Throws on network/parse errors.
+  Future<Map<String, dynamic>> extractIntake({
+    required String freeText,
+    List<String> missingFields = const [],
+  }) async {
+    // Prompt: force strict JSON only (so we can parse deterministically)
+    final missingHint = missingFields.isEmpty
+        ? ''
+        : '\nNote: The following fields were missing in previous attempts - try harder to find them: ${missingFields.join(', ')}';
+
+    final prompt = '''
+You are Pulse AI. Extract patient registration fields from the text.
+Return ONLY valid JSON with keys:
+fullName, nric, address, phone, allergies.
+If a field is missing, use null. No extra keys. No markdown. No explanations.
+
+TEXT:
+$freeText$missingHint
+''';
+
+    final uri = Uri.parse('$baseUrl/v1/chat/completions');
+    final res = await _http.post(
+      uri,
+      headers: {'Content-Type': 'application/application/json'},
+      body: jsonEncode({
+        'model': 'local',
+        'messages': [
+          {'role': 'system', 'content': 'You output strict JSON only.'},
+          {'role': 'user', 'content': prompt},
+        ],
+        'temperature': 0.0,
+      }),
+    );
+
+    if (res.statusCode < 200 || res.statusCode >= 300) {
+      throw Exception('llama-server HTTP ${res.statusCode}: ${res.body}');
+    }
+
+    final decoded = jsonDecode(res.body);
+    final content = decoded['choices']?[0]?['message']?['content'];
+
+    if (content is! String || content.trim().isEmpty) {
+      throw Exception('Empty model response');
+    }
+
+    // Some models may include accidental leading text; attempt to recover JSON.
+    final jsonText = _extractFirstJsonObject(content);
+    final obj = jsonDecode(jsonText);
+
+    if (obj is Map<String, dynamic>) return obj;
+    throw Exception('Model did not return a JSON object');
+  }
+
+  /// Extracts the first {...} JSON object from the model text.
+  /// This guards against occasional "Sure, here's the JSON:".
+  String _extractFirstJsonObject(String s) {
+    final start = s.indexOf('{');
+    final end = s.lastIndexOf('}');
+    if (start == -1 || end == -1 || end <= start) {
+      throw Exception('No JSON object found in model output');
+    }
+    return s.substring(start, end + 1).trim();
+  }
+}
+</file>
+
+<file path="lib/core/ai/pulse_ai_formatter.dart">
+// lib/core/ai/pulse_ai_formatter.dart
+//
+// Small formatting helpers for turning AiToolResponse (and tool debug payloads)
+// into clean, clinician-friendly chat text.
+//
+// Keep this file PURE (no Flutter imports) so it can be used from services,
+// background jobs, and tests.
+
+import 'dart:convert';
+
+import 'ai_service.dart'; // For AiResponseFormatter interface
+import 'ai_tool_response.dart';
+
+class PulseAiFormatter implements AiResponseFormatter {
+  /// Main entry: format a tool response for chat UI.
+  ///
+  /// - If tool already returns markdown-ish bullets, we keep it.
+  /// - If debug payload contains a structured series (e.g., trends7d),
+  ///   we can optionally append a compact summary.
+  @override
+  AiToolResponse format(
+    AiToolResponse r, {
+    bool includeDebugSummary = false,
+  }) {
+    String base = (r.answer).trim().isEmpty ? _fallbackText(r) : r.answer.trim();
+
+    if (includeDebugSummary) {
+      final dbg = r.debug;
+      if (dbg != null && dbg.isNotEmpty) {
+        final summary = _debugSummary(dbg);
+        if (summary != null && summary.trim().isNotEmpty) {
+          base = '$base\n\n$summary'.trim();
+        }
+      }
+    }
+
+    // Return new response with formatted answer (preserve handled/toolName/debug)
+    return r.copyWith(answer: base);
+  }
+
+  // ---------------------------------------------------------------------------
+  // Internals
+  // ---------------------------------------------------------------------------
+
+  String _fallbackText(AiToolResponse r) {
+    if (!r.handled) return 'I\'m not sure how to help with that. Try asking about encounters, triage, or trends.';
+    return 'Done. (${r.toolName})';
+  }
+
+  /// Turn common debug payload shapes into a short, readable summary.
+  String? _debugSummary(Map<String, Object?> dbg) {
+    // Trends payload
+    final series = dbg['series'];
+    if (series is Map) {
+      final s = series.cast<String, Object?>();
+      final days = _asStringList(s['days']);
+      final totals = _asIntList(s['totalCounts']);
+      final byTriage = s['byTriage'];
+
+      if (days != null && totals != null && days.length == totals.length) {
+        final totalSum = totals.fold<int>(0, (a, b) => a + b);
+        final start = days.isNotEmpty ? days.first : '—';
+        final end = days.isNotEmpty ? days.last : '—';
+
+        final triageTop = (byTriage is Map)
+            ? _topKeysBySeriesSum(byTriage.cast<String, Object?>(), take: 3)
+            : const <String>[];
+
+        final sb = StringBuffer()
+          ..writeln('—')
+          ..writeln('**Debug summary**')
+          ..writeln('Range: $start → $end')
+          ..writeln('Total (7d): $totalSum')
+          ..writeln(
+            'Top triage: ${triageTop.isEmpty ? '—' : triageTop.join(', ')}',
+          );
+
+        return sb.toString().trim();
+      }
+    }
+
+    // Generic start/end/unitId
+    final start = dbg['start']?.toString();
+    final end = dbg['end']?.toString();
+    final unitId = dbg['unitId']?.toString();
+
+    if (start != null || end != null || unitId != null) {
+      final parts = <String>[];
+      if (unitId != null && unitId.trim().isNotEmpty) parts.add('unitId=$unitId');
+      if (start != null && start.trim().isNotEmpty) parts.add('start=$start');
+      if (end != null && end.trim().isNotEmpty) parts.add('end=$end');
+
+      if (parts.isEmpty) return null;
+
+      return '—\n**Debug**\n${parts.join('\n')}';
+    }
+
+    return null;
+  }
+
+  List<String>? _asStringList(Object? x) {
+    if (x is List) {
+      return x.map((e) => e?.toString() ?? '').where((s) => s.isNotEmpty).toList();
+    }
+    return null;
+  }
+
+  List<int>? _asIntList(Object? x) {
+    if (x is List) {
+      return x.map((e) {
+        if (e is int) return e;
+        return int.tryParse(e.toString()) ?? 0;
+      }).toList();
+    }
+    return null;
+  }
+
+  List<String> _topKeysBySeriesSum(
+    Map<String, Object?> byTriage, {
+    int take = 3,
+  }) {
+    final totals = <String, int>{};
+
+    byTriage.forEach((k, v) {
+      final series = _asIntList(v);
+      if (series == null) return;
+      totals[k] = series.fold<int>(0, (a, b) => a + b);
+    });
+
+    final sorted = totals.entries.toList()
+      ..sort((a, b) => b.value.compareTo(a.value));
+
+    return sorted.take(take).map((e) => e.key).toList();
+  }
+
+  /// Optional helper: pretty-print debug JSON safely for logs/UI.
+  String prettyJson(Object? obj) {
+    try {
+      return const JsonEncoder.withIndent('  ').convert(obj);
+    } catch (_) {
+      return obj?.toString() ?? '';
+    }
+  }
+}
+</file>
+
+<file path="lib/core/ai/pulse_ai_providers.dart">
+// lib/core/ai/pulse_ai_providers.dart
+//
+// Central Riverpod wiring for Pulse AI (offline-first + hybrid local/cloud).
+//
+// Keeps construction in one place so UI/screens can just:
+//   final ai = ref.read(aiServiceProvider);
+//   final tools = ref.read(aiToolsProvider);
+//   final engine = ref.read(analyticsEngineProvider);
+//
+// NOTE:
+// - This file assumes you already have AppDatabase.instance.
+// - AiTools is expected to accept (engine, {Ref? ref}) so it can read authServiceProvider
+//   when saving events / drafts.
+// - If your AiService constructor differs, adjust only the AiService provider section.
+
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+import '../database/app_database.dart';
+import '../auth/auth_service.dart';
+import '../session/session_context_store.dart';
+
+import 'analytics_engine.dart';
+import 'ai_service.dart';
+import 'ai_tools.dart';
+import 'model_manager.dart'; // Your ModelManager
+import 'pulse_ai_formatter.dart';
+import 'backends/local_ai_backend.dart'; // Embedded fllama
+import 'backends/groq_ai_backend.dart'; // Cloud Groq
+import 'backends/hybrid_ai_backend.dart'; // Hybrid wrapper
+import 'backends/ai_backend.dart'; // For AiBackend interface
+
+// -----------------------------------------------------------------------------
+// AI Mode (shared enum - defined here, imported elsewhere)
+// -----------------------------------------------------------------------------
+enum AiMode { auto, localOnly, cloudOnly }
+
+final aiModeProvider = StateProvider<AiMode>((ref) => AiMode.auto);
+
+// -----------------------------------------------------------------------------
+// Formatter (static function)
+// -----------------------------------------------------------------------------
+final pulseAiFormatterProvider = Provider<AiResponseFormatter?>((ref) {
+  return PulseAiFormatter();
+});
+// -----------------------------------------------------------------------------
+// Analytics engine (DB-backed, deterministic)
+// -----------------------------------------------------------------------------
+final analyticsEngineProvider = Provider<AnalyticsEngine>((ref) {
+  final db = AppDatabase.instance;
+  return AnalyticsEngine(db);
+});
+
+// -----------------------------------------------------------------------------
+// Tool router (deterministic “offline tools”)
+// -----------------------------------------------------------------------------
+final aiToolsProvider = Provider<AiTools>((ref) {
+  final engine = ref.watch(analyticsEngineProvider);
+  return AiTools(engine, ref: ref);
+});
+
+// -----------------------------------------------------------------------------
+// Model management (gguf presence, download/verify, delete)
+// -----------------------------------------------------------------------------
+final modelManagerProvider = StateNotifierProvider<ModelManager, AsyncValue<ModelInfo?>>((ref) {
+  return ModelManager();
+});
+
+// -----------------------------------------------------------------------------
+// Hybrid AI Backend (local embedded + Groq cloud)
+// -----------------------------------------------------------------------------
+final aiBackendProvider = Provider<AiBackend>((ref) {
+  final modelInfo = ref.watch(modelManagerProvider).value;
+  final local = modelInfo != null ? LocalAiBackend(modelInfo.path) : null;
+  final cloud = GroqAiBackend(); // Always instantiated (will fail gracefully if no key)
+
+  final mode = ref.watch(aiModeProvider);
+
+  return HybridAiBackend(
+    local: local,
+    cloud: cloud,
+    mode: mode,
+  );
+});
+
+// -----------------------------------------------------------------------------
+// Main AI service provider (uses hybrid backend)
+// -----------------------------------------------------------------------------
+final aiServiceProvider = Provider<AiService>((ref) {
+  final tools = ref.watch(aiToolsProvider);
+  final formatter = ref.watch(pulseAiFormatterProvider);
+  final backend = ref.watch(aiBackendProvider);
+
+  final auth = ref.watch(authServiceProvider);
+  final sessionStore = ref.watch(sessionContextStoreProvider);
+
+  return AiService(
+    tools: tools,
+    backend: backend,
+    formatter: formatter,
+    auth: auth,
+    sessionStore: sessionStore,
+  );
+});
+
+// -----------------------------------------------------------------------------
+// Convenience: model ready state for UI gating
+// -----------------------------------------------------------------------------
+final pulseAiReadyProvider = FutureProvider<bool>((ref) async {
+  final manager = ref.watch(modelManagerProvider);
+  return manager.when(
+    data: (info) => info != null,
+    loading: () => false,
+    error: (_, __) => false,
+  );
+});
+</file>
+
+<file path="lib/core/ai/time_range.dart">
+// lib/core/ai/time_range.dart
+
+/// TimeRange
+///
+/// Represents a concrete, inclusive time window used for analytics queries
+/// (encounters, triage counts, trends, etc.).
+///
+/// This is deliberately simple and deterministic:
+/// - All times are local
+/// - Start is inclusive
+/// - End is exclusive
+class TimeRange {
+  final DateTime start;
+  final DateTime end;
+
+  const TimeRange({
+    required this.start,
+    required this.end,
+  });
+
+  /* ---------------- Factory helpers ---------------- */
+
+  /// Today (from 00:00 to now).
+  factory TimeRange.today() {
+    final now = DateTime.now();
+    final startOfDay = DateTime(now.year, now.month, now.day);
+    return TimeRange(start: startOfDay, end: now);
+  }
+
+  /// This morning (06:00 to 12:00 today).
+  factory TimeRange.thisMorning() {
+    final now = DateTime.now();
+    final morningStart =
+        DateTime(now.year, now.month, now.day, 6);
+    final noon =
+        DateTime(now.year, now.month, now.day, 12);
+
+    return TimeRange(
+      start: morningStart,
+      end: now.isBefore(noon) ? now : noon,
+    );
+  }
+
+  /// Yesterday (00:00 to 23:59:59).
+  factory TimeRange.yesterday() {
+    final now = DateTime.now();
+    final yesterday =
+        DateTime(now.year, now.month, now.day)
+            .subtract(const Duration(days: 1));
+
+    final start =
+        DateTime(yesterday.year, yesterday.month, yesterday.day);
+    final end = start.add(const Duration(days: 1));
+
+    return TimeRange(start: start, end: end);
+  }
+
+  /// Last N full days (rolling window ending now).
+  factory TimeRange.lastDays(int days) {
+    final now = DateTime.now();
+    final start = now.subtract(Duration(days: days));
+    return TimeRange(start: start, end: now);
+  }
+
+  /// Last 7 days (rolling).
+  factory TimeRange.last7Days() {
+    return TimeRange.lastDays(7);
+  }
+
+  /// Last 30 days (rolling).
+  factory TimeRange.last30Days() {
+    return TimeRange.lastDays(30);
+  }
+
+  /* ---------------- Utilities ---------------- */
+
+  Duration get duration => end.difference(start);
+
+  bool contains(DateTime t) =>
+      !t.isBefore(start) && t.isBefore(end);
+
+  @override
+  String toString() =>
+      'TimeRange(start: $start, end: $end)';
+
+  Map<String, Object?> toJson() => {
+        'start': start.toIso8601String(),
+        'end': end.toIso8601String(),
+      };
+
+  factory TimeRange.fromJson(Map<String, dynamic> json) {
+    return TimeRange(
+      start: DateTime.parse(json['start'] as String),
+      end: DateTime.parse(json['end'] as String),
+    );
+  }
+}
+</file>
+
+<file path="lib/core/auth/auth_service.dart">
+// lib/core/auth/auth_service.dart
+import 'dart:convert';
+import 'dart:math';
+
+import 'package:crypto/crypto.dart';
+import 'package:drift/drift.dart';
+import 'package:flutter/foundation.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+import '../database/app_database.dart';
+
+final authServiceProvider = Provider<AuthService>((ref) => AuthService._internal());
+
+class AuthService {
+  AuthService._internal();
+
+  final AppDatabase db = AppDatabase.instance;
+
+  User? currentUser;
+
+  Future<void> initialize() async {
+    // Ensure at least one admin exists
+    await _ensureSeedAdmin();
+
+    // Repair any legacy/broken password fields (like DEV_SEEDED==)
+    await _repairAdminPasswordIfCorrupt();
+
+    debugPrint('AuthService initialized');
+  }
+
+  Future<void> _ensureSeedAdmin() async {
+    final existingCountExpr = db.users.id.count();
+    final existingCount = await (db.selectOnly(db.users)..addColumns([existingCountExpr]))
+        .map((row) => row.read(existingCountExpr) ?? 0)
+        .getSingle();
+
+    if (existingCount > 0) return;
+
+    final now = DateTime.now();
+    final unitId = const UuidV4().generate();
+    final userId = const UuidV4().generate();
+
+    await db.into(db.units).insert(UnitsCompanion.insert(
+          id: unitId,
+          name: 'Default Unit',
+          code: 'DEFAULT',
+          createdAt: now,
+        ));
+
+    final hp = _hashPassword('admin123');
+
+    await db.into(db.users).insert(UsersCompanion.insert(
+          id: userId,
+          username: 'admin',
+          displayName: const Value('Administrator'),
+          role: 'admin',
+          passwordSaltB64: hp.saltB64,
+          passwordHashB64: hp.hashB64,
+          passwordIterations: hp.iterations,
+          isActive: const Value(true),
+          createdAt: now,
+        ));
+
+    await db.into(db.userUnits).insert(UserUnitsCompanion.insert(
+          userId: userId,
+          unitId: unitId,
+          createdAt: now,
+        ));
+
+    debugPrint('Seeded default admin: admin/admin123');
+  }
+
+  /// Fixes old broken DB content (e.g. passwordSaltB64 = "DEV_SEEDED==")
+  Future<void> _repairAdminPasswordIfCorrupt() async {
+    final admin = await (db.select(db.users)
+          ..where((u) => u.username.equals('admin')))
+        .getSingleOrNull();
+
+    if (admin == null) return;
+
+    final okSalt = _isValidStdBase64(admin.passwordSaltB64);
+    final okHash = _isValidStdBase64(admin.passwordHashB64);
+    final okIter = admin.passwordIterations > 0;
+
+    if (okSalt && okHash && okIter) return;
+
+    debugPrint(
+      'Password fields corrupt/legacy for admin. Repairing -> reset to admin123',
+    );
+
+    await setPassword(
+      userId: admin.id,
+      newPassword: 'admin123',
+      iterations: 150000,
+    );
+  }
+
+  /// Your UI currently calls: auth.login(username, password)
+  Future<User?> login(String username, String password) async {
+    final user = await (db.select(db.users)
+          ..where((u) => u.username.equals(username) & u.isActive.equals(true)))
+        .getSingleOrNull();
+
+    if (user == null) return null;
+
+    final ok = _verifyPasswordSafe(
+      password,
+      saltB64: user.passwordSaltB64,
+      hashB64: user.passwordHashB64,
+      iterations: user.passwordIterations,
+    );
+
+    if (!ok) return null;
+
+    currentUser = user;
+    return user;
+  }
+
+  void logout() {
+    currentUser = null;
+  }
+
+  Future<void> setPassword({
+    required String userId,
+    required String newPassword,
+    int iterations = 150000,
+  }) async {
+    final hp = _hashPassword(newPassword, iterations: iterations);
+
+    await (db.update(db.users)..where((u) => u.id.equals(userId))).write(
+      UsersCompanion(
+        passwordSaltB64: Value(hp.saltB64),
+        passwordHashB64: Value(hp.hashB64),
+        passwordIterations: Value(hp.iterations),
+      ),
+    );
+  }
+
+  // ---------------- Password hashing (PBKDF2-HMAC-SHA256) ----------------
+
+  _HashParts _hashPassword(
+    String password, {
+    int iterations = 150000,
+    int saltBytes = 16,
+    int dkLen = 32,
+  }) {
+    final salt = _randomBytes(saltBytes);
+    final derived = _pbkdf2HmacSha256(
+      password: utf8.encode(password),
+      salt: salt,
+      iterations: iterations,
+      dkLen: dkLen,
+    );
+
+    return _HashParts(
+      saltB64: base64Encode(salt),
+      hashB64: base64Encode(derived),
+      iterations: iterations,
+    );
+  }
+
+  /// Robust verifier: never throws. If DB has junk, it just returns false.
+  bool _verifyPasswordSafe(
+    String password, {
+    required String saltB64,
+    required String hashB64,
+    required int iterations,
+  }) {
+    try {
+      if (!_isValidStdBase64(saltB64) || !_isValidStdBase64(hashB64) || iterations <= 0) {
+        debugPrint('Password verification error (likely invalid stored data): salt/hash not valid base64');
+        return false;
+      }
+
+      final salt = base64Decode(saltB64);
+      final expected = base64Decode(hashB64);
+
+      final actual = _pbkdf2HmacSha256(
+        password: utf8.encode(password),
+        salt: salt,
+        iterations: iterations,
+        dkLen: expected.length,
+      );
+
+      return _constantTimeEquals(expected, actual);
+    } catch (e) {
+      debugPrint('Password verification error (likely invalid stored data): $e');
+      return false;
+    }
+  }
+
+  bool _isValidStdBase64(String s) {
+    // Reject common “fake” sentinel values like DEV_SEEDED==
+    if (s.contains('_') || s.contains('-')) return false; // base64url chars
+    try {
+      base64Decode(s);
+      return true;
+    } catch (_) {
+      return false;
+    }
+  }
+
+  List<int> _pbkdf2HmacSha256({
+    required List<int> password,
+    required List<int> salt,
+    required int iterations,
+    required int dkLen,
+  }) {
+    const hLen = 32;
+    final l = (dkLen / hLen).ceil();
+    final r = dkLen - (l - 1) * hLen;
+    final out = <int>[];
+
+    for (var i = 1; i <= l; i++) {
+      final t = _f(password, salt, iterations, i);
+      out.addAll(i == l ? t.sublist(0, r) : t);
+    }
+    return out;
+  }
+
+  List<int> _f(List<int> password, List<int> salt, int c, int blockIndex) {
+    final block = <int>[
+      ...salt,
+      (blockIndex >> 24) & 0xff,
+      (blockIndex >> 16) & 0xff,
+      (blockIndex >> 8) & 0xff,
+      blockIndex & 0xff,
+    ];
+
+    var u = _hmacSha256(password, block);
+    final t = List<int>.from(u);
+
+    for (var i = 2; i <= c; i++) {
+      u = _hmacSha256(password, u);
+      for (var j = 0; j < t.length; j++) {
+        t[j] ^= u[j];
+      }
+    }
+    return t;
+  }
+
+  List<int> _hmacSha256(List<int> key, List<int> message) {
+    final h = Hmac(sha256, key);
+    return h.convert(message).bytes;
+  }
+
+  List<int> _randomBytes(int n) {
+    final rnd = Random.secure();
+    return List<int>.generate(n, (_) => rnd.nextInt(256));
+  }
+
+  bool _constantTimeEquals(List<int> a, List<int> b) {
+    if (a.length != b.length) return false;
+    var diff = 0;
+    for (var i = 0; i < a.length; i++) {
+      diff |= a[i] ^ b[i];
+    }
+    return diff == 0;
+  }
+}
+
+class _HashParts {
+  _HashParts({
+    required this.saltB64,
+    required this.hashB64,
+    required this.iterations,
+  });
+
+  final String saltB64;
+  final String hashB64;
+  final int iterations;
+}
+
+class UuidV4 {
+  const UuidV4();
+
+  String generate() {
+    final rnd = Random.secure();
+    final bytes = List<int>.generate(16, (_) => rnd.nextInt(256));
+
+    bytes[6] = (bytes[6] & 0x0F) | 0x40;
+    bytes[8] = (bytes[8] & 0x3F) | 0x80;
+
+    String two(int x) => x.toRadixString(16).padLeft(2, '0');
+
+    return '${two(bytes[0])}${two(bytes[1])}${two(bytes[2])}${two(bytes[3])}-'
+        '${two(bytes[4])}${two(bytes[5])}-'
+        '${two(bytes[6])}${two(bytes[7])}-'
+        '${two(bytes[8])}${two(bytes[9])}-'
+        '${two(bytes[10])}${two(bytes[11])}${two(bytes[12])}${two(bytes[13])}${two(bytes[14])}${two(bytes[15])}';
+  }
+}
+</file>
+
+<file path="lib/core/auth/password_hasher.dart">
+// lib/core/auth/password_hasher.dart
+import 'dart:convert';
+import 'dart:math';
+import 'package:crypto/crypto.dart';
+
+/// Production-grade password hashing utility
+/// Uses PBKDF2-HMAC-SHA256
+///
+/// Compatible with AuthService.
+/// No Flutter dependencies. Pure Dart.
+
+class PasswordHasher {
+  static const int defaultIterations = 150000;
+  static const int defaultSaltBytes = 16;
+  static const int defaultKeyLength = 32;
+
+  const PasswordHasher();
+
+  /// Create salted PBKDF2 hash
+  HashResult hashPassword(
+    String password, {
+    int iterations = defaultIterations,
+    int saltBytes = defaultSaltBytes,
+    int dkLen = defaultKeyLength,
+  }) {
+    final salt = _randomBytes(saltBytes);
+
+    final derived = _pbkdf2(
+      password: utf8.encode(password),
+      salt: salt,
+      iterations: iterations,
+      dkLen: dkLen,
+    );
+
+    return HashResult(
+      saltB64: base64Encode(salt),
+      hashB64: base64Encode(derived),
+      iterations: iterations,
+    );
+  }
+
+  /// Verify password safely (never throws)
+  bool verifyPassword(
+    String password, {
+    required String saltB64,
+    required String hashB64,
+    required int iterations,
+  }) {
+    try {
+      final salt = base64Decode(saltB64);
+      final expected = base64Decode(hashB64);
+
+      final actual = _pbkdf2(
+        password: utf8.encode(password),
+        salt: salt,
+        iterations: iterations,
+        dkLen: expected.length,
+      );
+
+      return _constantTimeEquals(expected, actual);
+    } catch (_) {
+      // If corrupted DB content, just fail safely
+      return false;
+    }
+  }
+
+  // ---------------------------------------------------------
+  // PBKDF2 Implementation
+  // ---------------------------------------------------------
+
+  List<int> _pbkdf2({
+    required List<int> password,
+    required List<int> salt,
+    required int iterations,
+    required int dkLen,
+  }) {
+    const hLen = 32; // SHA256 output length
+    final l = (dkLen / hLen).ceil();
+    final r = dkLen - (l - 1) * hLen;
+
+    final out = <int>[];
+
+    for (var i = 1; i <= l; i++) {
+      final block = _f(password, salt, iterations, i);
+      out.addAll(i == l ? block.sublist(0, r) : block);
+    }
+
+    return out;
+  }
+
+  List<int> _f(List<int> password, List<int> salt, int c, int blockIndex) {
+    final block = <int>[
+      ...salt,
+      (blockIndex >> 24) & 0xff,
+      (blockIndex >> 16) & 0xff,
+      (blockIndex >> 8) & 0xff,
+      blockIndex & 0xff,
+    ];
+
+    var u = _hmacSha256(password, block);
+    final t = List<int>.from(u);
+
+    for (var i = 2; i <= c; i++) {
+      u = _hmacSha256(password, u);
+      for (var j = 0; j < t.length; j++) {
+        t[j] ^= u[j];
+      }
+    }
+
+    return t;
+  }
+
+  List<int> _hmacSha256(List<int> key, List<int> message) {
+    final h = Hmac(sha256, key);
+    return h.convert(message).bytes;
+  }
+
+  List<int> _randomBytes(int n) {
+    final rnd = Random.secure();
+    return List<int>.generate(n, (_) => rnd.nextInt(256));
+  }
+
+  bool _constantTimeEquals(List<int> a, List<int> b) {
+    if (a.length != b.length) return false;
+    var diff = 0;
+    for (var i = 0; i < a.length; i++) {
+      diff |= a[i] ^ b[i];
+    }
+    return diff == 0;
+  }
+}
+
+/// Returned after hashing a password
+class HashResult {
+  const HashResult({
+    required this.saltB64,
+    required this.hashB64,
+    required this.iterations,
+  });
+
+  final String saltB64;
+  final String hashB64;
+  final int iterations;
+}
+</file>
+
+<file path="lib/core/auth/session_store.dart">
+import 'dart:io';
+import 'package:path/path.dart' as p;
+import 'package:path_provider/path_provider.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+
+class SessionStore {
+  static const _secure = FlutterSecureStorage();
+
+  static String? userId;
+  static String? username;
+  static String? role;
+  static String? unitId;
+  static String? unitName;
+
+  static Future<void> load() async {
+    if (Platform.isMacOS) {
+      final f = await _file();
+      if (!await f.exists()) return;
+      final s = await f.readAsString();
+      final parts = s.split('|');
+      if (parts.length < 5) return;
+      userId = parts[0].isEmpty ? null : parts[0];
+      username = parts[1].isEmpty ? null : parts[1];
+      role = parts[2].isEmpty ? null : parts[2];
+      unitId = parts[3].isEmpty ? null : parts[3];
+      unitName = parts[4].isEmpty ? null : parts[4];
+      return;
+    }
+
+    userId = await _secure.read(key: 'sess_userId');
+    username = await _secure.read(key: 'sess_username');
+    role = await _secure.read(key: 'sess_role');
+    unitId = await _secure.read(key: 'sess_unitId');
+    unitName = await _secure.read(key: 'sess_unitName');
+  }
+
+  static Future<void> save({
+    required String userId,
+    required String username,
+    required String role,
+    required String unitId,
+    required String unitName,
+  }) async {
+    SessionStore.userId = userId;
+    SessionStore.username = username;
+    SessionStore.role = role;
+    SessionStore.unitId = unitId;
+    SessionStore.unitName = unitName;
+
+    if (Platform.isMacOS) {
+      final f = await _file();
+      await f.create(recursive: true);
+      await f.writeAsString('$userId|$username|$role|$unitId|$unitName', flush: true);
+      return;
+    }
+
+    await _secure.write(key: 'sess_userId', value: userId);
+    await _secure.write(key: 'sess_username', value: username);
+    await _secure.write(key: 'sess_role', value: role);
+    await _secure.write(key: 'sess_unitId', value: unitId);
+    await _secure.write(key: 'sess_unitName', value: unitName);
+  }
+
+  static Future<void> clear() async {
+    userId = username = role = unitId = unitName = null;
+
+    if (Platform.isMacOS) {
+      final f = await _file();
+      if (await f.exists()) await f.delete();
+      return;
+    }
+
+    await _secure.delete(key: 'sess_userId');
+    await _secure.delete(key: 'sess_username');
+    await _secure.delete(key: 'sess_role');
+    await _secure.delete(key: 'sess_unitId');
+    await _secure.delete(key: 'sess_unitName');
+  }
+
+  static Future<File> _file() async {
+    final dir = await getApplicationSupportDirectory();
+    return File(p.join(dir.path, 'pulseedge_session.txt'));
+  }
+
+  static bool get isLoggedIn => userId != null && unitId != null;
+}
+</file>
+
+<file path="lib/core/database/app_database.dart">
+// lib/core/database/app_database.dart
+import 'dart:io';
+
+import 'package:drift/drift.dart';
+import 'package:drift/native.dart';
+import 'package:path/path.dart' as p;
+import 'package:path_provider/path_provider.dart';
+
+part 'app_database.g.dart';
+
+/// -----------------------------
+/// Tables
+/// -----------------------------
+
+class Patients extends Table {
+  TextColumn get id => text()(); // UUID
+  TextColumn get mrn => text().nullable()(); // hospital MRN
+
+  TextColumn get fullName => text()();
+  TextColumn get fullNameNorm => text()(); // normalized
+
+  TextColumn get nric => text()(); // normalized NRIC
+  TextColumn get nricHash => text()(); // SHA-256 hex
+
+  TextColumn get address => text().nullable()();
+  TextColumn get allergies => text().nullable()();
+
+  TextColumn get consentStatus =>
+      text().withDefault(const Constant('unknown'))();
+  TextColumn get source => text().withDefault(const Constant('local'))();
+
+  DateTimeColumn get createdAt => dateTime()();
+  DateTimeColumn get updatedAt => dateTime()();
+
+  @override
+  Set<Column> get primaryKey => {id};
+}
+
+class Encounters extends Table {
+  TextColumn get id => text()(); // UUID
+  TextColumn get patientId => text()(); // FK -> Patients.id
+
+  TextColumn get encounterNo => text().nullable()(); // HIS number when synced
+
+  TextColumn get status =>
+      text().withDefault(const Constant('open'))(); // open/closed/cancelled
+  TextColumn get type =>
+      text().withDefault(const Constant('OPD'))(); // ED/OPD/IP/HomeVisit/Tele
+
+  TextColumn get unitId => text().nullable()();
+  TextColumn get unitName =>
+      text().withDefault(const Constant('Unknown Unit'))();
+
+  TextColumn get providerUserId => text().nullable()();
+  TextColumn get providerName => text().nullable()();
+
+  TextColumn get chiefComplaint => text().nullable()();
+  TextColumn get triageCategory => text().nullable()();
+
+  DateTimeColumn get startAt => dateTime()();
+  DateTimeColumn get endAt => dateTime().nullable()();
+
+  IntColumn get synced => integer().withDefault(const Constant(0))(); // 0/1
+  TextColumn get syncState =>
+      text().withDefault(const Constant('pending'))(); // pending/synced/conflict
+  TextColumn get aiMetadata => text().nullable()();
+
+  DateTimeColumn get createdAt => dateTime()();
+  DateTimeColumn get updatedAt => dateTime()();
+
+  @override
+  Set<Column> get primaryKey => {id};
+}
+
+class Events extends Table {
+  TextColumn get id => text()(); // UUID
+  TextColumn get encounterId => text()(); // FK -> Encounters.id
+
+  TextColumn get kind => text()(); // NOTE | ORDER | DOC | VITALS | ...
+  TextColumn get title => text()();
+  TextColumn get status =>
+      text().withDefault(const Constant('draft'))(); // draft/signed/cancelled
+
+  TextColumn get bodyText => text().nullable()(); // quick text store (notes)
+  TextColumn get payloadJson => text().nullable()(); // module-specific json
+
+  TextColumn get createdBy => text().nullable()();
+  DateTimeColumn get createdAt => dateTime()();
+
+  TextColumn get signedBy => text().nullable()();
+  DateTimeColumn get signedAt => dateTime().nullable()();
+
+  IntColumn get synced => integer().withDefault(const Constant(0))();
+  TextColumn get syncState => text().withDefault(const Constant('pending'))();
+
+  @override
+  Set<Column> get primaryKey => {id};
+}
+
+class Units extends Table {
+  TextColumn get id => text()(); // UUID
+  TextColumn get code => text()(); // e.g. "BINTULU_OUTREACH_A"
+  TextColumn get name => text()(); // e.g. "Bintulu Outreach Team A"
+  TextColumn get facility => text().nullable()(); // optional
+  DateTimeColumn get createdAt => dateTime()();
+
+  @override
+  Set<Column> get primaryKey => {id};
+}
+
+class Users extends Table {
+  TextColumn get id => text()(); // UUID
+  TextColumn get username => text()(); // unique
+  TextColumn get displayName => text().nullable()();
+  TextColumn get role => text()(); // "clinician", "admin", etc.
+
+  // Password storage (PBKDF2 – base64 fields)
+  TextColumn get passwordSaltB64 => text()();
+  TextColumn get passwordHashB64 => text()();
+  IntColumn get passwordIterations => integer()();
+
+  BoolColumn get isActive =>
+      boolean().withDefault(const Constant(true))(); // Drift wants Value<bool> in companions
+
+  DateTimeColumn get createdAt => dateTime()();
+
+  @override
+  Set<Column> get primaryKey => {id};
+}
+
+/// Many-to-many: which user belongs to which unit(s)
+class UserUnits extends Table {
+  TextColumn get userId => text()();
+  TextColumn get unitId => text()();
+  DateTimeColumn get createdAt => dateTime()();
+
+  @override
+  Set<Column> get primaryKey => {userId, unitId};
+}
+
+/// -----------------------------
+/// Database
+/// -----------------------------
+
+@DriftDatabase(tables: [Patients, Encounters, Events, Units, Users, UserUnits])
+class AppDatabase extends _$AppDatabase {
+  AppDatabase._internal() : super(_openConnection());
+
+  /// Singleton instance (used by AuthService, AnalyticsEngine, etc.)
+  static final AppDatabase instance = AppDatabase._internal();
+
+  /// Call once at app start.
+  /// This guarantees the DB file exists, migrations run, and pragmas are applied.
+  static Future<void> initialize() async {
+    // Touch the DB to force open + run migrations.
+    await instance.customSelect('SELECT 1').get();
+  }
+
+  static LazyDatabase _openConnection() {
+    return LazyDatabase(() async {
+      final dir = await getApplicationDocumentsDirectory();
+      final file = File(p.join(dir.path, 'pulseedge.db'));
+      return NativeDatabase(
+        file,
+        logStatements: false,
+      );
+    });
+  }
+
+  @override
+  int get schemaVersion => 3;
+
+  @override
+  MigrationStrategy get migration => MigrationStrategy(
+        onCreate: (m) async {
+          await m.createAll();
+        },
+        onUpgrade: (m, from, to) async {
+          // Keep upgrades safe for MVP:
+          // - Create missing tables/columns when possible
+          // - Avoid destructive deletes here (deletes cause data loss).
+          //
+          // If you later do breaking schema changes, we’ll write explicit
+          // migrations and data backfills per version.
+          await m.createAll();
+        },
+        beforeOpen: (details) async {
+          // Good defaults for correctness.
+          await customStatement('PRAGMA foreign_keys = ON;');
+          await customStatement('PRAGMA journal_mode = WAL;');
+
+          // NOTE:
+          // Do NOT seed users/passwords here.
+          // AuthService.initialize()/ensureSeedAdmin() should handle that,
+          // so we never write non-base64 placeholders (prevents the
+          // "Invalid encoding before padding" login issue).
+        },
+      );
+}
+</file>
+
+<file path="lib/core/database/app_database.g.dart">
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'app_database.dart';
+
+// ignore_for_file: type=lint
+class $PatientsTable extends Patients with TableInfo<$PatientsTable, Patient> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $PatientsTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _idMeta = const VerificationMeta('id');
+  @override
+  late final GeneratedColumn<String> id = GeneratedColumn<String>(
+    'id',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _mrnMeta = const VerificationMeta('mrn');
+  @override
+  late final GeneratedColumn<String> mrn = GeneratedColumn<String>(
+    'mrn',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _fullNameMeta = const VerificationMeta(
+    'fullName',
+  );
+  @override
+  late final GeneratedColumn<String> fullName = GeneratedColumn<String>(
+    'full_name',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _fullNameNormMeta = const VerificationMeta(
+    'fullNameNorm',
+  );
+  @override
+  late final GeneratedColumn<String> fullNameNorm = GeneratedColumn<String>(
+    'full_name_norm',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _nricMeta = const VerificationMeta('nric');
+  @override
+  late final GeneratedColumn<String> nric = GeneratedColumn<String>(
+    'nric',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _nricHashMeta = const VerificationMeta(
+    'nricHash',
+  );
+  @override
+  late final GeneratedColumn<String> nricHash = GeneratedColumn<String>(
+    'nric_hash',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _addressMeta = const VerificationMeta(
+    'address',
+  );
+  @override
+  late final GeneratedColumn<String> address = GeneratedColumn<String>(
+    'address',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _allergiesMeta = const VerificationMeta(
+    'allergies',
+  );
+  @override
+  late final GeneratedColumn<String> allergies = GeneratedColumn<String>(
+    'allergies',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _consentStatusMeta = const VerificationMeta(
+    'consentStatus',
+  );
+  @override
+  late final GeneratedColumn<String> consentStatus = GeneratedColumn<String>(
+    'consent_status',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+    defaultValue: const Constant('unknown'),
+  );
+  static const VerificationMeta _sourceMeta = const VerificationMeta('source');
+  @override
+  late final GeneratedColumn<String> source = GeneratedColumn<String>(
+    'source',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+    defaultValue: const Constant('local'),
+  );
+  static const VerificationMeta _createdAtMeta = const VerificationMeta(
+    'createdAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> createdAt = GeneratedColumn<DateTime>(
+    'created_at',
+    aliasedName,
+    false,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _updatedAtMeta = const VerificationMeta(
+    'updatedAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> updatedAt = GeneratedColumn<DateTime>(
+    'updated_at',
+    aliasedName,
+    false,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: true,
+  );
+  @override
+  List<GeneratedColumn> get $columns => [
+    id,
+    mrn,
+    fullName,
+    fullNameNorm,
+    nric,
+    nricHash,
+    address,
+    allergies,
+    consentStatus,
+    source,
+    createdAt,
+    updatedAt,
+  ];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'patients';
+  @override
+  VerificationContext validateIntegrity(
+    Insertable<Patient> instance, {
+    bool isInserting = false,
+  }) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('id')) {
+      context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
+    } else if (isInserting) {
+      context.missing(_idMeta);
+    }
+    if (data.containsKey('mrn')) {
+      context.handle(
+        _mrnMeta,
+        mrn.isAcceptableOrUnknown(data['mrn']!, _mrnMeta),
+      );
+    }
+    if (data.containsKey('full_name')) {
+      context.handle(
+        _fullNameMeta,
+        fullName.isAcceptableOrUnknown(data['full_name']!, _fullNameMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_fullNameMeta);
+    }
+    if (data.containsKey('full_name_norm')) {
+      context.handle(
+        _fullNameNormMeta,
+        fullNameNorm.isAcceptableOrUnknown(
+          data['full_name_norm']!,
+          _fullNameNormMeta,
+        ),
+      );
+    } else if (isInserting) {
+      context.missing(_fullNameNormMeta);
+    }
+    if (data.containsKey('nric')) {
+      context.handle(
+        _nricMeta,
+        nric.isAcceptableOrUnknown(data['nric']!, _nricMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_nricMeta);
+    }
+    if (data.containsKey('nric_hash')) {
+      context.handle(
+        _nricHashMeta,
+        nricHash.isAcceptableOrUnknown(data['nric_hash']!, _nricHashMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_nricHashMeta);
+    }
+    if (data.containsKey('address')) {
+      context.handle(
+        _addressMeta,
+        address.isAcceptableOrUnknown(data['address']!, _addressMeta),
+      );
+    }
+    if (data.containsKey('allergies')) {
+      context.handle(
+        _allergiesMeta,
+        allergies.isAcceptableOrUnknown(data['allergies']!, _allergiesMeta),
+      );
+    }
+    if (data.containsKey('consent_status')) {
+      context.handle(
+        _consentStatusMeta,
+        consentStatus.isAcceptableOrUnknown(
+          data['consent_status']!,
+          _consentStatusMeta,
+        ),
+      );
+    }
+    if (data.containsKey('source')) {
+      context.handle(
+        _sourceMeta,
+        source.isAcceptableOrUnknown(data['source']!, _sourceMeta),
+      );
+    }
+    if (data.containsKey('created_at')) {
+      context.handle(
+        _createdAtMeta,
+        createdAt.isAcceptableOrUnknown(data['created_at']!, _createdAtMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_createdAtMeta);
+    }
+    if (data.containsKey('updated_at')) {
+      context.handle(
+        _updatedAtMeta,
+        updatedAt.isAcceptableOrUnknown(data['updated_at']!, _updatedAtMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_updatedAtMeta);
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {id};
+  @override
+  Patient map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return Patient(
+      id: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}id'],
+      )!,
+      mrn: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}mrn'],
+      ),
+      fullName: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}full_name'],
+      )!,
+      fullNameNorm: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}full_name_norm'],
+      )!,
+      nric: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}nric'],
+      )!,
+      nricHash: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}nric_hash'],
+      )!,
+      address: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}address'],
+      ),
+      allergies: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}allergies'],
+      ),
+      consentStatus: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}consent_status'],
+      )!,
+      source: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}source'],
+      )!,
+      createdAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}created_at'],
+      )!,
+      updatedAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}updated_at'],
+      )!,
+    );
+  }
+
+  @override
+  $PatientsTable createAlias(String alias) {
+    return $PatientsTable(attachedDatabase, alias);
+  }
+}
+
+class Patient extends DataClass implements Insertable<Patient> {
+  final String id;
+  final String? mrn;
+  final String fullName;
+  final String fullNameNorm;
+  final String nric;
+  final String nricHash;
+  final String? address;
+  final String? allergies;
+  final String consentStatus;
+  final String source;
+  final DateTime createdAt;
+  final DateTime updatedAt;
+  const Patient({
+    required this.id,
+    this.mrn,
+    required this.fullName,
+    required this.fullNameNorm,
+    required this.nric,
+    required this.nricHash,
+    this.address,
+    this.allergies,
+    required this.consentStatus,
+    required this.source,
+    required this.createdAt,
+    required this.updatedAt,
+  });
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['id'] = Variable<String>(id);
+    if (!nullToAbsent || mrn != null) {
+      map['mrn'] = Variable<String>(mrn);
+    }
+    map['full_name'] = Variable<String>(fullName);
+    map['full_name_norm'] = Variable<String>(fullNameNorm);
+    map['nric'] = Variable<String>(nric);
+    map['nric_hash'] = Variable<String>(nricHash);
+    if (!nullToAbsent || address != null) {
+      map['address'] = Variable<String>(address);
+    }
+    if (!nullToAbsent || allergies != null) {
+      map['allergies'] = Variable<String>(allergies);
+    }
+    map['consent_status'] = Variable<String>(consentStatus);
+    map['source'] = Variable<String>(source);
+    map['created_at'] = Variable<DateTime>(createdAt);
+    map['updated_at'] = Variable<DateTime>(updatedAt);
+    return map;
+  }
+
+  PatientsCompanion toCompanion(bool nullToAbsent) {
+    return PatientsCompanion(
+      id: Value(id),
+      mrn: mrn == null && nullToAbsent ? const Value.absent() : Value(mrn),
+      fullName: Value(fullName),
+      fullNameNorm: Value(fullNameNorm),
+      nric: Value(nric),
+      nricHash: Value(nricHash),
+      address: address == null && nullToAbsent
+          ? const Value.absent()
+          : Value(address),
+      allergies: allergies == null && nullToAbsent
+          ? const Value.absent()
+          : Value(allergies),
+      consentStatus: Value(consentStatus),
+      source: Value(source),
+      createdAt: Value(createdAt),
+      updatedAt: Value(updatedAt),
+    );
+  }
+
+  factory Patient.fromJson(
+    Map<String, dynamic> json, {
+    ValueSerializer? serializer,
+  }) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return Patient(
+      id: serializer.fromJson<String>(json['id']),
+      mrn: serializer.fromJson<String?>(json['mrn']),
+      fullName: serializer.fromJson<String>(json['fullName']),
+      fullNameNorm: serializer.fromJson<String>(json['fullNameNorm']),
+      nric: serializer.fromJson<String>(json['nric']),
+      nricHash: serializer.fromJson<String>(json['nricHash']),
+      address: serializer.fromJson<String?>(json['address']),
+      allergies: serializer.fromJson<String?>(json['allergies']),
+      consentStatus: serializer.fromJson<String>(json['consentStatus']),
+      source: serializer.fromJson<String>(json['source']),
+      createdAt: serializer.fromJson<DateTime>(json['createdAt']),
+      updatedAt: serializer.fromJson<DateTime>(json['updatedAt']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'id': serializer.toJson<String>(id),
+      'mrn': serializer.toJson<String?>(mrn),
+      'fullName': serializer.toJson<String>(fullName),
+      'fullNameNorm': serializer.toJson<String>(fullNameNorm),
+      'nric': serializer.toJson<String>(nric),
+      'nricHash': serializer.toJson<String>(nricHash),
+      'address': serializer.toJson<String?>(address),
+      'allergies': serializer.toJson<String?>(allergies),
+      'consentStatus': serializer.toJson<String>(consentStatus),
+      'source': serializer.toJson<String>(source),
+      'createdAt': serializer.toJson<DateTime>(createdAt),
+      'updatedAt': serializer.toJson<DateTime>(updatedAt),
+    };
+  }
+
+  Patient copyWith({
+    String? id,
+    Value<String?> mrn = const Value.absent(),
+    String? fullName,
+    String? fullNameNorm,
+    String? nric,
+    String? nricHash,
+    Value<String?> address = const Value.absent(),
+    Value<String?> allergies = const Value.absent(),
+    String? consentStatus,
+    String? source,
+    DateTime? createdAt,
+    DateTime? updatedAt,
+  }) => Patient(
+    id: id ?? this.id,
+    mrn: mrn.present ? mrn.value : this.mrn,
+    fullName: fullName ?? this.fullName,
+    fullNameNorm: fullNameNorm ?? this.fullNameNorm,
+    nric: nric ?? this.nric,
+    nricHash: nricHash ?? this.nricHash,
+    address: address.present ? address.value : this.address,
+    allergies: allergies.present ? allergies.value : this.allergies,
+    consentStatus: consentStatus ?? this.consentStatus,
+    source: source ?? this.source,
+    createdAt: createdAt ?? this.createdAt,
+    updatedAt: updatedAt ?? this.updatedAt,
+  );
+  Patient copyWithCompanion(PatientsCompanion data) {
+    return Patient(
+      id: data.id.present ? data.id.value : this.id,
+      mrn: data.mrn.present ? data.mrn.value : this.mrn,
+      fullName: data.fullName.present ? data.fullName.value : this.fullName,
+      fullNameNorm: data.fullNameNorm.present
+          ? data.fullNameNorm.value
+          : this.fullNameNorm,
+      nric: data.nric.present ? data.nric.value : this.nric,
+      nricHash: data.nricHash.present ? data.nricHash.value : this.nricHash,
+      address: data.address.present ? data.address.value : this.address,
+      allergies: data.allergies.present ? data.allergies.value : this.allergies,
+      consentStatus: data.consentStatus.present
+          ? data.consentStatus.value
+          : this.consentStatus,
+      source: data.source.present ? data.source.value : this.source,
+      createdAt: data.createdAt.present ? data.createdAt.value : this.createdAt,
+      updatedAt: data.updatedAt.present ? data.updatedAt.value : this.updatedAt,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('Patient(')
+          ..write('id: $id, ')
+          ..write('mrn: $mrn, ')
+          ..write('fullName: $fullName, ')
+          ..write('fullNameNorm: $fullNameNorm, ')
+          ..write('nric: $nric, ')
+          ..write('nricHash: $nricHash, ')
+          ..write('address: $address, ')
+          ..write('allergies: $allergies, ')
+          ..write('consentStatus: $consentStatus, ')
+          ..write('source: $source, ')
+          ..write('createdAt: $createdAt, ')
+          ..write('updatedAt: $updatedAt')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(
+    id,
+    mrn,
+    fullName,
+    fullNameNorm,
+    nric,
+    nricHash,
+    address,
+    allergies,
+    consentStatus,
+    source,
+    createdAt,
+    updatedAt,
+  );
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is Patient &&
+          other.id == this.id &&
+          other.mrn == this.mrn &&
+          other.fullName == this.fullName &&
+          other.fullNameNorm == this.fullNameNorm &&
+          other.nric == this.nric &&
+          other.nricHash == this.nricHash &&
+          other.address == this.address &&
+          other.allergies == this.allergies &&
+          other.consentStatus == this.consentStatus &&
+          other.source == this.source &&
+          other.createdAt == this.createdAt &&
+          other.updatedAt == this.updatedAt);
+}
+
+class PatientsCompanion extends UpdateCompanion<Patient> {
+  final Value<String> id;
+  final Value<String?> mrn;
+  final Value<String> fullName;
+  final Value<String> fullNameNorm;
+  final Value<String> nric;
+  final Value<String> nricHash;
+  final Value<String?> address;
+  final Value<String?> allergies;
+  final Value<String> consentStatus;
+  final Value<String> source;
+  final Value<DateTime> createdAt;
+  final Value<DateTime> updatedAt;
+  final Value<int> rowid;
+  const PatientsCompanion({
+    this.id = const Value.absent(),
+    this.mrn = const Value.absent(),
+    this.fullName = const Value.absent(),
+    this.fullNameNorm = const Value.absent(),
+    this.nric = const Value.absent(),
+    this.nricHash = const Value.absent(),
+    this.address = const Value.absent(),
+    this.allergies = const Value.absent(),
+    this.consentStatus = const Value.absent(),
+    this.source = const Value.absent(),
+    this.createdAt = const Value.absent(),
+    this.updatedAt = const Value.absent(),
+    this.rowid = const Value.absent(),
+  });
+  PatientsCompanion.insert({
+    required String id,
+    this.mrn = const Value.absent(),
+    required String fullName,
+    required String fullNameNorm,
+    required String nric,
+    required String nricHash,
+    this.address = const Value.absent(),
+    this.allergies = const Value.absent(),
+    this.consentStatus = const Value.absent(),
+    this.source = const Value.absent(),
+    required DateTime createdAt,
+    required DateTime updatedAt,
+    this.rowid = const Value.absent(),
+  }) : id = Value(id),
+       fullName = Value(fullName),
+       fullNameNorm = Value(fullNameNorm),
+       nric = Value(nric),
+       nricHash = Value(nricHash),
+       createdAt = Value(createdAt),
+       updatedAt = Value(updatedAt);
+  static Insertable<Patient> custom({
+    Expression<String>? id,
+    Expression<String>? mrn,
+    Expression<String>? fullName,
+    Expression<String>? fullNameNorm,
+    Expression<String>? nric,
+    Expression<String>? nricHash,
+    Expression<String>? address,
+    Expression<String>? allergies,
+    Expression<String>? consentStatus,
+    Expression<String>? source,
+    Expression<DateTime>? createdAt,
+    Expression<DateTime>? updatedAt,
+    Expression<int>? rowid,
+  }) {
+    return RawValuesInsertable({
+      if (id != null) 'id': id,
+      if (mrn != null) 'mrn': mrn,
+      if (fullName != null) 'full_name': fullName,
+      if (fullNameNorm != null) 'full_name_norm': fullNameNorm,
+      if (nric != null) 'nric': nric,
+      if (nricHash != null) 'nric_hash': nricHash,
+      if (address != null) 'address': address,
+      if (allergies != null) 'allergies': allergies,
+      if (consentStatus != null) 'consent_status': consentStatus,
+      if (source != null) 'source': source,
+      if (createdAt != null) 'created_at': createdAt,
+      if (updatedAt != null) 'updated_at': updatedAt,
+      if (rowid != null) 'rowid': rowid,
+    });
+  }
+
+  PatientsCompanion copyWith({
+    Value<String>? id,
+    Value<String?>? mrn,
+    Value<String>? fullName,
+    Value<String>? fullNameNorm,
+    Value<String>? nric,
+    Value<String>? nricHash,
+    Value<String?>? address,
+    Value<String?>? allergies,
+    Value<String>? consentStatus,
+    Value<String>? source,
+    Value<DateTime>? createdAt,
+    Value<DateTime>? updatedAt,
+    Value<int>? rowid,
+  }) {
+    return PatientsCompanion(
+      id: id ?? this.id,
+      mrn: mrn ?? this.mrn,
+      fullName: fullName ?? this.fullName,
+      fullNameNorm: fullNameNorm ?? this.fullNameNorm,
+      nric: nric ?? this.nric,
+      nricHash: nricHash ?? this.nricHash,
+      address: address ?? this.address,
+      allergies: allergies ?? this.allergies,
+      consentStatus: consentStatus ?? this.consentStatus,
+      source: source ?? this.source,
+      createdAt: createdAt ?? this.createdAt,
+      updatedAt: updatedAt ?? this.updatedAt,
+      rowid: rowid ?? this.rowid,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (id.present) {
+      map['id'] = Variable<String>(id.value);
+    }
+    if (mrn.present) {
+      map['mrn'] = Variable<String>(mrn.value);
+    }
+    if (fullName.present) {
+      map['full_name'] = Variable<String>(fullName.value);
+    }
+    if (fullNameNorm.present) {
+      map['full_name_norm'] = Variable<String>(fullNameNorm.value);
+    }
+    if (nric.present) {
+      map['nric'] = Variable<String>(nric.value);
+    }
+    if (nricHash.present) {
+      map['nric_hash'] = Variable<String>(nricHash.value);
+    }
+    if (address.present) {
+      map['address'] = Variable<String>(address.value);
+    }
+    if (allergies.present) {
+      map['allergies'] = Variable<String>(allergies.value);
+    }
+    if (consentStatus.present) {
+      map['consent_status'] = Variable<String>(consentStatus.value);
+    }
+    if (source.present) {
+      map['source'] = Variable<String>(source.value);
+    }
+    if (createdAt.present) {
+      map['created_at'] = Variable<DateTime>(createdAt.value);
+    }
+    if (updatedAt.present) {
+      map['updated_at'] = Variable<DateTime>(updatedAt.value);
+    }
+    if (rowid.present) {
+      map['rowid'] = Variable<int>(rowid.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('PatientsCompanion(')
+          ..write('id: $id, ')
+          ..write('mrn: $mrn, ')
+          ..write('fullName: $fullName, ')
+          ..write('fullNameNorm: $fullNameNorm, ')
+          ..write('nric: $nric, ')
+          ..write('nricHash: $nricHash, ')
+          ..write('address: $address, ')
+          ..write('allergies: $allergies, ')
+          ..write('consentStatus: $consentStatus, ')
+          ..write('source: $source, ')
+          ..write('createdAt: $createdAt, ')
+          ..write('updatedAt: $updatedAt, ')
+          ..write('rowid: $rowid')
+          ..write(')'))
+        .toString();
+  }
+}
+
+class $EncountersTable extends Encounters
+    with TableInfo<$EncountersTable, Encounter> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $EncountersTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _idMeta = const VerificationMeta('id');
+  @override
+  late final GeneratedColumn<String> id = GeneratedColumn<String>(
+    'id',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _patientIdMeta = const VerificationMeta(
+    'patientId',
+  );
+  @override
+  late final GeneratedColumn<String> patientId = GeneratedColumn<String>(
+    'patient_id',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _encounterNoMeta = const VerificationMeta(
+    'encounterNo',
+  );
+  @override
+  late final GeneratedColumn<String> encounterNo = GeneratedColumn<String>(
+    'encounter_no',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _statusMeta = const VerificationMeta('status');
+  @override
+  late final GeneratedColumn<String> status = GeneratedColumn<String>(
+    'status',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+    defaultValue: const Constant('open'),
+  );
+  static const VerificationMeta _typeMeta = const VerificationMeta('type');
+  @override
+  late final GeneratedColumn<String> type = GeneratedColumn<String>(
+    'type',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+    defaultValue: const Constant('OPD'),
+  );
+  static const VerificationMeta _unitIdMeta = const VerificationMeta('unitId');
+  @override
+  late final GeneratedColumn<String> unitId = GeneratedColumn<String>(
+    'unit_id',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _unitNameMeta = const VerificationMeta(
+    'unitName',
+  );
+  @override
+  late final GeneratedColumn<String> unitName = GeneratedColumn<String>(
+    'unit_name',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+    defaultValue: const Constant('Unknown Unit'),
+  );
+  static const VerificationMeta _providerUserIdMeta = const VerificationMeta(
+    'providerUserId',
+  );
+  @override
+  late final GeneratedColumn<String> providerUserId = GeneratedColumn<String>(
+    'provider_user_id',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _providerNameMeta = const VerificationMeta(
+    'providerName',
+  );
+  @override
+  late final GeneratedColumn<String> providerName = GeneratedColumn<String>(
+    'provider_name',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _chiefComplaintMeta = const VerificationMeta(
+    'chiefComplaint',
+  );
+  @override
+  late final GeneratedColumn<String> chiefComplaint = GeneratedColumn<String>(
+    'chief_complaint',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _triageCategoryMeta = const VerificationMeta(
+    'triageCategory',
+  );
+  @override
+  late final GeneratedColumn<String> triageCategory = GeneratedColumn<String>(
+    'triage_category',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _startAtMeta = const VerificationMeta(
+    'startAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> startAt = GeneratedColumn<DateTime>(
+    'start_at',
+    aliasedName,
+    false,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _endAtMeta = const VerificationMeta('endAt');
+  @override
+  late final GeneratedColumn<DateTime> endAt = GeneratedColumn<DateTime>(
+    'end_at',
+    aliasedName,
+    true,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _syncedMeta = const VerificationMeta('synced');
+  @override
+  late final GeneratedColumn<int> synced = GeneratedColumn<int>(
+    'synced',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(0),
+  );
+  static const VerificationMeta _syncStateMeta = const VerificationMeta(
+    'syncState',
+  );
+  @override
+  late final GeneratedColumn<String> syncState = GeneratedColumn<String>(
+    'sync_state',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+    defaultValue: const Constant('pending'),
+  );
+  static const VerificationMeta _aiMetadataMeta = const VerificationMeta(
+    'aiMetadata',
+  );
+  @override
+  late final GeneratedColumn<String> aiMetadata = GeneratedColumn<String>(
+    'ai_metadata',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _createdAtMeta = const VerificationMeta(
+    'createdAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> createdAt = GeneratedColumn<DateTime>(
+    'created_at',
+    aliasedName,
+    false,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _updatedAtMeta = const VerificationMeta(
+    'updatedAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> updatedAt = GeneratedColumn<DateTime>(
+    'updated_at',
+    aliasedName,
+    false,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: true,
+  );
+  @override
+  List<GeneratedColumn> get $columns => [
+    id,
+    patientId,
+    encounterNo,
+    status,
+    type,
+    unitId,
+    unitName,
+    providerUserId,
+    providerName,
+    chiefComplaint,
+    triageCategory,
+    startAt,
+    endAt,
+    synced,
+    syncState,
+    aiMetadata,
+    createdAt,
+    updatedAt,
+  ];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'encounters';
+  @override
+  VerificationContext validateIntegrity(
+    Insertable<Encounter> instance, {
+    bool isInserting = false,
+  }) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('id')) {
+      context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
+    } else if (isInserting) {
+      context.missing(_idMeta);
+    }
+    if (data.containsKey('patient_id')) {
+      context.handle(
+        _patientIdMeta,
+        patientId.isAcceptableOrUnknown(data['patient_id']!, _patientIdMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_patientIdMeta);
+    }
+    if (data.containsKey('encounter_no')) {
+      context.handle(
+        _encounterNoMeta,
+        encounterNo.isAcceptableOrUnknown(
+          data['encounter_no']!,
+          _encounterNoMeta,
+        ),
+      );
+    }
+    if (data.containsKey('status')) {
+      context.handle(
+        _statusMeta,
+        status.isAcceptableOrUnknown(data['status']!, _statusMeta),
+      );
+    }
+    if (data.containsKey('type')) {
+      context.handle(
+        _typeMeta,
+        type.isAcceptableOrUnknown(data['type']!, _typeMeta),
+      );
+    }
+    if (data.containsKey('unit_id')) {
+      context.handle(
+        _unitIdMeta,
+        unitId.isAcceptableOrUnknown(data['unit_id']!, _unitIdMeta),
+      );
+    }
+    if (data.containsKey('unit_name')) {
+      context.handle(
+        _unitNameMeta,
+        unitName.isAcceptableOrUnknown(data['unit_name']!, _unitNameMeta),
+      );
+    }
+    if (data.containsKey('provider_user_id')) {
+      context.handle(
+        _providerUserIdMeta,
+        providerUserId.isAcceptableOrUnknown(
+          data['provider_user_id']!,
+          _providerUserIdMeta,
+        ),
+      );
+    }
+    if (data.containsKey('provider_name')) {
+      context.handle(
+        _providerNameMeta,
+        providerName.isAcceptableOrUnknown(
+          data['provider_name']!,
+          _providerNameMeta,
+        ),
+      );
+    }
+    if (data.containsKey('chief_complaint')) {
+      context.handle(
+        _chiefComplaintMeta,
+        chiefComplaint.isAcceptableOrUnknown(
+          data['chief_complaint']!,
+          _chiefComplaintMeta,
+        ),
+      );
+    }
+    if (data.containsKey('triage_category')) {
+      context.handle(
+        _triageCategoryMeta,
+        triageCategory.isAcceptableOrUnknown(
+          data['triage_category']!,
+          _triageCategoryMeta,
+        ),
+      );
+    }
+    if (data.containsKey('start_at')) {
+      context.handle(
+        _startAtMeta,
+        startAt.isAcceptableOrUnknown(data['start_at']!, _startAtMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_startAtMeta);
+    }
+    if (data.containsKey('end_at')) {
+      context.handle(
+        _endAtMeta,
+        endAt.isAcceptableOrUnknown(data['end_at']!, _endAtMeta),
+      );
+    }
+    if (data.containsKey('synced')) {
+      context.handle(
+        _syncedMeta,
+        synced.isAcceptableOrUnknown(data['synced']!, _syncedMeta),
+      );
+    }
+    if (data.containsKey('sync_state')) {
+      context.handle(
+        _syncStateMeta,
+        syncState.isAcceptableOrUnknown(data['sync_state']!, _syncStateMeta),
+      );
+    }
+    if (data.containsKey('ai_metadata')) {
+      context.handle(
+        _aiMetadataMeta,
+        aiMetadata.isAcceptableOrUnknown(data['ai_metadata']!, _aiMetadataMeta),
+      );
+    }
+    if (data.containsKey('created_at')) {
+      context.handle(
+        _createdAtMeta,
+        createdAt.isAcceptableOrUnknown(data['created_at']!, _createdAtMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_createdAtMeta);
+    }
+    if (data.containsKey('updated_at')) {
+      context.handle(
+        _updatedAtMeta,
+        updatedAt.isAcceptableOrUnknown(data['updated_at']!, _updatedAtMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_updatedAtMeta);
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {id};
+  @override
+  Encounter map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return Encounter(
+      id: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}id'],
+      )!,
+      patientId: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}patient_id'],
+      )!,
+      encounterNo: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}encounter_no'],
+      ),
+      status: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}status'],
+      )!,
+      type: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}type'],
+      )!,
+      unitId: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}unit_id'],
+      ),
+      unitName: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}unit_name'],
+      )!,
+      providerUserId: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}provider_user_id'],
+      ),
+      providerName: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}provider_name'],
+      ),
+      chiefComplaint: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}chief_complaint'],
+      ),
+      triageCategory: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}triage_category'],
+      ),
+      startAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}start_at'],
+      )!,
+      endAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}end_at'],
+      ),
+      synced: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}synced'],
+      )!,
+      syncState: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}sync_state'],
+      )!,
+      aiMetadata: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}ai_metadata'],
+      ),
+      createdAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}created_at'],
+      )!,
+      updatedAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}updated_at'],
+      )!,
+    );
+  }
+
+  @override
+  $EncountersTable createAlias(String alias) {
+    return $EncountersTable(attachedDatabase, alias);
+  }
+}
+
+class Encounter extends DataClass implements Insertable<Encounter> {
+  final String id;
+  final String patientId;
+  final String? encounterNo;
+  final String status;
+  final String type;
+  final String? unitId;
+  final String unitName;
+  final String? providerUserId;
+  final String? providerName;
+  final String? chiefComplaint;
+  final String? triageCategory;
+  final DateTime startAt;
+  final DateTime? endAt;
+  final int synced;
+  final String syncState;
+  final String? aiMetadata;
+  final DateTime createdAt;
+  final DateTime updatedAt;
+  const Encounter({
+    required this.id,
+    required this.patientId,
+    this.encounterNo,
+    required this.status,
+    required this.type,
+    this.unitId,
+    required this.unitName,
+    this.providerUserId,
+    this.providerName,
+    this.chiefComplaint,
+    this.triageCategory,
+    required this.startAt,
+    this.endAt,
+    required this.synced,
+    required this.syncState,
+    this.aiMetadata,
+    required this.createdAt,
+    required this.updatedAt,
+  });
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['id'] = Variable<String>(id);
+    map['patient_id'] = Variable<String>(patientId);
+    if (!nullToAbsent || encounterNo != null) {
+      map['encounter_no'] = Variable<String>(encounterNo);
+    }
+    map['status'] = Variable<String>(status);
+    map['type'] = Variable<String>(type);
+    if (!nullToAbsent || unitId != null) {
+      map['unit_id'] = Variable<String>(unitId);
+    }
+    map['unit_name'] = Variable<String>(unitName);
+    if (!nullToAbsent || providerUserId != null) {
+      map['provider_user_id'] = Variable<String>(providerUserId);
+    }
+    if (!nullToAbsent || providerName != null) {
+      map['provider_name'] = Variable<String>(providerName);
+    }
+    if (!nullToAbsent || chiefComplaint != null) {
+      map['chief_complaint'] = Variable<String>(chiefComplaint);
+    }
+    if (!nullToAbsent || triageCategory != null) {
+      map['triage_category'] = Variable<String>(triageCategory);
+    }
+    map['start_at'] = Variable<DateTime>(startAt);
+    if (!nullToAbsent || endAt != null) {
+      map['end_at'] = Variable<DateTime>(endAt);
+    }
+    map['synced'] = Variable<int>(synced);
+    map['sync_state'] = Variable<String>(syncState);
+    if (!nullToAbsent || aiMetadata != null) {
+      map['ai_metadata'] = Variable<String>(aiMetadata);
+    }
+    map['created_at'] = Variable<DateTime>(createdAt);
+    map['updated_at'] = Variable<DateTime>(updatedAt);
+    return map;
+  }
+
+  EncountersCompanion toCompanion(bool nullToAbsent) {
+    return EncountersCompanion(
+      id: Value(id),
+      patientId: Value(patientId),
+      encounterNo: encounterNo == null && nullToAbsent
+          ? const Value.absent()
+          : Value(encounterNo),
+      status: Value(status),
+      type: Value(type),
+      unitId: unitId == null && nullToAbsent
+          ? const Value.absent()
+          : Value(unitId),
+      unitName: Value(unitName),
+      providerUserId: providerUserId == null && nullToAbsent
+          ? const Value.absent()
+          : Value(providerUserId),
+      providerName: providerName == null && nullToAbsent
+          ? const Value.absent()
+          : Value(providerName),
+      chiefComplaint: chiefComplaint == null && nullToAbsent
+          ? const Value.absent()
+          : Value(chiefComplaint),
+      triageCategory: triageCategory == null && nullToAbsent
+          ? const Value.absent()
+          : Value(triageCategory),
+      startAt: Value(startAt),
+      endAt: endAt == null && nullToAbsent
+          ? const Value.absent()
+          : Value(endAt),
+      synced: Value(synced),
+      syncState: Value(syncState),
+      aiMetadata: aiMetadata == null && nullToAbsent
+          ? const Value.absent()
+          : Value(aiMetadata),
+      createdAt: Value(createdAt),
+      updatedAt: Value(updatedAt),
+    );
+  }
+
+  factory Encounter.fromJson(
+    Map<String, dynamic> json, {
+    ValueSerializer? serializer,
+  }) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return Encounter(
+      id: serializer.fromJson<String>(json['id']),
+      patientId: serializer.fromJson<String>(json['patientId']),
+      encounterNo: serializer.fromJson<String?>(json['encounterNo']),
+      status: serializer.fromJson<String>(json['status']),
+      type: serializer.fromJson<String>(json['type']),
+      unitId: serializer.fromJson<String?>(json['unitId']),
+      unitName: serializer.fromJson<String>(json['unitName']),
+      providerUserId: serializer.fromJson<String?>(json['providerUserId']),
+      providerName: serializer.fromJson<String?>(json['providerName']),
+      chiefComplaint: serializer.fromJson<String?>(json['chiefComplaint']),
+      triageCategory: serializer.fromJson<String?>(json['triageCategory']),
+      startAt: serializer.fromJson<DateTime>(json['startAt']),
+      endAt: serializer.fromJson<DateTime?>(json['endAt']),
+      synced: serializer.fromJson<int>(json['synced']),
+      syncState: serializer.fromJson<String>(json['syncState']),
+      aiMetadata: serializer.fromJson<String?>(json['aiMetadata']),
+      createdAt: serializer.fromJson<DateTime>(json['createdAt']),
+      updatedAt: serializer.fromJson<DateTime>(json['updatedAt']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'id': serializer.toJson<String>(id),
+      'patientId': serializer.toJson<String>(patientId),
+      'encounterNo': serializer.toJson<String?>(encounterNo),
+      'status': serializer.toJson<String>(status),
+      'type': serializer.toJson<String>(type),
+      'unitId': serializer.toJson<String?>(unitId),
+      'unitName': serializer.toJson<String>(unitName),
+      'providerUserId': serializer.toJson<String?>(providerUserId),
+      'providerName': serializer.toJson<String?>(providerName),
+      'chiefComplaint': serializer.toJson<String?>(chiefComplaint),
+      'triageCategory': serializer.toJson<String?>(triageCategory),
+      'startAt': serializer.toJson<DateTime>(startAt),
+      'endAt': serializer.toJson<DateTime?>(endAt),
+      'synced': serializer.toJson<int>(synced),
+      'syncState': serializer.toJson<String>(syncState),
+      'aiMetadata': serializer.toJson<String?>(aiMetadata),
+      'createdAt': serializer.toJson<DateTime>(createdAt),
+      'updatedAt': serializer.toJson<DateTime>(updatedAt),
+    };
+  }
+
+  Encounter copyWith({
+    String? id,
+    String? patientId,
+    Value<String?> encounterNo = const Value.absent(),
+    String? status,
+    String? type,
+    Value<String?> unitId = const Value.absent(),
+    String? unitName,
+    Value<String?> providerUserId = const Value.absent(),
+    Value<String?> providerName = const Value.absent(),
+    Value<String?> chiefComplaint = const Value.absent(),
+    Value<String?> triageCategory = const Value.absent(),
+    DateTime? startAt,
+    Value<DateTime?> endAt = const Value.absent(),
+    int? synced,
+    String? syncState,
+    Value<String?> aiMetadata = const Value.absent(),
+    DateTime? createdAt,
+    DateTime? updatedAt,
+  }) => Encounter(
+    id: id ?? this.id,
+    patientId: patientId ?? this.patientId,
+    encounterNo: encounterNo.present ? encounterNo.value : this.encounterNo,
+    status: status ?? this.status,
+    type: type ?? this.type,
+    unitId: unitId.present ? unitId.value : this.unitId,
+    unitName: unitName ?? this.unitName,
+    providerUserId: providerUserId.present
+        ? providerUserId.value
+        : this.providerUserId,
+    providerName: providerName.present ? providerName.value : this.providerName,
+    chiefComplaint: chiefComplaint.present
+        ? chiefComplaint.value
+        : this.chiefComplaint,
+    triageCategory: triageCategory.present
+        ? triageCategory.value
+        : this.triageCategory,
+    startAt: startAt ?? this.startAt,
+    endAt: endAt.present ? endAt.value : this.endAt,
+    synced: synced ?? this.synced,
+    syncState: syncState ?? this.syncState,
+    aiMetadata: aiMetadata.present ? aiMetadata.value : this.aiMetadata,
+    createdAt: createdAt ?? this.createdAt,
+    updatedAt: updatedAt ?? this.updatedAt,
+  );
+  Encounter copyWithCompanion(EncountersCompanion data) {
+    return Encounter(
+      id: data.id.present ? data.id.value : this.id,
+      patientId: data.patientId.present ? data.patientId.value : this.patientId,
+      encounterNo: data.encounterNo.present
+          ? data.encounterNo.value
+          : this.encounterNo,
+      status: data.status.present ? data.status.value : this.status,
+      type: data.type.present ? data.type.value : this.type,
+      unitId: data.unitId.present ? data.unitId.value : this.unitId,
+      unitName: data.unitName.present ? data.unitName.value : this.unitName,
+      providerUserId: data.providerUserId.present
+          ? data.providerUserId.value
+          : this.providerUserId,
+      providerName: data.providerName.present
+          ? data.providerName.value
+          : this.providerName,
+      chiefComplaint: data.chiefComplaint.present
+          ? data.chiefComplaint.value
+          : this.chiefComplaint,
+      triageCategory: data.triageCategory.present
+          ? data.triageCategory.value
+          : this.triageCategory,
+      startAt: data.startAt.present ? data.startAt.value : this.startAt,
+      endAt: data.endAt.present ? data.endAt.value : this.endAt,
+      synced: data.synced.present ? data.synced.value : this.synced,
+      syncState: data.syncState.present ? data.syncState.value : this.syncState,
+      aiMetadata: data.aiMetadata.present
+          ? data.aiMetadata.value
+          : this.aiMetadata,
+      createdAt: data.createdAt.present ? data.createdAt.value : this.createdAt,
+      updatedAt: data.updatedAt.present ? data.updatedAt.value : this.updatedAt,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('Encounter(')
+          ..write('id: $id, ')
+          ..write('patientId: $patientId, ')
+          ..write('encounterNo: $encounterNo, ')
+          ..write('status: $status, ')
+          ..write('type: $type, ')
+          ..write('unitId: $unitId, ')
+          ..write('unitName: $unitName, ')
+          ..write('providerUserId: $providerUserId, ')
+          ..write('providerName: $providerName, ')
+          ..write('chiefComplaint: $chiefComplaint, ')
+          ..write('triageCategory: $triageCategory, ')
+          ..write('startAt: $startAt, ')
+          ..write('endAt: $endAt, ')
+          ..write('synced: $synced, ')
+          ..write('syncState: $syncState, ')
+          ..write('aiMetadata: $aiMetadata, ')
+          ..write('createdAt: $createdAt, ')
+          ..write('updatedAt: $updatedAt')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(
+    id,
+    patientId,
+    encounterNo,
+    status,
+    type,
+    unitId,
+    unitName,
+    providerUserId,
+    providerName,
+    chiefComplaint,
+    triageCategory,
+    startAt,
+    endAt,
+    synced,
+    syncState,
+    aiMetadata,
+    createdAt,
+    updatedAt,
+  );
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is Encounter &&
+          other.id == this.id &&
+          other.patientId == this.patientId &&
+          other.encounterNo == this.encounterNo &&
+          other.status == this.status &&
+          other.type == this.type &&
+          other.unitId == this.unitId &&
+          other.unitName == this.unitName &&
+          other.providerUserId == this.providerUserId &&
+          other.providerName == this.providerName &&
+          other.chiefComplaint == this.chiefComplaint &&
+          other.triageCategory == this.triageCategory &&
+          other.startAt == this.startAt &&
+          other.endAt == this.endAt &&
+          other.synced == this.synced &&
+          other.syncState == this.syncState &&
+          other.aiMetadata == this.aiMetadata &&
+          other.createdAt == this.createdAt &&
+          other.updatedAt == this.updatedAt);
+}
+
+class EncountersCompanion extends UpdateCompanion<Encounter> {
+  final Value<String> id;
+  final Value<String> patientId;
+  final Value<String?> encounterNo;
+  final Value<String> status;
+  final Value<String> type;
+  final Value<String?> unitId;
+  final Value<String> unitName;
+  final Value<String?> providerUserId;
+  final Value<String?> providerName;
+  final Value<String?> chiefComplaint;
+  final Value<String?> triageCategory;
+  final Value<DateTime> startAt;
+  final Value<DateTime?> endAt;
+  final Value<int> synced;
+  final Value<String> syncState;
+  final Value<String?> aiMetadata;
+  final Value<DateTime> createdAt;
+  final Value<DateTime> updatedAt;
+  final Value<int> rowid;
+  const EncountersCompanion({
+    this.id = const Value.absent(),
+    this.patientId = const Value.absent(),
+    this.encounterNo = const Value.absent(),
+    this.status = const Value.absent(),
+    this.type = const Value.absent(),
+    this.unitId = const Value.absent(),
+    this.unitName = const Value.absent(),
+    this.providerUserId = const Value.absent(),
+    this.providerName = const Value.absent(),
+    this.chiefComplaint = const Value.absent(),
+    this.triageCategory = const Value.absent(),
+    this.startAt = const Value.absent(),
+    this.endAt = const Value.absent(),
+    this.synced = const Value.absent(),
+    this.syncState = const Value.absent(),
+    this.aiMetadata = const Value.absent(),
+    this.createdAt = const Value.absent(),
+    this.updatedAt = const Value.absent(),
+    this.rowid = const Value.absent(),
+  });
+  EncountersCompanion.insert({
+    required String id,
+    required String patientId,
+    this.encounterNo = const Value.absent(),
+    this.status = const Value.absent(),
+    this.type = const Value.absent(),
+    this.unitId = const Value.absent(),
+    this.unitName = const Value.absent(),
+    this.providerUserId = const Value.absent(),
+    this.providerName = const Value.absent(),
+    this.chiefComplaint = const Value.absent(),
+    this.triageCategory = const Value.absent(),
+    required DateTime startAt,
+    this.endAt = const Value.absent(),
+    this.synced = const Value.absent(),
+    this.syncState = const Value.absent(),
+    this.aiMetadata = const Value.absent(),
+    required DateTime createdAt,
+    required DateTime updatedAt,
+    this.rowid = const Value.absent(),
+  }) : id = Value(id),
+       patientId = Value(patientId),
+       startAt = Value(startAt),
+       createdAt = Value(createdAt),
+       updatedAt = Value(updatedAt);
+  static Insertable<Encounter> custom({
+    Expression<String>? id,
+    Expression<String>? patientId,
+    Expression<String>? encounterNo,
+    Expression<String>? status,
+    Expression<String>? type,
+    Expression<String>? unitId,
+    Expression<String>? unitName,
+    Expression<String>? providerUserId,
+    Expression<String>? providerName,
+    Expression<String>? chiefComplaint,
+    Expression<String>? triageCategory,
+    Expression<DateTime>? startAt,
+    Expression<DateTime>? endAt,
+    Expression<int>? synced,
+    Expression<String>? syncState,
+    Expression<String>? aiMetadata,
+    Expression<DateTime>? createdAt,
+    Expression<DateTime>? updatedAt,
+    Expression<int>? rowid,
+  }) {
+    return RawValuesInsertable({
+      if (id != null) 'id': id,
+      if (patientId != null) 'patient_id': patientId,
+      if (encounterNo != null) 'encounter_no': encounterNo,
+      if (status != null) 'status': status,
+      if (type != null) 'type': type,
+      if (unitId != null) 'unit_id': unitId,
+      if (unitName != null) 'unit_name': unitName,
+      if (providerUserId != null) 'provider_user_id': providerUserId,
+      if (providerName != null) 'provider_name': providerName,
+      if (chiefComplaint != null) 'chief_complaint': chiefComplaint,
+      if (triageCategory != null) 'triage_category': triageCategory,
+      if (startAt != null) 'start_at': startAt,
+      if (endAt != null) 'end_at': endAt,
+      if (synced != null) 'synced': synced,
+      if (syncState != null) 'sync_state': syncState,
+      if (aiMetadata != null) 'ai_metadata': aiMetadata,
+      if (createdAt != null) 'created_at': createdAt,
+      if (updatedAt != null) 'updated_at': updatedAt,
+      if (rowid != null) 'rowid': rowid,
+    });
+  }
+
+  EncountersCompanion copyWith({
+    Value<String>? id,
+    Value<String>? patientId,
+    Value<String?>? encounterNo,
+    Value<String>? status,
+    Value<String>? type,
+    Value<String?>? unitId,
+    Value<String>? unitName,
+    Value<String?>? providerUserId,
+    Value<String?>? providerName,
+    Value<String?>? chiefComplaint,
+    Value<String?>? triageCategory,
+    Value<DateTime>? startAt,
+    Value<DateTime?>? endAt,
+    Value<int>? synced,
+    Value<String>? syncState,
+    Value<String?>? aiMetadata,
+    Value<DateTime>? createdAt,
+    Value<DateTime>? updatedAt,
+    Value<int>? rowid,
+  }) {
+    return EncountersCompanion(
+      id: id ?? this.id,
+      patientId: patientId ?? this.patientId,
+      encounterNo: encounterNo ?? this.encounterNo,
+      status: status ?? this.status,
+      type: type ?? this.type,
+      unitId: unitId ?? this.unitId,
+      unitName: unitName ?? this.unitName,
+      providerUserId: providerUserId ?? this.providerUserId,
+      providerName: providerName ?? this.providerName,
+      chiefComplaint: chiefComplaint ?? this.chiefComplaint,
+      triageCategory: triageCategory ?? this.triageCategory,
+      startAt: startAt ?? this.startAt,
+      endAt: endAt ?? this.endAt,
+      synced: synced ?? this.synced,
+      syncState: syncState ?? this.syncState,
+      aiMetadata: aiMetadata ?? this.aiMetadata,
+      createdAt: createdAt ?? this.createdAt,
+      updatedAt: updatedAt ?? this.updatedAt,
+      rowid: rowid ?? this.rowid,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (id.present) {
+      map['id'] = Variable<String>(id.value);
+    }
+    if (patientId.present) {
+      map['patient_id'] = Variable<String>(patientId.value);
+    }
+    if (encounterNo.present) {
+      map['encounter_no'] = Variable<String>(encounterNo.value);
+    }
+    if (status.present) {
+      map['status'] = Variable<String>(status.value);
+    }
+    if (type.present) {
+      map['type'] = Variable<String>(type.value);
+    }
+    if (unitId.present) {
+      map['unit_id'] = Variable<String>(unitId.value);
+    }
+    if (unitName.present) {
+      map['unit_name'] = Variable<String>(unitName.value);
+    }
+    if (providerUserId.present) {
+      map['provider_user_id'] = Variable<String>(providerUserId.value);
+    }
+    if (providerName.present) {
+      map['provider_name'] = Variable<String>(providerName.value);
+    }
+    if (chiefComplaint.present) {
+      map['chief_complaint'] = Variable<String>(chiefComplaint.value);
+    }
+    if (triageCategory.present) {
+      map['triage_category'] = Variable<String>(triageCategory.value);
+    }
+    if (startAt.present) {
+      map['start_at'] = Variable<DateTime>(startAt.value);
+    }
+    if (endAt.present) {
+      map['end_at'] = Variable<DateTime>(endAt.value);
+    }
+    if (synced.present) {
+      map['synced'] = Variable<int>(synced.value);
+    }
+    if (syncState.present) {
+      map['sync_state'] = Variable<String>(syncState.value);
+    }
+    if (aiMetadata.present) {
+      map['ai_metadata'] = Variable<String>(aiMetadata.value);
+    }
+    if (createdAt.present) {
+      map['created_at'] = Variable<DateTime>(createdAt.value);
+    }
+    if (updatedAt.present) {
+      map['updated_at'] = Variable<DateTime>(updatedAt.value);
+    }
+    if (rowid.present) {
+      map['rowid'] = Variable<int>(rowid.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('EncountersCompanion(')
+          ..write('id: $id, ')
+          ..write('patientId: $patientId, ')
+          ..write('encounterNo: $encounterNo, ')
+          ..write('status: $status, ')
+          ..write('type: $type, ')
+          ..write('unitId: $unitId, ')
+          ..write('unitName: $unitName, ')
+          ..write('providerUserId: $providerUserId, ')
+          ..write('providerName: $providerName, ')
+          ..write('chiefComplaint: $chiefComplaint, ')
+          ..write('triageCategory: $triageCategory, ')
+          ..write('startAt: $startAt, ')
+          ..write('endAt: $endAt, ')
+          ..write('synced: $synced, ')
+          ..write('syncState: $syncState, ')
+          ..write('aiMetadata: $aiMetadata, ')
+          ..write('createdAt: $createdAt, ')
+          ..write('updatedAt: $updatedAt, ')
+          ..write('rowid: $rowid')
+          ..write(')'))
+        .toString();
+  }
+}
+
+class $EventsTable extends Events with TableInfo<$EventsTable, Event> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $EventsTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _idMeta = const VerificationMeta('id');
+  @override
+  late final GeneratedColumn<String> id = GeneratedColumn<String>(
+    'id',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _encounterIdMeta = const VerificationMeta(
+    'encounterId',
+  );
+  @override
+  late final GeneratedColumn<String> encounterId = GeneratedColumn<String>(
+    'encounter_id',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _kindMeta = const VerificationMeta('kind');
+  @override
+  late final GeneratedColumn<String> kind = GeneratedColumn<String>(
+    'kind',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _titleMeta = const VerificationMeta('title');
+  @override
+  late final GeneratedColumn<String> title = GeneratedColumn<String>(
+    'title',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _statusMeta = const VerificationMeta('status');
+  @override
+  late final GeneratedColumn<String> status = GeneratedColumn<String>(
+    'status',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+    defaultValue: const Constant('draft'),
+  );
+  static const VerificationMeta _bodyTextMeta = const VerificationMeta(
+    'bodyText',
+  );
+  @override
+  late final GeneratedColumn<String> bodyText = GeneratedColumn<String>(
+    'body_text',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _payloadJsonMeta = const VerificationMeta(
+    'payloadJson',
+  );
+  @override
+  late final GeneratedColumn<String> payloadJson = GeneratedColumn<String>(
+    'payload_json',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _createdByMeta = const VerificationMeta(
+    'createdBy',
+  );
+  @override
+  late final GeneratedColumn<String> createdBy = GeneratedColumn<String>(
+    'created_by',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _createdAtMeta = const VerificationMeta(
+    'createdAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> createdAt = GeneratedColumn<DateTime>(
+    'created_at',
+    aliasedName,
+    false,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _signedByMeta = const VerificationMeta(
+    'signedBy',
+  );
+  @override
+  late final GeneratedColumn<String> signedBy = GeneratedColumn<String>(
+    'signed_by',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _signedAtMeta = const VerificationMeta(
+    'signedAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> signedAt = GeneratedColumn<DateTime>(
+    'signed_at',
+    aliasedName,
+    true,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _syncedMeta = const VerificationMeta('synced');
+  @override
+  late final GeneratedColumn<int> synced = GeneratedColumn<int>(
+    'synced',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(0),
+  );
+  static const VerificationMeta _syncStateMeta = const VerificationMeta(
+    'syncState',
+  );
+  @override
+  late final GeneratedColumn<String> syncState = GeneratedColumn<String>(
+    'sync_state',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+    defaultValue: const Constant('pending'),
+  );
+  @override
+  List<GeneratedColumn> get $columns => [
+    id,
+    encounterId,
+    kind,
+    title,
+    status,
+    bodyText,
+    payloadJson,
+    createdBy,
+    createdAt,
+    signedBy,
+    signedAt,
+    synced,
+    syncState,
+  ];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'events';
+  @override
+  VerificationContext validateIntegrity(
+    Insertable<Event> instance, {
+    bool isInserting = false,
+  }) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('id')) {
+      context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
+    } else if (isInserting) {
+      context.missing(_idMeta);
+    }
+    if (data.containsKey('encounter_id')) {
+      context.handle(
+        _encounterIdMeta,
+        encounterId.isAcceptableOrUnknown(
+          data['encounter_id']!,
+          _encounterIdMeta,
+        ),
+      );
+    } else if (isInserting) {
+      context.missing(_encounterIdMeta);
+    }
+    if (data.containsKey('kind')) {
+      context.handle(
+        _kindMeta,
+        kind.isAcceptableOrUnknown(data['kind']!, _kindMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_kindMeta);
+    }
+    if (data.containsKey('title')) {
+      context.handle(
+        _titleMeta,
+        title.isAcceptableOrUnknown(data['title']!, _titleMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_titleMeta);
+    }
+    if (data.containsKey('status')) {
+      context.handle(
+        _statusMeta,
+        status.isAcceptableOrUnknown(data['status']!, _statusMeta),
+      );
+    }
+    if (data.containsKey('body_text')) {
+      context.handle(
+        _bodyTextMeta,
+        bodyText.isAcceptableOrUnknown(data['body_text']!, _bodyTextMeta),
+      );
+    }
+    if (data.containsKey('payload_json')) {
+      context.handle(
+        _payloadJsonMeta,
+        payloadJson.isAcceptableOrUnknown(
+          data['payload_json']!,
+          _payloadJsonMeta,
+        ),
+      );
+    }
+    if (data.containsKey('created_by')) {
+      context.handle(
+        _createdByMeta,
+        createdBy.isAcceptableOrUnknown(data['created_by']!, _createdByMeta),
+      );
+    }
+    if (data.containsKey('created_at')) {
+      context.handle(
+        _createdAtMeta,
+        createdAt.isAcceptableOrUnknown(data['created_at']!, _createdAtMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_createdAtMeta);
+    }
+    if (data.containsKey('signed_by')) {
+      context.handle(
+        _signedByMeta,
+        signedBy.isAcceptableOrUnknown(data['signed_by']!, _signedByMeta),
+      );
+    }
+    if (data.containsKey('signed_at')) {
+      context.handle(
+        _signedAtMeta,
+        signedAt.isAcceptableOrUnknown(data['signed_at']!, _signedAtMeta),
+      );
+    }
+    if (data.containsKey('synced')) {
+      context.handle(
+        _syncedMeta,
+        synced.isAcceptableOrUnknown(data['synced']!, _syncedMeta),
+      );
+    }
+    if (data.containsKey('sync_state')) {
+      context.handle(
+        _syncStateMeta,
+        syncState.isAcceptableOrUnknown(data['sync_state']!, _syncStateMeta),
+      );
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {id};
+  @override
+  Event map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return Event(
+      id: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}id'],
+      )!,
+      encounterId: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}encounter_id'],
+      )!,
+      kind: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}kind'],
+      )!,
+      title: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}title'],
+      )!,
+      status: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}status'],
+      )!,
+      bodyText: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}body_text'],
+      ),
+      payloadJson: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}payload_json'],
+      ),
+      createdBy: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}created_by'],
+      ),
+      createdAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}created_at'],
+      )!,
+      signedBy: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}signed_by'],
+      ),
+      signedAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}signed_at'],
+      ),
+      synced: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}synced'],
+      )!,
+      syncState: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}sync_state'],
+      )!,
+    );
+  }
+
+  @override
+  $EventsTable createAlias(String alias) {
+    return $EventsTable(attachedDatabase, alias);
+  }
+}
+
+class Event extends DataClass implements Insertable<Event> {
+  final String id;
+  final String encounterId;
+  final String kind;
+  final String title;
+  final String status;
+  final String? bodyText;
+  final String? payloadJson;
+  final String? createdBy;
+  final DateTime createdAt;
+  final String? signedBy;
+  final DateTime? signedAt;
+  final int synced;
+  final String syncState;
+  const Event({
+    required this.id,
+    required this.encounterId,
+    required this.kind,
+    required this.title,
+    required this.status,
+    this.bodyText,
+    this.payloadJson,
+    this.createdBy,
+    required this.createdAt,
+    this.signedBy,
+    this.signedAt,
+    required this.synced,
+    required this.syncState,
+  });
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['id'] = Variable<String>(id);
+    map['encounter_id'] = Variable<String>(encounterId);
+    map['kind'] = Variable<String>(kind);
+    map['title'] = Variable<String>(title);
+    map['status'] = Variable<String>(status);
+    if (!nullToAbsent || bodyText != null) {
+      map['body_text'] = Variable<String>(bodyText);
+    }
+    if (!nullToAbsent || payloadJson != null) {
+      map['payload_json'] = Variable<String>(payloadJson);
+    }
+    if (!nullToAbsent || createdBy != null) {
+      map['created_by'] = Variable<String>(createdBy);
+    }
+    map['created_at'] = Variable<DateTime>(createdAt);
+    if (!nullToAbsent || signedBy != null) {
+      map['signed_by'] = Variable<String>(signedBy);
+    }
+    if (!nullToAbsent || signedAt != null) {
+      map['signed_at'] = Variable<DateTime>(signedAt);
+    }
+    map['synced'] = Variable<int>(synced);
+    map['sync_state'] = Variable<String>(syncState);
+    return map;
+  }
+
+  EventsCompanion toCompanion(bool nullToAbsent) {
+    return EventsCompanion(
+      id: Value(id),
+      encounterId: Value(encounterId),
+      kind: Value(kind),
+      title: Value(title),
+      status: Value(status),
+      bodyText: bodyText == null && nullToAbsent
+          ? const Value.absent()
+          : Value(bodyText),
+      payloadJson: payloadJson == null && nullToAbsent
+          ? const Value.absent()
+          : Value(payloadJson),
+      createdBy: createdBy == null && nullToAbsent
+          ? const Value.absent()
+          : Value(createdBy),
+      createdAt: Value(createdAt),
+      signedBy: signedBy == null && nullToAbsent
+          ? const Value.absent()
+          : Value(signedBy),
+      signedAt: signedAt == null && nullToAbsent
+          ? const Value.absent()
+          : Value(signedAt),
+      synced: Value(synced),
+      syncState: Value(syncState),
+    );
+  }
+
+  factory Event.fromJson(
+    Map<String, dynamic> json, {
+    ValueSerializer? serializer,
+  }) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return Event(
+      id: serializer.fromJson<String>(json['id']),
+      encounterId: serializer.fromJson<String>(json['encounterId']),
+      kind: serializer.fromJson<String>(json['kind']),
+      title: serializer.fromJson<String>(json['title']),
+      status: serializer.fromJson<String>(json['status']),
+      bodyText: serializer.fromJson<String?>(json['bodyText']),
+      payloadJson: serializer.fromJson<String?>(json['payloadJson']),
+      createdBy: serializer.fromJson<String?>(json['createdBy']),
+      createdAt: serializer.fromJson<DateTime>(json['createdAt']),
+      signedBy: serializer.fromJson<String?>(json['signedBy']),
+      signedAt: serializer.fromJson<DateTime?>(json['signedAt']),
+      synced: serializer.fromJson<int>(json['synced']),
+      syncState: serializer.fromJson<String>(json['syncState']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'id': serializer.toJson<String>(id),
+      'encounterId': serializer.toJson<String>(encounterId),
+      'kind': serializer.toJson<String>(kind),
+      'title': serializer.toJson<String>(title),
+      'status': serializer.toJson<String>(status),
+      'bodyText': serializer.toJson<String?>(bodyText),
+      'payloadJson': serializer.toJson<String?>(payloadJson),
+      'createdBy': serializer.toJson<String?>(createdBy),
+      'createdAt': serializer.toJson<DateTime>(createdAt),
+      'signedBy': serializer.toJson<String?>(signedBy),
+      'signedAt': serializer.toJson<DateTime?>(signedAt),
+      'synced': serializer.toJson<int>(synced),
+      'syncState': serializer.toJson<String>(syncState),
+    };
+  }
+
+  Event copyWith({
+    String? id,
+    String? encounterId,
+    String? kind,
+    String? title,
+    String? status,
+    Value<String?> bodyText = const Value.absent(),
+    Value<String?> payloadJson = const Value.absent(),
+    Value<String?> createdBy = const Value.absent(),
+    DateTime? createdAt,
+    Value<String?> signedBy = const Value.absent(),
+    Value<DateTime?> signedAt = const Value.absent(),
+    int? synced,
+    String? syncState,
+  }) => Event(
+    id: id ?? this.id,
+    encounterId: encounterId ?? this.encounterId,
+    kind: kind ?? this.kind,
+    title: title ?? this.title,
+    status: status ?? this.status,
+    bodyText: bodyText.present ? bodyText.value : this.bodyText,
+    payloadJson: payloadJson.present ? payloadJson.value : this.payloadJson,
+    createdBy: createdBy.present ? createdBy.value : this.createdBy,
+    createdAt: createdAt ?? this.createdAt,
+    signedBy: signedBy.present ? signedBy.value : this.signedBy,
+    signedAt: signedAt.present ? signedAt.value : this.signedAt,
+    synced: synced ?? this.synced,
+    syncState: syncState ?? this.syncState,
+  );
+  Event copyWithCompanion(EventsCompanion data) {
+    return Event(
+      id: data.id.present ? data.id.value : this.id,
+      encounterId: data.encounterId.present
+          ? data.encounterId.value
+          : this.encounterId,
+      kind: data.kind.present ? data.kind.value : this.kind,
+      title: data.title.present ? data.title.value : this.title,
+      status: data.status.present ? data.status.value : this.status,
+      bodyText: data.bodyText.present ? data.bodyText.value : this.bodyText,
+      payloadJson: data.payloadJson.present
+          ? data.payloadJson.value
+          : this.payloadJson,
+      createdBy: data.createdBy.present ? data.createdBy.value : this.createdBy,
+      createdAt: data.createdAt.present ? data.createdAt.value : this.createdAt,
+      signedBy: data.signedBy.present ? data.signedBy.value : this.signedBy,
+      signedAt: data.signedAt.present ? data.signedAt.value : this.signedAt,
+      synced: data.synced.present ? data.synced.value : this.synced,
+      syncState: data.syncState.present ? data.syncState.value : this.syncState,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('Event(')
+          ..write('id: $id, ')
+          ..write('encounterId: $encounterId, ')
+          ..write('kind: $kind, ')
+          ..write('title: $title, ')
+          ..write('status: $status, ')
+          ..write('bodyText: $bodyText, ')
+          ..write('payloadJson: $payloadJson, ')
+          ..write('createdBy: $createdBy, ')
+          ..write('createdAt: $createdAt, ')
+          ..write('signedBy: $signedBy, ')
+          ..write('signedAt: $signedAt, ')
+          ..write('synced: $synced, ')
+          ..write('syncState: $syncState')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(
+    id,
+    encounterId,
+    kind,
+    title,
+    status,
+    bodyText,
+    payloadJson,
+    createdBy,
+    createdAt,
+    signedBy,
+    signedAt,
+    synced,
+    syncState,
+  );
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is Event &&
+          other.id == this.id &&
+          other.encounterId == this.encounterId &&
+          other.kind == this.kind &&
+          other.title == this.title &&
+          other.status == this.status &&
+          other.bodyText == this.bodyText &&
+          other.payloadJson == this.payloadJson &&
+          other.createdBy == this.createdBy &&
+          other.createdAt == this.createdAt &&
+          other.signedBy == this.signedBy &&
+          other.signedAt == this.signedAt &&
+          other.synced == this.synced &&
+          other.syncState == this.syncState);
+}
+
+class EventsCompanion extends UpdateCompanion<Event> {
+  final Value<String> id;
+  final Value<String> encounterId;
+  final Value<String> kind;
+  final Value<String> title;
+  final Value<String> status;
+  final Value<String?> bodyText;
+  final Value<String?> payloadJson;
+  final Value<String?> createdBy;
+  final Value<DateTime> createdAt;
+  final Value<String?> signedBy;
+  final Value<DateTime?> signedAt;
+  final Value<int> synced;
+  final Value<String> syncState;
+  final Value<int> rowid;
+  const EventsCompanion({
+    this.id = const Value.absent(),
+    this.encounterId = const Value.absent(),
+    this.kind = const Value.absent(),
+    this.title = const Value.absent(),
+    this.status = const Value.absent(),
+    this.bodyText = const Value.absent(),
+    this.payloadJson = const Value.absent(),
+    this.createdBy = const Value.absent(),
+    this.createdAt = const Value.absent(),
+    this.signedBy = const Value.absent(),
+    this.signedAt = const Value.absent(),
+    this.synced = const Value.absent(),
+    this.syncState = const Value.absent(),
+    this.rowid = const Value.absent(),
+  });
+  EventsCompanion.insert({
+    required String id,
+    required String encounterId,
+    required String kind,
+    required String title,
+    this.status = const Value.absent(),
+    this.bodyText = const Value.absent(),
+    this.payloadJson = const Value.absent(),
+    this.createdBy = const Value.absent(),
+    required DateTime createdAt,
+    this.signedBy = const Value.absent(),
+    this.signedAt = const Value.absent(),
+    this.synced = const Value.absent(),
+    this.syncState = const Value.absent(),
+    this.rowid = const Value.absent(),
+  }) : id = Value(id),
+       encounterId = Value(encounterId),
+       kind = Value(kind),
+       title = Value(title),
+       createdAt = Value(createdAt);
+  static Insertable<Event> custom({
+    Expression<String>? id,
+    Expression<String>? encounterId,
+    Expression<String>? kind,
+    Expression<String>? title,
+    Expression<String>? status,
+    Expression<String>? bodyText,
+    Expression<String>? payloadJson,
+    Expression<String>? createdBy,
+    Expression<DateTime>? createdAt,
+    Expression<String>? signedBy,
+    Expression<DateTime>? signedAt,
+    Expression<int>? synced,
+    Expression<String>? syncState,
+    Expression<int>? rowid,
+  }) {
+    return RawValuesInsertable({
+      if (id != null) 'id': id,
+      if (encounterId != null) 'encounter_id': encounterId,
+      if (kind != null) 'kind': kind,
+      if (title != null) 'title': title,
+      if (status != null) 'status': status,
+      if (bodyText != null) 'body_text': bodyText,
+      if (payloadJson != null) 'payload_json': payloadJson,
+      if (createdBy != null) 'created_by': createdBy,
+      if (createdAt != null) 'created_at': createdAt,
+      if (signedBy != null) 'signed_by': signedBy,
+      if (signedAt != null) 'signed_at': signedAt,
+      if (synced != null) 'synced': synced,
+      if (syncState != null) 'sync_state': syncState,
+      if (rowid != null) 'rowid': rowid,
+    });
+  }
+
+  EventsCompanion copyWith({
+    Value<String>? id,
+    Value<String>? encounterId,
+    Value<String>? kind,
+    Value<String>? title,
+    Value<String>? status,
+    Value<String?>? bodyText,
+    Value<String?>? payloadJson,
+    Value<String?>? createdBy,
+    Value<DateTime>? createdAt,
+    Value<String?>? signedBy,
+    Value<DateTime?>? signedAt,
+    Value<int>? synced,
+    Value<String>? syncState,
+    Value<int>? rowid,
+  }) {
+    return EventsCompanion(
+      id: id ?? this.id,
+      encounterId: encounterId ?? this.encounterId,
+      kind: kind ?? this.kind,
+      title: title ?? this.title,
+      status: status ?? this.status,
+      bodyText: bodyText ?? this.bodyText,
+      payloadJson: payloadJson ?? this.payloadJson,
+      createdBy: createdBy ?? this.createdBy,
+      createdAt: createdAt ?? this.createdAt,
+      signedBy: signedBy ?? this.signedBy,
+      signedAt: signedAt ?? this.signedAt,
+      synced: synced ?? this.synced,
+      syncState: syncState ?? this.syncState,
+      rowid: rowid ?? this.rowid,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (id.present) {
+      map['id'] = Variable<String>(id.value);
+    }
+    if (encounterId.present) {
+      map['encounter_id'] = Variable<String>(encounterId.value);
+    }
+    if (kind.present) {
+      map['kind'] = Variable<String>(kind.value);
+    }
+    if (title.present) {
+      map['title'] = Variable<String>(title.value);
+    }
+    if (status.present) {
+      map['status'] = Variable<String>(status.value);
+    }
+    if (bodyText.present) {
+      map['body_text'] = Variable<String>(bodyText.value);
+    }
+    if (payloadJson.present) {
+      map['payload_json'] = Variable<String>(payloadJson.value);
+    }
+    if (createdBy.present) {
+      map['created_by'] = Variable<String>(createdBy.value);
+    }
+    if (createdAt.present) {
+      map['created_at'] = Variable<DateTime>(createdAt.value);
+    }
+    if (signedBy.present) {
+      map['signed_by'] = Variable<String>(signedBy.value);
+    }
+    if (signedAt.present) {
+      map['signed_at'] = Variable<DateTime>(signedAt.value);
+    }
+    if (synced.present) {
+      map['synced'] = Variable<int>(synced.value);
+    }
+    if (syncState.present) {
+      map['sync_state'] = Variable<String>(syncState.value);
+    }
+    if (rowid.present) {
+      map['rowid'] = Variable<int>(rowid.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('EventsCompanion(')
+          ..write('id: $id, ')
+          ..write('encounterId: $encounterId, ')
+          ..write('kind: $kind, ')
+          ..write('title: $title, ')
+          ..write('status: $status, ')
+          ..write('bodyText: $bodyText, ')
+          ..write('payloadJson: $payloadJson, ')
+          ..write('createdBy: $createdBy, ')
+          ..write('createdAt: $createdAt, ')
+          ..write('signedBy: $signedBy, ')
+          ..write('signedAt: $signedAt, ')
+          ..write('synced: $synced, ')
+          ..write('syncState: $syncState, ')
+          ..write('rowid: $rowid')
+          ..write(')'))
+        .toString();
+  }
+}
+
+class $UnitsTable extends Units with TableInfo<$UnitsTable, Unit> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $UnitsTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _idMeta = const VerificationMeta('id');
+  @override
+  late final GeneratedColumn<String> id = GeneratedColumn<String>(
+    'id',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _codeMeta = const VerificationMeta('code');
+  @override
+  late final GeneratedColumn<String> code = GeneratedColumn<String>(
+    'code',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _nameMeta = const VerificationMeta('name');
+  @override
+  late final GeneratedColumn<String> name = GeneratedColumn<String>(
+    'name',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _facilityMeta = const VerificationMeta(
+    'facility',
+  );
+  @override
+  late final GeneratedColumn<String> facility = GeneratedColumn<String>(
+    'facility',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _createdAtMeta = const VerificationMeta(
+    'createdAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> createdAt = GeneratedColumn<DateTime>(
+    'created_at',
+    aliasedName,
+    false,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: true,
+  );
+  @override
+  List<GeneratedColumn> get $columns => [id, code, name, facility, createdAt];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'units';
+  @override
+  VerificationContext validateIntegrity(
+    Insertable<Unit> instance, {
+    bool isInserting = false,
+  }) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('id')) {
+      context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
+    } else if (isInserting) {
+      context.missing(_idMeta);
+    }
+    if (data.containsKey('code')) {
+      context.handle(
+        _codeMeta,
+        code.isAcceptableOrUnknown(data['code']!, _codeMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_codeMeta);
+    }
+    if (data.containsKey('name')) {
+      context.handle(
+        _nameMeta,
+        name.isAcceptableOrUnknown(data['name']!, _nameMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_nameMeta);
+    }
+    if (data.containsKey('facility')) {
+      context.handle(
+        _facilityMeta,
+        facility.isAcceptableOrUnknown(data['facility']!, _facilityMeta),
+      );
+    }
+    if (data.containsKey('created_at')) {
+      context.handle(
+        _createdAtMeta,
+        createdAt.isAcceptableOrUnknown(data['created_at']!, _createdAtMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_createdAtMeta);
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {id};
+  @override
+  Unit map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return Unit(
+      id: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}id'],
+      )!,
+      code: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}code'],
+      )!,
+      name: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}name'],
+      )!,
+      facility: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}facility'],
+      ),
+      createdAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}created_at'],
+      )!,
+    );
+  }
+
+  @override
+  $UnitsTable createAlias(String alias) {
+    return $UnitsTable(attachedDatabase, alias);
+  }
+}
+
+class Unit extends DataClass implements Insertable<Unit> {
+  final String id;
+  final String code;
+  final String name;
+  final String? facility;
+  final DateTime createdAt;
+  const Unit({
+    required this.id,
+    required this.code,
+    required this.name,
+    this.facility,
+    required this.createdAt,
+  });
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['id'] = Variable<String>(id);
+    map['code'] = Variable<String>(code);
+    map['name'] = Variable<String>(name);
+    if (!nullToAbsent || facility != null) {
+      map['facility'] = Variable<String>(facility);
+    }
+    map['created_at'] = Variable<DateTime>(createdAt);
+    return map;
+  }
+
+  UnitsCompanion toCompanion(bool nullToAbsent) {
+    return UnitsCompanion(
+      id: Value(id),
+      code: Value(code),
+      name: Value(name),
+      facility: facility == null && nullToAbsent
+          ? const Value.absent()
+          : Value(facility),
+      createdAt: Value(createdAt),
+    );
+  }
+
+  factory Unit.fromJson(
+    Map<String, dynamic> json, {
+    ValueSerializer? serializer,
+  }) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return Unit(
+      id: serializer.fromJson<String>(json['id']),
+      code: serializer.fromJson<String>(json['code']),
+      name: serializer.fromJson<String>(json['name']),
+      facility: serializer.fromJson<String?>(json['facility']),
+      createdAt: serializer.fromJson<DateTime>(json['createdAt']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'id': serializer.toJson<String>(id),
+      'code': serializer.toJson<String>(code),
+      'name': serializer.toJson<String>(name),
+      'facility': serializer.toJson<String?>(facility),
+      'createdAt': serializer.toJson<DateTime>(createdAt),
+    };
+  }
+
+  Unit copyWith({
+    String? id,
+    String? code,
+    String? name,
+    Value<String?> facility = const Value.absent(),
+    DateTime? createdAt,
+  }) => Unit(
+    id: id ?? this.id,
+    code: code ?? this.code,
+    name: name ?? this.name,
+    facility: facility.present ? facility.value : this.facility,
+    createdAt: createdAt ?? this.createdAt,
+  );
+  Unit copyWithCompanion(UnitsCompanion data) {
+    return Unit(
+      id: data.id.present ? data.id.value : this.id,
+      code: data.code.present ? data.code.value : this.code,
+      name: data.name.present ? data.name.value : this.name,
+      facility: data.facility.present ? data.facility.value : this.facility,
+      createdAt: data.createdAt.present ? data.createdAt.value : this.createdAt,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('Unit(')
+          ..write('id: $id, ')
+          ..write('code: $code, ')
+          ..write('name: $name, ')
+          ..write('facility: $facility, ')
+          ..write('createdAt: $createdAt')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(id, code, name, facility, createdAt);
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is Unit &&
+          other.id == this.id &&
+          other.code == this.code &&
+          other.name == this.name &&
+          other.facility == this.facility &&
+          other.createdAt == this.createdAt);
+}
+
+class UnitsCompanion extends UpdateCompanion<Unit> {
+  final Value<String> id;
+  final Value<String> code;
+  final Value<String> name;
+  final Value<String?> facility;
+  final Value<DateTime> createdAt;
+  final Value<int> rowid;
+  const UnitsCompanion({
+    this.id = const Value.absent(),
+    this.code = const Value.absent(),
+    this.name = const Value.absent(),
+    this.facility = const Value.absent(),
+    this.createdAt = const Value.absent(),
+    this.rowid = const Value.absent(),
+  });
+  UnitsCompanion.insert({
+    required String id,
+    required String code,
+    required String name,
+    this.facility = const Value.absent(),
+    required DateTime createdAt,
+    this.rowid = const Value.absent(),
+  }) : id = Value(id),
+       code = Value(code),
+       name = Value(name),
+       createdAt = Value(createdAt);
+  static Insertable<Unit> custom({
+    Expression<String>? id,
+    Expression<String>? code,
+    Expression<String>? name,
+    Expression<String>? facility,
+    Expression<DateTime>? createdAt,
+    Expression<int>? rowid,
+  }) {
+    return RawValuesInsertable({
+      if (id != null) 'id': id,
+      if (code != null) 'code': code,
+      if (name != null) 'name': name,
+      if (facility != null) 'facility': facility,
+      if (createdAt != null) 'created_at': createdAt,
+      if (rowid != null) 'rowid': rowid,
+    });
+  }
+
+  UnitsCompanion copyWith({
+    Value<String>? id,
+    Value<String>? code,
+    Value<String>? name,
+    Value<String?>? facility,
+    Value<DateTime>? createdAt,
+    Value<int>? rowid,
+  }) {
+    return UnitsCompanion(
+      id: id ?? this.id,
+      code: code ?? this.code,
+      name: name ?? this.name,
+      facility: facility ?? this.facility,
+      createdAt: createdAt ?? this.createdAt,
+      rowid: rowid ?? this.rowid,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (id.present) {
+      map['id'] = Variable<String>(id.value);
+    }
+    if (code.present) {
+      map['code'] = Variable<String>(code.value);
+    }
+    if (name.present) {
+      map['name'] = Variable<String>(name.value);
+    }
+    if (facility.present) {
+      map['facility'] = Variable<String>(facility.value);
+    }
+    if (createdAt.present) {
+      map['created_at'] = Variable<DateTime>(createdAt.value);
+    }
+    if (rowid.present) {
+      map['rowid'] = Variable<int>(rowid.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('UnitsCompanion(')
+          ..write('id: $id, ')
+          ..write('code: $code, ')
+          ..write('name: $name, ')
+          ..write('facility: $facility, ')
+          ..write('createdAt: $createdAt, ')
+          ..write('rowid: $rowid')
+          ..write(')'))
+        .toString();
+  }
+}
+
+class $UsersTable extends Users with TableInfo<$UsersTable, User> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $UsersTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _idMeta = const VerificationMeta('id');
+  @override
+  late final GeneratedColumn<String> id = GeneratedColumn<String>(
+    'id',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _usernameMeta = const VerificationMeta(
+    'username',
+  );
+  @override
+  late final GeneratedColumn<String> username = GeneratedColumn<String>(
+    'username',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _displayNameMeta = const VerificationMeta(
+    'displayName',
+  );
+  @override
+  late final GeneratedColumn<String> displayName = GeneratedColumn<String>(
+    'display_name',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _roleMeta = const VerificationMeta('role');
+  @override
+  late final GeneratedColumn<String> role = GeneratedColumn<String>(
+    'role',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _passwordSaltB64Meta = const VerificationMeta(
+    'passwordSaltB64',
+  );
+  @override
+  late final GeneratedColumn<String> passwordSaltB64 = GeneratedColumn<String>(
+    'password_salt_b64',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _passwordHashB64Meta = const VerificationMeta(
+    'passwordHashB64',
+  );
+  @override
+  late final GeneratedColumn<String> passwordHashB64 = GeneratedColumn<String>(
+    'password_hash_b64',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _passwordIterationsMeta =
+      const VerificationMeta('passwordIterations');
+  @override
+  late final GeneratedColumn<int> passwordIterations = GeneratedColumn<int>(
+    'password_iterations',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _isActiveMeta = const VerificationMeta(
+    'isActive',
+  );
+  @override
+  late final GeneratedColumn<bool> isActive = GeneratedColumn<bool>(
+    'is_active',
+    aliasedName,
+    false,
+    type: DriftSqlType.bool,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'CHECK ("is_active" IN (0, 1))',
+    ),
+    defaultValue: const Constant(true),
+  );
+  static const VerificationMeta _createdAtMeta = const VerificationMeta(
+    'createdAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> createdAt = GeneratedColumn<DateTime>(
+    'created_at',
+    aliasedName,
+    false,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: true,
+  );
+  @override
+  List<GeneratedColumn> get $columns => [
+    id,
+    username,
+    displayName,
+    role,
+    passwordSaltB64,
+    passwordHashB64,
+    passwordIterations,
+    isActive,
+    createdAt,
+  ];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'users';
+  @override
+  VerificationContext validateIntegrity(
+    Insertable<User> instance, {
+    bool isInserting = false,
+  }) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('id')) {
+      context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
+    } else if (isInserting) {
+      context.missing(_idMeta);
+    }
+    if (data.containsKey('username')) {
+      context.handle(
+        _usernameMeta,
+        username.isAcceptableOrUnknown(data['username']!, _usernameMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_usernameMeta);
+    }
+    if (data.containsKey('display_name')) {
+      context.handle(
+        _displayNameMeta,
+        displayName.isAcceptableOrUnknown(
+          data['display_name']!,
+          _displayNameMeta,
+        ),
+      );
+    }
+    if (data.containsKey('role')) {
+      context.handle(
+        _roleMeta,
+        role.isAcceptableOrUnknown(data['role']!, _roleMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_roleMeta);
+    }
+    if (data.containsKey('password_salt_b64')) {
+      context.handle(
+        _passwordSaltB64Meta,
+        passwordSaltB64.isAcceptableOrUnknown(
+          data['password_salt_b64']!,
+          _passwordSaltB64Meta,
+        ),
+      );
+    } else if (isInserting) {
+      context.missing(_passwordSaltB64Meta);
+    }
+    if (data.containsKey('password_hash_b64')) {
+      context.handle(
+        _passwordHashB64Meta,
+        passwordHashB64.isAcceptableOrUnknown(
+          data['password_hash_b64']!,
+          _passwordHashB64Meta,
+        ),
+      );
+    } else if (isInserting) {
+      context.missing(_passwordHashB64Meta);
+    }
+    if (data.containsKey('password_iterations')) {
+      context.handle(
+        _passwordIterationsMeta,
+        passwordIterations.isAcceptableOrUnknown(
+          data['password_iterations']!,
+          _passwordIterationsMeta,
+        ),
+      );
+    } else if (isInserting) {
+      context.missing(_passwordIterationsMeta);
+    }
+    if (data.containsKey('is_active')) {
+      context.handle(
+        _isActiveMeta,
+        isActive.isAcceptableOrUnknown(data['is_active']!, _isActiveMeta),
+      );
+    }
+    if (data.containsKey('created_at')) {
+      context.handle(
+        _createdAtMeta,
+        createdAt.isAcceptableOrUnknown(data['created_at']!, _createdAtMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_createdAtMeta);
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {id};
+  @override
+  User map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return User(
+      id: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}id'],
+      )!,
+      username: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}username'],
+      )!,
+      displayName: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}display_name'],
+      ),
+      role: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}role'],
+      )!,
+      passwordSaltB64: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}password_salt_b64'],
+      )!,
+      passwordHashB64: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}password_hash_b64'],
+      )!,
+      passwordIterations: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}password_iterations'],
+      )!,
+      isActive: attachedDatabase.typeMapping.read(
+        DriftSqlType.bool,
+        data['${effectivePrefix}is_active'],
+      )!,
+      createdAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}created_at'],
+      )!,
+    );
+  }
+
+  @override
+  $UsersTable createAlias(String alias) {
+    return $UsersTable(attachedDatabase, alias);
+  }
+}
+
+class User extends DataClass implements Insertable<User> {
+  final String id;
+  final String username;
+  final String? displayName;
+  final String role;
+  final String passwordSaltB64;
+  final String passwordHashB64;
+  final int passwordIterations;
+  final bool isActive;
+  final DateTime createdAt;
+  const User({
+    required this.id,
+    required this.username,
+    this.displayName,
+    required this.role,
+    required this.passwordSaltB64,
+    required this.passwordHashB64,
+    required this.passwordIterations,
+    required this.isActive,
+    required this.createdAt,
+  });
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['id'] = Variable<String>(id);
+    map['username'] = Variable<String>(username);
+    if (!nullToAbsent || displayName != null) {
+      map['display_name'] = Variable<String>(displayName);
+    }
+    map['role'] = Variable<String>(role);
+    map['password_salt_b64'] = Variable<String>(passwordSaltB64);
+    map['password_hash_b64'] = Variable<String>(passwordHashB64);
+    map['password_iterations'] = Variable<int>(passwordIterations);
+    map['is_active'] = Variable<bool>(isActive);
+    map['created_at'] = Variable<DateTime>(createdAt);
+    return map;
+  }
+
+  UsersCompanion toCompanion(bool nullToAbsent) {
+    return UsersCompanion(
+      id: Value(id),
+      username: Value(username),
+      displayName: displayName == null && nullToAbsent
+          ? const Value.absent()
+          : Value(displayName),
+      role: Value(role),
+      passwordSaltB64: Value(passwordSaltB64),
+      passwordHashB64: Value(passwordHashB64),
+      passwordIterations: Value(passwordIterations),
+      isActive: Value(isActive),
+      createdAt: Value(createdAt),
+    );
+  }
+
+  factory User.fromJson(
+    Map<String, dynamic> json, {
+    ValueSerializer? serializer,
+  }) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return User(
+      id: serializer.fromJson<String>(json['id']),
+      username: serializer.fromJson<String>(json['username']),
+      displayName: serializer.fromJson<String?>(json['displayName']),
+      role: serializer.fromJson<String>(json['role']),
+      passwordSaltB64: serializer.fromJson<String>(json['passwordSaltB64']),
+      passwordHashB64: serializer.fromJson<String>(json['passwordHashB64']),
+      passwordIterations: serializer.fromJson<int>(json['passwordIterations']),
+      isActive: serializer.fromJson<bool>(json['isActive']),
+      createdAt: serializer.fromJson<DateTime>(json['createdAt']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'id': serializer.toJson<String>(id),
+      'username': serializer.toJson<String>(username),
+      'displayName': serializer.toJson<String?>(displayName),
+      'role': serializer.toJson<String>(role),
+      'passwordSaltB64': serializer.toJson<String>(passwordSaltB64),
+      'passwordHashB64': serializer.toJson<String>(passwordHashB64),
+      'passwordIterations': serializer.toJson<int>(passwordIterations),
+      'isActive': serializer.toJson<bool>(isActive),
+      'createdAt': serializer.toJson<DateTime>(createdAt),
+    };
+  }
+
+  User copyWith({
+    String? id,
+    String? username,
+    Value<String?> displayName = const Value.absent(),
+    String? role,
+    String? passwordSaltB64,
+    String? passwordHashB64,
+    int? passwordIterations,
+    bool? isActive,
+    DateTime? createdAt,
+  }) => User(
+    id: id ?? this.id,
+    username: username ?? this.username,
+    displayName: displayName.present ? displayName.value : this.displayName,
+    role: role ?? this.role,
+    passwordSaltB64: passwordSaltB64 ?? this.passwordSaltB64,
+    passwordHashB64: passwordHashB64 ?? this.passwordHashB64,
+    passwordIterations: passwordIterations ?? this.passwordIterations,
+    isActive: isActive ?? this.isActive,
+    createdAt: createdAt ?? this.createdAt,
+  );
+  User copyWithCompanion(UsersCompanion data) {
+    return User(
+      id: data.id.present ? data.id.value : this.id,
+      username: data.username.present ? data.username.value : this.username,
+      displayName: data.displayName.present
+          ? data.displayName.value
+          : this.displayName,
+      role: data.role.present ? data.role.value : this.role,
+      passwordSaltB64: data.passwordSaltB64.present
+          ? data.passwordSaltB64.value
+          : this.passwordSaltB64,
+      passwordHashB64: data.passwordHashB64.present
+          ? data.passwordHashB64.value
+          : this.passwordHashB64,
+      passwordIterations: data.passwordIterations.present
+          ? data.passwordIterations.value
+          : this.passwordIterations,
+      isActive: data.isActive.present ? data.isActive.value : this.isActive,
+      createdAt: data.createdAt.present ? data.createdAt.value : this.createdAt,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('User(')
+          ..write('id: $id, ')
+          ..write('username: $username, ')
+          ..write('displayName: $displayName, ')
+          ..write('role: $role, ')
+          ..write('passwordSaltB64: $passwordSaltB64, ')
+          ..write('passwordHashB64: $passwordHashB64, ')
+          ..write('passwordIterations: $passwordIterations, ')
+          ..write('isActive: $isActive, ')
+          ..write('createdAt: $createdAt')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(
+    id,
+    username,
+    displayName,
+    role,
+    passwordSaltB64,
+    passwordHashB64,
+    passwordIterations,
+    isActive,
+    createdAt,
+  );
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is User &&
+          other.id == this.id &&
+          other.username == this.username &&
+          other.displayName == this.displayName &&
+          other.role == this.role &&
+          other.passwordSaltB64 == this.passwordSaltB64 &&
+          other.passwordHashB64 == this.passwordHashB64 &&
+          other.passwordIterations == this.passwordIterations &&
+          other.isActive == this.isActive &&
+          other.createdAt == this.createdAt);
+}
+
+class UsersCompanion extends UpdateCompanion<User> {
+  final Value<String> id;
+  final Value<String> username;
+  final Value<String?> displayName;
+  final Value<String> role;
+  final Value<String> passwordSaltB64;
+  final Value<String> passwordHashB64;
+  final Value<int> passwordIterations;
+  final Value<bool> isActive;
+  final Value<DateTime> createdAt;
+  final Value<int> rowid;
+  const UsersCompanion({
+    this.id = const Value.absent(),
+    this.username = const Value.absent(),
+    this.displayName = const Value.absent(),
+    this.role = const Value.absent(),
+    this.passwordSaltB64 = const Value.absent(),
+    this.passwordHashB64 = const Value.absent(),
+    this.passwordIterations = const Value.absent(),
+    this.isActive = const Value.absent(),
+    this.createdAt = const Value.absent(),
+    this.rowid = const Value.absent(),
+  });
+  UsersCompanion.insert({
+    required String id,
+    required String username,
+    this.displayName = const Value.absent(),
+    required String role,
+    required String passwordSaltB64,
+    required String passwordHashB64,
+    required int passwordIterations,
+    this.isActive = const Value.absent(),
+    required DateTime createdAt,
+    this.rowid = const Value.absent(),
+  }) : id = Value(id),
+       username = Value(username),
+       role = Value(role),
+       passwordSaltB64 = Value(passwordSaltB64),
+       passwordHashB64 = Value(passwordHashB64),
+       passwordIterations = Value(passwordIterations),
+       createdAt = Value(createdAt);
+  static Insertable<User> custom({
+    Expression<String>? id,
+    Expression<String>? username,
+    Expression<String>? displayName,
+    Expression<String>? role,
+    Expression<String>? passwordSaltB64,
+    Expression<String>? passwordHashB64,
+    Expression<int>? passwordIterations,
+    Expression<bool>? isActive,
+    Expression<DateTime>? createdAt,
+    Expression<int>? rowid,
+  }) {
+    return RawValuesInsertable({
+      if (id != null) 'id': id,
+      if (username != null) 'username': username,
+      if (displayName != null) 'display_name': displayName,
+      if (role != null) 'role': role,
+      if (passwordSaltB64 != null) 'password_salt_b64': passwordSaltB64,
+      if (passwordHashB64 != null) 'password_hash_b64': passwordHashB64,
+      if (passwordIterations != null) 'password_iterations': passwordIterations,
+      if (isActive != null) 'is_active': isActive,
+      if (createdAt != null) 'created_at': createdAt,
+      if (rowid != null) 'rowid': rowid,
+    });
+  }
+
+  UsersCompanion copyWith({
+    Value<String>? id,
+    Value<String>? username,
+    Value<String?>? displayName,
+    Value<String>? role,
+    Value<String>? passwordSaltB64,
+    Value<String>? passwordHashB64,
+    Value<int>? passwordIterations,
+    Value<bool>? isActive,
+    Value<DateTime>? createdAt,
+    Value<int>? rowid,
+  }) {
+    return UsersCompanion(
+      id: id ?? this.id,
+      username: username ?? this.username,
+      displayName: displayName ?? this.displayName,
+      role: role ?? this.role,
+      passwordSaltB64: passwordSaltB64 ?? this.passwordSaltB64,
+      passwordHashB64: passwordHashB64 ?? this.passwordHashB64,
+      passwordIterations: passwordIterations ?? this.passwordIterations,
+      isActive: isActive ?? this.isActive,
+      createdAt: createdAt ?? this.createdAt,
+      rowid: rowid ?? this.rowid,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (id.present) {
+      map['id'] = Variable<String>(id.value);
+    }
+    if (username.present) {
+      map['username'] = Variable<String>(username.value);
+    }
+    if (displayName.present) {
+      map['display_name'] = Variable<String>(displayName.value);
+    }
+    if (role.present) {
+      map['role'] = Variable<String>(role.value);
+    }
+    if (passwordSaltB64.present) {
+      map['password_salt_b64'] = Variable<String>(passwordSaltB64.value);
+    }
+    if (passwordHashB64.present) {
+      map['password_hash_b64'] = Variable<String>(passwordHashB64.value);
+    }
+    if (passwordIterations.present) {
+      map['password_iterations'] = Variable<int>(passwordIterations.value);
+    }
+    if (isActive.present) {
+      map['is_active'] = Variable<bool>(isActive.value);
+    }
+    if (createdAt.present) {
+      map['created_at'] = Variable<DateTime>(createdAt.value);
+    }
+    if (rowid.present) {
+      map['rowid'] = Variable<int>(rowid.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('UsersCompanion(')
+          ..write('id: $id, ')
+          ..write('username: $username, ')
+          ..write('displayName: $displayName, ')
+          ..write('role: $role, ')
+          ..write('passwordSaltB64: $passwordSaltB64, ')
+          ..write('passwordHashB64: $passwordHashB64, ')
+          ..write('passwordIterations: $passwordIterations, ')
+          ..write('isActive: $isActive, ')
+          ..write('createdAt: $createdAt, ')
+          ..write('rowid: $rowid')
+          ..write(')'))
+        .toString();
+  }
+}
+
+class $UserUnitsTable extends UserUnits
+    with TableInfo<$UserUnitsTable, UserUnit> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $UserUnitsTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _userIdMeta = const VerificationMeta('userId');
+  @override
+  late final GeneratedColumn<String> userId = GeneratedColumn<String>(
+    'user_id',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _unitIdMeta = const VerificationMeta('unitId');
+  @override
+  late final GeneratedColumn<String> unitId = GeneratedColumn<String>(
+    'unit_id',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _createdAtMeta = const VerificationMeta(
+    'createdAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> createdAt = GeneratedColumn<DateTime>(
+    'created_at',
+    aliasedName,
+    false,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: true,
+  );
+  @override
+  List<GeneratedColumn> get $columns => [userId, unitId, createdAt];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'user_units';
+  @override
+  VerificationContext validateIntegrity(
+    Insertable<UserUnit> instance, {
+    bool isInserting = false,
+  }) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('user_id')) {
+      context.handle(
+        _userIdMeta,
+        userId.isAcceptableOrUnknown(data['user_id']!, _userIdMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_userIdMeta);
+    }
+    if (data.containsKey('unit_id')) {
+      context.handle(
+        _unitIdMeta,
+        unitId.isAcceptableOrUnknown(data['unit_id']!, _unitIdMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_unitIdMeta);
+    }
+    if (data.containsKey('created_at')) {
+      context.handle(
+        _createdAtMeta,
+        createdAt.isAcceptableOrUnknown(data['created_at']!, _createdAtMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_createdAtMeta);
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {userId, unitId};
+  @override
+  UserUnit map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return UserUnit(
+      userId: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}user_id'],
+      )!,
+      unitId: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}unit_id'],
+      )!,
+      createdAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}created_at'],
+      )!,
+    );
+  }
+
+  @override
+  $UserUnitsTable createAlias(String alias) {
+    return $UserUnitsTable(attachedDatabase, alias);
+  }
+}
+
+class UserUnit extends DataClass implements Insertable<UserUnit> {
+  final String userId;
+  final String unitId;
+  final DateTime createdAt;
+  const UserUnit({
+    required this.userId,
+    required this.unitId,
+    required this.createdAt,
+  });
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['user_id'] = Variable<String>(userId);
+    map['unit_id'] = Variable<String>(unitId);
+    map['created_at'] = Variable<DateTime>(createdAt);
+    return map;
+  }
+
+  UserUnitsCompanion toCompanion(bool nullToAbsent) {
+    return UserUnitsCompanion(
+      userId: Value(userId),
+      unitId: Value(unitId),
+      createdAt: Value(createdAt),
+    );
+  }
+
+  factory UserUnit.fromJson(
+    Map<String, dynamic> json, {
+    ValueSerializer? serializer,
+  }) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return UserUnit(
+      userId: serializer.fromJson<String>(json['userId']),
+      unitId: serializer.fromJson<String>(json['unitId']),
+      createdAt: serializer.fromJson<DateTime>(json['createdAt']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'userId': serializer.toJson<String>(userId),
+      'unitId': serializer.toJson<String>(unitId),
+      'createdAt': serializer.toJson<DateTime>(createdAt),
+    };
+  }
+
+  UserUnit copyWith({String? userId, String? unitId, DateTime? createdAt}) =>
+      UserUnit(
+        userId: userId ?? this.userId,
+        unitId: unitId ?? this.unitId,
+        createdAt: createdAt ?? this.createdAt,
+      );
+  UserUnit copyWithCompanion(UserUnitsCompanion data) {
+    return UserUnit(
+      userId: data.userId.present ? data.userId.value : this.userId,
+      unitId: data.unitId.present ? data.unitId.value : this.unitId,
+      createdAt: data.createdAt.present ? data.createdAt.value : this.createdAt,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('UserUnit(')
+          ..write('userId: $userId, ')
+          ..write('unitId: $unitId, ')
+          ..write('createdAt: $createdAt')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(userId, unitId, createdAt);
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is UserUnit &&
+          other.userId == this.userId &&
+          other.unitId == this.unitId &&
+          other.createdAt == this.createdAt);
+}
+
+class UserUnitsCompanion extends UpdateCompanion<UserUnit> {
+  final Value<String> userId;
+  final Value<String> unitId;
+  final Value<DateTime> createdAt;
+  final Value<int> rowid;
+  const UserUnitsCompanion({
+    this.userId = const Value.absent(),
+    this.unitId = const Value.absent(),
+    this.createdAt = const Value.absent(),
+    this.rowid = const Value.absent(),
+  });
+  UserUnitsCompanion.insert({
+    required String userId,
+    required String unitId,
+    required DateTime createdAt,
+    this.rowid = const Value.absent(),
+  }) : userId = Value(userId),
+       unitId = Value(unitId),
+       createdAt = Value(createdAt);
+  static Insertable<UserUnit> custom({
+    Expression<String>? userId,
+    Expression<String>? unitId,
+    Expression<DateTime>? createdAt,
+    Expression<int>? rowid,
+  }) {
+    return RawValuesInsertable({
+      if (userId != null) 'user_id': userId,
+      if (unitId != null) 'unit_id': unitId,
+      if (createdAt != null) 'created_at': createdAt,
+      if (rowid != null) 'rowid': rowid,
+    });
+  }
+
+  UserUnitsCompanion copyWith({
+    Value<String>? userId,
+    Value<String>? unitId,
+    Value<DateTime>? createdAt,
+    Value<int>? rowid,
+  }) {
+    return UserUnitsCompanion(
+      userId: userId ?? this.userId,
+      unitId: unitId ?? this.unitId,
+      createdAt: createdAt ?? this.createdAt,
+      rowid: rowid ?? this.rowid,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (userId.present) {
+      map['user_id'] = Variable<String>(userId.value);
+    }
+    if (unitId.present) {
+      map['unit_id'] = Variable<String>(unitId.value);
+    }
+    if (createdAt.present) {
+      map['created_at'] = Variable<DateTime>(createdAt.value);
+    }
+    if (rowid.present) {
+      map['rowid'] = Variable<int>(rowid.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('UserUnitsCompanion(')
+          ..write('userId: $userId, ')
+          ..write('unitId: $unitId, ')
+          ..write('createdAt: $createdAt, ')
+          ..write('rowid: $rowid')
+          ..write(')'))
+        .toString();
+  }
+}
+
+abstract class _$AppDatabase extends GeneratedDatabase {
+  _$AppDatabase(QueryExecutor e) : super(e);
+  $AppDatabaseManager get managers => $AppDatabaseManager(this);
+  late final $PatientsTable patients = $PatientsTable(this);
+  late final $EncountersTable encounters = $EncountersTable(this);
+  late final $EventsTable events = $EventsTable(this);
+  late final $UnitsTable units = $UnitsTable(this);
+  late final $UsersTable users = $UsersTable(this);
+  late final $UserUnitsTable userUnits = $UserUnitsTable(this);
+  @override
+  Iterable<TableInfo<Table, Object?>> get allTables =>
+      allSchemaEntities.whereType<TableInfo<Table, Object?>>();
+  @override
+  List<DatabaseSchemaEntity> get allSchemaEntities => [
+    patients,
+    encounters,
+    events,
+    units,
+    users,
+    userUnits,
+  ];
+}
+
+typedef $$PatientsTableCreateCompanionBuilder =
+    PatientsCompanion Function({
+      required String id,
+      Value<String?> mrn,
+      required String fullName,
+      required String fullNameNorm,
+      required String nric,
+      required String nricHash,
+      Value<String?> address,
+      Value<String?> allergies,
+      Value<String> consentStatus,
+      Value<String> source,
+      required DateTime createdAt,
+      required DateTime updatedAt,
+      Value<int> rowid,
+    });
+typedef $$PatientsTableUpdateCompanionBuilder =
+    PatientsCompanion Function({
+      Value<String> id,
+      Value<String?> mrn,
+      Value<String> fullName,
+      Value<String> fullNameNorm,
+      Value<String> nric,
+      Value<String> nricHash,
+      Value<String?> address,
+      Value<String?> allergies,
+      Value<String> consentStatus,
+      Value<String> source,
+      Value<DateTime> createdAt,
+      Value<DateTime> updatedAt,
+      Value<int> rowid,
+    });
+
+class $$PatientsTableFilterComposer
+    extends Composer<_$AppDatabase, $PatientsTable> {
+  $$PatientsTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<String> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get mrn => $composableBuilder(
+    column: $table.mrn,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get fullName => $composableBuilder(
+    column: $table.fullName,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get fullNameNorm => $composableBuilder(
+    column: $table.fullNameNorm,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get nric => $composableBuilder(
+    column: $table.nric,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get nricHash => $composableBuilder(
+    column: $table.nricHash,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get address => $composableBuilder(
+    column: $table.address,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get allergies => $composableBuilder(
+    column: $table.allergies,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get consentStatus => $composableBuilder(
+    column: $table.consentStatus,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get source => $composableBuilder(
+    column: $table.source,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get createdAt => $composableBuilder(
+    column: $table.createdAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get updatedAt => $composableBuilder(
+    column: $table.updatedAt,
+    builder: (column) => ColumnFilters(column),
+  );
+}
+
+class $$PatientsTableOrderingComposer
+    extends Composer<_$AppDatabase, $PatientsTable> {
+  $$PatientsTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<String> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get mrn => $composableBuilder(
+    column: $table.mrn,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get fullName => $composableBuilder(
+    column: $table.fullName,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get fullNameNorm => $composableBuilder(
+    column: $table.fullNameNorm,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get nric => $composableBuilder(
+    column: $table.nric,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get nricHash => $composableBuilder(
+    column: $table.nricHash,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get address => $composableBuilder(
+    column: $table.address,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get allergies => $composableBuilder(
+    column: $table.allergies,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get consentStatus => $composableBuilder(
+    column: $table.consentStatus,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get source => $composableBuilder(
+    column: $table.source,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get createdAt => $composableBuilder(
+    column: $table.createdAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get updatedAt => $composableBuilder(
+    column: $table.updatedAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+}
+
+class $$PatientsTableAnnotationComposer
+    extends Composer<_$AppDatabase, $PatientsTable> {
+  $$PatientsTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<String> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
+
+  GeneratedColumn<String> get mrn =>
+      $composableBuilder(column: $table.mrn, builder: (column) => column);
+
+  GeneratedColumn<String> get fullName =>
+      $composableBuilder(column: $table.fullName, builder: (column) => column);
+
+  GeneratedColumn<String> get fullNameNorm => $composableBuilder(
+    column: $table.fullNameNorm,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get nric =>
+      $composableBuilder(column: $table.nric, builder: (column) => column);
+
+  GeneratedColumn<String> get nricHash =>
+      $composableBuilder(column: $table.nricHash, builder: (column) => column);
+
+  GeneratedColumn<String> get address =>
+      $composableBuilder(column: $table.address, builder: (column) => column);
+
+  GeneratedColumn<String> get allergies =>
+      $composableBuilder(column: $table.allergies, builder: (column) => column);
+
+  GeneratedColumn<String> get consentStatus => $composableBuilder(
+    column: $table.consentStatus,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get source =>
+      $composableBuilder(column: $table.source, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get createdAt =>
+      $composableBuilder(column: $table.createdAt, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get updatedAt =>
+      $composableBuilder(column: $table.updatedAt, builder: (column) => column);
+}
+
+class $$PatientsTableTableManager
+    extends
+        RootTableManager<
+          _$AppDatabase,
+          $PatientsTable,
+          Patient,
+          $$PatientsTableFilterComposer,
+          $$PatientsTableOrderingComposer,
+          $$PatientsTableAnnotationComposer,
+          $$PatientsTableCreateCompanionBuilder,
+          $$PatientsTableUpdateCompanionBuilder,
+          (Patient, BaseReferences<_$AppDatabase, $PatientsTable, Patient>),
+          Patient,
+          PrefetchHooks Function()
+        > {
+  $$PatientsTableTableManager(_$AppDatabase db, $PatientsTable table)
+    : super(
+        TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$PatientsTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$PatientsTableOrderingComposer($db: db, $table: table),
+          createComputedFieldComposer: () =>
+              $$PatientsTableAnnotationComposer($db: db, $table: table),
+          updateCompanionCallback:
+              ({
+                Value<String> id = const Value.absent(),
+                Value<String?> mrn = const Value.absent(),
+                Value<String> fullName = const Value.absent(),
+                Value<String> fullNameNorm = const Value.absent(),
+                Value<String> nric = const Value.absent(),
+                Value<String> nricHash = const Value.absent(),
+                Value<String?> address = const Value.absent(),
+                Value<String?> allergies = const Value.absent(),
+                Value<String> consentStatus = const Value.absent(),
+                Value<String> source = const Value.absent(),
+                Value<DateTime> createdAt = const Value.absent(),
+                Value<DateTime> updatedAt = const Value.absent(),
+                Value<int> rowid = const Value.absent(),
+              }) => PatientsCompanion(
+                id: id,
+                mrn: mrn,
+                fullName: fullName,
+                fullNameNorm: fullNameNorm,
+                nric: nric,
+                nricHash: nricHash,
+                address: address,
+                allergies: allergies,
+                consentStatus: consentStatus,
+                source: source,
+                createdAt: createdAt,
+                updatedAt: updatedAt,
+                rowid: rowid,
+              ),
+          createCompanionCallback:
+              ({
+                required String id,
+                Value<String?> mrn = const Value.absent(),
+                required String fullName,
+                required String fullNameNorm,
+                required String nric,
+                required String nricHash,
+                Value<String?> address = const Value.absent(),
+                Value<String?> allergies = const Value.absent(),
+                Value<String> consentStatus = const Value.absent(),
+                Value<String> source = const Value.absent(),
+                required DateTime createdAt,
+                required DateTime updatedAt,
+                Value<int> rowid = const Value.absent(),
+              }) => PatientsCompanion.insert(
+                id: id,
+                mrn: mrn,
+                fullName: fullName,
+                fullNameNorm: fullNameNorm,
+                nric: nric,
+                nricHash: nricHash,
+                address: address,
+                allergies: allergies,
+                consentStatus: consentStatus,
+                source: source,
+                createdAt: createdAt,
+                updatedAt: updatedAt,
+                rowid: rowid,
+              ),
+          withReferenceMapper: (p0) => p0
+              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .toList(),
+          prefetchHooksCallback: null,
+        ),
+      );
+}
+
+typedef $$PatientsTableProcessedTableManager =
+    ProcessedTableManager<
+      _$AppDatabase,
+      $PatientsTable,
+      Patient,
+      $$PatientsTableFilterComposer,
+      $$PatientsTableOrderingComposer,
+      $$PatientsTableAnnotationComposer,
+      $$PatientsTableCreateCompanionBuilder,
+      $$PatientsTableUpdateCompanionBuilder,
+      (Patient, BaseReferences<_$AppDatabase, $PatientsTable, Patient>),
+      Patient,
+      PrefetchHooks Function()
+    >;
+typedef $$EncountersTableCreateCompanionBuilder =
+    EncountersCompanion Function({
+      required String id,
+      required String patientId,
+      Value<String?> encounterNo,
+      Value<String> status,
+      Value<String> type,
+      Value<String?> unitId,
+      Value<String> unitName,
+      Value<String?> providerUserId,
+      Value<String?> providerName,
+      Value<String?> chiefComplaint,
+      Value<String?> triageCategory,
+      required DateTime startAt,
+      Value<DateTime?> endAt,
+      Value<int> synced,
+      Value<String> syncState,
+      Value<String?> aiMetadata,
+      required DateTime createdAt,
+      required DateTime updatedAt,
+      Value<int> rowid,
+    });
+typedef $$EncountersTableUpdateCompanionBuilder =
+    EncountersCompanion Function({
+      Value<String> id,
+      Value<String> patientId,
+      Value<String?> encounterNo,
+      Value<String> status,
+      Value<String> type,
+      Value<String?> unitId,
+      Value<String> unitName,
+      Value<String?> providerUserId,
+      Value<String?> providerName,
+      Value<String?> chiefComplaint,
+      Value<String?> triageCategory,
+      Value<DateTime> startAt,
+      Value<DateTime?> endAt,
+      Value<int> synced,
+      Value<String> syncState,
+      Value<String?> aiMetadata,
+      Value<DateTime> createdAt,
+      Value<DateTime> updatedAt,
+      Value<int> rowid,
+    });
+
+class $$EncountersTableFilterComposer
+    extends Composer<_$AppDatabase, $EncountersTable> {
+  $$EncountersTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<String> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get patientId => $composableBuilder(
+    column: $table.patientId,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get encounterNo => $composableBuilder(
+    column: $table.encounterNo,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get status => $composableBuilder(
+    column: $table.status,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get type => $composableBuilder(
+    column: $table.type,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get unitId => $composableBuilder(
+    column: $table.unitId,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get unitName => $composableBuilder(
+    column: $table.unitName,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get providerUserId => $composableBuilder(
+    column: $table.providerUserId,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get providerName => $composableBuilder(
+    column: $table.providerName,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get chiefComplaint => $composableBuilder(
+    column: $table.chiefComplaint,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get triageCategory => $composableBuilder(
+    column: $table.triageCategory,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get startAt => $composableBuilder(
+    column: $table.startAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get endAt => $composableBuilder(
+    column: $table.endAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get synced => $composableBuilder(
+    column: $table.synced,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get syncState => $composableBuilder(
+    column: $table.syncState,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get aiMetadata => $composableBuilder(
+    column: $table.aiMetadata,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get createdAt => $composableBuilder(
+    column: $table.createdAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get updatedAt => $composableBuilder(
+    column: $table.updatedAt,
+    builder: (column) => ColumnFilters(column),
+  );
+}
+
+class $$EncountersTableOrderingComposer
+    extends Composer<_$AppDatabase, $EncountersTable> {
+  $$EncountersTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<String> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get patientId => $composableBuilder(
+    column: $table.patientId,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get encounterNo => $composableBuilder(
+    column: $table.encounterNo,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get status => $composableBuilder(
+    column: $table.status,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get type => $composableBuilder(
+    column: $table.type,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get unitId => $composableBuilder(
+    column: $table.unitId,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get unitName => $composableBuilder(
+    column: $table.unitName,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get providerUserId => $composableBuilder(
+    column: $table.providerUserId,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get providerName => $composableBuilder(
+    column: $table.providerName,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get chiefComplaint => $composableBuilder(
+    column: $table.chiefComplaint,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get triageCategory => $composableBuilder(
+    column: $table.triageCategory,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get startAt => $composableBuilder(
+    column: $table.startAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get endAt => $composableBuilder(
+    column: $table.endAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get synced => $composableBuilder(
+    column: $table.synced,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get syncState => $composableBuilder(
+    column: $table.syncState,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get aiMetadata => $composableBuilder(
+    column: $table.aiMetadata,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get createdAt => $composableBuilder(
+    column: $table.createdAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get updatedAt => $composableBuilder(
+    column: $table.updatedAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+}
+
+class $$EncountersTableAnnotationComposer
+    extends Composer<_$AppDatabase, $EncountersTable> {
+  $$EncountersTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<String> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
+
+  GeneratedColumn<String> get patientId =>
+      $composableBuilder(column: $table.patientId, builder: (column) => column);
+
+  GeneratedColumn<String> get encounterNo => $composableBuilder(
+    column: $table.encounterNo,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get status =>
+      $composableBuilder(column: $table.status, builder: (column) => column);
+
+  GeneratedColumn<String> get type =>
+      $composableBuilder(column: $table.type, builder: (column) => column);
+
+  GeneratedColumn<String> get unitId =>
+      $composableBuilder(column: $table.unitId, builder: (column) => column);
+
+  GeneratedColumn<String> get unitName =>
+      $composableBuilder(column: $table.unitName, builder: (column) => column);
+
+  GeneratedColumn<String> get providerUserId => $composableBuilder(
+    column: $table.providerUserId,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get providerName => $composableBuilder(
+    column: $table.providerName,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get chiefComplaint => $composableBuilder(
+    column: $table.chiefComplaint,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get triageCategory => $composableBuilder(
+    column: $table.triageCategory,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<DateTime> get startAt =>
+      $composableBuilder(column: $table.startAt, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get endAt =>
+      $composableBuilder(column: $table.endAt, builder: (column) => column);
+
+  GeneratedColumn<int> get synced =>
+      $composableBuilder(column: $table.synced, builder: (column) => column);
+
+  GeneratedColumn<String> get syncState =>
+      $composableBuilder(column: $table.syncState, builder: (column) => column);
+
+  GeneratedColumn<String> get aiMetadata => $composableBuilder(
+    column: $table.aiMetadata,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<DateTime> get createdAt =>
+      $composableBuilder(column: $table.createdAt, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get updatedAt =>
+      $composableBuilder(column: $table.updatedAt, builder: (column) => column);
+}
+
+class $$EncountersTableTableManager
+    extends
+        RootTableManager<
+          _$AppDatabase,
+          $EncountersTable,
+          Encounter,
+          $$EncountersTableFilterComposer,
+          $$EncountersTableOrderingComposer,
+          $$EncountersTableAnnotationComposer,
+          $$EncountersTableCreateCompanionBuilder,
+          $$EncountersTableUpdateCompanionBuilder,
+          (
+            Encounter,
+            BaseReferences<_$AppDatabase, $EncountersTable, Encounter>,
+          ),
+          Encounter,
+          PrefetchHooks Function()
+        > {
+  $$EncountersTableTableManager(_$AppDatabase db, $EncountersTable table)
+    : super(
+        TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$EncountersTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$EncountersTableOrderingComposer($db: db, $table: table),
+          createComputedFieldComposer: () =>
+              $$EncountersTableAnnotationComposer($db: db, $table: table),
+          updateCompanionCallback:
+              ({
+                Value<String> id = const Value.absent(),
+                Value<String> patientId = const Value.absent(),
+                Value<String?> encounterNo = const Value.absent(),
+                Value<String> status = const Value.absent(),
+                Value<String> type = const Value.absent(),
+                Value<String?> unitId = const Value.absent(),
+                Value<String> unitName = const Value.absent(),
+                Value<String?> providerUserId = const Value.absent(),
+                Value<String?> providerName = const Value.absent(),
+                Value<String?> chiefComplaint = const Value.absent(),
+                Value<String?> triageCategory = const Value.absent(),
+                Value<DateTime> startAt = const Value.absent(),
+                Value<DateTime?> endAt = const Value.absent(),
+                Value<int> synced = const Value.absent(),
+                Value<String> syncState = const Value.absent(),
+                Value<String?> aiMetadata = const Value.absent(),
+                Value<DateTime> createdAt = const Value.absent(),
+                Value<DateTime> updatedAt = const Value.absent(),
+                Value<int> rowid = const Value.absent(),
+              }) => EncountersCompanion(
+                id: id,
+                patientId: patientId,
+                encounterNo: encounterNo,
+                status: status,
+                type: type,
+                unitId: unitId,
+                unitName: unitName,
+                providerUserId: providerUserId,
+                providerName: providerName,
+                chiefComplaint: chiefComplaint,
+                triageCategory: triageCategory,
+                startAt: startAt,
+                endAt: endAt,
+                synced: synced,
+                syncState: syncState,
+                aiMetadata: aiMetadata,
+                createdAt: createdAt,
+                updatedAt: updatedAt,
+                rowid: rowid,
+              ),
+          createCompanionCallback:
+              ({
+                required String id,
+                required String patientId,
+                Value<String?> encounterNo = const Value.absent(),
+                Value<String> status = const Value.absent(),
+                Value<String> type = const Value.absent(),
+                Value<String?> unitId = const Value.absent(),
+                Value<String> unitName = const Value.absent(),
+                Value<String?> providerUserId = const Value.absent(),
+                Value<String?> providerName = const Value.absent(),
+                Value<String?> chiefComplaint = const Value.absent(),
+                Value<String?> triageCategory = const Value.absent(),
+                required DateTime startAt,
+                Value<DateTime?> endAt = const Value.absent(),
+                Value<int> synced = const Value.absent(),
+                Value<String> syncState = const Value.absent(),
+                Value<String?> aiMetadata = const Value.absent(),
+                required DateTime createdAt,
+                required DateTime updatedAt,
+                Value<int> rowid = const Value.absent(),
+              }) => EncountersCompanion.insert(
+                id: id,
+                patientId: patientId,
+                encounterNo: encounterNo,
+                status: status,
+                type: type,
+                unitId: unitId,
+                unitName: unitName,
+                providerUserId: providerUserId,
+                providerName: providerName,
+                chiefComplaint: chiefComplaint,
+                triageCategory: triageCategory,
+                startAt: startAt,
+                endAt: endAt,
+                synced: synced,
+                syncState: syncState,
+                aiMetadata: aiMetadata,
+                createdAt: createdAt,
+                updatedAt: updatedAt,
+                rowid: rowid,
+              ),
+          withReferenceMapper: (p0) => p0
+              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .toList(),
+          prefetchHooksCallback: null,
+        ),
+      );
+}
+
+typedef $$EncountersTableProcessedTableManager =
+    ProcessedTableManager<
+      _$AppDatabase,
+      $EncountersTable,
+      Encounter,
+      $$EncountersTableFilterComposer,
+      $$EncountersTableOrderingComposer,
+      $$EncountersTableAnnotationComposer,
+      $$EncountersTableCreateCompanionBuilder,
+      $$EncountersTableUpdateCompanionBuilder,
+      (Encounter, BaseReferences<_$AppDatabase, $EncountersTable, Encounter>),
+      Encounter,
+      PrefetchHooks Function()
+    >;
+typedef $$EventsTableCreateCompanionBuilder =
+    EventsCompanion Function({
+      required String id,
+      required String encounterId,
+      required String kind,
+      required String title,
+      Value<String> status,
+      Value<String?> bodyText,
+      Value<String?> payloadJson,
+      Value<String?> createdBy,
+      required DateTime createdAt,
+      Value<String?> signedBy,
+      Value<DateTime?> signedAt,
+      Value<int> synced,
+      Value<String> syncState,
+      Value<int> rowid,
+    });
+typedef $$EventsTableUpdateCompanionBuilder =
+    EventsCompanion Function({
+      Value<String> id,
+      Value<String> encounterId,
+      Value<String> kind,
+      Value<String> title,
+      Value<String> status,
+      Value<String?> bodyText,
+      Value<String?> payloadJson,
+      Value<String?> createdBy,
+      Value<DateTime> createdAt,
+      Value<String?> signedBy,
+      Value<DateTime?> signedAt,
+      Value<int> synced,
+      Value<String> syncState,
+      Value<int> rowid,
+    });
+
+class $$EventsTableFilterComposer
+    extends Composer<_$AppDatabase, $EventsTable> {
+  $$EventsTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<String> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get encounterId => $composableBuilder(
+    column: $table.encounterId,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get kind => $composableBuilder(
+    column: $table.kind,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get title => $composableBuilder(
+    column: $table.title,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get status => $composableBuilder(
+    column: $table.status,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get bodyText => $composableBuilder(
+    column: $table.bodyText,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get payloadJson => $composableBuilder(
+    column: $table.payloadJson,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get createdBy => $composableBuilder(
+    column: $table.createdBy,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get createdAt => $composableBuilder(
+    column: $table.createdAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get signedBy => $composableBuilder(
+    column: $table.signedBy,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get signedAt => $composableBuilder(
+    column: $table.signedAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get synced => $composableBuilder(
+    column: $table.synced,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get syncState => $composableBuilder(
+    column: $table.syncState,
+    builder: (column) => ColumnFilters(column),
+  );
+}
+
+class $$EventsTableOrderingComposer
+    extends Composer<_$AppDatabase, $EventsTable> {
+  $$EventsTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<String> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get encounterId => $composableBuilder(
+    column: $table.encounterId,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get kind => $composableBuilder(
+    column: $table.kind,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get title => $composableBuilder(
+    column: $table.title,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get status => $composableBuilder(
+    column: $table.status,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get bodyText => $composableBuilder(
+    column: $table.bodyText,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get payloadJson => $composableBuilder(
+    column: $table.payloadJson,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get createdBy => $composableBuilder(
+    column: $table.createdBy,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get createdAt => $composableBuilder(
+    column: $table.createdAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get signedBy => $composableBuilder(
+    column: $table.signedBy,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get signedAt => $composableBuilder(
+    column: $table.signedAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get synced => $composableBuilder(
+    column: $table.synced,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get syncState => $composableBuilder(
+    column: $table.syncState,
+    builder: (column) => ColumnOrderings(column),
+  );
+}
+
+class $$EventsTableAnnotationComposer
+    extends Composer<_$AppDatabase, $EventsTable> {
+  $$EventsTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<String> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
+
+  GeneratedColumn<String> get encounterId => $composableBuilder(
+    column: $table.encounterId,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get kind =>
+      $composableBuilder(column: $table.kind, builder: (column) => column);
+
+  GeneratedColumn<String> get title =>
+      $composableBuilder(column: $table.title, builder: (column) => column);
+
+  GeneratedColumn<String> get status =>
+      $composableBuilder(column: $table.status, builder: (column) => column);
+
+  GeneratedColumn<String> get bodyText =>
+      $composableBuilder(column: $table.bodyText, builder: (column) => column);
+
+  GeneratedColumn<String> get payloadJson => $composableBuilder(
+    column: $table.payloadJson,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get createdBy =>
+      $composableBuilder(column: $table.createdBy, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get createdAt =>
+      $composableBuilder(column: $table.createdAt, builder: (column) => column);
+
+  GeneratedColumn<String> get signedBy =>
+      $composableBuilder(column: $table.signedBy, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get signedAt =>
+      $composableBuilder(column: $table.signedAt, builder: (column) => column);
+
+  GeneratedColumn<int> get synced =>
+      $composableBuilder(column: $table.synced, builder: (column) => column);
+
+  GeneratedColumn<String> get syncState =>
+      $composableBuilder(column: $table.syncState, builder: (column) => column);
+}
+
+class $$EventsTableTableManager
+    extends
+        RootTableManager<
+          _$AppDatabase,
+          $EventsTable,
+          Event,
+          $$EventsTableFilterComposer,
+          $$EventsTableOrderingComposer,
+          $$EventsTableAnnotationComposer,
+          $$EventsTableCreateCompanionBuilder,
+          $$EventsTableUpdateCompanionBuilder,
+          (Event, BaseReferences<_$AppDatabase, $EventsTable, Event>),
+          Event,
+          PrefetchHooks Function()
+        > {
+  $$EventsTableTableManager(_$AppDatabase db, $EventsTable table)
+    : super(
+        TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$EventsTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$EventsTableOrderingComposer($db: db, $table: table),
+          createComputedFieldComposer: () =>
+              $$EventsTableAnnotationComposer($db: db, $table: table),
+          updateCompanionCallback:
+              ({
+                Value<String> id = const Value.absent(),
+                Value<String> encounterId = const Value.absent(),
+                Value<String> kind = const Value.absent(),
+                Value<String> title = const Value.absent(),
+                Value<String> status = const Value.absent(),
+                Value<String?> bodyText = const Value.absent(),
+                Value<String?> payloadJson = const Value.absent(),
+                Value<String?> createdBy = const Value.absent(),
+                Value<DateTime> createdAt = const Value.absent(),
+                Value<String?> signedBy = const Value.absent(),
+                Value<DateTime?> signedAt = const Value.absent(),
+                Value<int> synced = const Value.absent(),
+                Value<String> syncState = const Value.absent(),
+                Value<int> rowid = const Value.absent(),
+              }) => EventsCompanion(
+                id: id,
+                encounterId: encounterId,
+                kind: kind,
+                title: title,
+                status: status,
+                bodyText: bodyText,
+                payloadJson: payloadJson,
+                createdBy: createdBy,
+                createdAt: createdAt,
+                signedBy: signedBy,
+                signedAt: signedAt,
+                synced: synced,
+                syncState: syncState,
+                rowid: rowid,
+              ),
+          createCompanionCallback:
+              ({
+                required String id,
+                required String encounterId,
+                required String kind,
+                required String title,
+                Value<String> status = const Value.absent(),
+                Value<String?> bodyText = const Value.absent(),
+                Value<String?> payloadJson = const Value.absent(),
+                Value<String?> createdBy = const Value.absent(),
+                required DateTime createdAt,
+                Value<String?> signedBy = const Value.absent(),
+                Value<DateTime?> signedAt = const Value.absent(),
+                Value<int> synced = const Value.absent(),
+                Value<String> syncState = const Value.absent(),
+                Value<int> rowid = const Value.absent(),
+              }) => EventsCompanion.insert(
+                id: id,
+                encounterId: encounterId,
+                kind: kind,
+                title: title,
+                status: status,
+                bodyText: bodyText,
+                payloadJson: payloadJson,
+                createdBy: createdBy,
+                createdAt: createdAt,
+                signedBy: signedBy,
+                signedAt: signedAt,
+                synced: synced,
+                syncState: syncState,
+                rowid: rowid,
+              ),
+          withReferenceMapper: (p0) => p0
+              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .toList(),
+          prefetchHooksCallback: null,
+        ),
+      );
+}
+
+typedef $$EventsTableProcessedTableManager =
+    ProcessedTableManager<
+      _$AppDatabase,
+      $EventsTable,
+      Event,
+      $$EventsTableFilterComposer,
+      $$EventsTableOrderingComposer,
+      $$EventsTableAnnotationComposer,
+      $$EventsTableCreateCompanionBuilder,
+      $$EventsTableUpdateCompanionBuilder,
+      (Event, BaseReferences<_$AppDatabase, $EventsTable, Event>),
+      Event,
+      PrefetchHooks Function()
+    >;
+typedef $$UnitsTableCreateCompanionBuilder =
+    UnitsCompanion Function({
+      required String id,
+      required String code,
+      required String name,
+      Value<String?> facility,
+      required DateTime createdAt,
+      Value<int> rowid,
+    });
+typedef $$UnitsTableUpdateCompanionBuilder =
+    UnitsCompanion Function({
+      Value<String> id,
+      Value<String> code,
+      Value<String> name,
+      Value<String?> facility,
+      Value<DateTime> createdAt,
+      Value<int> rowid,
+    });
+
+class $$UnitsTableFilterComposer extends Composer<_$AppDatabase, $UnitsTable> {
+  $$UnitsTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<String> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get code => $composableBuilder(
+    column: $table.code,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get name => $composableBuilder(
+    column: $table.name,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get facility => $composableBuilder(
+    column: $table.facility,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get createdAt => $composableBuilder(
+    column: $table.createdAt,
+    builder: (column) => ColumnFilters(column),
+  );
+}
+
+class $$UnitsTableOrderingComposer
+    extends Composer<_$AppDatabase, $UnitsTable> {
+  $$UnitsTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<String> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get code => $composableBuilder(
+    column: $table.code,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get name => $composableBuilder(
+    column: $table.name,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get facility => $composableBuilder(
+    column: $table.facility,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get createdAt => $composableBuilder(
+    column: $table.createdAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+}
+
+class $$UnitsTableAnnotationComposer
+    extends Composer<_$AppDatabase, $UnitsTable> {
+  $$UnitsTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<String> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
+
+  GeneratedColumn<String> get code =>
+      $composableBuilder(column: $table.code, builder: (column) => column);
+
+  GeneratedColumn<String> get name =>
+      $composableBuilder(column: $table.name, builder: (column) => column);
+
+  GeneratedColumn<String> get facility =>
+      $composableBuilder(column: $table.facility, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get createdAt =>
+      $composableBuilder(column: $table.createdAt, builder: (column) => column);
+}
+
+class $$UnitsTableTableManager
+    extends
+        RootTableManager<
+          _$AppDatabase,
+          $UnitsTable,
+          Unit,
+          $$UnitsTableFilterComposer,
+          $$UnitsTableOrderingComposer,
+          $$UnitsTableAnnotationComposer,
+          $$UnitsTableCreateCompanionBuilder,
+          $$UnitsTableUpdateCompanionBuilder,
+          (Unit, BaseReferences<_$AppDatabase, $UnitsTable, Unit>),
+          Unit,
+          PrefetchHooks Function()
+        > {
+  $$UnitsTableTableManager(_$AppDatabase db, $UnitsTable table)
+    : super(
+        TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$UnitsTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$UnitsTableOrderingComposer($db: db, $table: table),
+          createComputedFieldComposer: () =>
+              $$UnitsTableAnnotationComposer($db: db, $table: table),
+          updateCompanionCallback:
+              ({
+                Value<String> id = const Value.absent(),
+                Value<String> code = const Value.absent(),
+                Value<String> name = const Value.absent(),
+                Value<String?> facility = const Value.absent(),
+                Value<DateTime> createdAt = const Value.absent(),
+                Value<int> rowid = const Value.absent(),
+              }) => UnitsCompanion(
+                id: id,
+                code: code,
+                name: name,
+                facility: facility,
+                createdAt: createdAt,
+                rowid: rowid,
+              ),
+          createCompanionCallback:
+              ({
+                required String id,
+                required String code,
+                required String name,
+                Value<String?> facility = const Value.absent(),
+                required DateTime createdAt,
+                Value<int> rowid = const Value.absent(),
+              }) => UnitsCompanion.insert(
+                id: id,
+                code: code,
+                name: name,
+                facility: facility,
+                createdAt: createdAt,
+                rowid: rowid,
+              ),
+          withReferenceMapper: (p0) => p0
+              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .toList(),
+          prefetchHooksCallback: null,
+        ),
+      );
+}
+
+typedef $$UnitsTableProcessedTableManager =
+    ProcessedTableManager<
+      _$AppDatabase,
+      $UnitsTable,
+      Unit,
+      $$UnitsTableFilterComposer,
+      $$UnitsTableOrderingComposer,
+      $$UnitsTableAnnotationComposer,
+      $$UnitsTableCreateCompanionBuilder,
+      $$UnitsTableUpdateCompanionBuilder,
+      (Unit, BaseReferences<_$AppDatabase, $UnitsTable, Unit>),
+      Unit,
+      PrefetchHooks Function()
+    >;
+typedef $$UsersTableCreateCompanionBuilder =
+    UsersCompanion Function({
+      required String id,
+      required String username,
+      Value<String?> displayName,
+      required String role,
+      required String passwordSaltB64,
+      required String passwordHashB64,
+      required int passwordIterations,
+      Value<bool> isActive,
+      required DateTime createdAt,
+      Value<int> rowid,
+    });
+typedef $$UsersTableUpdateCompanionBuilder =
+    UsersCompanion Function({
+      Value<String> id,
+      Value<String> username,
+      Value<String?> displayName,
+      Value<String> role,
+      Value<String> passwordSaltB64,
+      Value<String> passwordHashB64,
+      Value<int> passwordIterations,
+      Value<bool> isActive,
+      Value<DateTime> createdAt,
+      Value<int> rowid,
+    });
+
+class $$UsersTableFilterComposer extends Composer<_$AppDatabase, $UsersTable> {
+  $$UsersTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<String> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get username => $composableBuilder(
+    column: $table.username,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get displayName => $composableBuilder(
+    column: $table.displayName,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get role => $composableBuilder(
+    column: $table.role,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get passwordSaltB64 => $composableBuilder(
+    column: $table.passwordSaltB64,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get passwordHashB64 => $composableBuilder(
+    column: $table.passwordHashB64,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get passwordIterations => $composableBuilder(
+    column: $table.passwordIterations,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<bool> get isActive => $composableBuilder(
+    column: $table.isActive,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get createdAt => $composableBuilder(
+    column: $table.createdAt,
+    builder: (column) => ColumnFilters(column),
+  );
+}
+
+class $$UsersTableOrderingComposer
+    extends Composer<_$AppDatabase, $UsersTable> {
+  $$UsersTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<String> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get username => $composableBuilder(
+    column: $table.username,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get displayName => $composableBuilder(
+    column: $table.displayName,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get role => $composableBuilder(
+    column: $table.role,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get passwordSaltB64 => $composableBuilder(
+    column: $table.passwordSaltB64,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get passwordHashB64 => $composableBuilder(
+    column: $table.passwordHashB64,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get passwordIterations => $composableBuilder(
+    column: $table.passwordIterations,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<bool> get isActive => $composableBuilder(
+    column: $table.isActive,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get createdAt => $composableBuilder(
+    column: $table.createdAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+}
+
+class $$UsersTableAnnotationComposer
+    extends Composer<_$AppDatabase, $UsersTable> {
+  $$UsersTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<String> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
+
+  GeneratedColumn<String> get username =>
+      $composableBuilder(column: $table.username, builder: (column) => column);
+
+  GeneratedColumn<String> get displayName => $composableBuilder(
+    column: $table.displayName,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get role =>
+      $composableBuilder(column: $table.role, builder: (column) => column);
+
+  GeneratedColumn<String> get passwordSaltB64 => $composableBuilder(
+    column: $table.passwordSaltB64,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get passwordHashB64 => $composableBuilder(
+    column: $table.passwordHashB64,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<int> get passwordIterations => $composableBuilder(
+    column: $table.passwordIterations,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<bool> get isActive =>
+      $composableBuilder(column: $table.isActive, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get createdAt =>
+      $composableBuilder(column: $table.createdAt, builder: (column) => column);
+}
+
+class $$UsersTableTableManager
+    extends
+        RootTableManager<
+          _$AppDatabase,
+          $UsersTable,
+          User,
+          $$UsersTableFilterComposer,
+          $$UsersTableOrderingComposer,
+          $$UsersTableAnnotationComposer,
+          $$UsersTableCreateCompanionBuilder,
+          $$UsersTableUpdateCompanionBuilder,
+          (User, BaseReferences<_$AppDatabase, $UsersTable, User>),
+          User,
+          PrefetchHooks Function()
+        > {
+  $$UsersTableTableManager(_$AppDatabase db, $UsersTable table)
+    : super(
+        TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$UsersTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$UsersTableOrderingComposer($db: db, $table: table),
+          createComputedFieldComposer: () =>
+              $$UsersTableAnnotationComposer($db: db, $table: table),
+          updateCompanionCallback:
+              ({
+                Value<String> id = const Value.absent(),
+                Value<String> username = const Value.absent(),
+                Value<String?> displayName = const Value.absent(),
+                Value<String> role = const Value.absent(),
+                Value<String> passwordSaltB64 = const Value.absent(),
+                Value<String> passwordHashB64 = const Value.absent(),
+                Value<int> passwordIterations = const Value.absent(),
+                Value<bool> isActive = const Value.absent(),
+                Value<DateTime> createdAt = const Value.absent(),
+                Value<int> rowid = const Value.absent(),
+              }) => UsersCompanion(
+                id: id,
+                username: username,
+                displayName: displayName,
+                role: role,
+                passwordSaltB64: passwordSaltB64,
+                passwordHashB64: passwordHashB64,
+                passwordIterations: passwordIterations,
+                isActive: isActive,
+                createdAt: createdAt,
+                rowid: rowid,
+              ),
+          createCompanionCallback:
+              ({
+                required String id,
+                required String username,
+                Value<String?> displayName = const Value.absent(),
+                required String role,
+                required String passwordSaltB64,
+                required String passwordHashB64,
+                required int passwordIterations,
+                Value<bool> isActive = const Value.absent(),
+                required DateTime createdAt,
+                Value<int> rowid = const Value.absent(),
+              }) => UsersCompanion.insert(
+                id: id,
+                username: username,
+                displayName: displayName,
+                role: role,
+                passwordSaltB64: passwordSaltB64,
+                passwordHashB64: passwordHashB64,
+                passwordIterations: passwordIterations,
+                isActive: isActive,
+                createdAt: createdAt,
+                rowid: rowid,
+              ),
+          withReferenceMapper: (p0) => p0
+              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .toList(),
+          prefetchHooksCallback: null,
+        ),
+      );
+}
+
+typedef $$UsersTableProcessedTableManager =
+    ProcessedTableManager<
+      _$AppDatabase,
+      $UsersTable,
+      User,
+      $$UsersTableFilterComposer,
+      $$UsersTableOrderingComposer,
+      $$UsersTableAnnotationComposer,
+      $$UsersTableCreateCompanionBuilder,
+      $$UsersTableUpdateCompanionBuilder,
+      (User, BaseReferences<_$AppDatabase, $UsersTable, User>),
+      User,
+      PrefetchHooks Function()
+    >;
+typedef $$UserUnitsTableCreateCompanionBuilder =
+    UserUnitsCompanion Function({
+      required String userId,
+      required String unitId,
+      required DateTime createdAt,
+      Value<int> rowid,
+    });
+typedef $$UserUnitsTableUpdateCompanionBuilder =
+    UserUnitsCompanion Function({
+      Value<String> userId,
+      Value<String> unitId,
+      Value<DateTime> createdAt,
+      Value<int> rowid,
+    });
+
+class $$UserUnitsTableFilterComposer
+    extends Composer<_$AppDatabase, $UserUnitsTable> {
+  $$UserUnitsTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<String> get userId => $composableBuilder(
+    column: $table.userId,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get unitId => $composableBuilder(
+    column: $table.unitId,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get createdAt => $composableBuilder(
+    column: $table.createdAt,
+    builder: (column) => ColumnFilters(column),
+  );
+}
+
+class $$UserUnitsTableOrderingComposer
+    extends Composer<_$AppDatabase, $UserUnitsTable> {
+  $$UserUnitsTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<String> get userId => $composableBuilder(
+    column: $table.userId,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get unitId => $composableBuilder(
+    column: $table.unitId,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get createdAt => $composableBuilder(
+    column: $table.createdAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+}
+
+class $$UserUnitsTableAnnotationComposer
+    extends Composer<_$AppDatabase, $UserUnitsTable> {
+  $$UserUnitsTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<String> get userId =>
+      $composableBuilder(column: $table.userId, builder: (column) => column);
+
+  GeneratedColumn<String> get unitId =>
+      $composableBuilder(column: $table.unitId, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get createdAt =>
+      $composableBuilder(column: $table.createdAt, builder: (column) => column);
+}
+
+class $$UserUnitsTableTableManager
+    extends
+        RootTableManager<
+          _$AppDatabase,
+          $UserUnitsTable,
+          UserUnit,
+          $$UserUnitsTableFilterComposer,
+          $$UserUnitsTableOrderingComposer,
+          $$UserUnitsTableAnnotationComposer,
+          $$UserUnitsTableCreateCompanionBuilder,
+          $$UserUnitsTableUpdateCompanionBuilder,
+          (UserUnit, BaseReferences<_$AppDatabase, $UserUnitsTable, UserUnit>),
+          UserUnit,
+          PrefetchHooks Function()
+        > {
+  $$UserUnitsTableTableManager(_$AppDatabase db, $UserUnitsTable table)
+    : super(
+        TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$UserUnitsTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$UserUnitsTableOrderingComposer($db: db, $table: table),
+          createComputedFieldComposer: () =>
+              $$UserUnitsTableAnnotationComposer($db: db, $table: table),
+          updateCompanionCallback:
+              ({
+                Value<String> userId = const Value.absent(),
+                Value<String> unitId = const Value.absent(),
+                Value<DateTime> createdAt = const Value.absent(),
+                Value<int> rowid = const Value.absent(),
+              }) => UserUnitsCompanion(
+                userId: userId,
+                unitId: unitId,
+                createdAt: createdAt,
+                rowid: rowid,
+              ),
+          createCompanionCallback:
+              ({
+                required String userId,
+                required String unitId,
+                required DateTime createdAt,
+                Value<int> rowid = const Value.absent(),
+              }) => UserUnitsCompanion.insert(
+                userId: userId,
+                unitId: unitId,
+                createdAt: createdAt,
+                rowid: rowid,
+              ),
+          withReferenceMapper: (p0) => p0
+              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .toList(),
+          prefetchHooksCallback: null,
+        ),
+      );
+}
+
+typedef $$UserUnitsTableProcessedTableManager =
+    ProcessedTableManager<
+      _$AppDatabase,
+      $UserUnitsTable,
+      UserUnit,
+      $$UserUnitsTableFilterComposer,
+      $$UserUnitsTableOrderingComposer,
+      $$UserUnitsTableAnnotationComposer,
+      $$UserUnitsTableCreateCompanionBuilder,
+      $$UserUnitsTableUpdateCompanionBuilder,
+      (UserUnit, BaseReferences<_$AppDatabase, $UserUnitsTable, UserUnit>),
+      UserUnit,
+      PrefetchHooks Function()
+    >;
+
+class $AppDatabaseManager {
+  final _$AppDatabase _db;
+  $AppDatabaseManager(this._db);
+  $$PatientsTableTableManager get patients =>
+      $$PatientsTableTableManager(_db, _db.patients);
+  $$EncountersTableTableManager get encounters =>
+      $$EncountersTableTableManager(_db, _db.encounters);
+  $$EventsTableTableManager get events =>
+      $$EventsTableTableManager(_db, _db.events);
+  $$UnitsTableTableManager get units =>
+      $$UnitsTableTableManager(_db, _db.units);
+  $$UsersTableTableManager get users =>
+      $$UsersTableTableManager(_db, _db.users);
+  $$UserUnitsTableTableManager get userUnits =>
+      $$UserUnitsTableTableManager(_db, _db.userUnits);
+}
+</file>
+
+<file path="lib/core/di/providers.dart">
+
+</file>
+
+<file path="lib/core/encounters/encounter_repo.dart">
+// lib/core/encounters/encounter_repo.dart
+import 'dart:convert';
+
+import 'package:drift/drift.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+//import 'package:uuid/uuid.dart';
+
+import '../database/app_database.dart';
+import '../auth/auth_service.dart';
+
+class EncounterRepo {
+  final AppDatabase db;
+  final Ref ref;
+
+  EncounterRepo(this.db, this.ref);
+
+  Future<List<Encounter>> listForPatient(String patientId) async {
+    return (db.select(db.encounters)
+          ..where((e) => e.patientId.equals(patientId))
+          ..orderBy([(e) => OrderingTerm.desc(e.startAt)]))
+        .get();
+  }
+
+  Future<Encounter> createEncounter({
+    required String patientId,
+    required String type,
+    required String unitName,
+    String? unitId,
+    String? chiefComplaint,
+    String? triageCategory,
+  }) async {
+    final currentUser = ref.read(authServiceProvider).currentUser;
+    if (currentUser == null) throw Exception('User not authenticated');
+
+    final id = const UuidV4().generate();
+    final now = DateTime.now();
+
+    await db.into(db.encounters).insert(EncountersCompanion.insert(
+      id: id,
+      patientId: patientId,
+      type: Value(type),  // Has default in schema → Value required
+      status: const Value('open'),  // Default → Value
+      unitId: unitId == null ? const Value.absent() : Value(unitId),
+      unitName: Value(unitName),  // Default → Value
+      providerUserId: Value(currentUser.id),
+      providerName: Value(currentUser.displayName ?? currentUser.username),
+      chiefComplaint: chiefComplaint == null || chiefComplaint.trim().isEmpty
+          ? const Value.absent()
+          : Value(chiefComplaint.trim()),
+      triageCategory: triageCategory == null || triageCategory.trim().isEmpty
+          ? const Value.absent()
+          : Value(triageCategory.trim()),
+      startAt: now,
+      createdAt: now,
+      updatedAt: now,
+      synced: const Value(0),  // Default → Value
+      syncState: const Value('pending'),  // Default → Value
+    ));
+
+    return (db.select(db.encounters)..where((e) => e.id.equals(id))).getSingle();
+  }
+
+  Future<void> closeEncounter(String encounterId) async {
+    final now = DateTime.now();
+
+    await (db.update(db.encounters)..where((e) => e.id.equals(encounterId))).write(
+      EncountersCompanion(
+        status: const Value('closed'),
+        endAt: Value(now),
+        updatedAt: Value(now),
+        syncState: const Value('pending'),
+      ),
+    );
+  }
+
+  Future<List<Event>> listEvents(String encounterId, {required String kind}) async {
+    return (db.select(db.events)
+          ..where((ev) => ev.encounterId.equals(encounterId) & ev.kind.equals(kind))
+          ..orderBy([(ev) => OrderingTerm.desc(ev.createdAt)]))
+        .get();
+  }
+
+  Future<Event> createNoteEvent({
+    required String encounterId,
+    required String title,
+    required String body,
+    String status = 'draft',
+    String kind = 'NOTE',
+  }) async {
+    final currentUser = ref.read(authServiceProvider).currentUser;
+    if (currentUser == null) throw Exception('User not authenticated');
+
+    final id = const UuidV4().generate();
+    final now = DateTime.now();
+
+    await db.into(db.events).insert(EventsCompanion.insert(
+      id: id,
+      encounterId: encounterId,
+      kind: kind,
+      title: title,
+      status: Value(status),
+      bodyText: Value(body),
+      payloadJson: Value(jsonEncode({'format': 'text'})),
+      createdBy: Value(currentUser.id),
+      createdAt: now,
+      synced: const Value(0),
+      syncState: const Value('pending'),
+    ));
+
+    return (db.select(db.events)..where((e) => e.id.equals(id))).getSingle();
+  }
+
+  Future<void> signNote({
+    required String eventId,
+    required String finalBody,
+  }) async {
+    final currentUser = ref.read(authServiceProvider).currentUser;
+    if (currentUser == null) throw Exception('User not authenticated');
+
+    final now = DateTime.now();
+
+    await (db.update(db.events)..where((e) => e.id.equals(eventId))).write(
+      EventsCompanion(
+        status: const Value('signed'),
+        bodyText: Value(finalBody),
+        signedBy: Value(currentUser.id),
+        signedAt: Value(now),
+        syncState: const Value('pending'),
+      ),
+    );
+  }
+}
+</file>
+
+<file path="lib/core/intake/intake_parser.dart">
+// lib/core/ai/intake_parser.dart
+
+import '../ai/pulse_ai_client.dart';
+
+/// NOTE: Keep this model aligned with your EncounterWorkspaceScreen._IntakeDraft.
+/// If you later move _IntakeDraft into a shared file, update imports accordingly.
+class IntakeDraftModel {
+  IntakeDraftModel({
+    this.fullName,
+    this.nric,
+    this.address,
+    this.phone,
+    this.allergies,
+  });
+
+  final String? fullName;
+  final String? nric;
+  final String? address;
+  final String? phone;
+  final String? allergies;
+
+  static IntakeDraftModel fromJson(Map<String, dynamic> j) {
+    String? s(String k) {
+      final v = j[k];
+      if (v == null) return null;
+      if (v is String && v.trim().isNotEmpty) return v.trim();
+      return null;
+    }
+
+    String? digits12(String? x) {
+      if (x == null) return null;
+      final d = x.replaceAll(RegExp(r'[^0-9]'), '');
+      if (d.length == 12) return d;
+      // If model gives partial, keep as-is digits (still useful)
+      return d.isEmpty ? null : d;
+    }
+
+    String? phoneNorm(String? x) {
+      if (x == null) return null;
+      final p = x.replaceAll(RegExp(r'[^0-9\+]'), '');
+      return p.isEmpty ? null : p;
+    }
+
+    return IntakeDraftModel(
+      fullName: s("fullName"),
+      nric: digits12(s("nric")),
+      address: s("address"),
+      phone: phoneNorm(s("phone")),
+      allergies: s("allergies"),
+    );
+  }
+}
+
+/// Parser facade: deterministic fallback + AI enhancement.
+class IntakeParser {
+  const IntakeParser({
+    required PulseAiClient ai,
+    required IntakeDraftModel Function(String text) deterministicParse,
+  })  : _ai = ai,
+        _deterministicParse = deterministicParse;
+
+  final PulseAiClient _ai;
+  final IntakeDraftModel Function(String text) _deterministicParse;
+
+  Future<IntakeDraftModel> parse(
+    String text, {
+    List<String> missingFields = const [],
+  }) async {
+    final t = text.trim();
+    if (t.isEmpty) return IntakeDraftModel();
+
+    try {
+      final j = await _ai.extractIntake(
+        freeText: t,
+        missingFields: missingFields,
+      );
+      return IntakeDraftModel.fromJson(j);
+    } catch (_) {
+      // Offline-first: always fallback.
+      return _deterministicParse(t);
+    }
+  }
+}
+</file>
+
+<file path="lib/core/patients/incomplete_registration_queue_screen.dart">
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+import '../../core/patients/patient_encounter_service.dart';
+import 'patient_edit_screen.dart';
+
+class IncompleteRegistrationQueueScreen
+    extends ConsumerStatefulWidget {
+  const IncompleteRegistrationQueueScreen({super.key});
+
+  @override
+  ConsumerState<IncompleteRegistrationQueueScreen> createState() =>
+      _IncompleteRegistrationQueueScreenState();
+}
+
+class _IncompleteRegistrationQueueScreenState
+    extends ConsumerState<IncompleteRegistrationQueueScreen> {
+  bool _loading = true;
+  String? _error;
+  List<PatientSearchHit> _items = const [];
+
+  @override
+  void initState() {
+    super.initState();
+    _load();
+  }
+
+  Future<void> _load() async {
+    setState(() {
+      _loading = true;
+      _error = null;
+    });
+
+    try {
+      final svc = ref.read(patientEncounterServiceProvider);
+      final list = await svc.listIncompletePatients();
+      setState(() => _items = list);
+    } catch (e) {
+      setState(() => _error = e.toString());
+    } finally {
+      setState(() => _loading = false);
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Incomplete Registrations'),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.refresh),
+            onPressed: _load,
+          ),
+        ],
+      ),
+      body: _loading
+          ? const Center(child: CircularProgressIndicator())
+          : _error != null
+              ? Center(child: Text(_error!))
+              : _items.isEmpty
+                  ? const Center(
+                      child: Text('No incomplete registrations 🎉'),
+                    )
+                  : ListView.builder(
+                      itemCount: _items.length,
+                      itemBuilder: (context, i) {
+                        final p = _items[i];
+                        return ListTile(
+                          leading: const Icon(Icons.warning_amber,
+                              color: Colors.orange),
+                          title: Text(p.fullName),
+                          subtitle: Text(
+                            '${p.nricMasked}'
+                            '${p.lastSeenAt != null ? ' • Last seen ${_fmt(p.lastSeenAt!)}' : ''}',
+                          ),
+                          trailing: const Icon(Icons.chevron_right),
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (_) =>
+                                    PatientEditScreen(patientId: p.patientId),
+                              ),
+                            ).then((_) => _load());
+                          },
+                        );
+                      },
+                    ),
+    );
+  }
+
+  String _fmt(DateTime d) =>
+      '${d.day}/${d.month}/${d.year}';
+}
+</file>
+
+<file path="lib/core/patients/patient_edit_screen.dart">
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:drift/drift.dart' show Value;
+
+import '../../core/database/app_database.dart';
+
+class PatientEditScreen extends ConsumerStatefulWidget {
+  const PatientEditScreen({super.key, required this.patientId});
+
+  final String patientId;
+
+  @override
+  ConsumerState<PatientEditScreen> createState() =>
+      _PatientEditScreenState();
+}
+
+class _PatientEditScreenState
+    extends ConsumerState<PatientEditScreen> {
+  final _nameCtrl = TextEditingController();
+  final _nricCtrl = TextEditingController();
+  final _addressCtrl = TextEditingController();
+
+  bool _loading = true;
+  String? _error;
+
+  @override
+  void initState() {
+    super.initState();
+    _load();
+  }
+
+  Future<void> _load() async {
+    try {
+      final db = AppDatabase.instance;
+      final p = await (db.select(db.patients)
+            ..where((x) => x.id.equals(widget.patientId)))
+          .getSingle();
+
+      _nameCtrl.text = p.fullName;
+      _nricCtrl.text = p.nric;
+      _addressCtrl.text = p.address ?? '';
+
+      setState(() => _loading = false);
+    } catch (e) {
+      setState(() => _error = e.toString());
+    }
+  }
+
+  Future<void> _save() async {
+    try {
+      final db = AppDatabase.instance;
+      await (db.update(db.patients)
+            ..where((x) => x.id.equals(widget.patientId)))
+          .write(
+        PatientsCompanion(
+          fullName: Value(_nameCtrl.text.trim()),
+          nric: Value(_nricCtrl.text.trim()),
+          address: Value(_addressCtrl.text.trim()),
+          updatedAt: Value(DateTime.now()),
+        ),
+      );
+      if (!mounted) return;
+      Navigator.pop(context);
+    } catch (e) {
+      setState(() => _error = e.toString());
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('Complete Registration')),
+      body: _loading
+          ? const Center(child: CircularProgressIndicator())
+          : Padding(
+              padding: const EdgeInsets.all(16),
+              child: Column(
+                children: [
+                  TextField(
+                    controller: _nameCtrl,
+                    decoration:
+                        const InputDecoration(labelText: 'Full name'),
+                  ),
+                  TextField(
+                    controller: _nricCtrl,
+                    decoration:
+                        const InputDecoration(labelText: 'NRIC'),
+                  ),
+                  TextField(
+                    controller: _addressCtrl,
+                    decoration:
+                        const InputDecoration(labelText: 'Address'),
+                    maxLines: 3,
+                  ),
+                  const SizedBox(height: 16),
+                  if (_error != null)
+                    Text(_error!,
+                        style: const TextStyle(color: Colors.red)),
+                  ElevatedButton(
+                    onPressed: _save,
+                    child: const Text('Save'),
+                  ),
+                ],
+              ),
+            ),
+    );
+  }
+}
+</file>
+
+<file path="lib/core/patients/patient_encounter_service.dart">
+// lib/core/patients/patient_encounter_service.dart
+//
+// Offline-first patient search + one-click stub patient + start encounter.
+// Works with your Drift schema in AppDatabase (patients, encounters, user_units, units).
+
+import 'dart:convert';
+
+import 'package:crypto/crypto.dart';
+import 'package:drift/drift.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:uuid/uuid.dart';
+
+import '../database/app_database.dart';
+
+final patientEncounterServiceProvider = Provider<PatientEncounterService>((ref) {
+  return PatientEncounterService(AppDatabase.instance);
+});
+
+class PatientSearchHit {
+  const PatientSearchHit({
+    required this.patientId,
+    required this.fullName,
+    required this.nricMasked,
+    required this.lastSeenAt,
+    required this.isIncomplete,
+  });
+
+  final String patientId;
+  final String fullName;
+  final String nricMasked;
+  final DateTime? lastSeenAt;
+  final bool isIncomplete;
+}
+
+class CreatePatientStubInput {
+  const CreatePatientStubInput({
+    required this.fullName,
+    this.nricOrOldId,
+    this.address,
+    this.allergies,
+  });
+
+  final String fullName;
+  final String? nricOrOldId;
+  final String? address;
+  final String? allergies;
+}
+
+class CreateEncounterInput {
+  const CreateEncounterInput({
+    required this.patientId,
+    required this.unitId,
+    required this.unitName,
+    required this.providerUserId,
+    required this.providerName,
+    this.type = 'OPD',
+  });
+
+  final String patientId;
+  final String unitId;
+  final String unitName;
+  final String providerUserId;
+  final String providerName;
+  final String type;
+}
+
+class PatientEncounterService {
+  PatientEncounterService(this._db);
+
+  final AppDatabase _db;
+  static const _uuid = Uuid();
+
+  // -----------------------------
+  // SEARCH
+  // -----------------------------
+
+  /// Search patients by name and/or ID digits.
+  /// - If input looks like an ID, we also try a hash match (nric_hash).
+  /// - Returns lastSeenAt (max encounter start_at) and "incomplete" heuristic.
+  Future<List<PatientSearchHit>> searchPatients({
+    required String query,
+    int limit = 10,
+  }) async {
+    final q = query.trim();
+    if (q.isEmpty) return [];
+
+    final nameNorm = _normalizeName(q);
+    final idDigits = _normalizeIdDigits(q);
+    final isLikelyId = idDigits.length >= 6;
+    final idHash = isLikelyId ? _sha256Hex(idDigits) : '';
+
+    // We do a single query using LEFT JOIN to get lastSeen.
+    // Match rules:
+    // - name LIKE
+    // - OR nric_hash match (if looks like ID)
+    // - OR nric digits contains (fallback)
+    const sql = '''
+    SELECT
+      p.id AS patientId,
+      p.full_name AS fullName,
+      p.nric AS nric,
+      p.address AS address,
+      MAX(e.start_at) AS lastSeen
+    FROM patients p
+    LEFT JOIN encounters e ON e.patient_id = p.id
+    WHERE
+      (p.full_name_norm LIKE ?1)
+      OR (?2 = 1 AND p.nric_hash = ?3)
+      OR (?2 = 1 AND p.nric LIKE ?4)
+    GROUP BY p.id, p.full_name, p.nric, p.address
+    ORDER BY lastSeen DESC NULLS LAST, p.full_name ASC
+    LIMIT ?5
+    ''';
+
+    final likeName = '%$nameNorm%';
+    final likeId = '%$idDigits%';
+
+    final rows = await _db.customSelect(
+      sql,
+      variables: [
+        Variable.withString(likeName),
+        Variable.withInt(isLikelyId ? 1 : 0),
+        Variable.withString(idHash),
+        Variable.withString(likeId),
+        Variable.withInt(limit),
+      ],
+      readsFrom: {_db.patients, _db.encounters},
+    ).get();
+
+    return rows
+        .map((r) {
+          final data = r.data;
+          final patientId = (data['patientId'] as String?) ?? '';
+          final fullName = (data['fullName'] as String?) ?? '';
+          final nric = (data['nric'] as String?) ?? '';
+          final address = data['address'] as String?;
+          final lastSeenRaw = data['lastSeen'];
+          final lastSeen = lastSeenRaw is DateTime ? lastSeenRaw : null;
+
+          final isIncomplete =
+              (address == null || address.trim().isEmpty) || nric.trim().isEmpty;
+
+          return PatientSearchHit(
+            patientId: patientId,
+            fullName: fullName,
+            nricMasked: _maskId(nric),
+            lastSeenAt: lastSeen,
+            isIncomplete: isIncomplete,
+          );
+        })
+        .where((x) => x.patientId.isNotEmpty)
+        .toList();
+  }
+
+  /// Simple helper to list incomplete patients (missing address or missing nric).
+  Future<List<PatientSearchHit>> listIncompletePatients({int limit = 20}) async {
+    final rows = await _db.customSelect(
+      '''
+      SELECT
+        p.id AS patientId,
+        p.full_name AS fullName,
+        p.nric AS nric,
+        p.address AS address,
+        MAX(e.start_at) AS lastSeen
+      FROM patients p
+      LEFT JOIN encounters e ON e.patient_id = p.id
+      WHERE
+        (p.address IS NULL OR TRIM(p.address) = '')
+        OR (TRIM(p.nric) = '')
+      GROUP BY p.id, p.full_name, p.nric, p.address
+      ORDER BY lastSeen DESC NULLS LAST, p.full_name ASC
+      LIMIT ?1
+      ''',
+      variables: [Variable.withInt(limit)],
+      readsFrom: {_db.patients, _db.encounters},
+    ).get();
+
+    return rows
+        .map((r) {
+          final data = r.data;
+          final patientId = (data['patientId'] as String?) ?? '';
+          final fullName = (data['fullName'] as String?) ?? '';
+          final nric = (data['nric'] as String?) ?? '';
+          final address = data['address'] as String?;
+          final lastSeenRaw = data['lastSeen'];
+          final lastSeen = lastSeenRaw is DateTime ? lastSeenRaw : null;
+
+          final isIncomplete =
+              (address == null || address.trim().isEmpty) || nric.trim().isEmpty;
+
+          return PatientSearchHit(
+            patientId: patientId,
+            fullName: fullName,
+            nricMasked: _maskId(nric),
+            lastSeenAt: lastSeen,
+            isIncomplete: isIncomplete,
+          );
+        })
+        .where((x) => x.patientId.isNotEmpty)
+        .toList();
+  }
+
+  // -----------------------------
+  // CREATE PATIENT STUB
+  // -----------------------------
+
+  Future<String> createPatientStub(CreatePatientStubInput input) async {
+    final now = DateTime.now();
+    final id = _uuid.v4();
+
+    final fullName = input.fullName.trim();
+    if (fullName.isEmpty) {
+      throw ArgumentError('fullName is required');
+    }
+
+    // NRIC column is non-null in your schema, so we store '' for "no ID".
+    final nricNorm = _normalizeIdDigits(input.nricOrOldId ?? '');
+    final nameNorm = _normalizeName(fullName);
+    final nricHash = _sha256Hex(nricNorm); // safe even if empty
+
+    // Optional: prevent duplicates when NRIC is provided
+    if (nricNorm.isNotEmpty) {
+      final dup = await _db.customSelect(
+        'SELECT id FROM patients WHERE nric_hash = ?1 LIMIT 1',
+        variables: [Variable.withString(nricHash)],
+        readsFrom: {_db.patients},
+      ).get();
+
+      if (dup.isNotEmpty) {
+        return dup.first.read<String>('id');
+      }
+    }
+
+    await _db.into(_db.patients).insert(
+          PatientsCompanion.insert(
+            id: id,
+            mrn: const Value.absent(),
+            fullName: fullName,
+            fullNameNorm: nameNorm,
+            nric: nricNorm, // '' allowed
+            nricHash: nricHash,
+            address: Value(input.address?.trim()),
+            allergies: Value(input.allergies?.trim()),
+            createdAt: now,
+            updatedAt: now,
+          ),
+        );
+
+    return id;
+  }
+
+  // -----------------------------
+  // CREATE ENCOUNTER (encounter-first)
+  // -----------------------------
+
+  Future<String> createEncounter(CreateEncounterInput input) async {
+    final now = DateTime.now();
+    final id = _uuid.v4();
+
+    await _db.into(_db.encounters).insert(
+          EncountersCompanion.insert(
+            id: id,
+            patientId: input.patientId,
+            encounterNo: const Value.absent(),
+            status: const Value('open'),
+            type: Value(input.type),
+            unitId: Value(input.unitId),
+            unitName: Value(input.unitName),
+            providerUserId: Value(input.providerUserId),
+            providerName: Value(input.providerName),
+            chiefComplaint: const Value.absent(),
+            triageCategory: const Value.absent(),
+            startAt: now,
+            endAt: const Value.absent(),
+            createdAt: now,
+            updatedAt: now,
+          ),
+        );
+
+    return id;
+  }
+
+  // -----------------------------
+  // ONE-CLICK: Create stub + start encounter (fast intake)
+  // -----------------------------
+
+  Future<String> createStubAndStartEncounter({
+    required CreatePatientStubInput patient,
+    required String unitId,
+    required String unitName,
+    required String providerUserId,
+    required String providerName,
+    String type = 'OPD',
+  }) async {
+    return _db.transaction(() async {
+      final patientId = await createPatientStub(patient);
+      final encounterId = await createEncounter(
+        CreateEncounterInput(
+          patientId: patientId,
+          unitId: unitId,
+          unitName: unitName,
+          providerUserId: providerUserId,
+          providerName: providerName,
+          type: type,
+        ),
+      );
+      return encounterId;
+    });
+  }
+
+  // -----------------------------
+  // Duplicate risk check (soft match)
+  // -----------------------------
+
+  Future<List<PatientSearchHit>> findPossibleDuplicates({
+    required String fullName,
+    String? nricOrOldId,
+    int limit = 5,
+  }) async {
+    final nameNorm = _normalizeName(fullName);
+    final idDigits = _normalizeIdDigits(nricOrOldId ?? '');
+
+    // Simple strategy:
+    // - If ID digits exist: prefer hash match and also name match.
+    // - Else: just name match.
+    final sql = '''
+    SELECT
+      p.id AS patientId,
+      p.full_name AS fullName,
+      p.nric AS nric,
+      p.address AS address,
+      MAX(e.start_at) AS lastSeen
+    FROM patients p
+    LEFT JOIN encounters e ON e.patient_id = p.id
+    WHERE
+      p.full_name_norm LIKE ?1
+      ${idDigits.isEmpty ? '' : 'OR p.nric_hash = ?2'}
+    GROUP BY p.id, p.full_name, p.nric, p.address
+    ORDER BY lastSeen DESC NULLS LAST
+    LIMIT ?${idDigits.isEmpty ? 2 : 3}
+    ''';
+
+    final variables = <Variable<Object>>[
+      Variable.withString('%$nameNorm%'),
+      if (idDigits.isNotEmpty) Variable.withString(_sha256Hex(idDigits)),
+      Variable.withInt(limit),
+    ];
+
+    final rows = await _db.customSelect(
+      sql,
+      variables: variables,
+      readsFrom: {_db.patients, _db.encounters},
+    ).get();
+
+    return rows
+        .map((r) {
+          final data = r.data;
+          final patientId = (data['patientId'] as String?) ?? '';
+          final fullName = (data['fullName'] as String?) ?? '';
+          final nric = (data['nric'] as String?) ?? '';
+          final address = data['address'] as String?;
+          final lastSeenRaw = data['lastSeen'];
+          final lastSeen = lastSeenRaw is DateTime ? lastSeenRaw : null;
+
+          final isIncomplete =
+              (address == null || address.trim().isEmpty) || nric.trim().isEmpty;
+
+          return PatientSearchHit(
+            patientId: patientId,
+            fullName: fullName,
+            nricMasked: _maskId(nric),
+            lastSeenAt: lastSeen,
+            isIncomplete: isIncomplete,
+          );
+        })
+        .where((x) => x.patientId.isNotEmpty)
+        .toList();
+  }
+
+  // -----------------------------
+  // Helpers
+  // -----------------------------
+
+  String _normalizeName(String s) {
+    final x = s.trim().toLowerCase();
+    // collapse multiple spaces
+    return x.replaceAll(RegExp(r'\s+'), ' ');
+  }
+
+  String _normalizeIdDigits(String s) {
+    // keep digits only
+    return s.replaceAll(RegExp(r'[^0-9]'), '');
+  }
+
+  String _sha256Hex(String s) {
+    final bytes = utf8.encode(s);
+    return sha256.convert(bytes).toString(); // hex
+  }
+
+  String _maskId(String raw) {
+    final id = raw.trim();
+    if (id.isEmpty) return '';
+    if (id.length <= 4) return '****';
+    final tail = id.substring(id.length - 4);
+    return '****$tail';
+  }
+}
+</file>
+
+<file path="lib/core/patients/patient_repo.dart">
+import 'dart:convert';
+import 'package:cryptography/cryptography.dart';
+import 'package:uuid/uuid.dart';
+import '../database/app_database.dart';
+import 'package:drift/drift.dart';
+
+class PatientRepo {
+  PatientRepo(this.db);
+  final AppDatabase db;
+
+  static String normalizeName(String s) {
+    return s.trim().replaceAll(RegExp(r'\s+'), ' ').toUpperCase();
+  }
+
+  static String normalizeNric(String s) {
+    return s.replaceAll(RegExp(r'[^0-9A-Za-z]'), '').toUpperCase();
+  }
+
+  static bool looksLikeMrn(String s) {
+    // Simple heuristic: mostly digits or alphanum, length 5-16
+    final t = s.trim();
+    if (t.length < 5 || t.length > 16) return false;
+    return RegExp(r'^[0-9A-Za-z\-]+$').hasMatch(t);
+  }
+
+  static bool looksLikeNric(String s) {
+    // MY NRIC often 12 digits; allow 10-14 alphanum after normalization
+    final n = normalizeNric(s);
+    return (n.length >= 10 && n.length <= 14) && RegExp(r'^[0-9A-Za-z]+$').hasMatch(n);
+  }
+
+  Future<String> sha256Hex(String input) async {
+    final h = await Sha256().hash(utf8.encode(input));
+    return h.bytes.map((b) => b.toRadixString(16).padLeft(2, '0')).join();
+  }
+
+  Future<List<Patient>> searchPatients(String query, {int limit = 50}) async {
+    final q = query.trim();
+    if (q.isEmpty) return [];
+
+    final nricNorm = normalizeNric(q);
+    final nameNorm = normalizeName(q);
+
+    // Pull candidates by:
+    // - NRIC hash exact
+    // - MRN exact
+    // - Name LIKE
+    final candidates = <Patient>{};
+
+    if (looksLikeNric(q)) {
+      final hash = await sha256Hex(nricNorm);
+      final byHash = await (db.select(db.patients)
+            ..where((p) => p.nricHash.equals(hash))
+            ..limit(limit))
+          .get();
+      candidates.addAll(byHash);
+    }
+
+    if (looksLikeMrn(q)) {
+      final byMrn = await (db.select(db.patients)
+            ..where((p) => p.mrn.equals(q))
+            ..limit(limit))
+          .get();
+      candidates.addAll(byMrn);
+    }
+
+    final byName = await (db.select(db.patients)
+          ..where((p) => p.fullNameNorm.like('%$nameNorm%'))
+          ..limit(limit))
+        .get();
+    candidates.addAll(byName);
+
+    // Sort: exact NRIC hash matches first, then MRN exact, then name contains
+    final hash = looksLikeNric(q) ? await sha256Hex(nricNorm) : null;
+
+    final list = candidates.toList();
+    list.sort((a, b) {
+      int score(Patient p) {
+        var s = 0;
+        if (hash != null && p.nricHash == hash) s += 1000;
+        if (p.mrn != null && p.mrn == q) s += 500;
+        if (p.fullNameNorm.contains(nameNorm)) s += 100;
+        return -s; // descending
+      }
+
+      return score(a).compareTo(score(b));
+    });
+
+    return list;
+  }
+
+  Future<Patient> createPatient({
+    String? mrn,
+    required String fullName,
+    required String nricRaw,
+    String? address,
+    String? allergies,
+    String consentStatus = 'unknown',
+    String source = 'local',
+  }) async {
+    final id = const Uuid().v4();
+    final now = DateTime.now();
+
+    final nameNorm = normalizeName(fullName);
+    final nricNorm = normalizeNric(nricRaw);
+    final hash = await sha256Hex(nricNorm);
+
+    await db.into(db.patients).insert(PatientsCompanion.insert(
+          id: id,
+          mrn: mrn == null ? const Value.absent() : Value(mrn),
+          fullName: fullName.trim(),
+          fullNameNorm: nameNorm,
+          nric: nricNorm,
+          nricHash: hash,
+          address: address == null ? const Value.absent() : Value(address.trim()),
+          allergies: allergies == null ? const Value.absent() : Value(allergies.trim()),
+          consentStatus: Value(consentStatus),
+          source: Value(source),
+          createdAt: now,
+          updatedAt: now,
+        ));
+
+    final created = await (db.select(db.patients)..where((p) => p.id.equals(id))).getSingle();
+    return created;
+  }
+}
+</file>
+
+<file path="lib/core/security/device_identity.dart">
+// lib/core/security/device_identity.dart
+
+import 'dart:convert';
+import 'dart:math';
+
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+import 'package:flutter/foundation.dart';
+
+class DeviceIdentity {
+  DeviceIdentity._internal();
+
+  static final DeviceIdentity _instance = DeviceIdentity._internal();
+  static DeviceIdentity get instance => _instance;
+
+  static const _storage = FlutterSecureStorage();
+
+  static const _deviceIdKey = 'pulseedge_device_id';
+  static const _installIdKey = 'pulseedge_install_id';
+
+  String? _deviceId;
+  String? _installId;
+
+  String get deviceId {
+    if (_deviceId == null) {
+      throw StateError('DeviceIdentity not initialized');
+    }
+    return _deviceId!;
+  }
+
+  String get installId {
+    if (_installId == null) {
+      throw StateError('DeviceIdentity not initialized');
+    }
+    return _installId!;
+  }
+
+  /// Call once at bootstrap
+  static Future<void> initialize() async {
+    await instance._init();
+  }
+
+  Future<void> _init() async {
+    _deviceId = await _storage.read(key: _deviceIdKey);
+    _installId = await _storage.read(key: _installIdKey);
+
+    // If no device ID exists, create one
+    if (_deviceId == null) {
+      _deviceId = _generateSecureId();
+      await _storage.write(key: _deviceIdKey, value: _deviceId);
+      debugPrint('DeviceIdentity: Generated new deviceId');
+    }
+
+    // Install ID changes if app reinstalled
+    if (_installId == null) {
+      _installId = _generateSecureId();
+      await _storage.write(key: _installIdKey, value: _installId);
+      debugPrint('DeviceIdentity: Generated new installId');
+    }
+
+    debugPrint('DeviceIdentity ready');
+  }
+
+  /// Cryptographically strong random ID (128-bit)
+  String _generateSecureId({int bytes = 16}) {
+    final rnd = Random.secure();
+    final data = List<int>.generate(bytes, (_) => rnd.nextInt(256));
+    return base64UrlEncode(data).replaceAll('=', '');
+  }
+
+  /// Future use:
+  /// Bind encryption key derivation to device
+  String deriveScopedKey(String namespace) {
+    final input = utf8.encode('$deviceId::$namespace');
+    final hash = base64UrlEncode(input);
+    return hash.substring(0, min(32, hash.length));
+  }
+
+  /// Optional: Reset identity (DEV only)
+  Future<void> resetForDev() async {
+    await _storage.delete(key: _deviceIdKey);
+    await _storage.delete(key: _installIdKey);
+    _deviceId = null;
+    _installId = null;
+  }
+}
+</file>
+
+<file path="lib/core/session/session_context_store.dart">
+import 'dart:convert';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+class SessionContext {
+  final String userId;
+  final String unitId;
+  final String unitName;
+  final DateTime startedAt;
+  final DateTime expiresAt;
+
+  const SessionContext({
+    required this.userId,
+    required this.unitId,
+    required this.unitName,
+    required this.startedAt,
+    required this.expiresAt,
+  });
+
+  bool get isExpired => DateTime.now().isAfter(expiresAt);
+
+  Map<String, dynamic> toJson() => {
+        'userId': userId,
+        'unitId': unitId,
+        'unitName': unitName,
+        'startedAt': startedAt.toIso8601String(),
+        'expiresAt': expiresAt.toIso8601String(),
+      };
+
+  static SessionContext fromJson(Map<String, dynamic> j) => SessionContext(
+        userId: j['userId'] as String,
+        unitId: j['unitId'] as String,
+        unitName: j['unitName'] as String,
+        startedAt: DateTime.parse(j['startedAt'] as String),
+        expiresAt: DateTime.parse(j['expiresAt'] as String),
+      );
+}
+
+class SessionContextStore {
+  static const _key = 'active_session_context_json';
+  final FlutterSecureStorage _secure = const FlutterSecureStorage();
+
+  Future<SessionContext?> getActive() async {
+    final raw = await _secure.read(key: _key);
+    if (raw == null) return null;
+
+    try {
+      final ctx = SessionContext.fromJson(jsonDecode(raw));
+      if (ctx.isExpired) {
+        await clear();
+        return null;
+      }
+      return ctx;
+    } catch (_) {
+      await clear();
+      return null;
+    }
+  }
+
+  Future<void> setActive(SessionContext ctx) async {
+    await _secure.write(key: _key, value: jsonEncode(ctx.toJson()));
+  }
+
+  Future<void> clear() async {
+    await _secure.delete(key: _key);
+  }
+}
+
+final sessionContextStoreProvider = Provider<SessionContextStore>((ref) {
+  return SessionContextStore();
+});
+</file>
+
+<file path="lib/core/app_bootstrap.dart">
+// lib/core/app_bootstrap.dart
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+import 'database/app_database.dart';
+import 'auth/auth_service.dart';
+
+final bootstrapProvider = FutureProvider<void>((ref) async {
+  // 1) DB init
+  await AppDatabase.initialize();
+
+  // 2) Auth init (seed admin)
+  //await ref.read(authServiceProvider).initialize();
+  final auth = ref.read(authServiceProvider);
+  await auth.initialize();
+});
+
+class AppBootstrapGate extends ConsumerWidget {
+  const AppBootstrapGate({super.key, required this.child});
+  final Widget child;
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final boot = ref.watch(bootstrapProvider);
+
+    return boot.when(
+      loading: () => const _BootstrapSplash(),
+      error: (e, st) => _BootstrapError(error: e),
+      data: (_) => child,
+    );
+  }
+}
+
+class _BootstrapSplash extends StatelessWidget {
+  const _BootstrapSplash();
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        body: Center(child: CircularProgressIndicator()),
+      ),
+    );
+  }
+}
+
+class _BootstrapError extends StatelessWidget {
+  const _BootstrapError({required this.error});
+  final Object error;
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        body: Center(
+          child: Padding(
+            padding: const EdgeInsets.all(24),
+            child: Text(
+              'Bootstrap failed:\n$error',
+              textAlign: TextAlign.center,
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+</file>
+
+<file path="lib/theme/app_theme.dart">
+// lib/theme/app_theme.dart
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+class AppTheme {
+  // Brand-aligned palette (muted, professional medical tone with subtle warmth)
+  static const Color black = Color(0xFF000000);
+  static const Color darkPrimary = Color(0xFF3A2B2C);    // Deep charcoal-brown (headers, icons)
+  static const Color primary = Color(0xFF755659);       // Main brand accent (buttons, highlights, heartbeat line)
+  static const Color secondary = Color(0xFFA8898C);     // Softer mid-tone (cards, secondary buttons)
+  static const Color surface = Color(0xFFD3C4C5);       // Elevated surfaces, cards
+  static const Color background = Color(0xFFFEFFFF);    // App background (clean, clinical white)
+
+  static const BorderRadius _borderRadius = BorderRadius.all(Radius.circular(12));
+  static const BorderSide _secondaryBorder = BorderSide(color: secondary);
+  static const BorderSide _primaryBorder = BorderSide(color: primary, width: 2);
+
+  static ThemeData get lightTheme => ThemeData(
+    colorScheme: ColorScheme.light(
+      primary: primary,
+      onPrimary: background,
+      secondary: secondary,
+      onSecondary: black,
+      surface: surface,
+      onSurface: black,
+      background: background,
+      onBackground: black,
+      error: Colors.red[700]!,
+      outline: darkPrimary,
+    ),
+    useMaterial3: true,
+    scaffoldBackgroundColor: background,
+    textTheme: GoogleFonts.interTextTheme(
+      ThemeData.light().textTheme,
+    ).apply(
+      bodyColor: black,
+      displayColor: darkPrimary,
+    ),
+    appBarTheme: const AppBarTheme(
+      elevation: 0,
+      backgroundColor: Colors.transparent,
+      foregroundColor: darkPrimary,
+      centerTitle: true,
+      titleTextStyle: TextStyle(
+        fontSize: 20,
+        fontWeight: FontWeight.w600,
+        color: darkPrimary,
+      ),
+    ),
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ElevatedButton.styleFrom(
+        backgroundColor: primary,
+        foregroundColor: background,
+        padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 24),
+        shape: const RoundedRectangleBorder(borderRadius: _borderRadius),
+        elevation: 2,
+      ),
+    ),
+    cardTheme: const CardThemeData(
+      color: surface,
+      elevation: 4,
+      shape: RoundedRectangleBorder(borderRadius: _borderRadius),
+      margin: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+    ),
+    inputDecorationTheme: InputDecorationTheme(
+      border: const OutlineInputBorder(
+        borderRadius: _borderRadius,
+        borderSide: _secondaryBorder,
+      ),
+      focusedBorder: const OutlineInputBorder(
+        borderRadius: _borderRadius,
+        borderSide: _primaryBorder,
+      ),
+      enabledBorder: const OutlineInputBorder(
+        borderRadius: _borderRadius,
+        borderSide: _secondaryBorder,
+      ),
+      errorBorder: OutlineInputBorder(
+        borderRadius: _borderRadius,
+        borderSide: BorderSide(color: Colors.red[700]!),
+      ),
+      labelStyle: const TextStyle(color: darkPrimary),
+      hintStyle: TextStyle(color: secondary.withOpacity(0.6)),
+    ),
+    dividerColor: secondary.withOpacity(0.3),
+  );
+
+  static ThemeData get darkTheme => ThemeData(
+    colorScheme: const ColorScheme.dark(
+      primary: primary,
+      onPrimary: black,
+      secondary: secondary,
+      onSecondary: background,
+      surface: darkPrimary,
+      onSurface: background,
+      background: black,
+      onBackground: surface,
+    ),
+    useMaterial3: true,
+    scaffoldBackgroundColor: black,
+    textTheme: GoogleFonts.interTextTheme(
+      ThemeData.dark().textTheme,
+    ).apply(
+      bodyColor: surface,
+      displayColor: background,
+    ),
+    cardTheme: const CardThemeData(
+      color: darkPrimary,
+      elevation: 6,
+      shape: RoundedRectangleBorder(borderRadius: _borderRadius),
+      margin: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+    ),
+    inputDecorationTheme: InputDecorationTheme(
+      border: OutlineInputBorder(
+        borderRadius: _borderRadius,
+        borderSide: BorderSide(color: secondary.withOpacity(0.5)),
+      ),
+      focusedBorder: const OutlineInputBorder(
+        borderRadius: _borderRadius,
+        borderSide: _primaryBorder,
+      ),
+    ),
+  );
+}
+</file>
+
+<file path="lib/ui/auth/unit_select_screen.dart">
+// lib/ui/auth/unit_select_screen.dart
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
+import 'package:lottie/lottie.dart';
+
+import '../../theme/app_theme.dart';
+import '../../core/database/app_database.dart';
+//import '../../core/auth/auth_service.dart';
+//import '../../core/encounters/encounter_repo.dart';  // If needed for unit context
+
+class UnitSelectScreen extends ConsumerStatefulWidget {
+  const UnitSelectScreen({super.key});
+
+  @override
+  ConsumerState<UnitSelectScreen> createState() => _UnitSelectScreenState();
+}
+
+class _UnitSelectScreenState extends ConsumerState<UnitSelectScreen> {
+  List<Unit> _units = [];
+  bool _loading = true;
+  String? _error;
+
+  @override
+  void initState() {
+    super.initState();
+    _loadUnits();
+  }
+
+  Future<void> _loadUnits() async {
+    setState(() {
+      _loading = true;
+      _error = null;
+    });
+
+    try {
+      final db = AppDatabase.instance;
+      _units = await db.select(db.units).get();
+    } catch (e) {
+      setState(() => _error = 'Failed to load units');
+      debugPrint('Unit load error: $e');
+    } finally {
+      setState(() => _loading = false);
+    }
+  }
+
+  // to do - Save selected unit to currentUser or session (e.g., update user.unitId)
+  // For now, just navigate to home
+  Future<void> _selectUnit(Unit unit) async {
+    if (mounted) context.go('/home');
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: AppTheme.background,
+      body: Stack(
+        fit: StackFit.expand,
+        children: [
+          // Subtle ECG grid background (matches deck style)
+          CustomPaint(painter: ECGGridPainter()),
+
+          // Main content
+          SafeArea(
+            child: Padding(
+              padding: const EdgeInsets.all(24),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  // Header with logos
+                  Row(
+                    children: [
+                      Image.asset('assets/icons/pulseedge_logo_black.png', width: 180),
+                      const Spacer(),
+                      Image.asset('assets/icons/patek_logo.png', width: 80),
+                    ],
+                  ),
+                  const SizedBox(height: 40),
+
+                  // Title
+                  Text(
+                    'Select Clinical Unit',
+                    style: Theme.of(context).textTheme.headlineMedium?.copyWith(color: AppTheme.darkPrimary),
+                  ),
+                  const SizedBox(height: 8),
+                  Text(
+                    'Choose the unit for this session',
+                    style: Theme.of(context).textTheme.titleMedium?.copyWith(color: AppTheme.secondary),
+                  ),
+                  const SizedBox(height: 40),
+
+                  // Loading/Error/Units list
+                  if (_loading)
+                    const Center(child: CircularProgressIndicator())
+                  else if (_error != null)
+                    Center(
+                      child: Text(
+                        _error!,
+                        style: const TextStyle(color: Colors.red),
+                      ),
+                    )
+                  else if (_units.isEmpty)
+                    Center(
+                      child: Text(
+                        'No units available. Contact admin.',
+                        style: Theme.of(context).textTheme.titleMedium,
+                      ),
+                    )
+                  else
+                    Expanded(
+                      child: ListView.builder(
+                        itemCount: _units.length,
+                        itemBuilder: (context, index) {
+                          final unit = _units[index];
+                          return Card(
+                            color: AppTheme.surface,
+                            elevation: 4,
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+                            margin: const EdgeInsets.symmetric(vertical: 8),
+                            child: ListTile(
+                              leading: const Icon(Icons.location_on, color: AppTheme.primary, size: 40),
+                              title: Text(
+                                unit.name,
+                                style: Theme.of(context).textTheme.titleMedium?.copyWith(color: AppTheme.darkPrimary),
+                              ),
+                              subtitle: Text(
+                                'Code: ${unit.code}${unit.facility != null ? ' • ${unit.facility}' : ''}',
+                                style: Theme.of(context).textTheme.bodyMedium,
+                              ),
+                              trailing: const Icon(Icons.arrow_forward_ios),
+                              onTap: () => _selectUnit(unit),
+                            ),
+                          );
+                        },
+                      ),
+                    ),
+
+                  // Bottom heartbeat animation
+                  Align(
+                    alignment: Alignment.bottomCenter,
+                    child: Lottie.asset(
+                      'assets/animations/heartbeat.lottie.json',
+                      width: 200,
+                      repeat: true,
+                      delegates: LottieDelegates(
+                        values: [
+                          ValueDelegate.color(['**'], value: AppTheme.primary),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+// ECG grid painter (matches deck style)
+class ECGGridPainter extends CustomPainter {
+  @override
+  void paint(Canvas canvas, Size size) {
+    final paint = Paint()
+      ..color = AppTheme.primary.withValues(alpha: 0.08)
+      ..strokeWidth = 1.0;
+
+    const gridSize = 20.0;
+    for (double x = 0; x < size.width; x += gridSize) {
+      canvas.drawLine(Offset(x, 0), Offset(x, size.height), paint);
+    }
+    for (double y = 0; y < size.height; y += gridSize) {
+      canvas.drawLine(Offset(0, y), Offset(size.width, y), paint);
+    }
+
+    final boldPaint = Paint()
+      ..color = AppTheme.primary.withValues(alpha: 0.15)
+      ..strokeWidth = 2.0;
+
+    for (double x = 0; x < size.width; x += gridSize * 5) {
+      canvas.drawLine(Offset(x, 0), Offset(x, size.height), boldPaint);
+    }
+    for (double y = 0; y < size.height; y += gridSize * 5) {
+      canvas.drawLine(Offset(0, y), Offset(size.width, y), boldPaint);
+    }
+  }
+
+  @override
+  bool shouldRepaint(covariant CustomPainter oldDelegate) => false;
+}
+</file>
+
+<file path="lib/ui/encounters/modules/encounter_documents_module.dart">
+import 'package:flutter/material.dart';
+import '../../../core/database/app_database.dart';
+
+class EncounterDocumentsModule extends StatelessWidget {
+  final Encounter encounter;
+  final Patient patient;
+
+  const EncounterDocumentsModule({super.key, required this.encounter, required this.patient});
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
+      padding: const EdgeInsets.all(20),
+      children: const [
+        Card(
+          child: ListTile(
+            title: Text('Documents placeholder'),
+            subtitle: Text('Next: attach photo/PDF, OCR, store as DOC events, sync later.'),
+          ),
+        ),
+      ],
+    );
+  }
+}
+</file>
+
+<file path="lib/ui/encounters/modules/encounter_notes_module.dart">
+// lib/ui/encounters/modules/encounter_notes_module.dart
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:speech_to_text/speech_to_text.dart';
+
+import '../../../core/database/app_database.dart';
+import '../../../core/encounters/encounter_repo.dart';
+//import '../../../core/ai/ai_service.dart';
+import '../../../theme/app_theme.dart';
+import '../../../core/ai/pulse_ai_providers.dart';
+
+class EncounterNotesModule extends ConsumerStatefulWidget {
+  final Encounter encounter;
+  final Patient patient;
+
+  const EncounterNotesModule({
+    super.key,
+    required this.encounter,
+    required this.patient,
+  });
+
+  @override
+  ConsumerState<EncounterNotesModule> createState() => _EncounterNotesModuleState();
+}
+
+class _EncounterNotesModuleState extends ConsumerState<EncounterNotesModule> {
+  late final EncounterRepo _repo;
+  List<Event> _notes = [];
+  bool _loading = true;
+
+  // Voice dictation
+  final SpeechToText _speech = SpeechToText();
+  bool _speechEnabled = false;
+  String _transcript = '';
+  bool _isListening = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _repo = EncounterRepo(AppDatabase.instance, ref as Ref<Object?>);
+    _initSpeech();
+    _loadNotes();
+  }
+
+  Future<void> _initSpeech() async {
+    _speechEnabled = await _speech.initialize();
+    setState(() {});
+  }
+
+  Future<void> _loadNotes() async {
+    setState(() => _loading = true);
+    _notes = await _repo.listEvents(widget.encounter.id, kind: 'NOTE');
+    setState(() => _loading = false);
+  }
+
+  void _startListening() async {
+    if (_speechEnabled) {
+      await _speech.listen(
+        onResult: (result) {
+          setState(() => _transcript = result.recognizedWords);
+        },
+        listenFor: const Duration(seconds: 30),
+        pauseFor: const Duration(seconds: 5),
+      );
+      setState(() => _isListening = true);
+    }
+  }
+
+  void _stopListening() async {
+    await _speech.stop();
+    setState(() => _isListening = false);
+  }
+
+  Future<void> _newNote() async {
+    final result = await showDialog<String>(
+      context: context,
+      builder: (_) => _NewNoteDialog(
+        patient: widget.patient,
+        initialTranscript: _transcript,
+        onSave: (title, body, isAIDrafted) async {
+          await _repo.createNoteEvent(
+            encounterId: widget.encounter.id,
+            title: title,
+            body: body + (isAIDrafted ? "\n\n---\nAI-assisted draft (clinician reviewed)" : ""),
+          );
+          await _loadNotes();
+        },
+      ),
+    );
+
+    if (result != null) {
+      setState(() => _transcript = '');
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(20),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Card(
+            color: AppTheme.surface,
+            child: ListTile(
+              leading: const Icon(Icons.person, color: AppTheme.primary, size: 40),
+              title: Text(
+                widget.patient.fullName,
+                style: Theme.of(context).textTheme.titleLarge?.copyWith(color: AppTheme.darkPrimary),
+              ),
+              subtitle: Text(
+                'Encounter: ${widget.encounter.type} • ${widget.encounter.status} • ${widget.encounter.unitName}',
+                style: Theme.of(context).textTheme.bodyMedium,
+              ),
+            ),
+          ),
+          const SizedBox(height: 24),
+
+          Row(
+            children: [
+              Text('Clinical Notes', style: Theme.of(context).textTheme.headlineSmall?.copyWith(color: AppTheme.darkPrimary)),
+              const Spacer(),
+              ElevatedButton.icon(
+                onPressed: _newNote,
+                icon: const Icon(Icons.note_add),
+                label: const Text('New Note'),
+                style: ElevatedButton.styleFrom(backgroundColor: AppTheme.primary),
+              ),
+            ],
+          ),
+          const SizedBox(height: 16),
+
+          if (_speechEnabled)
+            Card(
+              child: Padding(
+                padding: const EdgeInsets.all(16),
+                child: Column(
+                  children: [
+                    Row(
+                      children: [
+                        Icon(_isListening ? Icons.mic : Icons.mic_off, color: _isListening ? AppTheme.primary : Colors.grey),
+                        const SizedBox(width: 12),
+                        Expanded(
+                          child: Text(
+                            _isListening ? 'Listening... speak clearly' : 'Tap mic to dictate',
+                            style: Theme.of(context).textTheme.titleMedium,
+                          ),
+                        ),
+                        IconButton(
+                          onPressed: _isListening ? _stopListening : _startListening,
+                          icon: Icon(_isListening ? Icons.stop : Icons.mic, size: 32),
+                          color: AppTheme.primary,
+                        ),
+                      ],
+                    ),
+                    if (_transcript.isNotEmpty)
+                      Padding(
+                        padding: const EdgeInsets.only(top: 12),
+                        child: Text(
+                          _transcript,
+                          style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: AppTheme.secondary),
+                        ),
+                      ),
+                  ],
+                ),
+              ),
+            ),
+
+          const SizedBox(height: 16),
+
+          if (_loading)
+            const Center(child: CircularProgressIndicator())
+          else if (_notes.isEmpty)
+            const Card(
+              child: ListTile(
+                leading: Icon(Icons.info_outline, color: AppTheme.secondary),
+                title:  Text('No notes yet'),
+                subtitle: Text('Start with voice dictation or manual entry. AI can assist drafting SOAP notes.'),
+              ),
+            )
+          else
+            Expanded(
+              child: ListView.builder(
+                itemCount: _notes.length,
+                itemBuilder: (context, index) {
+                  final note = _notes[index];
+                  final hasAI = note.bodyText?.contains('AI-assisted') ?? false;
+                  return Card(
+                    margin: const EdgeInsets.symmetric(vertical: 8),
+                    child: ListTile(
+                      leading: hasAI ? const Icon(Icons.smart_toy, color: AppTheme.primary) : const Icon(Icons.note, color: AppTheme.secondary),
+                      title: Text(note.title, style: Theme.of(context).textTheme.titleMedium),
+                      subtitle: Text(
+                        note.bodyText ?? '(empty)',
+                        maxLines: 3,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                      trailing: Text(
+                        note.createdAt.toLocal().toString().substring(0, 16),
+                        style: Theme.of(context).textTheme.bodySmall,
+                      ),
+                    ),
+                  );
+                },
+              ),
+            ),
+        ],
+      ),
+    );
+  }
+}
+
+class _NewNoteDialog extends ConsumerStatefulWidget {
+  final Patient patient;
+  final String initialTranscript;
+  final Future<void> Function(String title, String body, bool isAIDrafted) onSave;
+
+  const _NewNoteDialog({
+    required this.patient,
+    required this.initialTranscript,
+    required this.onSave,
+  });
+
+  @override
+  ConsumerState<_NewNoteDialog> createState() => _NewNoteDialogState();
+}
+
+class _NewNoteDialogState extends ConsumerState<_NewNoteDialog> {
+  final _titleController = TextEditingController(text: 'SOAP Note');
+  final _bodyController = TextEditingController();
+  bool _busy = false;
+  bool _generatingAI = false;
+  String _aiStatus = '';
+
+  @override
+  void initState() {
+    super.initState();
+    _bodyController.text = widget.initialTranscript;
+  }
+
+  Future<void> _generateAIDraft() async {
+    final ai = ref.read(aiServiceProvider);
+    setState(() {
+      _generatingAI = true;
+      _aiStatus = 'Generating draft...';
+    });
+
+    String draft = '';
+    await for (var token in ai.draftNote(
+      transcript: _bodyController.text,
+      // FIXED: Use only known Patient fields (fullName exists from original code)
+      // Extend Patient model later for age/DOB/allergies if needed
+      patientContext: 'Patient: ${widget.patient.fullName}',
+    )) {
+      setState(() {
+        draft += token;
+        _bodyController.text = draft;
+        _bodyController.selection = TextSelection.fromPosition(
+          TextPosition(offset: _bodyController.text.length),
+        );
+        _aiStatus = 'Streaming...';
+      });
+    }
+
+    setState(() {
+      _generatingAI = false;
+      _aiStatus = 'AI draft complete — review & edit';
+    });
+  }
+
+  Future<void> _save() async {
+    setState(() => _busy = true);
+    final isAIDrafted = _bodyController.text.contains('AI-assisted');
+    await widget.onSave(_titleController.text.trim(), _bodyController.text.trim(), isAIDrafted);
+    if (mounted) Navigator.pop(context, 'saved');
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return AlertDialog(
+      title: const Text('New Clinical Note', style: TextStyle(color: AppTheme.darkPrimary)),
+      content: SizedBox(
+        width: double.maxFinite,
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              TextField(
+                controller: _titleController,
+                decoration: InputDecoration(
+                  labelText: 'Title',
+                  border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
+                ),
+              ),
+              const SizedBox(height: 16),
+              TextField(
+                controller: _bodyController,
+                maxLines: 12,
+                decoration: InputDecoration(
+                  labelText: 'Note Body (SOAP format recommended)',
+                  hintText: 'Subjective...\nObjective...\nAssessment...\nPlan...',
+                  border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
+                  alignLabelWithHint: true,
+                ),
+              ),
+              const SizedBox(height: 16),
+              if (_generatingAI || _aiStatus.isNotEmpty)
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 8),
+                  child: Text(_aiStatus, style: const TextStyle(color: AppTheme.primary)),
+                ),
+            ],
+          ),
+        ),
+      ),
+      actions: [
+        Row(
+          children: [
+            OutlinedButton.icon(
+              onPressed: _generatingAI ? null : _generateAIDraft,
+              icon: const Icon(Icons.smart_toy),
+              label: Text(_generatingAI ? 'Generating...' : 'AI Draft'),
+            ),
+            const Spacer(),
+            TextButton(
+              onPressed: _busy ? null : () => Navigator.pop(context),
+              child: const Text('Cancel'),
+            ),
+            ElevatedButton(
+              onPressed: _busy ? null : _save,
+              child: Text(_busy ? 'Saving...' : 'Save Note'),
+            ),
+          ],
+        ),
+      ],
+    );
+  }
+
+  @override
+  void dispose() {
+    _titleController.dispose();
+    _bodyController.dispose();
+    super.dispose();
+  }
+}
+</file>
+
+<file path="lib/ui/encounters/modules/encounter_orders_module.dart">
+import 'package:flutter/material.dart';
+import '../../../core/database/app_database.dart';
+
+class EncounterOrdersModule extends StatelessWidget {
+  final Encounter encounter;
+  final Patient patient;
+
+  const EncounterOrdersModule({super.key, required this.encounter, required this.patient});
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
+      padding: const EdgeInsets.all(20),
+      children: const [
+        Card(
+          child: ListTile(
+            title: Text('Orders (CPOE) placeholder'),
+            subtitle: Text('Next: create ORDER events (meds/labs/imaging/procedures) attached to encounter.'),
+          ),
+        ),
+      ],
+    );
+  }
+}
+</file>
+
+<file path="lib/ui/encounters/modules/encounter_sync_module.dart">
+import 'package:flutter/material.dart';
+import '../../../core/database/app_database.dart';
+
+class EncounterSyncModule extends StatelessWidget {
+  final Encounter encounter;
+  final Patient patient;
+
+  const EncounterSyncModule({super.key, required this.encounter, required this.patient});
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
+      padding: const EdgeInsets.all(20),
+      children: [
+        Card(
+          child: ListTile(
+            title: const Text('Sync status'),
+            subtitle: Text('Encounter syncState: ${encounter.syncState} • synced: ${encounter.synced}'),
+          ),
+        ),
+        const SizedBox(height: 12),
+        const Card(
+          child: ListTile(
+            title: Text('Audit trail next'),
+            subtitle: Text('Everything becomes an Event row. Sync sends deltas + resolves conflicts at encounter scope.'),
+          ),
+        ),
+      ],
+    );
+  }
+}
+</file>
+
+<file path="lib/ui/encounters/encounter_registration_screen.dart">
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+import '../../core/auth/auth_service.dart';
+import '../../core/patients/patient_encounter_service.dart';
+import '../../core/session/session_context_store.dart';
+import 'encounter_workspace_screen.dart';
+
+class EncounterRegistrationScreen extends ConsumerStatefulWidget {
+  const EncounterRegistrationScreen({super.key});
+
+  @override
+  ConsumerState<EncounterRegistrationScreen> createState() =>
+      _EncounterRegistrationScreenState();
+}
+
+class _EncounterRegistrationScreenState
+    extends ConsumerState<EncounterRegistrationScreen> {
+  final _searchCtrl = TextEditingController();
+  final _nameCtrl = TextEditingController();
+  final _idCtrl = TextEditingController();
+
+  List<PatientSearchHit> _results = const [];
+  bool _searching = false;
+  bool _creating = false;
+  String? _error;
+
+  @override
+  void dispose() {
+    _searchCtrl.dispose();
+    _nameCtrl.dispose();
+    _idCtrl.dispose();
+    super.dispose();
+  }
+
+  // ---------------------------------------------------------------------------
+  // Search patients (offline-first)
+  // ---------------------------------------------------------------------------
+  Future<void> _searchPatients(String q) async {
+    final query = q.trim();
+    if (query.length < 2) {
+      setState(() => _results = const []);
+      return;
+    }
+
+    setState(() {
+      _searching = true;
+      _error = null;
+    });
+
+    try {
+      final svc = ref.read(patientEncounterServiceProvider);
+      final hits = await svc.searchPatients(query: query);
+      setState(() => _results = hits);
+    } catch (e) {
+      setState(() => _error = e.toString());
+    } finally {
+      setState(() => _searching = false);
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // Start encounter for existing patient
+  // ---------------------------------------------------------------------------
+  Future<void> _startEncounterForPatient(String patientId) async {
+    setState(() {
+      _creating = true;
+      _error = null;
+    });
+
+    try {
+      final session =
+          await ref.read(sessionContextStoreProvider).getActive();
+      if (session == null) {
+        throw Exception('Session required');
+      }
+
+      final auth = ref.read(authServiceProvider);
+      final user = auth.currentUser!;
+      final svc = ref.read(patientEncounterServiceProvider);
+
+      final encounterId = await svc.createEncounter(
+        CreateEncounterInput(
+          patientId: patientId,
+          unitId: session.unitId,
+          unitName: session.unitName,
+          providerUserId: user.id,
+          providerName: _providerNameFromUser(user),
+        ),
+      );
+
+      if (!mounted) return;
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+          builder: (_) =>
+              EncounterWorkspaceScreen(encounterId: encounterId),
+        ),
+      );
+    } catch (e) {
+      setState(() => _error = e.toString());
+    } finally {
+      setState(() => _creating = false);
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // Create patient stub + start encounter (with duplicate-risk confirmation)
+  // ---------------------------------------------------------------------------
+  Future<void> _createStubAndStart() async {
+    final fullName = _nameCtrl.text.trim();
+    if (fullName.isEmpty) {
+      setState(() => _error = 'Patient name is required');
+      return;
+    }
+
+    setState(() {
+      _creating = true;
+      _error = null;
+    });
+
+    try {
+      final svc = ref.read(patientEncounterServiceProvider);
+
+      // 1️⃣ Duplicate-risk check
+      final possibles = await svc.findPossibleDuplicates(
+        fullName: fullName,
+        nricOrOldId: _idCtrl.text.trim(),
+      );
+
+      if (possibles.isNotEmpty) {
+        final decision = await _showDuplicateDialog(possibles);
+        if (!mounted) return;
+
+        if (decision == _DuplicateDecision.useExisting) {
+          await _startEncounterForPatient(possibles.first.patientId);
+          return;
+        }
+
+        if (decision == _DuplicateDecision.cancel) {
+          setState(() => _creating = false);
+          return;
+        }
+        // else: Create anyway
+      }
+
+      // 2️⃣ Create stub + encounter
+      final session =
+          await ref.read(sessionContextStoreProvider).getActive();
+      if (session == null) {
+        throw Exception('Session required');
+      }
+
+      final auth = ref.read(authServiceProvider);
+      final user = auth.currentUser!;
+
+      final encounterId = await svc.createStubAndStartEncounter(
+        patient: CreatePatientStubInput(
+          fullName: fullName,
+          nricOrOldId:
+              _idCtrl.text.trim().isEmpty ? null : _idCtrl.text.trim(),
+        ),
+        unitId: session.unitId,
+        unitName: session.unitName,
+        providerUserId: user.id,
+        providerName: _providerNameFromUser(user),
+      );
+
+      if (!mounted) return;
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+          builder: (_) =>
+              EncounterWorkspaceScreen(encounterId: encounterId),
+        ),
+      );
+    } catch (e) {
+      setState(() => _error = e.toString());
+    } finally {
+      setState(() => _creating = false);
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // UI
+  // ---------------------------------------------------------------------------
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+
+    return Scaffold(
+      appBar: AppBar(title: const Text('New Encounter')),
+      body: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            TextField(
+              controller: _searchCtrl,
+              decoration: const InputDecoration(
+                labelText: 'Search patient (NRIC / phone / name)',
+                prefixIcon: Icon(Icons.search),
+              ),
+              onChanged: _searchPatients,
+            ),
+            const SizedBox(height: 12),
+            if (_searching)
+              const LinearProgressIndicator(minHeight: 2),
+            if (_error != null)
+              Padding(
+                padding: const EdgeInsets.only(top: 8),
+                child: Text(
+                  _error!,
+                  style:
+                      theme.textTheme.bodyMedium?.copyWith(color: Colors.red),
+                ),
+              ),
+            const SizedBox(height: 12),
+            Expanded(
+              child: _results.isEmpty
+                  ? _buildCreateStubCard()
+                  : ListView.builder(
+                      itemCount: _results.length,
+                      itemBuilder: (context, i) {
+                        final p = _results[i];
+                        return Card(
+                          elevation: 0,
+                          child: ListTile(
+                            title: Text(
+                              p.fullName,
+                              style: const TextStyle(
+                                  fontWeight: FontWeight.w700),
+                            ),
+                            subtitle: Text(
+                              '${p.nricMasked}'
+                              '${p.lastSeenAt != null ? ' • Last seen ${_fmt(p.lastSeenAt!)}' : ''}',
+                            ),
+                            trailing: p.isIncomplete
+                                ? const Icon(Icons.warning_amber,
+                                    color: Colors.orange)
+                                : null,
+                            onTap: _creating
+                                ? null
+                                : () =>
+                                    _startEncounterForPatient(p.patientId),
+                          ),
+                        );
+                      },
+                    ),
+            ),
+            if (_creating)
+              const Padding(
+                padding: EdgeInsets.only(top: 8),
+                child: LinearProgressIndicator(minHeight: 2),
+              ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  // ---------------------------------------------------------------------------
+  // Create stub UI
+  // ---------------------------------------------------------------------------
+  Widget _buildCreateStubCard() {
+    return Card(
+      elevation: 0,
+      child: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            const Text(
+              'Create new patient (fast)',
+              style:
+                  TextStyle(fontSize: 16, fontWeight: FontWeight.w800),
+            ),
+            const SizedBox(height: 8),
+            const Text(
+              'Start the encounter now. You can complete registration later.',
+            ),
+            const SizedBox(height: 12),
+            TextField(
+              controller: _nameCtrl,
+              decoration: const InputDecoration(labelText: 'Full name'),
+            ),
+            const SizedBox(height: 8),
+            TextField(
+              controller: _idCtrl,
+              decoration: const InputDecoration(
+                labelText: 'NRIC / Old ID (optional)',
+              ),
+              keyboardType: TextInputType.number,
+            ),
+            const SizedBox(height: 16),
+            ElevatedButton.icon(
+              onPressed: _creating ? null : _createStubAndStart,
+              icon: const Icon(Icons.play_arrow),
+              label: const Text('Start encounter'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  // ---------------------------------------------------------------------------
+  // Duplicate confirmation dialog
+  // ---------------------------------------------------------------------------
+  Future<_DuplicateDecision> _showDuplicateDialog(
+    List<PatientSearchHit> hits,
+  ) async {
+    return await showDialog<_DuplicateDecision>(
+          context: context,
+          barrierDismissible: false,
+          builder: (ctx) {
+            return AlertDialog(
+              title: const Text('Possible duplicate patient'),
+              content: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  const Text(
+                    'We found patients with similar names. '
+                    'Please confirm before creating a new record.',
+                  ),
+                  const SizedBox(height: 12),
+                  ...hits.map(
+                    (p) => ListTile(
+                      title: Text(p.fullName),
+                      subtitle: Text(
+                        '${p.nricMasked}'
+                        '${p.lastSeenAt != null ? ' • Last seen ${_fmt(p.lastSeenAt!)}' : ''}',
+                      ),
+                      onTap: () => Navigator.of(ctx)
+                          .pop(_DuplicateDecision.useExisting),
+                    ),
+                  ),
+                ],
+              ),
+              actions: [
+                TextButton(
+                  onPressed: () => Navigator.of(ctx)
+                      .pop(_DuplicateDecision.cancel),
+                  child: const Text('Cancel'),
+                ),
+                ElevatedButton(
+                  onPressed: () => Navigator.of(ctx)
+                      .pop(_DuplicateDecision.createAnyway),
+                  child: const Text('Create anyway'),
+                ),
+              ],
+            );
+          },
+        ) ??
+        _DuplicateDecision.cancel;
+  }
+
+  // ---------------------------------------------------------------------------
+  // Helpers
+  // ---------------------------------------------------------------------------
+  String _providerNameFromUser(dynamic user) {
+    try {
+      final u = user as dynamic;
+      if (u.fullName != null && (u.fullName as String).isNotEmpty) {
+        return u.fullName as String;
+      }
+      if (u.displayName != null &&
+          (u.displayName as String).isNotEmpty) {
+        return u.displayName as String;
+      }
+      if (u.username != null && (u.username as String).isNotEmpty) {
+        return u.username as String;
+      }
+      if (u.email != null && (u.email as String).isNotEmpty) {
+        return u.email as String;
+      }
+    } catch (_) {}
+    return 'Provider ${user.id}';
+  }
+
+  String _fmt(DateTime d) =>
+      '${d.day}/${d.month}/${d.year}';
+}
+
+// ---------------------------------------------------------------------------
+// Internal enums
+// ---------------------------------------------------------------------------
+enum _DuplicateDecision {
+  useExisting,
+  createAnyway,
+  cancel,
+}
+</file>
+
+<file path="lib/ui/encounters/encounter_workspace_screen.dart">
+// lib/ui/encounters/encounter_workspace_screen.dart
+import 'dart:convert';
+
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:uuid/uuid.dart';
+import 'package:drift/drift.dart' as drift;
+
+import '../../core/database/app_database.dart';
+import '../../core/ai/intake_draft.dart';
+import '../patients/patient_timeline_screen.dart';
+
+class EncounterWorkspaceScreen extends ConsumerStatefulWidget {
+  const EncounterWorkspaceScreen({
+    super.key,
+    required this.encounterId,
+  });
+
+  final String encounterId;
+
+  @override
+  ConsumerState<EncounterWorkspaceScreen> createState() =>
+      _EncounterWorkspaceScreenState();
+}
+
+class _EncounterWorkspaceScreenState
+    extends ConsumerState<EncounterWorkspaceScreen> {
+  Encounter? _encounter;
+  Patient? _patient;
+
+  bool _loading = true;
+  String? _error;
+
+  @override
+  void initState() {
+    super.initState();
+    _load();
+  }
+
+  Future<void> _load() async {
+    setState(() {
+      _loading = true;
+      _error = null;
+    });
+
+    try {
+      final db = AppDatabase.instance;
+
+      final encounter = await (db.select(db.encounters)
+            ..where((e) => e.id.equals(widget.encounterId))
+            ..limit(1))
+          .getSingleOrNull();
+
+      if (encounter == null) {
+        throw Exception('Encounter not found');
+      }
+
+      final patient = await (db.select(db.patients)
+            ..where((p) => p.id.equals(encounter.patientId))
+            ..limit(1))
+          .getSingleOrNull();
+
+      if (!mounted) return;
+      setState(() {
+        _encounter = encounter;
+        _patient = patient;
+        _loading = false;
+      });
+    } catch (e) {
+      if (!mounted) return;
+      setState(() {
+        _error = e.toString();
+        _loading = false;
+      });
+    }
+  }
+
+  bool get _patientIncomplete {
+    final p = _patient;
+    if (p == null) return true;
+
+    final missingName = p.fullName.trim().isEmpty;
+    final missingId = p.nric.trim().isEmpty;
+    final missingAddress = (p.address == null || p.address!.trim().isEmpty);
+
+    return missingName || missingId || missingAddress;
+  }
+
+  List<String> _missingFields() {
+    final p = _patient;
+    if (p == null) return const ['fullName', 'nric', 'address'];
+
+    final missing = <String>[];
+    if (p.fullName.trim().isEmpty) missing.add('fullName');
+    if (p.nric.trim().isEmpty) missing.add('nric');
+    if (p.address == null || p.address!.trim().isEmpty) missing.add('address');
+    return missing;
+  }
+
+  Future<void> _openTimeline() async {
+    final p = _patient;
+    if (p == null) return;
+
+    await Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (_) => PatientTimelineScreen(patientId: p.id),
+      ),
+    );
+  }
+
+  Future<void> _openIntakeCopilot() async {
+    final p = _patient;
+    if (p == null) return;
+
+    final result = await showModalBottomSheet<IntakeDraft>(
+      context: context,
+      isScrollControlled: true,
+      builder: (_) => _IntakeCopilotSheet(
+        existingPatient: p,
+        missingFields: _missingFields(),
+      ),
+    );
+
+    if (result == null) return;
+
+    await _applyIntakeDraftToPatient(result);
+    await _load();
+  }
+
+  Future<void> _applyIntakeDraftToPatient(IntakeDraft draft) async {
+    final p = _patient;
+    final e = _encounter;
+    if (p == null || e == null) return;
+
+    final db = AppDatabase.instance;
+
+    // Only write provided fields (don’t overwrite existing good data).
+    final fullName = (draft.fullName ?? '').trim();
+    final nric = (draft.nric ?? '').trim();
+    final address = (draft.address ?? '').trim();
+    final allergies = (draft.allergies ?? '').trim();
+
+    final companion = PatientsCompanion(
+      fullName: fullName.isNotEmpty ? drift.Value(fullName) : const drift.Value.absent(),
+      fullNameNorm: fullName.isNotEmpty
+          ? drift.Value(_normalizeName(fullName))
+          : const drift.Value.absent(),
+      nric: nric.isNotEmpty ? drift.Value(_digitsOnly(nric)) : const drift.Value.absent(),
+      // If your schema has nricHash, keep this; if not, remove these two lines.
+      nricHash: nric.isNotEmpty
+          ? drift.Value(_pseudoHashHex(_digitsOnly(nric)))
+          : const drift.Value.absent(),
+      address: address.isNotEmpty ? drift.Value(address) : const drift.Value.absent(),
+      allergies:
+          allergies.isNotEmpty ? drift.Value(allergies) : const drift.Value.absent(),
+      updatedAt: drift.Value(DateTime.now()),
+    );
+
+    await (db.update(db.patients)..where((x) => x.id.equals(p.id)))
+        .write(companion);
+
+    // Write a timeline/audit event (encounter-scoped)
+    await _writeIntakeEvent(encounterId: e.id, draft: draft);
+
+    if (!mounted) return;
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(content: Text('Patient registration updated')),
+    );
+  }
+
+  Future<void> _writeIntakeEvent({
+    required String encounterId,
+    required IntakeDraft draft,
+  }) async {
+    final db = AppDatabase.instance;
+    final now = DateTime.now();
+
+    // Prefer the uuid package (already in your deps).
+    final eventId = const Uuid().v4();
+
+    final payloadJson = jsonEncode(draft.toJson());
+    final bodyText = _safeNoteText(draft);
+
+    await db.into(db.events).insert(
+          EventsCompanion.insert(
+            id: eventId,
+            encounterId: encounterId,
+            kind: 'DOC',
+            title: 'Intake Draft',
+            createdAt: now,
+
+            // Optional columns in your Events table
+            status: const drift.Value('draft'),
+            bodyText: bodyText == null
+                ? const drift.Value.absent()
+                : drift.Value(bodyText),
+            payloadJson: drift.Value(payloadJson),
+            createdBy: const drift.Value.absent(),
+
+            signedBy: const drift.Value.absent(),
+            signedAt: const drift.Value.absent(),
+
+            synced: const drift.Value(0),
+            syncState: const drift.Value('pending'),
+          ),
+        );
+  }
+
+  String? _safeNoteText(IntakeDraft d) {
+    // If your IntakeDraft has toNoteText(), use it. Otherwise, fall back.
+    try {
+      // ignore: invalid_use_of_protected_member, invalid_use_of_visible_for_testing_member
+      // (This is just a runtime-safe attempt.)
+      // If you DO have toNoteText(), delete this try/catch and call it directly.
+      final dynamic dd = d;
+      final String s = dd.toNoteText();
+      return s.trim().isEmpty ? null : s;
+    } catch (_) {
+      // Fallback
+      final parts = <String>[];
+      if ((d.fullName ?? '').trim().isNotEmpty) parts.add('Name: ${d.fullName}');
+      if ((d.nric ?? '').trim().isNotEmpty) parts.add('NRIC: ${d.nric}');
+      if ((d.address ?? '').trim().isNotEmpty) parts.add('Address: ${d.address}');
+      if ((d.phone ?? '').trim().isNotEmpty) parts.add('Phone: ${d.phone}');
+      if ((d.allergies ?? '').trim().isNotEmpty) parts.add('Allergies: ${d.allergies}');
+      if (parts.isEmpty) return null;
+      return parts.join('\n');
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    assert(widget.encounterId.isNotEmpty,
+        'EncounterWorkspace requires encounterId');
+
+    if (_loading) {
+      return const Scaffold(
+        body: Center(child: CircularProgressIndicator()),
+      );
+    }
+
+    if (_error != null) {
+      return Scaffold(
+        appBar: AppBar(title: const Text('Encounter')),
+        body: Center(
+          child: Text(
+            _error!,
+            style: Theme.of(context)
+                .textTheme
+                .bodyMedium
+                ?.copyWith(color: Colors.red),
+          ),
+        ),
+      );
+    }
+
+    final encounter = _encounter!;
+    final patient = _patient;
+
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Encounter'),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.refresh),
+            onPressed: _load,
+          ),
+        ],
+      ),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          _HeaderCard(
+            patient: patient,
+            encounter: encounter,
+            showIncompleteWarning: _patientIncomplete,
+            onOpenTimeline: _openTimeline,
+          ),
+
+          // Intake Copilot (shows only when incomplete)
+          if (_patientIncomplete)
+            Padding(
+              padding: const EdgeInsets.fromLTRB(12, 0, 12, 8),
+              child: Card(
+                elevation: 0,
+                child: ListTile(
+                  leading: const Icon(Icons.auto_awesome),
+                  title: const Text(
+                    'Intake Copilot',
+                    style: TextStyle(fontWeight: FontWeight.w800),
+                  ),
+                  subtitle: Text(
+                    'Missing: ${_missingFields().join(', ')}\n'
+                    'Tap to fill via quick chat.',
+                  ),
+                  trailing: const Icon(Icons.chevron_right),
+                  onTap: _openIntakeCopilot,
+                ),
+              ),
+            ),
+
+          const Expanded(
+            child: DefaultTabController(
+              length: 3,
+              child: Column(
+                children: [
+                  TabBar(
+                    tabs: [
+                      Tab(text: 'Notes'),
+                      Tab(text: 'Vitals'),
+                      Tab(text: 'Orders'),
+                    ],
+                  ),
+                  Expanded(
+                    child: TabBarView(
+                      children: [
+                        _PlaceholderPane(
+                          icon: Icons.note_alt,
+                          text:
+                              'Doctor / Nurse notes go here\n(attached to this encounter)',
+                        ),
+                        _PlaceholderPane(
+                          icon: Icons.monitor_heart,
+                          text:
+                              'Vitals & triage data\n(attached to this encounter)',
+                        ),
+                        _PlaceholderPane(
+                          icon: Icons.medication,
+                          text:
+                              'Orders (CPOE)\n(attached to this encounter)',
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Header
+// -----------------------------------------------------------------------------
+class _HeaderCard extends StatelessWidget {
+  const _HeaderCard({
+    required this.patient,
+    required this.encounter,
+    required this.showIncompleteWarning,
+    required this.onOpenTimeline,
+  });
+
+  final Patient? patient;
+  final Encounter encounter;
+  final bool showIncompleteWarning;
+  final VoidCallback onOpenTimeline;
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+
+    return Card(
+      elevation: 0,
+      margin: const EdgeInsets.all(12),
+      child: Padding(
+        padding: const EdgeInsets.all(12),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Text(
+              (patient != null && patient!.fullName.trim().isNotEmpty)
+                  ? patient!.fullName
+                  : 'Unnamed patient',
+              style: theme.textTheme.titleLarge
+                  ?.copyWith(fontWeight: FontWeight.w800),
+            ),
+            const SizedBox(height: 6),
+            Row(
+              children: [
+                TextButton.icon(
+                  onPressed: onOpenTimeline,
+                  icon: const Icon(Icons.timeline),
+                  label: const Text('Timeline'),
+                ),
+              ],
+            ),
+            const SizedBox(height: 4),
+            Text(
+              _patientSubtitle(patient),
+              style: theme.textTheme.bodyMedium,
+            ),
+            const SizedBox(height: 8),
+            Wrap(
+              spacing: 12,
+              runSpacing: 4,
+              children: [
+                _Chip(
+                  icon: Icons.local_hospital,
+                  label: encounter.unitName, // non-nullable in your schema
+                ),
+                _Chip(
+                  icon: Icons.badge,
+                  label: encounter.providerName ?? 'Unknown provider',
+                ),
+                _Chip(
+                  icon: Icons.schedule,
+                  label: _fmt(encounter.startAt),
+                ),
+              ],
+            ),
+            if (showIncompleteWarning) ...[
+              const SizedBox(height: 10),
+              Container(
+                padding: const EdgeInsets.all(8),
+                decoration: BoxDecoration(
+                  color: Colors.orange.withOpacity(0.12),
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: const Text(
+                  '⚠ Patient registration incomplete. You can complete it now with Intake Copilot.',
+                  style: TextStyle(fontWeight: FontWeight.w600),
+                ),
+              ),
+            ],
+          ],
+        ),
+      ),
+    );
+  }
+
+  String _patientSubtitle(Patient? p) {
+    if (p == null) return '—';
+
+    final parts = <String>[];
+
+    if (p.nric.trim().isNotEmpty) {
+      parts.add(_maskId(p.nric));
+    }
+
+    final addr = p.address?.trim() ?? '';
+    if (addr.isNotEmpty) parts.add(addr);
+
+    return parts.isEmpty ? '—' : parts.join(' • ');
+  }
+
+  String _maskId(String id) {
+    if (id.length <= 4) return id;
+    return '****${id.substring(id.length - 4)}';
+  }
+
+  String _fmt(DateTime d) {
+    return '${d.day}/${d.month}/${d.year} '
+        '${d.hour.toString().padLeft(2, '0')}:${d.minute.toString().padLeft(2, '0')}';
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Intake Copilot Bottom Sheet (deterministic parsing now; PulseAI later)
+// -----------------------------------------------------------------------------
+class _IntakeCopilotSheet extends StatefulWidget {
+  const _IntakeCopilotSheet({
+    required this.existingPatient,
+    required this.missingFields,
+  });
+
+  final Patient existingPatient;
+  final List<String> missingFields;
+
+  @override
+  State<_IntakeCopilotSheet> createState() => _IntakeCopilotSheetState();
+}
+
+class _IntakeCopilotSheetState extends State<_IntakeCopilotSheet> {
+  final _ctrl = TextEditingController();
+  IntakeDraft _draft = const IntakeDraft();
+
+  @override
+  void dispose() {
+    _ctrl.dispose();
+    super.dispose();
+  }
+
+  void _parse() {
+    final text = _ctrl.text.trim();
+    if (text.isEmpty) return;
+
+    final parsed = IntakeDraft.fromFreeText(text);
+
+    setState(() {
+      _draft = parsed;
+    });
+  }
+
+  bool get _hasAnyField =>
+      (_draft.fullName?.trim().isNotEmpty ?? false) ||
+      (_draft.nric?.trim().isNotEmpty ?? false) ||
+      (_draft.address?.trim().isNotEmpty ?? false) ||
+      (_draft.phone?.trim().isNotEmpty ?? false) ||
+      (_draft.allergies?.trim().isNotEmpty ?? false);
+
+  @override
+  Widget build(BuildContext context) {
+    final bottomInset = MediaQuery.of(context).viewInsets.bottom;
+
+    return SafeArea(
+      child: Padding(
+        padding: EdgeInsets.only(
+          left: 16,
+          right: 16,
+          top: 16,
+          bottom: 16 + bottomInset,
+        ),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            const Text(
+              'Intake Copilot',
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.w900),
+            ),
+            const SizedBox(height: 8),
+            Text(
+              'Missing: ${widget.missingFields.join(', ')}',
+              style: const TextStyle(fontWeight: FontWeight.w600),
+            ),
+            const SizedBox(height: 12),
+            TextField(
+              controller: _ctrl,
+              minLines: 2,
+              maxLines: 5,
+              decoration: const InputDecoration(
+                labelText: 'Type details in one line',
+                hintText:
+                    'Example: NRIC 900101015432, address Jalan Ampang, allergy penicillin, phone 0123456789',
+                border: OutlineInputBorder(),
+              ),
+            ),
+            const SizedBox(height: 10),
+            Row(
+              children: [
+                Expanded(
+                  child: OutlinedButton.icon(
+                    onPressed: _parse,
+                    icon: const Icon(Icons.auto_fix_high),
+                    label: const Text('Parse'),
+                  ),
+                ),
+                const SizedBox(width: 10),
+                Expanded(
+                  child: ElevatedButton.icon(
+                    onPressed:
+                        _hasAnyField ? () => Navigator.pop(context, _draft) : null,
+                    icon: const Icon(Icons.save),
+                    label: const Text('Save to patient'),
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 12),
+            if (_hasAnyField) _DraftPreview(draft: _draft),
+            const SizedBox(height: 8),
+            const Text(
+              'Tip: You can paste WhatsApp text. This is offline parsing now; later we’ll swap it to PulseAI.',
+              textAlign: TextAlign.center,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class _DraftPreview extends StatelessWidget {
+  const _DraftPreview({required this.draft});
+
+  final IntakeDraft draft;
+
+  @override
+  Widget build(BuildContext context) {
+    final items = <String>[];
+    if (draft.fullName?.trim().isNotEmpty ?? false) {
+      items.add('Full name: ${draft.fullName}');
+    }
+    if (draft.nric?.trim().isNotEmpty ?? false) {
+      items.add('NRIC: ${draft.nric}');
+    }
+    if (draft.address?.trim().isNotEmpty ?? false) {
+      items.add('Address: ${draft.address}');
+    }
+    if (draft.phone?.trim().isNotEmpty ?? false) {
+      items.add('Phone: ${draft.phone}');
+    }
+    if (draft.allergies?.trim().isNotEmpty ?? false) {
+      items.add('Allergies: ${draft.allergies}');
+    }
+
+    return Card(
+      elevation: 0,
+      child: Padding(
+        padding: const EdgeInsets.all(12),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            const Text(
+              'Preview',
+              style: TextStyle(fontWeight: FontWeight.w800),
+            ),
+            const SizedBox(height: 8),
+            ...items.map(
+              (s) => Padding(
+                padding: const EdgeInsets.only(bottom: 4),
+                child: Text('• $s'),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+// -----------------------------------------------------------------------------
+// UI helpers
+// -----------------------------------------------------------------------------
+class _Chip extends StatelessWidget {
+  const _Chip({required this.icon, required this.label});
+
+  final IconData icon;
+  final String label;
+
+  @override
+  Widget build(BuildContext context) {
+    return Chip(
+      avatar: Icon(icon, size: 16),
+      label: Text(label),
+    );
+  }
+}
+
+class _PlaceholderPane extends StatelessWidget {
+  const _PlaceholderPane({
+    required this.icon,
+    required this.text,
+  });
+
+  final IconData icon;
+  final String text;
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+
+    return Center(
+      child: Padding(
+        padding: const EdgeInsets.all(24),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(icon, size: 48, color: theme.disabledColor),
+            const SizedBox(height: 12),
+            Text(
+              text,
+              textAlign: TextAlign.center,
+              style: theme.textTheme.bodyMedium,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Simple helpers (local)
+// -----------------------------------------------------------------------------
+String _digitsOnly(String s) => s.replaceAll(RegExp(r'[^0-9]'), '');
+
+String _normalizeName(String s) {
+  final lower = s.toLowerCase();
+  final cleaned = lower.replaceAll(RegExp(r'[^a-z0-9\s]'), ' ');
+  return cleaned.replaceAll(RegExp(r'\s+'), ' ').trim();
+}
+
+/// Non-crypto placeholder hash for deterministic storage.
+/// Replace later with package:crypto sha256 if you want.
+String _pseudoHashHex(String input) {
+  var h = 0;
+  for (final c in input.codeUnits) {
+    h = 0x1fffffff & (h + c);
+    h = 0x1fffffff & (h + ((0x0007ffff & h) << 10));
+    h ^= (h >> 6);
+  }
+  h = 0x1fffffff & (h + ((0x03ffffff & h) << 3));
+  h ^= (h >> 11);
+  h = 0x1fffffff & (h + ((0x00003fff & h) << 15));
+  return h.toRadixString(16).padLeft(8, '0');
+}
+</file>
+
+<file path="lib/ui/login/login_screen.dart">
+// lib/ui/auth/unit_select_screen.dart
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
+import 'package:lottie/lottie.dart';
+
+import '../../theme/app_theme.dart';
+import '../../core/database/app_database.dart';
+//import '../../core/auth/auth_service.dart';
+//import '../../core/encounters/encounter_repo.dart';  // If needed for unit context
+
+class UnitSelectScreen extends ConsumerStatefulWidget {
+  const UnitSelectScreen({super.key});
+
+  @override
+  ConsumerState<UnitSelectScreen> createState() => _UnitSelectScreenState();
+}
+
+class _UnitSelectScreenState extends ConsumerState<UnitSelectScreen> {
+  List<Unit> _units = [];
+  bool _loading = true;
+  String? _error;
+
+  @override
+  void initState() {
+    super.initState();
+    _loadUnits();
+  }
+
+  Future<void> _loadUnits() async {
+    setState(() {
+      _loading = true;
+      _error = null;
+    });
+
+    try {
+      final db = AppDatabase.instance;
+      _units = await db.select(db.units).get();
+    } catch (e) {
+      setState(() => _error = 'Failed to load units');
+      debugPrint('Unit load error: $e');
+    } finally {
+      setState(() => _loading = false);
+    }
+  }
+
+  // to do - Save selected unit to currentUser or session (e.g., update user.unitId)
+  // For now, just navigate to home
+  Future<void> _selectUnit(Unit unit) async {
+    if (mounted) context.go('/home');
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: AppTheme.background,
+      body: Stack(
+        fit: StackFit.expand,
+        children: [
+          // Subtle ECG grid background (matches deck style)
+          CustomPaint(painter: ECGGridPainter()),
+
+          // Main content
+          SafeArea(
+            child: Padding(
+              padding: const EdgeInsets.all(24),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  // Header with logos
+                  Row(
+                    children: [
+                      Image.asset('assets/icons/pulseedge_logo_black.png', width: 180),
+                      const Spacer(),
+                      Image.asset('assets/icons/patek_logo.png', width: 80),
+                    ],
+                  ),
+                  const SizedBox(height: 40),
+
+                  // Title
+                  Text(
+                    'Select Clinical Unit',
+                    style: Theme.of(context).textTheme.headlineMedium?.copyWith(color: AppTheme.darkPrimary),
+                  ),
+                  const SizedBox(height: 8),
+                  Text(
+                    'Choose the unit for this session',
+                    style: Theme.of(context).textTheme.titleMedium?.copyWith(color: AppTheme.secondary),
+                  ),
+                  const SizedBox(height: 40),
+
+                  // Loading/Error/Units list
+                  if (_loading)
+                    const Center(child: CircularProgressIndicator())
+                  else if (_error != null)
+                    Center(
+                      child: Text(
+                        _error!,
+                        style: const TextStyle(color: Colors.red),
+                      ),
+                    )
+                  else if (_units.isEmpty)
+                    Center(
+                      child: Text(
+                        'No units available. Contact admin.',
+                        style: Theme.of(context).textTheme.titleMedium,
+                      ),
+                    )
+                  else
+                    Expanded(
+                      child: ListView.builder(
+                        itemCount: _units.length,
+                        itemBuilder: (context, index) {
+                          final unit = _units[index];
+                          return Card(
+                            color: AppTheme.surface,
+                            elevation: 4,
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+                            margin: const EdgeInsets.symmetric(vertical: 8),
+                            child: ListTile(
+                              leading: const Icon(Icons.location_on, color: AppTheme.primary, size: 40),
+                              title: Text(
+                                unit.name,
+                                style: Theme.of(context).textTheme.titleMedium?.copyWith(color: AppTheme.darkPrimary),
+                              ),
+                              subtitle: Text(
+                                'Code: ${unit.code}${unit.facility != null ? ' • ${unit.facility}' : ''}',
+                                style: Theme.of(context).textTheme.bodyMedium,
+                              ),
+                              trailing: const Icon(Icons.arrow_forward_ios),
+                              onTap: () => _selectUnit(unit),
+                            ),
+                          );
+                        },
+                      ),
+                    ),
+
+                  // Bottom heartbeat animation
+                  Align(
+                    alignment: Alignment.bottomCenter,
+                    child: Lottie.asset(
+                      'assets/animations/heartbeat.lottie.json',
+                      width: 200,
+                      repeat: true,
+                      delegates: LottieDelegates(
+                        values: [
+                          ValueDelegate.color(['**'], value: AppTheme.primary),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+// ECG grid painter (matches deck style)
+class ECGGridPainter extends CustomPainter {
+  @override
+  void paint(Canvas canvas, Size size) {
+    final paint = Paint()
+      ..color = AppTheme.primary.withValues(alpha: 0.08)
+      ..strokeWidth = 1.0;
+
+    const gridSize = 20.0;
+    for (double x = 0; x < size.width; x += gridSize) {
+      canvas.drawLine(Offset(x, 0), Offset(x, size.height), paint);
+    }
+    for (double y = 0; y < size.height; y += gridSize) {
+      canvas.drawLine(Offset(0, y), Offset(size.width, y), paint);
+    }
+
+    final boldPaint = Paint()
+      ..color = AppTheme.primary.withValues(alpha: 0.15)
+      ..strokeWidth = 2.0;
+
+    for (double x = 0; x < size.width; x += gridSize * 5) {
+      canvas.drawLine(Offset(x, 0), Offset(x, size.height), boldPaint);
+    }
+    for (double y = 0; y < size.height; y += gridSize * 5) {
+      canvas.drawLine(Offset(0, y), Offset(size.width, y), boldPaint);
+    }
+  }
+
+  @override
+  bool shouldRepaint(covariant CustomPainter oldDelegate) => false;
+}
+</file>
+
+<file path="lib/ui/login/unit_select_screen.dart">
+// lib/ui/auth/unit_select_screen.dart
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
+import 'package:lottie/lottie.dart';
+
+import '../../theme/app_theme.dart';
+import '../../core/database/app_database.dart';
+//import '../../core/auth/auth_service.dart';
+//import '../../core/encounters/encounter_repo.dart';  // If needed for unit context
+
+class UnitSelectScreen extends ConsumerStatefulWidget {
+  const UnitSelectScreen({super.key});
+
+  @override
+  ConsumerState<UnitSelectScreen> createState() => _UnitSelectScreenState();
+}
+
+class _UnitSelectScreenState extends ConsumerState<UnitSelectScreen> {
+  List<Unit> _units = [];
+  bool _loading = true;
+  String? _error;
+
+  @override
+  void initState() {
+    super.initState();
+    _loadUnits();
+  }
+
+  Future<void> _loadUnits() async {
+    setState(() {
+      _loading = true;
+      _error = null;
+    });
+
+    try {
+      final db = AppDatabase.instance;
+      _units = await db.select(db.units).get();
+    } catch (e) {
+      setState(() => _error = 'Failed to load units');
+      debugPrint('Unit load error: $e');
+    } finally {
+      setState(() => _loading = false);
+    }
+  }
+
+  // to do - Save selected unit to currentUser or session (e.g., update user.unitId)
+  // For now, just navigate to home
+  Future<void> _selectUnit(Unit unit) async {
+    if (mounted) context.go('/home');
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: AppTheme.background,
+      body: Stack(
+        fit: StackFit.expand,
+        children: [
+          // Subtle ECG grid background (matches deck style)
+          CustomPaint(painter: ECGGridPainter()),
+
+          // Main content
+          SafeArea(
+            child: Padding(
+              padding: const EdgeInsets.all(24),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  // Header with logos
+                  Row(
+                    children: [
+                      Image.asset('assets/icons/pulseedge_logo_black.png', width: 180),
+                      const Spacer(),
+                      Image.asset('assets/icons/patek_logo.png', width: 80),
+                    ],
+                  ),
+                  const SizedBox(height: 40),
+
+                  // Title
+                  Text(
+                    'Select Clinical Unit',
+                    style: Theme.of(context).textTheme.headlineMedium?.copyWith(color: AppTheme.darkPrimary),
+                  ),
+                  const SizedBox(height: 8),
+                  Text(
+                    'Choose the unit for this session',
+                    style: Theme.of(context).textTheme.titleMedium?.copyWith(color: AppTheme.secondary),
+                  ),
+                  const SizedBox(height: 40),
+
+                  // Loading/Error/Units list
+                  if (_loading)
+                    const Center(child: CircularProgressIndicator())
+                  else if (_error != null)
+                    Center(
+                      child: Text(
+                        _error!,
+                        style: const TextStyle(color: Colors.red),
+                      ),
+                    )
+                  else if (_units.isEmpty)
+                    Center(
+                      child: Text(
+                        'No units available. Contact admin.',
+                        style: Theme.of(context).textTheme.titleMedium,
+                      ),
+                    )
+                  else
+                    Expanded(
+                      child: ListView.builder(
+                        itemCount: _units.length,
+                        itemBuilder: (context, index) {
+                          final unit = _units[index];
+                          return Card(
+                            color: AppTheme.surface,
+                            elevation: 4,
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+                            margin: const EdgeInsets.symmetric(vertical: 8),
+                            child: ListTile(
+                              leading: const Icon(Icons.location_on, color: AppTheme.primary, size: 40),
+                              title: Text(
+                                unit.name,
+                                style: Theme.of(context).textTheme.titleMedium?.copyWith(color: AppTheme.darkPrimary),
+                              ),
+                              subtitle: Text(
+                                'Code: ${unit.code}${unit.facility != null ? ' • ${unit.facility}' : ''}',
+                                style: Theme.of(context).textTheme.bodyMedium,
+                              ),
+                              trailing: const Icon(Icons.arrow_forward_ios),
+                              onTap: () => _selectUnit(unit),
+                            ),
+                          );
+                        },
+                      ),
+                    ),
+
+                  // Bottom heartbeat animation
+                  Align(
+                    alignment: Alignment.bottomCenter,
+                    child: Lottie.asset(
+                      'assets/animations/heartbeat.lottie.json',
+                      width: 200,
+                      repeat: true,
+                      delegates: LottieDelegates(
+                        values: [
+                          ValueDelegate.color(['**'], value: AppTheme.primary),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+// ECG grid painter (matches deck style)
+class ECGGridPainter extends CustomPainter {
+  @override
+  void paint(Canvas canvas, Size size) {
+    final paint = Paint()
+      ..color = AppTheme.primary.withValues(alpha: 0.08)
+      ..strokeWidth = 1.0;
+
+    const gridSize = 20.0;
+    for (double x = 0; x < size.width; x += gridSize) {
+      canvas.drawLine(Offset(x, 0), Offset(x, size.height), paint);
+    }
+    for (double y = 0; y < size.height; y += gridSize) {
+      canvas.drawLine(Offset(0, y), Offset(size.width, y), paint);
+    }
+
+    final boldPaint = Paint()
+      ..color = AppTheme.primary.withValues(alpha: 0.15)
+      ..strokeWidth = 2.0;
+
+    for (double x = 0; x < size.width; x += gridSize * 5) {
+      canvas.drawLine(Offset(x, 0), Offset(x, size.height), boldPaint);
+    }
+    for (double y = 0; y < size.height; y += gridSize * 5) {
+      canvas.drawLine(Offset(0, y), Offset(size.width, y), boldPaint);
+    }
+  }
+
+  @override
+  bool shouldRepaint(covariant CustomPainter oldDelegate) => false;
+}
+</file>
+
+<file path="lib/ui/patients/patient_create_sheet.dart">
+import 'package:flutter/material.dart';
+import '../../core/database/app_database.dart';
+import '../../core/patients/patient_repo.dart';
+
+class PatientCreateSheet extends StatefulWidget {
+  final String initialQuery;
+  final PatientRepo repo;
+
+  const PatientCreateSheet({super.key, required this.initialQuery, required this.repo});
+
+  @override
+  State<PatientCreateSheet> createState() => _PatientCreateSheetState();
+}
+
+class _PatientCreateSheetState extends State<PatientCreateSheet> {
+  final _formKey = GlobalKey<FormState>();
+
+  final _name = TextEditingController();
+  final _nric = TextEditingController();
+  final _mrn = TextEditingController();
+  final _address = TextEditingController();
+  final _allergies = TextEditingController();
+
+  String _consent = 'unknown';
+  bool _busy = false;
+  String? _error;
+
+  @override
+  void initState() {
+    super.initState();
+
+    // Prefill intelligently based on what user typed
+    final q = widget.initialQuery.trim();
+    if (PatientRepo.looksLikeNric(q)) {
+      _nric.text = q;
+    } else if (PatientRepo.looksLikeMrn(q)) {
+      _mrn.text = q;
+    } else if (q.isNotEmpty) {
+      _name.text = q;
+    }
+  }
+
+  @override
+  void dispose() {
+    _name.dispose();
+    _nric.dispose();
+    _mrn.dispose();
+    _address.dispose();
+    _allergies.dispose();
+    super.dispose();
+  }
+
+  Future<void> _save() async {
+    setState(() {
+      _busy = true;
+      _error = null;
+    });
+
+    try {
+      if (!_formKey.currentState!.validate()) return;
+
+      final created = await widget.repo.createPatient(
+        mrn: _mrn.text.trim().isEmpty ? null : _mrn.text.trim(),
+        fullName: _name.text,
+        nricRaw: _nric.text,
+        address: _address.text.trim().isEmpty ? null : _address.text.trim(),
+        allergies: _allergies.text.trim().isEmpty ? null : _allergies.text.trim(),
+        consentStatus: _consent,
+        source: 'local',
+      );
+
+      if (!mounted) return;
+      Navigator.pop<Patient>(context, created);
+    } catch (e) {
+      setState(() => _error = e.toString());
+    } finally {
+      setState(() => _busy = false);
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final bottom = MediaQuery.of(context).viewInsets.bottom;
+
+    return Padding(
+      padding: EdgeInsets.only(left: 16, right: 16, top: 16, bottom: bottom + 16),
+      child: Form(
+        key: _formKey,
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              const Text('Create New Patient', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+              const SizedBox(height: 12),
+
+              TextFormField(
+                controller: _name,
+                decoration: const InputDecoration(labelText: 'Full Name *'),
+                validator: (v) => (v == null || v.trim().isEmpty) ? 'Name is required' : null,
+              ),
+              const SizedBox(height: 10),
+
+              TextFormField(
+                controller: _nric,
+                decoration: const InputDecoration(labelText: 'NRIC * (no spaces/dashes ok)'),
+                validator: (v) => (v == null || v.trim().isEmpty) ? 'NRIC is required' : null,
+              ),
+              const SizedBox(height: 10),
+
+              TextFormField(
+                controller: _mrn,
+                decoration: const InputDecoration(labelText: 'MRN (if available)'),
+              ),
+              const SizedBox(height: 10),
+
+              DropdownButtonFormField<String>(
+                value: _consent,
+                items: const [
+                  DropdownMenuItem(value: 'unknown', child: Text('Consent: Unknown')),
+                  DropdownMenuItem(value: 'pending', child: Text('Consent: Pending')),
+                  DropdownMenuItem(value: 'consented', child: Text('Consent: Consented')),
+                  DropdownMenuItem(value: 'declined', child: Text('Consent: Declined')),
+                ],
+                onChanged: (v) => setState(() => _consent = v ?? 'unknown'),
+              ),
+              const SizedBox(height: 10),
+
+              TextFormField(
+                controller: _address,
+                decoration: const InputDecoration(labelText: 'Address'),
+                maxLines: 2,
+              ),
+              const SizedBox(height: 10),
+
+              TextFormField(
+                controller: _allergies,
+                decoration: const InputDecoration(labelText: 'Allergies (free text)'),
+                maxLines: 2,
+              ),
+              const SizedBox(height: 12),
+
+              if (_error != null)
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 10),
+                  child: Text(_error!, style: const TextStyle(color: Colors.red)),
+                ),
+
+              SizedBox(
+                width: double.infinity,
+                child: ElevatedButton(
+                  onPressed: _busy ? null : _save,
+                  child: Text(_busy ? 'Saving...' : 'Save Patient'),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+</file>
+
+<file path="lib/ui/patients/patient_search_screen.dart">
+import 'dart:async';
+import 'package:flutter/material.dart';
+import '../../core/database/app_database.dart';
+import '../../core/patients/patient_repo.dart';
+import '../../core/auth/session_store.dart';
+import 'patient_create_sheet.dart';
+import '../workspace/patient_workspace_screen.dart';
+
+class PatientSearchScreen extends StatefulWidget {
+  const PatientSearchScreen({super.key});
+
+  @override
+  State<PatientSearchScreen> createState() => _PatientSearchScreenState();
+}
+
+class _PatientSearchScreenState extends State<PatientSearchScreen> {
+  final _q = TextEditingController();
+  Timer? _debounce;
+  bool _busy = false;
+  List<Patient> _results = [];
+
+  late final PatientRepo repo;
+
+  @override
+  void initState() {
+    super.initState();
+    repo = PatientRepo(AppDatabase.instance);
+    _q.addListener(_onChanged);
+  }
+
+  @override
+  void dispose() {
+    _debounce?.cancel();
+    _q.dispose();
+    super.dispose();
+  }
+
+  void _onChanged() {
+    _debounce?.cancel();
+    _debounce = Timer(const Duration(milliseconds: 250), () async {
+      final text = _q.text.trim();
+      if (text.isEmpty) {
+        setState(() => _results = []);
+        return;
+      }
+      setState(() => _busy = true);
+      final r = await repo.searchPatients(text);
+      if (!mounted) return;
+      setState(() {
+        _results = r;
+        _busy = false;
+      });
+    });
+  }
+
+  Future<void> _createNew() async {
+    final initial = _q.text.trim();
+
+    final created = await showModalBottomSheet<Patient>(
+      context: context,
+      isScrollControlled: true,
+      builder: (_) => PatientCreateSheet(
+        initialQuery: initial,
+        repo: repo,
+      ),
+    );
+
+    if (created != null) {
+      if (!mounted) return;
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Created patient: ${created.fullName}')),
+      );
+      setState(() {
+        _q.text = created.fullName;
+        _results = [created];
+      });
+    }
+  }
+
+  void _selectPatient(Patient p) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (_) => PatientWorkspaceScreen(patientId: p.id),
+      ),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final user = SessionStore.username ?? 'Unknown';
+    final unit = SessionStore.unitName ?? 'No Unit';
+
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Patient Search'),
+        bottom: PreferredSize(
+          preferredSize: const Size.fromHeight(26),
+          child: Padding(
+            padding: const EdgeInsets.only(left: 16, right: 16, bottom: 10),
+            child: Align(
+              alignment: Alignment.centerLeft,
+              child: Text('User: $user • Unit: $unit',
+                  style: const TextStyle(color: Colors.white70)),
+            ),
+          ),
+        ),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          children: [
+            TextField(
+              controller: _q,
+              decoration: InputDecoration(
+                labelText: 'Search by MRN / Name / NRIC',
+                prefixIcon: const Icon(Icons.search),
+                suffixIcon: _q.text.isEmpty
+                    ? null
+                    : IconButton(
+                        icon: const Icon(Icons.clear),
+                        onPressed: () {
+                          _q.clear();
+                          setState(() => _results = []);
+                        },
+                      ),
+              ),
+            ),
+            const SizedBox(height: 12),
+            if (_busy) const LinearProgressIndicator(),
+            const SizedBox(height: 8),
+            Expanded(
+              child: _results.isEmpty
+                  ? _EmptyState(onCreate: _createNew)
+                  : ListView.builder(
+                      itemCount: _results.length,
+                      itemBuilder: (_, i) {
+                        final p = _results[i];
+                        return Card(
+                          child: ListTile(
+                            title: Text(p.fullName),
+                            subtitle: Text([
+                              if (p.mrn != null) 'MRN: ${p.mrn}',
+                              'NRIC: ${_maskNric(p.nric)}',
+                              'Consent: ${p.consentStatus}',
+                              'Source: ${p.source}',
+                            ].join(' • ')),
+                            trailing: const Icon(Icons.arrow_forward_ios),
+                            onTap: () => _selectPatient(p),
+                          ),
+                        );
+                      },
+                    ),
+            ),
+          ],
+        ),
+      ),
+      floatingActionButton: FloatingActionButton.extended(
+        onPressed: _createNew,
+        icon: const Icon(Icons.person_add),
+        label: const Text('Create New'),
+      ),
+    );
+  }
+
+  String _maskNric(String nric) {
+    // Mask display for safety: show last 4
+    if (nric.length <= 4) return '****';
+    final last = nric.substring(nric.length - 4);
+    return '****$last';
+  }
+}
+
+class _EmptyState extends StatelessWidget {
+  final VoidCallback onCreate;
+  const _EmptyState({required this.onCreate});
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: ConstrainedBox(
+        constraints: const BoxConstraints(maxWidth: 520),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            const Icon(Icons.person_search, size: 64, color: Colors.grey),
+            const SizedBox(height: 10),
+            const Text(
+              'No matching patients found.',
+              style: TextStyle(fontSize: 16),
+            ),
+            const SizedBox(height: 6),
+            const Text(
+              'Create a new patient from here (standard clinical workflow).',
+              style: TextStyle(color: Colors.grey),
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(height: 14),
+            ElevatedButton.icon(
+              onPressed: onCreate,
+              icon: const Icon(Icons.person_add),
+              label: const Text('Create New Patient'),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}
+</file>
+
+<file path="lib/ui/patients/patient_timeline_screen.dart">
+// lib/ui/patients/patient_timeline_screen.dart
+import 'dart:convert';
+
+import 'package:drift/drift.dart' show QueryRow, Variable;
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+import '../../core/database/app_database.dart';
+
+class PatientTimelineScreen extends ConsumerStatefulWidget {
+  const PatientTimelineScreen({
+    super.key,
+    required this.patientId,
+  });
+
+  final String patientId;
+
+  @override
+  ConsumerState<PatientTimelineScreen> createState() =>
+      _PatientTimelineScreenState();
+}
+
+class _PatientTimelineScreenState extends ConsumerState<PatientTimelineScreen> {
+  bool _loading = true;
+  String? _error;
+
+  Patient? _patient;
+  List<_TimelineRow> _rows = const [];
+
+  @override
+  void initState() {
+    super.initState();
+    _load();
+  }
+
+  Future<void> _load() async {
+    if (!mounted) return;
+    setState(() {
+      _loading = true;
+      _error = null;
+      _rows = const [];
+    });
+
+    try {
+      final db = AppDatabase.instance;
+
+      final patient = await (db.select(db.patients)
+            ..where((p) => p.id.equals(widget.patientId))
+            ..limit(1))
+          .getSingleOrNull();
+
+      if (patient == null) {
+        throw Exception('Patient not found');
+      }
+
+      // Events are encounter-scoped → join encounters to filter by patient.
+      //
+      // IMPORTANT:
+      // These SQL column names assume drift default snake_case mapping:
+      // encounters.patient_id, events.encounter_id, etc.
+      // If yours differ, change the SQL aliases only; the UI stays the same.
+      final result = await db.customSelect(
+        '''
+        SELECT
+          ev.id AS eventId,
+          ev.encounter_id AS encounterId,
+          ev.kind AS kind,
+          ev.title AS title,
+          ev.status AS status,
+          ev.body_text AS bodyText,
+          ev.payload_json AS payloadJson,
+          ev.created_by AS createdBy,
+          ev.created_at AS createdAt,
+          ev.signed_by AS signedBy,
+          ev.signed_at AS signedAt,
+
+          en.start_at AS encounterStartAt,
+          en.end_at AS encounterEndAt,
+          en.unit_name AS unitName,
+          en.provider_name AS providerName
+        FROM events ev
+        JOIN encounters en ON en.id = ev.encounter_id
+        WHERE en.patient_id = ?1
+        ORDER BY ev.created_at DESC
+        LIMIT 500
+        ''',
+        variables: [Variable.withString(widget.patientId)],
+        readsFrom: {db.events, db.encounters},
+      ).get();
+
+      final rows = result.map(_TimelineRow.fromRow).toList();
+
+      if (!mounted) return;
+      setState(() {
+        _patient = patient;
+        _rows = rows;
+        _loading = false;
+      });
+    } catch (e) {
+      if (!mounted) return;
+      setState(() {
+        _error = e.toString();
+        _loading = false;
+      });
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+
+    if (_loading) {
+      return const Scaffold(
+        body: Center(child: CircularProgressIndicator()),
+      );
+    }
+
+    if (_error != null) {
+      return Scaffold(
+        appBar: AppBar(title: const Text('Patient Timeline')),
+        body: Center(
+          child: Padding(
+            padding: const EdgeInsets.all(16),
+            child: Text(
+              _error!,
+              style: theme.textTheme.bodyMedium?.copyWith(color: Colors.red),
+              textAlign: TextAlign.center,
+            ),
+          ),
+        ),
+      );
+    }
+
+    final patient = _patient!;
+    final grouped = _groupByDate(_rows);
+
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Patient Timeline'),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.refresh),
+            onPressed: _load,
+          ),
+        ],
+      ),
+      body: ListView(
+        padding: const EdgeInsets.fromLTRB(12, 12, 12, 24),
+        children: [
+          _PatientHeader(patient: patient),
+          const SizedBox(height: 12),
+          if (_rows.isEmpty)
+            const _EmptyState()
+          else
+            ...grouped.entries.map((entry) {
+              final dateLabel = entry.key;
+              final items = entry.value;
+
+              return _DateSection(
+                dateLabel: dateLabel,
+                children: items
+                    .map((row) => _TimelineEventCard(row: row))
+                    .toList(),
+              );
+            }),
+        ],
+      ),
+    );
+  }
+
+  Map<String, List<_TimelineRow>> _groupByDate(List<_TimelineRow> rows) {
+    final map = <String, List<_TimelineRow>>{};
+    for (final r in rows) {
+      final d = r.createdAt;
+      final key =
+          '${d.year}-${d.month.toString().padLeft(2, '0')}-${d.day.toString().padLeft(2, '0')}';
+      map.putIfAbsent(key, () => <_TimelineRow>[]).add(r);
+    }
+    return map;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Model
+// -----------------------------------------------------------------------------
+class _TimelineRow {
+  _TimelineRow({
+    required this.eventId,
+    required this.encounterId,
+    required this.kind,
+    required this.title,
+    required this.status,
+    required this.bodyText,
+    required this.payloadJson,
+    required this.createdBy,
+    required this.createdAt,
+    required this.signedBy,
+    required this.signedAt,
+    required this.encounterStartAt,
+    required this.encounterEndAt,
+    required this.unitName,
+    required this.providerName,
+  });
+
+  final String eventId;
+  final String encounterId;
+  final String kind;
+  final String title;
+  final String status;
+  final String? bodyText;
+  final String? payloadJson;
+  final String? createdBy;
+  final DateTime createdAt;
+  final String? signedBy;
+  final DateTime? signedAt;
+
+  final DateTime encounterStartAt;
+  final DateTime? encounterEndAt;
+  final String? unitName;
+  final String? providerName;
+
+  Map<String, Object?> payloadAsMap() {
+    final s = payloadJson;
+    if (s == null || s.trim().isEmpty) return const {};
+    try {
+      final obj = jsonDecode(s);
+      if (obj is Map<String, dynamic>) return obj;
+      return {'_': obj};
+    } catch (_) {
+      return const {};
+    }
+  }
+
+  static _TimelineRow fromRow(QueryRow r) {
+    final data = r.data;
+
+    DateTime _requireDate(String k) {
+      final v = data[k];
+      if (v is DateTime) return v;
+      return DateTime.tryParse('$v') ?? DateTime.fromMillisecondsSinceEpoch(0);
+    }
+
+    DateTime? _optDate(String k) {
+      final v = data[k];
+      if (v == null) return null;
+      if (v is DateTime) return v;
+      return DateTime.tryParse('$v');
+    }
+
+    String _reqStr(String k) => (data[k] as String?) ?? '';
+
+    return _TimelineRow(
+      eventId: _reqStr('eventId'),
+      encounterId: _reqStr('encounterId'),
+      kind: _reqStr('kind'),
+      title: _reqStr('title'),
+      status: _reqStr('status'),
+      bodyText: data['bodyText'] as String?,
+      payloadJson: data['payloadJson'] as String?,
+      createdBy: data['createdBy'] as String?,
+      createdAt: _requireDate('createdAt'),
+      signedBy: data['signedBy'] as String?,
+      signedAt: _optDate('signedAt'),
+      encounterStartAt: _requireDate('encounterStartAt'),
+      encounterEndAt: _optDate('encounterEndAt'),
+      unitName: data['unitName'] as String?,
+      providerName: data['providerName'] as String?,
+    );
+  }
+}
+
+// -----------------------------------------------------------------------------
+// UI
+// -----------------------------------------------------------------------------
+class _PatientHeader extends StatelessWidget {
+  const _PatientHeader({required this.patient});
+
+  final Patient patient;
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+
+    final name = patient.fullName.trim().isEmpty
+        ? '(Unnamed patient)'
+        : patient.fullName.trim();
+
+    final nricMasked = patient.nric.trim().isEmpty ? '—' : _maskId(patient.nric);
+
+    final addr = patient.address?.trim() ?? '';
+    final address = addr.isEmpty ? null : addr;
+
+    return Card(
+      elevation: 0,
+      child: Padding(
+        padding: const EdgeInsets.all(12),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Text(
+              name,
+              style: theme.textTheme.titleLarge?.copyWith(
+                fontWeight: FontWeight.w900,
+              ),
+            ),
+            const SizedBox(height: 4),
+            Text('NRIC: $nricMasked'),
+            if (address != null) ...[
+              const SizedBox(height: 2),
+              Text('Address: $address'),
+            ],
+          ],
+        ),
+      ),
+    );
+  }
+
+  String _maskId(String id) {
+    final s = id.trim();
+    if (s.length <= 4) return s;
+    return '****${s.substring(s.length - 4)}';
+  }
+}
+
+class _DateSection extends StatelessWidget {
+  const _DateSection({
+    required this.dateLabel,
+    required this.children,
+  });
+
+  final String dateLabel;
+  final List<Widget> children;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 14),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Padding(
+            padding: const EdgeInsets.fromLTRB(4, 8, 4, 8),
+            child: Text(
+              dateLabel,
+              style: const TextStyle(fontWeight: FontWeight.w900),
+            ),
+          ),
+          ...children,
+        ],
+      ),
+    );
+  }
+}
+
+class _TimelineEventCard extends StatelessWidget {
+  const _TimelineEventCard({required this.row});
+
+  final _TimelineRow row;
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+
+    final icon = _iconForKind(row.kind);
+    final time = _hhmm(row.createdAt);
+    final subtitle = _subtitleLine();
+
+    return Card(
+      elevation: 0,
+      margin: const EdgeInsets.only(bottom: 8),
+      child: ListTile(
+        leading: Icon(icon),
+        title: Text(
+          row.title.trim().isEmpty ? row.kind : row.title,
+          style: const TextStyle(fontWeight: FontWeight.w800),
+        ),
+        subtitle: Text(subtitle),
+        trailing: Text(
+          time,
+          style: theme.textTheme.labelMedium,
+        ),
+        onTap: () => _openDetails(context),
+      ),
+    );
+  }
+
+  String _subtitleLine() {
+    final unit = (row.unitName?.trim().isNotEmpty ?? false)
+        ? row.unitName!.trim()
+        : 'Unknown unit';
+
+    final provider = (row.providerName?.trim().isNotEmpty ?? false)
+        ? row.providerName!.trim()
+        : 'Unknown provider';
+
+    final kind = row.kind.trim().isEmpty ? '—' : row.kind.trim();
+    final status = row.status.trim().isEmpty ? '—' : row.status.trim();
+
+    return '$unit • $provider • $kind • $status';
+  }
+
+  void _openDetails(BuildContext context) {
+    final payload = row.payloadAsMap();
+
+    showModalBottomSheet<void>(
+      context: context,
+      isScrollControlled: true,
+      builder: (ctx) {
+        return SafeArea(
+          child: Padding(
+            padding: EdgeInsets.only(
+              left: 16,
+              right: 16,
+              top: 16,
+              bottom: 16 + MediaQuery.of(ctx).viewInsets.bottom,
+            ),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Text(
+                  row.title.trim().isEmpty ? row.kind : row.title,
+                  style: const TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w900,
+                  ),
+                ),
+                const SizedBox(height: 8),
+                Text('Kind: ${row.kind}'),
+                Text('Status: ${row.status}'),
+                Text('Created: ${row.createdAt}'),
+                if (row.bodyText != null && row.bodyText!.trim().isNotEmpty) ...[
+                  const SizedBox(height: 12),
+                  const Text(
+                    'Body',
+                    style: TextStyle(fontWeight: FontWeight.w900),
+                  ),
+                  const SizedBox(height: 6),
+                  Text(row.bodyText!),
+                ],
+                if (payload.isNotEmpty) ...[
+                  const SizedBox(height: 12),
+                  const Text(
+                    'Payload (JSON)',
+                    style: TextStyle(fontWeight: FontWeight.w900),
+                  ),
+                  const SizedBox(height: 6),
+                  Text(const JsonEncoder.withIndent('  ').convert(payload)),
+                ],
+                const SizedBox(height: 16),
+                ElevatedButton(
+                  onPressed: () => Navigator.pop(ctx),
+                  child: const Text('Close'),
+                ),
+              ],
+            ),
+          ),
+        );
+      },
+    );
+  }
+
+  IconData _iconForKind(String kind) {
+    switch (kind.toUpperCase()) {
+      case 'NOTE':
+        return Icons.note_alt;
+      case 'ORDER':
+        return Icons.medication;
+      case 'VITALS':
+        return Icons.monitor_heart;
+      case 'DOC':
+        return Icons.description;
+      default:
+        return Icons.event_note;
+    }
+  }
+
+  String _hhmm(DateTime d) =>
+      '${d.hour.toString().padLeft(2, '0')}:${d.minute.toString().padLeft(2, '0')}';
+}
+
+class _EmptyState extends StatelessWidget {
+  const _EmptyState();
+
+  @override
+  Widget build(BuildContext context) {
+    return const Padding(
+      padding: EdgeInsets.all(24),
+      child: Center(
+        child: Text(
+          'No timeline events yet.\nOnce you create notes, vitals, orders, or intake updates, they will appear here.',
+          textAlign: TextAlign.center,
+        ),
+      ),
+    );
+  }
+}
+</file>
+
+<file path="lib/ui/setting/settings_screen.dart">
+import 'dart:async';
+import 'dart:io';
+
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:path/path.dart' as p;
+import 'package:path_provider/path_provider.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
+import '../../core/auth/auth_service.dart';
+import '../../core/session/session_context_store.dart';
+import '../../core/database/app_database.dart';
+import '../../core/ai/model_store.dart';
+
+/// Local provider for ModelStore
+final modelStoreProvider = Provider<ModelStore>((ref) {
+  final store = ModelStore(
+    modelFileName: 'Llama-3.2-3B-Instruct-Q4_K_M.gguf',
+  );
+  ref.onDispose(store.dispose);
+  return store;
+});
+
+/// Persisted URL key
+const _kCustomModelUrlKey = 'custom_model_download_url';
+
+class SettingsScreen extends ConsumerStatefulWidget {
+  const SettingsScreen({super.key});
+
+  @override
+  ConsumerState<SettingsScreen> createState() => _SettingsScreenState();
+}
+
+class _SettingsScreenState extends ConsumerState<SettingsScreen> {
+  bool _modelBusy = false;
+  double? _modelProgress;
+  String? _modelError;
+
+  // URL editing
+  late TextEditingController _urlController;
+  final _urlFocus = FocusNode();
+  bool _urlEditing = false;
+  String? _savedCustomUrl;
+
+  static const _defaultDevUrl = 'http://127.0.0.1:8000/Llama-3.2-3B-Instruct-Q4_K_M.gguf';
+
+  @override
+  void initState() {
+    super.initState();
+    _loadSavedUrl();
+  }
+
+  Future<void> _loadSavedUrl() async {
+    final prefs = await SharedPreferences.getInstance();
+    final saved = prefs.getString(_kCustomModelUrlKey);
+    setState(() {
+      _savedCustomUrl = saved;
+      _urlController = TextEditingController(text: saved ?? _defaultDevUrl);
+    });
+  }
+
+  Future<void> _saveUrl(String url) async {
+    final prefs = await SharedPreferences.getInstance();
+    if (url == _defaultDevUrl) {
+      await prefs.remove(_kCustomModelUrlKey);
+    } else {
+      await prefs.setString(_kCustomModelUrlKey, url);
+    }
+    setState(() => _savedCustomUrl = url == _defaultDevUrl ? null : url);
+  }
+
+  void _refreshModelStatus() {
+    if (!mounted) return;
+    setState(() {});
+  }
+
+  Future<void> _downloadOrVerifyModel() async {
+    final store = ref.read(modelStoreProvider);
+    final url = _urlController.text.trim();
+    if (url.isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Please enter a valid URL')),
+      );
+      return;
+    }
+
+    setState(() {
+      _modelBusy = true;
+      _modelError = null;
+      _modelProgress = null;
+    });
+
+    try {
+      final path = await _downloadWithProgress(url, store.modelFileName);
+
+      // Apply iOS do-not-backup
+      if (Platform.isIOS) {
+        const channel = MethodChannel('com.yourapp/modelmanager');
+        await channel.invokeMethod('setDoNotBackup', {'path': path});
+      }
+
+      if (!mounted) return;
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Offline AI model ready: $path')),
+      );
+    } catch (e) {
+      if (!mounted) return;
+      setState(() => _modelError = e.toString());
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Model setup failed: $e')),
+      );
+    } finally {
+      if (mounted) {
+        setState(() {
+          _modelBusy = false;
+          _modelProgress = null;
+        });
+        _refreshModelStatus();
+      }
+    }
+  }
+
+  /// Safe resumable download - saves to 'models/' subfolder, prevents bloat
+  Future<String> _downloadWithProgress(String url, String fileName) async {
+    final dir = await getApplicationSupportDirectory();
+    final modelsDir = Directory(p.join(dir.path, 'models'));
+    await modelsDir.create(recursive: true); // Ensure subfolder exists
+
+    final path = p.join(modelsDir.path, fileName);
+    final file = File(path);
+
+    // HEAD request for accurate total size
+    final headClient = HttpClient();
+    final headRequest = await headClient.headUrl(Uri.parse(url));
+    final headResponse = await headRequest.close();
+    final totalStr = headResponse.headers.value('content-length');
+    final totalBytes = totalStr != null ? int.tryParse(totalStr) ?? 0 : 0;
+    headClient.close();
+
+    // Check existing file
+    if (await file.exists()) {
+      final currentSize = await file.length();
+      if (totalBytes > 0 && currentSize == totalBytes) {
+        // Already complete - skip
+        if (mounted) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(content: Text('Model already fully downloaded')),
+          );
+        }
+        return path;
+      } else {
+        // Partial/corrupted - delete and restart
+        await file.delete();
+        print('Deleted incomplete file ($currentSize bytes) - starting fresh');
+      }
+    }
+
+    // Proceed with download
+    final client = HttpClient();
+    final request = await client.getUrl(Uri.parse(url));
+    final response = await request.close();
+
+    if (response.statusCode != HttpStatus.ok && response.statusCode != HttpStatus.partialContent) {
+      throw Exception('HTTP ${response.statusCode}');
+    }
+
+    final sink = await file.open(mode: FileMode.write);
+    var received = 0;
+
+    await for (final chunk in response) {
+      await sink.writeFrom(chunk);
+      received += chunk.length;
+
+      final progress = totalBytes > 0 ? received / totalBytes : null;
+      if (mounted) {
+        setState(() => _modelProgress = progress);
+      }
+    }
+
+    await sink.close();
+    client.close();
+
+    // Final size check
+    final finalSize = await file.length();
+    if (totalBytes > 0 && finalSize != totalBytes) {
+      throw Exception('Download incomplete: $finalSize / $totalBytes bytes');
+    }
+
+    return path;
+  }
+
+  Future<void> _deleteModel() async {
+    final store = ref.read(modelStoreProvider);
+
+    setState(() {
+      _modelBusy = true;
+      _modelError = null;
+      _modelProgress = null;
+    });
+
+    try {
+      await store.deleteModelIfExists();
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Offline AI model deleted')),
+      );
+    } catch (e) {
+      setState(() => _modelError = e.toString());
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Delete failed: $e')),
+      );
+    } finally {
+      if (mounted) {
+        setState(() {
+          _modelBusy = false;
+          _modelProgress = null;
+        });
+        _refreshModelStatus();
+      }
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final auth = ref.watch(authServiceProvider);
+    final sessionStore = ref.watch(sessionContextStoreProvider);
+    final store = ref.watch(modelStoreProvider);
+
+    return Scaffold(
+      appBar: AppBar(title: const Text('Settings')),
+      body: ListView(
+        padding: const EdgeInsets.all(16),
+        children: [
+          // User
+          _Section(
+            title: 'User',
+            children: [
+              _KeyValueTile(
+                label: 'Username',
+                value: auth.currentUser?.username ?? 'Unknown',
+              ),
+              _KeyValueTile(
+                label: 'Role',
+                value: auth.currentUser?.role ?? '—',
+              ),
+            ],
+          ),
+          const SizedBox(height: 16),
+
+          // Active Session
+          _Section(
+            title: 'Active Session',
+            children: [
+              FutureBuilder(
+                future: sessionStore.getActive(),
+                builder: (context, snap) {
+                  if (snap.connectionState == ConnectionState.waiting) {
+                    return const Padding(
+                      padding: EdgeInsets.all(12),
+                      child: LinearProgressIndicator(),
+                    );
+                  }
+                  if (snap.hasError) {
+                    return Padding(
+                      padding: const EdgeInsets.all(8),
+                      child: Text(
+                        snap.error.toString(),
+                        style: const TextStyle(color: Colors.red),
+                      ),
+                    );
+                  }
+
+                  final session = snap.data;
+                  if (session == null) {
+                    return const ListTile(
+                      leading: Icon(Icons.warning_amber),
+                      title: Text('No active session'),
+                      subtitle: Text('Start a session to begin work'),
+                    );
+                  }
+
+                  return Column(
+                    children: [
+                      _KeyValueTile(label: 'Unit', value: session.unitName),
+                      _KeyValueTile(
+                        label: 'Started at',
+                        value: _fmt(session.startedAt),
+                      ),
+                      const SizedBox(height: 8),
+                      OutlinedButton.icon(
+                        icon: const Icon(Icons.swap_horiz),
+                        label: const Text('Switch unit'),
+                        onPressed: () async {
+                          await sessionStore.clear();
+                          if (!context.mounted) return;
+                          Navigator.pop(context);
+                        },
+                      ),
+                    ],
+                  );
+                },
+              ),
+            ],
+          ),
+          const SizedBox(height: 16),
+
+          // Offline AI
+          _Section(
+            title: 'Offline AI',
+            children: [
+              FutureBuilder(
+                future: Future.wait([
+                  store.modelPath(),
+                  store.isModelReady(),
+                  store.modelSizeBytes(),
+                ]),
+                builder: (context, snap) {
+                  if (snap.connectionState == ConnectionState.waiting) {
+                    return const Padding(
+                      padding: EdgeInsets.all(12),
+                      child: LinearProgressIndicator(),
+                    );
+                  }
+                  if (snap.hasError) {
+                    return Padding(
+                      padding: const EdgeInsets.all(8),
+                      child: Text(
+                        snap.error.toString(),
+                        style: const TextStyle(color: Colors.red),
+                      ),
+                    );
+                  }
+
+                  final data = snap.data!;
+                  final path = data[0] as String;
+                  final ready = data[1] as bool;
+                  final sizeBytes = data[2] as int?;
+
+                  final sizeLabel = sizeBytes == null ? '—' : _fmtBytes(sizeBytes);
+
+                  return Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      ListTile(
+                        leading: Icon(
+                          ready ? Icons.check_circle : Icons.cloud_download,
+                          color: ready ? Colors.green : Colors.orange,
+                        ),
+                        title: Text(ready ? 'Model installed' : 'Model not installed'),
+                        subtitle: Text(
+                          'File: ${store.modelFileName}\n'
+                          'Size: $sizeLabel\n'
+                          'Path: $path',
+                        ),
+                        isThreeLine: true,
+                      ),
+
+                      // Editable URL field
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(12, 8, 12, 0),
+                        child: TextField(
+                          controller: _urlController,
+                          focusNode: _urlFocus,
+                          enabled: !_modelBusy,
+                          decoration: InputDecoration(
+                            labelText: 'Download URL',
+                            hintText: _defaultDevUrl,
+                            suffixIcon: _urlEditing
+                                ? IconButton(
+                                    icon: const Icon(Icons.save),
+                                    onPressed: () {
+                                      _saveUrl(_urlController.text.trim());
+                                      _urlFocus.unfocus();
+                                      setState(() => _urlEditing = false);
+                                    },
+                                  )
+                                : IconButton(
+                                    icon: const Icon(Icons.edit),
+                                    onPressed: () => setState(() => _urlEditing = true),
+                                  ),
+                          ),
+                          onSubmitted: (v) {
+                            _saveUrl(v.trim());
+                            setState(() => _urlEditing = false);
+                          },
+                        ),
+                      ),
+
+                      if (_modelError != null)
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(12, 8, 12, 10),
+                          child: Text(
+                            _modelError!,
+                            style: const TextStyle(color: Colors.red, fontWeight: FontWeight.w600),
+                          ),
+                        ),
+
+                      if (_modelBusy && _modelProgress != null)
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(12, 8, 12, 10),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.stretch,
+                            children: [
+                              LinearProgressIndicator(value: _modelProgress),
+                              const SizedBox(height: 6),
+                              Text(
+                                'Downloading… ${(_modelProgress! * 100).toStringAsFixed(1)}%',
+                                style: Theme.of(context).textTheme.labelMedium,
+                              ),
+                            ],
+                          ),
+                        ),
+
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(12, 12, 12, 12),
+                        child: Wrap(
+                          spacing: 10,
+                          runSpacing: 10,
+                          children: [
+                            ElevatedButton.icon(
+                              onPressed: _modelBusy ? null : _downloadOrVerifyModel,
+                              icon: Icon(ready ? Icons.verified : Icons.download),
+                              label: Text(ready ? 'Re-download / Repair' : 'Install from URL'),
+                            ),
+                            OutlinedButton.icon(
+                              onPressed: _modelBusy ? null : _deleteModel,
+                              icon: const Icon(Icons.delete_outline),
+                              label: const Text('Delete'),
+                            ),
+                            OutlinedButton.icon(
+                              onPressed: _modelBusy ? null : _refreshModelStatus,
+                              icon: const Icon(Icons.refresh),
+                              label: const Text('Refresh'),
+                            ),
+                          ],
+                        ),
+                      ),
+
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(12, 0, 12, 12),
+                        child: Text(
+                          'Dev note: Default URL points to local server (127.0.0.1:8000). '
+                          'Change and save for production CDN. Model stored in app-private Application Support directory.',
+                          style: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.black54),
+                        ),
+                      ),
+                    ],
+                  );
+                },
+              ),
+            ],
+          ),
+          const SizedBox(height: 16),
+
+          // Data & Sync
+          _Section(
+            title: 'Data & Sync',
+            children: [
+              ListTile(
+                leading: const Icon(Icons.storage),
+                title: const Text('Local database'),
+                subtitle: const Text('Offline-first. Data stored on this device.'),
+                trailing: OutlinedButton(
+                  child: const Text('Stats'),
+                  onPressed: () async {
+                    final db = AppDatabase.instance;
+                    final counts = await _dbStats(db);
+                    if (!context.mounted) return;
+
+                    showDialog(
+                      context: context,
+                      builder: (_) => AlertDialog(
+                        title: const Text('Local data stats'),
+                        content: Text(counts),
+                        actions: [
+                          TextButton(
+                            onPressed: () => Navigator.pop(context),
+                            child: const Text('Close'),
+                          ),
+                        ],
+                      ),
+                    );
+                  },
+                ),
+              ),
+              const Divider(),
+              ListTile(
+                leading: const Icon(Icons.sync),
+                title: const Text('Sync status'),
+                subtitle: const Text('Background sync pending'),
+                trailing: Chip(
+                  label: const Text('Offline'),
+                  backgroundColor: Colors.orangeAccent.withOpacity(0.15),
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 16),
+
+          // Security
+          const _Section(
+            title: 'Security',
+            children: [
+              ListTile(
+                leading: Icon(Icons.lock_outline),
+                title: Text('Access control'),
+                subtitle: Text('Patient data is scoped by unit and encounter.'),
+              ),
+              ListTile(
+                leading: Icon(Icons.visibility_off),
+                title: Text('Privacy'),
+                subtitle: Text('No browsing of patient records without an encounter.'),
+              ),
+            ],
+          ),
+          const SizedBox(height: 16),
+
+          // About
+          const _Section(
+            title: 'About',
+            children: [
+              _KeyValueTile(label: 'App', value: 'PulseEdge'),
+              _KeyValueTile(label: 'Mode', value: 'Offline-first'),
+              _KeyValueTile(label: 'Build', value: 'Internal'),
+            ],
+          ),
+          const SizedBox(height: 24),
+
+          // Logout
+          OutlinedButton.icon(
+            icon: const Icon(Icons.logout),
+            label: const Text('Log out'),
+            onPressed: () {
+              ref.read(authServiceProvider).logout();
+              if (context.mounted) {
+                Navigator.popUntil(context, (r) => r.isFirst);
+              }
+            },
+          ),
+        ],
+      ),
+    );
+  }
+
+  static Future<String> _dbStats(AppDatabase db) async {
+    final patients = await db.customSelect('SELECT COUNT(*) AS c FROM patients').getSingle();
+    final encounters = await db.customSelect('SELECT COUNT(*) AS c FROM encounters').getSingle();
+    final events = await db.customSelect('SELECT COUNT(*) AS c FROM events').getSingle();
+
+    return '''
+Patients: ${patients.data['c']}
+Encounters: ${encounters.data['c']}
+Events: ${events.data['c']}
+''';
+  }
+
+  static String _fmt(DateTime d) {
+    return '${d.day}/${d.month}/${d.year} '
+        '${d.hour.toString().padLeft(2, '0')}:${d.minute.toString().padLeft(2, '0')}';
+  }
+
+  static String _fmtBytes(int bytes) {
+    const kb = 1024;
+    const mb = 1024 * kb;
+    const gb = 1024 * mb;
+
+    if (bytes >= gb) return '${(bytes / gb).toStringAsFixed(2)} GB';
+    if (bytes >= mb) return '${(bytes / mb).toStringAsFixed(1)} MB';
+    if (bytes >= kb) return '${(bytes / kb).toStringAsFixed(1)} KB';
+    return '$bytes B';
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Small UI helpers
+// -----------------------------------------------------------------------------
+class _Section extends StatelessWidget {
+  const _Section({required this.title, required this.children});
+
+  final String title;
+  final List<Widget> children;
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      elevation: 0,
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(12, 12, 12, 4),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Text(
+              title,
+              style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                    fontWeight: FontWeight.w800,
+                  ),
+            ),
+            const SizedBox(height: 8),
+            ...children,
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class _KeyValueTile extends StatelessWidget {
+  const _KeyValueTile({required this.label, required this.value});
+
+  final String label;
+  final String value;
+
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      dense: true,
+      title: Text(label),
+      trailing: Text(
+        value,
+        style: const TextStyle(fontWeight: FontWeight.w700),
+      ),
+    );
+  }
+}
+</file>
+
+<file path="lib/ui/workspace/modules/patient_demographics_module.dart">
+import 'package:flutter/material.dart';
+import 'package:drift/drift.dart' as drift;
+import '../../../core/database/app_database.dart';
+
+class PatientDemographicsModule extends StatefulWidget {
+  final Patient patient;
+  final Future<void> Function() onUpdated;
+
+  const PatientDemographicsModule({
+    super.key,
+    required this.patient,
+    required this.onUpdated,
+  });
+
+  @override
+  State<PatientDemographicsModule> createState() => _PatientDemographicsModuleState();
+}
+
+class _PatientDemographicsModuleState extends State<PatientDemographicsModule> {
+  final _formKey = GlobalKey<FormState>();
+
+  late final TextEditingController _name;
+  late final TextEditingController _mrn;
+  late final TextEditingController _nric;
+  late final TextEditingController _address;
+  late final TextEditingController _allergies;
+
+  String _consent = 'unknown';
+  bool _busy = false;
+
+  @override
+  void initState() {
+    super.initState();
+    final p = widget.patient;
+    _name = TextEditingController(text: p.fullName);
+    _mrn = TextEditingController(text: p.mrn ?? '');
+    _nric = TextEditingController(text: p.nric);
+    _address = TextEditingController(text: p.address ?? '');
+    _allergies = TextEditingController(text: p.allergies ?? '');
+    _consent = p.consentStatus;
+  }
+
+  @override
+  void dispose() {
+    _name.dispose();
+    _mrn.dispose();
+    _nric.dispose();
+    _address.dispose();
+    _allergies.dispose();
+    super.dispose();
+  }
+
+  Future<void> _save() async {
+    if (!_formKey.currentState!.validate()) return;
+
+    setState(() => _busy = true);
+
+    final db = AppDatabase.instance;
+
+    // Keep normalization simple for now; full normalization/hashing stays in repo when creating.
+    final fullName = _name.text.trim();
+    final fullNameNorm = fullName.toUpperCase().replaceAll(RegExp(r'\s+'), ' ');
+    final nric = _nric.text.trim().replaceAll(RegExp(r'[^0-9A-Za-z]'), '').toUpperCase();
+
+    await (db.update(db.patients)..where((t) => t.id.equals(widget.patient.id))).write(
+      PatientsCompanion(
+        fullName: drift.Value(fullName),
+        fullNameNorm: drift.Value(fullNameNorm),
+        mrn: _mrn.text.trim().isEmpty ? const drift.Value.absent() : drift.Value(_mrn.text.trim()),
+        nric: drift.Value(nric),
+        address: _address.text.trim().isEmpty ? const drift.Value.absent() : drift.Value(_address.text.trim()),
+        allergies: _allergies.text.trim().isEmpty ? const drift.Value.absent() : drift.Value(_allergies.text.trim()),
+        consentStatus: drift.Value(_consent),
+        updatedAt: drift.Value(DateTime.now()),
+      ),
+    );
+
+    setState(() => _busy = false);
+
+    await widget.onUpdated();
+    if (!mounted) return;
+    ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Patient updated')));
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
+      padding: const EdgeInsets.all(20),
+      children: [
+        Text('Demographics', style: Theme.of(context).textTheme.headlineSmall),
+        const SizedBox(height: 12),
+
+        Card(
+          child: Padding(
+            padding: const EdgeInsets.all(16),
+            child: Form(
+              key: _formKey,
+              child: Column(
+                children: [
+                  TextFormField(
+                    controller: _name,
+                    decoration: const InputDecoration(labelText: 'Full Name *'),
+                    validator: (v) => (v == null || v.trim().isEmpty) ? 'Required' : null,
+                  ),
+                  const SizedBox(height: 10),
+
+                  TextFormField(
+                    controller: _nric,
+                    decoration: const InputDecoration(labelText: 'NRIC *'),
+                    validator: (v) => (v == null || v.trim().isEmpty) ? 'Required' : null,
+                  ),
+                  const SizedBox(height: 10),
+
+                  TextFormField(
+                    controller: _mrn,
+                    decoration: const InputDecoration(labelText: 'MRN (optional)'),
+                  ),
+                  const SizedBox(height: 10),
+
+                  DropdownButtonFormField<String>(
+                    value: _consent,
+                    decoration: const InputDecoration(labelText: 'Consent'),
+                    items: const [
+                      DropdownMenuItem(value: 'unknown', child: Text('Unknown')),
+                      DropdownMenuItem(value: 'pending', child: Text('Pending')),
+                      DropdownMenuItem(value: 'consented', child: Text('Consented')),
+                      DropdownMenuItem(value: 'declined', child: Text('Declined')),
+                    ],
+                    onChanged: (v) => setState(() => _consent = v ?? 'unknown'),
+                  ),
+                  const SizedBox(height: 10),
+
+                  TextFormField(
+                    controller: _address,
+                    maxLines: 2,
+                    decoration: const InputDecoration(labelText: 'Address'),
+                  ),
+                  const SizedBox(height: 10),
+
+                  TextFormField(
+                    controller: _allergies,
+                    maxLines: 2,
+                    decoration: const InputDecoration(labelText: 'Allergies'),
+                  ),
+                  const SizedBox(height: 14),
+
+                  SizedBox(
+                    width: double.infinity,
+                    child: ElevatedButton(
+                      onPressed: _busy ? null : _save,
+                      child: Text(_busy ? 'Saving...' : 'Save'),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+}
+</file>
+
+<file path="lib/ui/workspace/modules/patient_documents_module.dart">
+import 'package:flutter/material.dart';
+import '../../../core/database/app_database.dart';
+
+class PatientDocumentsModule extends StatelessWidget {
+  final Patient patient;
+  const PatientDocumentsModule({super.key, required this.patient});
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
+      padding: const EdgeInsets.all(20),
+      children: [
+        Text('Documents', style: Theme.of(context).textTheme.headlineSmall),
+        const SizedBox(height: 12),
+        const Card(
+          child: ListTile(
+            title: Text('Scans/PDFs placeholder'),
+            subtitle: Text('Later: attach photo/PDF, OCR, AI summarise, sync queue.'),
+          ),
+        ),
+      ],
+    );
+  }
+}
+</file>
+
+<file path="lib/ui/workspace/modules/patient_encounters_module.dart">
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+import '../../../core/database/app_database.dart';
+import '../../../core/encounters/encounter_repo.dart';
+import '../../encounters/encounter_registration_screen.dart';
+import '../../encounters/encounter_workspace_screen.dart';
+
+class PatientEncountersModule extends ConsumerStatefulWidget {
+  final Patient patient;
+  const PatientEncountersModule({super.key, required this.patient});
+
+  @override
+  ConsumerState<PatientEncountersModule> createState() =>
+      _PatientEncountersModuleState();
+}
+
+class _PatientEncountersModuleState extends ConsumerState<PatientEncountersModule> {
+  late final EncounterRepo repo;
+  List<Encounter> encounters = [];
+  bool loading = true;
+
+  @override
+  void initState() {
+    super.initState();
+
+    // IMPORTANT:
+    // Your EncounterRepo currently expects Ref<Object?> in the constructor (per compiler error).
+    // WidgetRef is not assignable to Ref<Object?>, so we cast safely.
+    // (Better long-term fix is to change EncounterRepo to accept `Ref`, but this unblocks you now.)
+    repo = EncounterRepo(AppDatabase.instance, ref as Ref<Object?>);
+
+    _load();
+  }
+
+  Future<void> _load() async {
+    if (!mounted) return;
+    setState(() => loading = true);
+
+    try {
+      final list = await repo.listForPatient(widget.patient.id);
+      if (!mounted) return;
+      setState(() {
+        encounters = list;
+        loading = false;
+      });
+    } catch (_) {
+      if (!mounted) return;
+      setState(() => loading = false);
+    }
+  }
+
+  Future<void> _newEncounter() async {
+    // Your current EncounterRegistrationScreen constructor has NO `patient:` param.
+    // So we open it in general mode.
+    final created = await Navigator.push<dynamic>(
+      context,
+      MaterialPageRoute(
+        builder: (_) => const EncounterRegistrationScreen(),
+      ),
+    );
+
+    if (created == null) return;
+
+    // Accept either Encounter or encounterId String
+    String? encounterId;
+    if (created is Encounter) {
+      encounterId = created.id;
+    } else if (created is String) {
+      encounterId = created;
+    }
+
+    if (encounterId == null || encounterId.isEmpty) return;
+
+    await _load();
+    if (!mounted) return;
+
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (_) => EncounterWorkspaceScreen(encounterId: encounterId!),
+      ),
+    );
+  }
+
+  void _open(Encounter e) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (_) => EncounterWorkspaceScreen(encounterId: e.id),
+      ),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
+      padding: const EdgeInsets.all(20),
+      children: [
+        Row(
+          children: [
+            Text(
+              'Encounters',
+              style: Theme.of(context).textTheme.headlineSmall,
+            ),
+            const Spacer(),
+            ElevatedButton.icon(
+              onPressed: _newEncounter,
+              icon: const Icon(Icons.add),
+              label: const Text('New Encounter'),
+            ),
+          ],
+        ),
+        const SizedBox(height: 12),
+
+        if (loading)
+          const Center(
+            child: Padding(
+              padding: EdgeInsets.all(20),
+              child: CircularProgressIndicator(),
+            ),
+          ),
+
+        if (!loading && encounters.isEmpty)
+          const Card(
+            child: ListTile(
+              title: Text('No encounters yet'),
+              subtitle: Text(
+                'Create the first encounter to start notes/orders/documents.',
+              ),
+            ),
+          ),
+
+        if (!loading)
+          ...encounters.map((e) {
+            final subtitle = [
+              'Type: ${e.type}',
+              'Status: ${e.status}',
+              if (e.unitName.isNotEmpty) 'Unit: ${e.unitName}',
+              if (e.chiefComplaint != null && e.chiefComplaint!.trim().isNotEmpty)
+                'CC: ${e.chiefComplaint}',
+              'Start: ${e.startAt}',
+            ].join(' • ');
+
+            return Card(
+              child: ListTile(
+                title: Text('Encounter ${e.encounterNo ?? e.id.substring(0, 8)}'),
+                subtitle: Text(subtitle),
+                trailing: const Icon(Icons.arrow_forward_ios, size: 16),
+                onTap: () => _open(e),
+              ),
+            );
+          }),
+      ],
+    );
+  }
+}
+</file>
+
+<file path="lib/ui/workspace/modules/patient_overview_module.dart">
+import 'package:flutter/material.dart';
+import '../../../core/database/app_database.dart';
+
+class PatientOverviewModule extends StatelessWidget {
+  final Patient patient;
+  const PatientOverviewModule({super.key, required this.patient});
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
+      padding: const EdgeInsets.all(20),
+      children: [
+        Text('Overview', style: Theme.of(context).textTheme.headlineSmall),
+        const SizedBox(height: 12),
+
+        Card(
+          child: ListTile(
+            title: const Text('Patient Snapshot'),
+            subtitle: Text(
+              'Name: ${patient.fullName}\n'
+              'Consent: ${patient.consentStatus}\n'
+              'Allergies: ${(patient.allergies ?? "None")}',
+            ),
+          ),
+        ),
+
+        const SizedBox(height: 12),
+        const Card(
+          child: ListTile(
+            title: Text('Next: AI Patient Brief (coming)'),
+            subtitle: Text(
+              'We will generate a safe summary from existing records:\n'
+              '• Key problems • Recent encounters • Meds • Allergies • Alerts',
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+}
+</file>
+
+<file path="lib/ui/workspace/modules/patient_sync_audit_module.dart">
+import 'package:flutter/material.dart';
+import '../../../core/database/app_database.dart';
+
+class PatientSyncAuditModule extends StatelessWidget {
+  final Patient patient;
+  const PatientSyncAuditModule({super.key, required this.patient});
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
+      padding: const EdgeInsets.all(20),
+      children: [
+        Text('Sync & Audit', style: Theme.of(context).textTheme.headlineSmall),
+        const SizedBox(height: 12),
+        Card(
+          child: ListTile(
+            title: const Text('Sync queue (next)'),
+            subtitle: Text(
+              'Patient source: ${patient.source}\n'
+              'We will log: created/edited events + sync status + conflicts.',
+            ),
+          ),
+        ),
+        const SizedBox(height: 12),
+        const Card(
+          child: ListTile(
+            title: Text('Audit trail (next)'),
+            subtitle: Text('Every action becomes an Event row for governance + sync.'),
+          ),
+        ),
+      ],
+    );
+  }
+}
+</file>
+
+<file path="lib/ui/workspace/patient_workspace_screen.dart">
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+import '../../core/auth/auth_service.dart';
+import '../../core/database/app_database.dart';
+import '../../core/session/session_context_store.dart';
+
+import 'modules/patient_overview_module.dart';
+import 'modules/patient_demographics_module.dart';
+import 'modules/patient_encounters_module.dart';
+import 'modules/patient_documents_module.dart';
+import 'modules/patient_sync_audit_module.dart';
+
+class PatientWorkspaceScreen extends ConsumerStatefulWidget {
+  final String patientId;
+  const PatientWorkspaceScreen({super.key, required this.patientId});
+
+  @override
+  ConsumerState<PatientWorkspaceScreen> createState() =>
+      _PatientWorkspaceScreenState();
+}
+
+class _PatientWorkspaceScreenState
+    extends ConsumerState<PatientWorkspaceScreen> {
+  int index = 0;
+  Patient? patient;
+
+  @override
+  void initState() {
+    super.initState();
+    _loadPatient();
+  }
+
+  Future<void> _loadPatient() async {
+    final db = AppDatabase.instance;
+    final p = await (db.select(db.patients)
+          ..where((t) => t.id.equals(widget.patientId))
+          ..limit(1))
+        .getSingleOrNull();
+    if (!mounted) return;
+    setState(() => patient = p);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final auth = ref.watch(authServiceProvider);
+    final sessionStore = ref.watch(sessionContextStoreProvider);
+
+    final username = auth.currentUser?.username ?? 'Unknown';
+
+    final p = patient;
+    final title = p == null ? 'Patient Workspace' : p.fullName;
+
+    return FutureBuilder(
+      future: sessionStore.getActive(),
+      builder: (context, snap) {
+        final unitName = snap.data?.unitName ?? 'No Unit';
+
+        return Scaffold(
+          appBar: AppBar(
+            title: Text(title),
+            leading: IconButton(
+              icon: const Icon(Icons.arrow_back),
+              tooltip: 'Back',
+              onPressed: () => Navigator.pop(context),
+            ),
+            bottom: PreferredSize(
+              preferredSize: const Size.fromHeight(78),
+              child: patient == null
+                  ? const SizedBox(
+                      height: 78,
+                      child: LinearProgressIndicator(),
+                    )
+                  : SizedBox(
+                      height: 78,
+                      child: SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 16, vertical: 10),
+                        child: _PatientBanner(
+                          patient: patient!, // safe: guarded above
+                          user: username,
+                          unit: unitName,
+                        ),
+                      ),
+                    ),
+            ),
+          ),
+          body: Row(
+            children: [
+              NavigationRail(
+                selectedIndex: index,
+                onDestinationSelected: (i) => setState(() => index = i),
+                labelType: NavigationRailLabelType.all,
+                destinations: const [
+                  NavigationRailDestination(
+                    icon: Icon(Icons.dashboard_outlined),
+                    selectedIcon: Icon(Icons.dashboard),
+                    label: Text('Overview'),
+                  ),
+                  NavigationRailDestination(
+                    icon: Icon(Icons.badge_outlined),
+                    selectedIcon: Icon(Icons.badge),
+                    label: Text('Demographics'),
+                  ),
+                  NavigationRailDestination(
+                    icon: Icon(Icons.event_note_outlined),
+                    selectedIcon: Icon(Icons.event_note),
+                    label: Text('Encounters'),
+                  ),
+                  NavigationRailDestination(
+                    icon: Icon(Icons.folder_outlined),
+                    selectedIcon: Icon(Icons.folder),
+                    label: Text('Documents'),
+                  ),
+                  NavigationRailDestination(
+                    icon: Icon(Icons.sync_outlined),
+                    selectedIcon: Icon(Icons.sync),
+                    label: Text('Sync & Audit'),
+                  ),
+                ],
+              ),
+              const VerticalDivider(width: 1),
+              Expanded(
+                child: p == null
+                    ? const Center(child: CircularProgressIndicator())
+                    : IndexedStack(
+                        index: index,
+                        children: [
+                          PatientOverviewModule(patient: p),
+                          PatientDemographicsModule(
+                            patient: p,
+                            onUpdated: _loadPatient,
+                          ),
+                          PatientEncountersModule(patient: p),
+                          PatientDocumentsModule(patient: p),
+                          PatientSyncAuditModule(patient: p),
+                        ],
+                      ),
+              ),
+            ],
+          ),
+        );
+      },
+    );
+  }
+}
+
+class _PatientBanner extends StatelessWidget {
+  final Patient patient;
+  final String user;
+  final String unit;
+
+  const _PatientBanner({
+    required this.patient,
+    required this.user,
+    required this.unit,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final mrn = (patient.mrn ?? '').trim().isEmpty ? '—' : patient.mrn!;
+    final consent = patient.consentStatus;
+    final allergies =
+        (patient.allergies == null || patient.allergies!.trim().isEmpty)
+            ? 'None'
+            : patient.allergies!;
+    final nricMasked = _maskNric(patient.nric);
+
+    return Container(
+      padding: const EdgeInsets.fromLTRB(16, 8, 16, 12),
+      width: double.infinity,
+      child: Wrap(
+        spacing: 14,
+        runSpacing: 6,
+        children: [
+          _pill('MRN', mrn),
+          _pill('NRIC', nricMasked),
+          _pill('Consent', consent),
+          _pill('Allergies', allergies),
+          _pill('Unit', unit),
+          _pill('User', user),
+        ],
+      ),
+    );
+  }
+
+  Widget _pill(String k, String v) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+      decoration: BoxDecoration(
+        color: Colors.white.withOpacity(0.12),
+        borderRadius: BorderRadius.circular(999),
+      ),
+      child: Text(
+        '$k: $v',
+        style: const TextStyle(color: Colors.white70),
+      ),
+    );
+  }
+
+  static String _maskNric(String nric) {
+    if (nric.isEmpty) return '—';
+    if (nric.length <= 4) return '****';
+    return '****${nric.substring(nric.length - 4)}';
+  }
+}
+</file>
+
+<file path="lib/ui/home_screen.dart">
+import 'dart:async';
+
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
+
+// Your existing theme + services
+import '../theme/app_theme.dart';
+import '../core/auth/auth_service.dart';
+
+// IMPORTANT: adjust this import to your actual AI service path
+import '../core/ai/ai_service.dart';
+import '../core/ai/analytics_engine.dart';
+import '../core/session/session_context_store.dart';
+import 'package:intl/intl.dart';
+
+import '../ui/encounters/encounter_registration_screen.dart';
+import '../ui/patients/patient_search_screen.dart';
+import '../ui/setting/settings_screen.dart';
+
+//import '../../core/ai/pulse_ai_providers.dart'; // Added for aiServiceProvider + pulseAiReadyProvider
+import 'package:pulseedge/core/ai/pulse_ai_providers.dart'
+    show aiServiceProvider;//, analyticsEngineProvider;
+
+Color _mutedText(BuildContext c) =>
+    Theme.of(c).textTheme.bodySmall?.color?.withOpacity(0.65)
+    ?? Colors.grey;
+
+Color _borderColor(BuildContext c) =>
+    Theme.of(c).dividerColor;
+
+Color _successColor(BuildContext c) =>
+    Colors.green.shade600;
+
+Color _dangerColor(BuildContext c) =>
+    Colors.red.shade600;
+
+class HomeScreen extends ConsumerStatefulWidget {
+  const HomeScreen({super.key});
+
+  @override
+  ConsumerState<HomeScreen> createState() => _HomeScreenState();
+}
+
+class UnitLite {
+  final String id;
+  final String name;
+
+  const UnitLite({required this.id, required this.name});
+
+  @override
+  String toString() => name;
+}
+
+class _HomeScreenState extends ConsumerState<HomeScreen> {
+  final TextEditingController _chatCtrl = TextEditingController();
+  final ScrollController _chatScroll = ScrollController();
+
+  @override
+  void initState() {
+    super.initState();
+    _loadSessionAndUnits();
+  }
+
+  bool _sending = false;
+  String? _chatError;
+  //Session Gate UI
+  SessionContext? _activeSession;
+  bool _sessionLoading = true;
+  String? _sessionError;
+  List<UnitLite> _myUnits = const [];
+
+  final List<_ChatMsg> _msgs = <_ChatMsg>[
+    _ChatMsg(
+      role: _ChatRole.assistant,
+      text:
+          "Hi 👋 I'm PulseEdge AI.\n\nTry:\n• “how many encounters this morning?”\n• “berapa encounter pagi ini”\n• “top diagnosis today”",
+      at: DateTime.now(),
+    ),
+  ];
+
+  // --- Helpers -------------------------------------------------------------
+
+  Color _opacity(Color c, double o) => c.withAlpha((o * 255).round());
+
+  Future<void> _scrollChatToBottom() async {
+    await Future<void>.delayed(const Duration(milliseconds: 20));
+    if (!_chatScroll.hasClients) return;
+    _chatScroll.animateTo(
+      _chatScroll.position.maxScrollExtent,
+      duration: const Duration(milliseconds: 220),
+      curve: Curves.easeOut,
+    );
+  }
+
+  void _addMsg(_ChatMsg m) {
+    setState(() => _msgs.add(m));
+    _scrollChatToBottom();
+  }
+
+  Future<void> _sendChat(String prompt) async {
+    const uiOnlyActions = {
+      'start a new encounter workflow.',
+      'open patient search.',
+    };
+
+    if (uiOnlyActions.contains(prompt.toLowerCase())) {
+      return;
+    }
+
+    if (_activeSession == null) {
+      await _startOrSwitchSession();
+      if (_activeSession == null) return; // user cancelled
+    }
+
+    final trimmed = prompt.trim();
+    if (trimmed.isEmpty || _sending) return;
+
+    setState(() {
+      _sending = true;
+      _chatError = null;
+    });
+
+    _chatCtrl.clear();
+
+    _addMsg(_ChatMsg(
+      role: _ChatRole.user,
+      text: trimmed,
+      at: DateTime.now(),
+    ));
+
+    try {
+      final ai = ref.read(aiServiceProvider);
+
+      // THIS matches your ai_service.dart
+      final response = await ai.runRawPrompt(trimmed);
+
+      _addMsg(_ChatMsg(
+        role: _ChatRole.assistant,
+        text: response.answer.trim(),
+        at: DateTime.now(),
+      ));
+    } catch (e, st) {
+      debugPrint('AI ERROR: $e\n$st');
+      setState(() {
+        _chatError = 'AI error: ${e.toString()}';
+      });
+    } finally {
+      if (mounted) setState(() => _sending = false);
+    }
+  }
+
+  Future<void> _logout() async {
+    // clear session context on logout
+    await ref.read(sessionContextStoreProvider).clear();
+
+    final auth = ref.read(authServiceProvider);
+    auth.logout();
+    if (mounted) context.go('/login');
+  }
+
+  Future<void> _loadSessionAndUnits() async {
+    setState(() {
+      _sessionLoading = true;
+      _sessionError = null;
+    });
+
+    try {
+      final auth = ref.read(authServiceProvider);
+      final user = auth.currentUser;
+
+      if (user == null) {
+        setState(() {
+          _activeSession = null;
+          _myUnits = const [];
+          _sessionLoading = false;
+        });
+        return;
+      }
+
+      final store = ref.read(sessionContextStoreProvider);
+      final existing = await store.getActive();
+
+      //final engine = ref.read(analyticsEngineProvider);
+      final units = await engine.unitsForUser(user.id);
+
+      // Auto-start if user only has one unit and no existing session.
+      if (existing == null && units.length == 1) {
+        final u = units.first;
+        final now = DateTime.now();
+        final ctx = SessionContext(
+          userId: user.id,
+          unitId: u.id,
+          unitName: u.name,
+          startedAt: now,
+          expiresAt: now.add(const Duration(hours: 8)),
+        );
+        await store.setActive(ctx);
+        setState(() {
+          _activeSession = ctx;
+          _myUnits = units;
+          _sessionLoading = false;
+        });
+        return;
+      }
+
+      setState(() {
+        _activeSession = existing;
+        _myUnits = units;
+        _sessionLoading = false;
+      });
+    } catch (e) {
+      setState(() {
+        _sessionError = e.toString();
+        _sessionLoading = false;
+      });
+    }
+  }
+
+  //session
+  Future<void> _startOrSwitchSession() async {
+    final auth = ref.read(authServiceProvider);
+    final user = auth.currentUser;
+    if (user == null) return;
+
+    if (_myUnits.isEmpty) {
+      setState(() => _chatError = 'No unit assigned to your user. Ask admin to assign a unit.');
+      return;
+    }
+
+    final selected = await showModalBottomSheet<UnitLite>(
+      context: context,
+      backgroundColor: AppTheme.surface,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(18)),
+      ),
+      builder: (ctx) {
+        return SafeArea(
+          child: Padding(
+            padding: const EdgeInsets.fromLTRB(16, 10, 16, 16),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                const SizedBox(height: 6),
+                Text(
+                  'Start Session',
+                  style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                        fontWeight: FontWeight.w800,
+                        color: AppTheme.darkPrimary,
+                      ),
+                ),
+                const SizedBox(height: 6),
+                Text(
+                  'Choose your medical unit. PulseAI will scope analytics + patient access to this session.',
+                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                        color: _mutedText(context),
+                      ),
+                ),
+                const SizedBox(height: 12),
+                ..._myUnits.map((u) {
+                  final isActive = _activeSession?.unitId == u.id;
+                  return Card(
+                    elevation: 0,
+                    color: isActive
+                        ? AppTheme.primary.withOpacity(0.10)
+                        : AppTheme.surface,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(14),
+                      side: BorderSide(
+                        color: isActive
+                            ? AppTheme.primary.withOpacity(0.35)
+                            : _borderColor(context),
+                      ),
+                    ),
+                    child: ListTile(
+                      title: Text(u.name, style: const TextStyle(fontWeight: FontWeight.w700)),
+                      subtitle: Text(u.code),
+                      trailing: isActive ? const Icon(Icons.check_circle) : const Icon(Icons.arrow_forward),
+                      onTap: () => Navigator.of(ctx).pop(u),
+                    ),
+                  );
+                }),
+                const SizedBox(height: 8),
+              ],
+            ),
+          ),
+        );
+      },
+    );
+
+    if (selected == null) return;
+
+    final now = DateTime.now();
+    final ctx = SessionContext(
+      userId: user.id,
+      unitId: selected.id,
+      unitName: selected.name,
+      startedAt: now,
+      expiresAt: now.add(const Duration(hours: 8)),
+    );
+
+    final store = ref.read(sessionContextStoreProvider);
+    await store.setActive(ctx);
+
+    setState(() => _activeSession = ctx);
+
+    _addMsg(_ChatMsg(
+      role: _ChatRole.assistant,
+      text: '✅ Session started: **${selected.name}** (expires in 8h).',
+      at: DateTime.now(),
+    ));
+  }
+
+  Future<void> _endSession() async {
+    final store = ref.read(sessionContextStoreProvider);
+    await store.clear();
+    setState(() => _activeSession = null);
+
+    _addMsg(_ChatMsg(
+      role: _ChatRole.assistant,
+      text: 'Session ended. Start a new session to continue.',
+      at: DateTime.now(),
+    ));
+  }
+  // --- UI ------------------------------------------------------------------
+ /* @override
+  void initState() {
+    super.initState();
+    _loadSessionAndUnits();
+  }
+*/
+  @override
+  void dispose() {
+    _chatCtrl.dispose();
+    _chatScroll.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final auth = ref.watch(authServiceProvider);
+
+    return Scaffold(
+      backgroundColor: AppTheme.background,
+      appBar: AppBar(
+        backgroundColor: AppTheme.surface,
+        elevation: 0,
+        title: Row(
+          children: [
+            Image.asset(
+              'assets/icons/pulseedge_logo_black.png',
+              height: 28,
+              errorBuilder: (_, __, ___) => const SizedBox.shrink(),
+            ),
+            const SizedBox(width: 10),
+            const Text('PulseEdge'),
+            const Spacer(),
+            IconButton(
+              tooltip: 'Logout',
+              onPressed: _logout,
+              icon: const Icon(Icons.logout),
+            ),
+          ],
+        ),
+      ),
+
+      // Make it scrollable to avoid RenderFlex overflow on small windows.
+      body: CustomPaint(
+        painter: ECGGridPainter(color: _opacity(AppTheme.primary, 0.10)),
+        child: SafeArea(
+          child: SingleChildScrollView(
+            padding: const EdgeInsets.all(16),
+            child: Center(
+              child: ConstrainedBox(
+                constraints: const BoxConstraints(maxWidth: 980),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    // ---- Header row ------------------------------------------------
+                    _HeaderRow(
+                      subtitle: 'Offline-first clinical operations',
+                      rightBadge: _UserBadge(
+                        username: auth.currentUser?.username ?? 'Unknown',
+                        role: auth.currentUser?.role ?? '—',
+                      ),
+                    ),
+                    _SessionGateCard(
+                      loading: _sessionLoading,
+                      error: _sessionError,
+                      active: _activeSession,
+                      unitsCount: _myUnits.length,
+                      onStartOrSwitch: _startOrSwitchSession,
+                      onEnd: _endSession,
+                    ),
+                  const SizedBox(height: 8),
+                  
+                    // ---- AI Chat Panel (center / primary) -------------------------
+                    _AiChatCard(
+                      sending: _sending,
+                      error: _chatError,
+                      msgs: _msgs,
+                      scrollController: _chatScroll,
+                      controller: _chatCtrl,
+                      onSend: _sendChat,
+                      opacity: _opacity,
+                      activeSession: _activeSession,
+                      onStartSession: _startOrSwitchSession,
+                    ),
+                    const SizedBox(height: 16),
+
+                    // ---- Quick Actions (pushed up, no dead center panel) ----------
+                    Text(
+                      'Quick Actions',
+                      style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                            fontWeight: FontWeight.w700,
+                            color: AppTheme.darkPrimary,
+                          ),
+                    ),
+                    const SizedBox(height: 10),
+
+                    _QuickActionsGrid(
+                    opacity: _opacity,
+                    onAction: (action) {
+                      switch (action.title) {
+                        case 'New Encounter':
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (_) => const EncounterRegistrationScreen(),
+                            ),
+                          );
+                          return;
+
+                        case 'Search Patients':
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (_) => const PatientSearchScreen(),
+                            ),
+                          );
+                          return;
+
+                        case 'Settings':
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (_) => const SettingsScreen(),
+                            ),
+                          );
+                          return;
+
+                        // 🔽 These are analytics → AI
+                        case 'Morning Snapshot':
+                        case 'Common Illness':
+                        case 'Similar Populations':
+                          _sendChat(action.aiHint);
+                          return;
+
+                        default:
+                          // Safe fallback
+                          _sendChat(action.aiHint);
+                      }
+                    },
+                  ),
+
+                    const SizedBox(height: 18),
+
+                    // ---- “Today” cards (optional, compact) ------------------------
+                    _MiniStatsRow(opacity: _opacity),
+
+                    const SizedBox(height: 10),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+// ============================== AI Chat Card ===============================
+
+class _AiChatCard extends StatelessWidget {
+  const _AiChatCard({
+    required this.sending,
+    required this.error,
+    required this.msgs,
+    required this.scrollController,
+    required this.controller,
+    required this.onSend,
+    required this.opacity,
+    required this.activeSession,
+    required this.onStartSession,
+  });
+
+  final SessionContext? activeSession;
+  final VoidCallback onStartSession;
+  final bool sending;
+  final String? error;
+  final List<_ChatMsg> msgs;
+  final ScrollController scrollController;
+  final TextEditingController controller;
+  final Future<void> Function(String prompt) onSend;
+  final Color Function(Color, double) opacity;
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+
+    return Card(
+      elevation: 10,
+      color: AppTheme.surface,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(16, 16, 16, 14),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            // Title row
+            Row(
+              children: [
+                const Icon(Icons.auto_awesome, color: AppTheme.primary),
+                const SizedBox(width: 10),
+                Text(
+                  'Pulse AI',
+                  style: theme.textTheme.titleLarge?.copyWith(
+                    fontWeight: FontWeight.w800,
+                    color: AppTheme.darkPrimary,
+                  ),
+                ),
+                const Spacer(),
+                if (activeSession == null)
+                  OutlinedButton(
+                    onPressed: onStartSession,
+                    child: const Text('Start session'),
+                  )
+                else
+                  Flexible(
+                    child: Text(
+                      activeSession!.unitName,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: Theme.of(context).textTheme.labelMedium,
+                    ),
+                  ),
+                const SizedBox(width: 16),  
+                /*Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                  decoration: BoxDecoration(
+                    color: opacity(AppTheme.primary, 0.12),
+                    borderRadius: BorderRadius.circular(999),
+                    border: Border.all(color: opacity(AppTheme.primary, 0.25)),
+                  ),
+                  child: Text(
+                    'Offline-first AI',
+                    style: theme.textTheme.labelMedium?.copyWith(
+                      color: AppTheme.primary,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                ),*/
+              ],
+            ),
+            const SizedBox(height: 10),
+/*
+            // Suggested prompts
+            Wrap(
+              spacing: 8,
+              runSpacing: 8,
+              children: [
+                _PromptChip(
+                  text: 'Encounters this morning',
+                  onTap: () => onSend('How many encounters were created this morning?'),
+                ),
+                _PromptChip(
+                  text: 'Top diagnosis today',
+                  onTap: () => onSend('List the top 5 diagnoses today with counts.'),
+                ),
+                _PromptChip(
+                  text: 'BM: berapa encounter pagi ini',
+                  onTap: () => onSend('Berapa encounter pagi ini?'),
+                ),
+                _PromptChip(
+                  text: 'Trends (7 days)',
+                  onTap: () => onSend('Show diagnosis trend for last 7 days.'),
+                ),
+              ],
+            ),
+            const SizedBox(height: 12),*/
+
+            // Chat history
+            Container(
+              height: 320,
+              decoration: BoxDecoration(
+                color: opacity(AppTheme.background, 0.65),
+                borderRadius: BorderRadius.circular(14),
+                border: Border.all(color: opacity(AppTheme.primary, 0.16)),
+              ),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(14),
+                child: ListView.builder(
+                  controller: scrollController,
+                  padding: const EdgeInsets.fromLTRB(12, 12, 12, 12),
+                  itemCount: msgs.length,
+                  itemBuilder: (context, i) {
+                    final m = msgs[i];
+                    final isUser = m.role == _ChatRole.user;
+
+                    final bubbleColor = isUser
+                        ? opacity(AppTheme.primary, 0.14)
+                        : opacity(Colors.black, 0.05);
+
+                    final borderColor = isUser
+                        ? opacity(AppTheme.primary, 0.28)
+                        : opacity(Colors.black, 0.12);
+
+                    return Align(
+                      alignment:
+                          isUser ? Alignment.centerRight : Alignment.centerLeft,
+                      child: Container(
+                        constraints: const BoxConstraints(maxWidth: 640),
+                        margin: const EdgeInsets.symmetric(vertical: 6),
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 12, vertical: 10),
+                        decoration: BoxDecoration(
+                          color: bubbleColor,
+                          borderRadius: BorderRadius.circular(14),
+                          border: Border.all(color: borderColor),
+                        ),
+                        child: SelectableText(
+                          m.text,
+                          style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                                height: 1.25,
+                                color: AppTheme.darkPrimary,
+                              ),
+                        ),
+                      ),
+                    );
+                  },
+                ),
+              ),
+            ),
+
+            if (error != null) ...[
+              const SizedBox(height: 10),
+              Text(
+                error!,
+                style: theme.textTheme.bodySmall?.copyWith(
+                  color: Colors.red,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+            ],
+
+            const SizedBox(height: 12),
+
+            // Input row
+            Row(
+              children: [
+                Expanded(
+                  child: TextField(
+                    controller: controller,
+                    textInputAction: TextInputAction.send,
+                    onSubmitted: (v) => onSend(v),
+                    decoration: InputDecoration(
+                      hintText:
+                          'Ask: “how many encounters this morning?” / “berapa encounter pagi ini?”',
+                      filled: true,
+                      fillColor: opacity(AppTheme.background, 0.85),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(14),
+                        borderSide: BorderSide(color: opacity(AppTheme.primary, 0.18)),
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(14),
+                        borderSide: BorderSide(color: opacity(AppTheme.primary, 0.18)),
+                      ),
+                      contentPadding: const EdgeInsets.symmetric(
+                        horizontal: 12,
+                        vertical: 12,
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(width: 10),
+                SizedBox(
+                  height: 48,
+                  child: ElevatedButton.icon(
+                    onPressed: sending ? null : () => onSend(controller.text),
+                    icon: sending
+                        ? const SizedBox(
+                            height: 16,
+                            width: 16,
+                            child: CircularProgressIndicator(strokeWidth: 2),
+                          )
+                        : const Icon(Icons.send),
+                    label: Text(sending ? 'Thinking…' : 'Send'),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: AppTheme.primary,
+                      foregroundColor: Colors.white,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(14),
+                      ),
+                      padding: const EdgeInsets.symmetric(horizontal: 14),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+/*
+class _PromptChip extends StatelessWidget {
+  const _PromptChip({required this.text, required this.onTap});
+  final String text;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      borderRadius: BorderRadius.circular(999),
+      onTap: onTap,
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(999),
+          border: Border.all(color: AppTheme.primary.withAlpha(60)),
+          color: AppTheme.primary.withAlpha(22),
+        ),
+        child: Text(
+          text,
+          style: Theme.of(context).textTheme.labelMedium?.copyWith(
+                color: AppTheme.primary,
+                fontWeight: FontWeight.w800,
+              ),
+        ),
+      ),
+    );
+  }
+}
+*/
+// ============================ Quick Actions ================================
+
+class _QuickActionsGrid extends StatelessWidget {
+  const _QuickActionsGrid({required this.opacity, required this.onAction});
+
+  final Color Function(Color, double) opacity;
+  final void Function(_QuickAction action) onAction;
+
+  @override
+  Widget build(BuildContext context) {
+    final actions = <_QuickAction>[
+      const _QuickAction(
+        icon: Icons.add_circle_outline,
+        title: 'New Encounter',
+        subtitle: 'Start a visit',
+        aiHint: 'Start a new encounter workflow.',
+      ),
+      const _QuickAction(
+        icon: Icons.search,
+        title: 'Search Patients',
+        subtitle: 'Find records fast',
+        aiHint: 'Open patient search.',
+      ),
+      const _QuickAction(
+        icon: Icons.analytics_outlined,
+        title: 'Morning Snapshot',
+        subtitle: 'Today’s stats',
+        aiHint: 'How many encounters this morning? Group top diagnosis.',
+      ),
+      const _QuickAction(
+        icon: Icons.medical_information_outlined,
+        title: 'Common Illness',
+        subtitle: 'Top conditions',
+        aiHint: 'What sickness is most common today? Provide counts.',
+      ),
+      const _QuickAction(
+        icon: Icons.groups_2_outlined,
+        title: 'Similar Populations',
+        subtitle: 'Cross-reference',
+        aiHint:
+            'Cross-reference top diagnoses with similar demographics and show statistics.',
+      ),
+      const _QuickAction(
+        icon: Icons.settings_outlined,
+        title: 'Settings',
+        subtitle: 'Units & security',
+        aiHint: 'Open settings. Show current unit.',
+      ),
+    ];
+
+    return LayoutBuilder(
+      builder: (context, c) {
+        final w = c.maxWidth;
+        final cols = w >= 900
+            ? 3
+            : w >= 600
+                ? 2
+                : 1;
+        return GridView.builder(
+          shrinkWrap: true,
+          physics: const NeverScrollableScrollPhysics(),
+          itemCount: actions.length,
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: cols,
+            mainAxisSpacing: 12,
+            crossAxisSpacing: 12,
+            childAspectRatio: cols == 1 ? 3.0 : 2.6,
+          ),
+          itemBuilder: (context, i) {
+            final a = actions[i];
+            return InkWell(
+              borderRadius: BorderRadius.circular(18),
+              onTap: () => onAction(a),
+              child: Container(
+                padding: const EdgeInsets.all(14),
+                decoration: BoxDecoration(
+                  color: AppTheme.surface,
+                  borderRadius: BorderRadius.circular(18),
+                  border: Border.all(color: opacity(AppTheme.primary, 0.12)),
+                  boxShadow: [
+                    BoxShadow(
+                      blurRadius: 16,
+                      offset: const Offset(0, 6),
+                      color: Colors.black.withAlpha(18),
+                    ),
+                  ],
+                ),
+                child: Row(
+                  children: [
+                    Container(
+                      height: 48,
+                      width: 48,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(14),
+                        color: opacity(AppTheme.primary, 0.12),
+                      ),
+                      child: Icon(a.icon, color: AppTheme.primary),
+                    ),
+                    const SizedBox(width: 12),
+                    Expanded(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          // FIX: prevent truncation by allowing 2 lines with ellipsis.
+                          Text(
+                            a.title,
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
+                            softWrap: true,
+                            style: Theme.of(context)
+                                .textTheme
+                                .titleMedium
+                                ?.copyWith(
+                                  fontWeight: FontWeight.w800,
+                                  color: AppTheme.darkPrimary,
+                                ),
+                          ),
+                          const SizedBox(height: 3),
+                          Text(
+                            a.subtitle,
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style:
+                                Theme.of(context).textTheme.bodySmall?.copyWith(
+                                      color: Colors.black.withAlpha(110),
+                                      fontWeight: FontWeight.w600,
+                                    ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(width: 8),
+                    Icon(Icons.chevron_right,
+                        color: Colors.black.withAlpha(90)),
+                  ],
+                ),
+              ),
+            );
+          },
+        );
+      },
+    );
+  }
+}
+
+class _QuickAction {
+  const _QuickAction({
+    required this.icon,
+    required this.title,
+    required this.subtitle,
+    required this.aiHint,
+  });
+
+  final IconData icon;
+  final String title;
+  final String subtitle;
+  final String aiHint;
+}
+
+// =============================== Header ===================================
+
+class _HeaderRow extends StatelessWidget {
+  const _HeaderRow({required this.subtitle, required this.rightBadge});
+  final String subtitle;
+  final Widget rightBadge;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Expanded(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Dashboard',
+                style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                      fontWeight: FontWeight.w900,
+                      color: AppTheme.darkPrimary,
+                    ),
+              ),
+              const SizedBox(height: 4),
+              Text(
+                subtitle,
+                style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                      color: Colors.black.withAlpha(120),
+                      fontWeight: FontWeight.w600,
+                    ),
+              ),
+            ],
+          ),
+        ),
+        const SizedBox(width: 12),
+        rightBadge,
+      ],
+    );
+  }
+}
+
+class _UserBadge extends StatelessWidget {
+  const _UserBadge({required this.username, required this.role});
+  final String username;
+  final String role;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(14),
+        color: AppTheme.primary.withAlpha(18),
+        border: Border.all(color: AppTheme.primary.withAlpha(50)),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            username,
+            style: Theme.of(context).textTheme.labelLarge?.copyWith(
+                  fontWeight: FontWeight.w900,
+                  color: AppTheme.darkPrimary,
+                ),
+          ),
+          const SizedBox(height: 2),
+          Text(
+            role,
+            style: Theme.of(context).textTheme.labelMedium?.copyWith(
+                  fontWeight: FontWeight.w700,
+                  color: AppTheme.primary,
+                ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+// =============================== Mini Stats ================================
+
+class _MiniStatsRow extends StatelessWidget {
+  const _MiniStatsRow({required this.opacity});
+  final Color Function(Color, double) opacity;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Expanded(
+          child: _MiniCard(
+            title: 'Today',
+            value: '—',
+            hint: 'Encounters',
+            opacity: opacity,
+            icon: Icons.today_outlined,
+          ),
+        ),
+        const SizedBox(width: 12),
+        Expanded(
+          child: _MiniCard(
+            title: 'Top Dx',
+            value: '—',
+            hint: 'Most common',
+            opacity: opacity,
+            icon: Icons.monitor_heart_outlined,
+          ),
+        ),
+        const SizedBox(width: 12),
+        Expanded(
+          child: _MiniCard(
+            title: 'Alerts',
+            value: '—',
+            hint: 'Flags',
+            opacity: opacity,
+            icon: Icons.warning_amber_rounded,
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+class _MiniCard extends StatelessWidget {
+  const _MiniCard({
+    required this.title,
+    required this.value,
+    required this.hint,
+    required this.opacity,
+    required this.icon,
+  });
+
+  final String title;
+  final String value;
+  final String hint;
+  final Color Function(Color, double) opacity;
+  final IconData icon;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.all(14),
+      decoration: BoxDecoration(
+        color: AppTheme.surface,
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: opacity(AppTheme.primary, 0.12)),
+      ),
+      child: Row(
+        children: [
+          Container(
+            height: 44,
+            width: 44,
+            decoration: BoxDecoration(
+              color: opacity(AppTheme.primary, 0.12),
+              borderRadius: BorderRadius.circular(14),
+            ),
+            child: Icon(icon, color: AppTheme.primary),
+          ),
+          const SizedBox(width: 10),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  title,
+                  style: Theme.of(context).textTheme.labelLarge?.copyWith(
+                        fontWeight: FontWeight.w900,
+                        color: AppTheme.darkPrimary,
+                      ),
+                ),
+                const SizedBox(height: 2),
+                Text(
+                  '$value  •  $hint',
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                        color: Colors.black.withAlpha(115),
+                        fontWeight: FontWeight.w600,
+                      ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _SessionGateCard extends StatelessWidget {
+  const _SessionGateCard({
+    required this.loading,
+    required this.error,
+    required this.active,
+    required this.unitsCount,
+    required this.onStartOrSwitch,
+    required this.onEnd,
+  });
+
+  final bool loading;
+  final String? error;
+  final SessionContext? active;
+  final int unitsCount;
+  final VoidCallback onStartOrSwitch;
+  final VoidCallback onEnd;
+
+  @override
+  Widget build(BuildContext context) {
+    final expiry = active?.expiresAt;
+
+    String fmt(DateTime d) => DateFormat('d MMM, HH:mm').format(d);
+
+    return Card(
+      elevation: 0,
+      color: AppTheme.surface,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(18),
+        side: BorderSide(color: _borderColor(context)),
+      ),
+      child: Padding(
+        padding: const EdgeInsets.all(14),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Row(
+              children: [
+                const Icon(Icons.local_hospital, size: 18),
+                const SizedBox(width: 8),
+                Text(
+                  'Session Context',
+                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                        fontWeight: FontWeight.w800,
+                        color: AppTheme.darkPrimary,
+                      ),
+                ),
+                const Spacer(),
+                if (active != null)
+                  Text(
+                    'Active',
+                    style: Theme.of(context).textTheme.labelMedium?.copyWith(
+                          fontWeight: FontWeight.w800,
+                          color: _successColor(context),
+                        ),
+                  ),
+              ],
+            ),
+            const SizedBox(height: 10),
+
+            if (loading)
+              const Padding(
+                padding: EdgeInsets.symmetric(vertical: 10),
+                child: Center(child: CircularProgressIndicator()),
+              )
+            else if (error != null)
+              Text(
+                'Session error: $error',
+                style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                      color: _dangerColor(context),
+                      fontWeight: FontWeight.w700,
+                    ),
+              )
+            else if (active == null) ...[
+              Text(
+                'No active session. Start a session to scope access (unit assignment) and prevent browsing.',
+                style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                      color: _mutedText(context),
+                    ),
+              ),
+              const SizedBox(height: 10),
+              ElevatedButton.icon(
+                onPressed: unitsCount == 0 ? null : onStartOrSwitch,
+                icon: const Icon(Icons.play_arrow),
+                label: Text(unitsCount == 0 ? 'No unit assigned' : 'Start Session'),
+              ),
+            ] else ...[
+              Text(
+                active!.unitName,
+                style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                      fontWeight: FontWeight.w900,
+                      color: AppTheme.darkPrimary,
+                    ),
+              ),
+              const SizedBox(height: 4),
+              Text(
+                expiry == null
+                    ? 'Expires: —'
+                    : 'Expires: ${fmt(expiry)}',
+                style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                      color: _mutedText(context),
+                      fontWeight: FontWeight.w600,
+                    ),
+              ),
+              const SizedBox(height: 12),
+              Row(
+                children: [
+                  Expanded(
+                    child: OutlinedButton.icon(
+                      onPressed: onStartOrSwitch,
+                      icon: const Icon(Icons.swap_horiz),
+                      label: const Text('Switch'),
+                    ),
+                  ),
+                  const SizedBox(width: 10),
+                  Expanded(
+                    child: OutlinedButton.icon(
+                      onPressed: onEnd,
+                      icon: const Icon(Icons.stop_circle),
+                      label: const Text('End'),
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ],
+        ),
+      ),
+    );
+  }
+}
+// ============================== ECG Grid ==================================
+
+class ECGGridPainter extends CustomPainter {
+  ECGGridPainter({required this.color});
+  final Color color;
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final paint = Paint()
+      ..color = color
+      ..strokeWidth = 1;
+
+    const grid = 20.0;
+    for (double x = 0; x < size.width; x += grid) {
+      canvas.drawLine(Offset(x, 0), Offset(x, size.height), paint);
+    }
+    for (double y = 0; y < size.height; y += grid) {
+      canvas.drawLine(Offset(0, y), Offset(size.width, y), paint);
+    }
+
+    final bold = Paint()
+      ..color = color.withAlpha((color.alpha * 1.6).clamp(0, 255).toInt())
+      ..strokeWidth = 2;
+
+    for (double x = 0; x < size.width; x += grid * 5) {
+      canvas.drawLine(Offset(x, 0), Offset(x, size.height), bold);
+    }
+    for (double y = 0; y < size.height; y += grid * 5) {
+      canvas.drawLine(Offset(0, y), Offset(size.width, y), bold);
+    }
+  }
+
+  @override
+  bool shouldRepaint(covariant CustomPainter oldDelegate) => false;
+}
+
+// ============================== Chat Model ================================
+
+enum _ChatRole { user, assistant }
+
+class _ChatMsg {
+  _ChatMsg({required this.role, required this.text, required this.at});
+  final _ChatRole role;
+  final String text;
+  final DateTime at;
+}
+</file>
+
+<file path="lib/ui/splash_screen.dart">
+import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:lottie/lottie.dart';
+import '../theme/app_theme.dart';
+
+class SplashScreen extends StatefulWidget {
+  const SplashScreen({super.key});
+
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> with TickerProviderStateMixin {
+  late final AnimationController _fadeController;
+  late final Animation<double> _fadeAnimation;
+
+  @override
+  void initState() {
+    super.initState();
+
+    _fadeController = AnimationController(
+      duration: const Duration(seconds: 2),
+      vsync: this,
+    );
+
+    _fadeAnimation = CurvedAnimation(
+      parent: _fadeController,
+      curve: Curves.easeIn,
+    );
+
+    _fadeController.forward();
+
+    // Navigate to login after 4 seconds (adjust as needed)
+    Future.delayed(const Duration(seconds: 4), () {
+      if (mounted) context.go('/login');
+    });
+  }
+
+  @override
+  void dispose() {
+    _fadeController.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: AppTheme.background,
+      body: Stack(
+        fit: StackFit.expand,
+        children: [
+          // Subtle ECG-inspired grid overlay (warm primary color)
+          CustomPaint(
+            painter: ECGGridPainter(),
+          ),
+
+          // Main content - centered branding (matches your deck cover slide)
+          Center(
+            child: FadeTransition(
+              opacity: _fadeAnimation,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  // Patek Mega Enterprise logo (replace with your actual asset)
+                  Image.asset(
+                    'assets/icons/patek_logo.png', // Add your "PM" heartbeat logo here
+                    width: 120,
+                  ),
+                  const SizedBox(height: 24),
+
+                  // PulseEdge title
+                  Text(
+                    'PulseEdge',
+                    style: Theme.of(context).textTheme.displayMedium?.copyWith(
+                          color: AppTheme.darkPrimary,
+                          fontWeight: FontWeight.bold,
+                        ),
+                  ),
+                  Text(
+                    'AI-Assisted Offline Clinical Operations',
+                    textAlign: TextAlign.center,
+                    style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                          color: AppTheme.primary,
+                          fontStyle: FontStyle.italic,
+                        ),
+                  ),
+                  const SizedBox(height: 48),
+
+                  // Tagline from deck
+                  Text(
+                    'Vital care at the edge',
+                    style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                          color: AppTheme.secondary,
+                        ),
+                  ),
+                  const SizedBox(height: 80),
+
+                  // Optional: Tablet mockup or feature icons (add your asset)
+                  // Image.asset('assets/icons/tablet_mockup.png', width: 200),
+                ],
+              ),
+            ),
+          ),
+
+          // Bottom: Powered by heartbeat animation
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Padding(
+              padding: const EdgeInsets.only(bottom: 48),
+              child: Lottie.asset(
+                'assets/animations/heartbeat.lottie.json',
+                width: 150,
+                delegates: LottieDelegates(
+                  values: [
+                    ValueDelegate.color(
+                      ['**'],
+                      value: AppTheme.primary, // Tint heartbeat to brand color
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+// Custom painter for subtle ECG grid background (matches deck's orange-red grid)
+class ECGGridPainter extends CustomPainter {
+  @override
+  void paint(Canvas canvas, Size size) {
+    final paint = Paint()
+      ..color = AppTheme.primary.withOpacity(0.08)
+      ..strokeWidth = 1.0;
+
+    final gridSize = 20.0;
+    for (double x = 0; x < size.width; x += gridSize) {
+      canvas.drawLine(Offset(x, 0), Offset(x, size.height), paint);
+    }
+    for (double y = 0; y < size.height; y += gridSize) {
+      canvas.drawLine(Offset(0, y), Offset(size.width, y), paint);
+    }
+
+    // Thicker lines every 5 grids (classic ECG paper style)
+    final boldPaint = Paint()
+      ..color = AppTheme.primary.withOpacity(0.15)
+      ..strokeWidth = 2.0;
+
+    for (double x = 0; x < size.width; x += gridSize * 5) {
+      canvas.drawLine(Offset(x, 0), Offset(x, size.height), boldPaint);
+    }
+    for (double y = 0; y < size.height; y += gridSize * 5) {
+      canvas.drawLine(Offset(0, y), Offset(size.width, y), boldPaint);
+    }
+  }
+
+  @override
+  bool shouldRepaint(covariant CustomPainter oldDelegate) => false;
+}
+</file>
+
+<file path="lib/utils/pdf_generator.dart">
+import 'dart:typed_data';
+import 'dart:ui' as ui;
+
+import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:pdf/pdf.dart';
+import 'package:pdf/widgets.dart' as pw;
+import 'package:printing/printing.dart';
+import 'package:qr_flutter/qr_flutter.dart';
+
+import '../core/database/app_database.dart';  // For Patient & Encounter types
+//import '../theme/app_theme.dart';
+
+/// Generates a patient-readable visit summary PDF with embedded QR code
+/// for seamless import into MyPulse (as per MVP decks: day-one benefit)
+Future<void> generatePatientSummary({
+  required BuildContext context,
+  required WidgetRef ref,
+  required Patient patient,
+  required Encounter encounter,
+  required List<Event> notes,  // Clinical notes (SOAP, etc.)
+  String shareUrl = 'https://mypulse.patek.xyz/import?encounter=',  // Placeholder secure link
+}) async {
+  final pdf = pw.Document();
+
+  // Capture QR code as image
+  final qrKey = GlobalKey();
+  final qrImage = await _captureQrCode(qrKey, '${shareUrl}${encounter.id}');
+
+  pdf.addPage(
+    pw.MultiPage(
+      pageFormat: PdfPageFormat.a4,
+      margin: const pw.EdgeInsets.all(40),
+      header: (context) => pw.Container(
+        alignment: pw.Alignment.centerLeft,
+        child: pw.Text(
+          'PulseEdge Visit Summary',
+          style: pw.TextStyle(
+            fontSize: 24,
+            fontWeight: pw.FontWeight.bold,
+            color: PdfColors.grey900,
+          ),
+        ),
+      ),
+      footer: (context) => pw.Container(
+        alignment: pw.Alignment.center,
+        child: pw.Text(
+          'Generated by PulseEdge • Patient-readable only • Page ${context.pageNumber} of ${context.pagesCount}',
+          style: const pw.TextStyle(fontSize: 10, color: PdfColors.grey600),
+        ),
+      ),
+      build: (context) => [
+        pw.Header(
+          level: 0,
+          child: pw.Row(
+            mainAxisAlignment: pw.MainAxisAlignment.spaceBetween,
+            children: [
+              pw.Column(
+                crossAxisAlignment: pw.CrossAxisAlignment.start,
+                children: [
+                  pw.Text('Patient: ${patient.fullName}', style: const pw.TextStyle(fontSize: 18)),
+                  pw.Text('Encounter Date: ${encounter.createdAt.toLocal().toString().substring(0, 10)}'),
+                  pw.Text('Unit: ${encounter.unitName} • Type: ${encounter.type}'),
+                ],
+              ),
+              if (qrImage != null)
+                pw.Image(pw.MemoryImage(qrImage), width: 120, height: 120),
+            ],
+          ),
+        ),
+        pw.SizedBox(height: 20),
+        pw.Divider(color: PdfColors.grey400),
+        pw.SizedBox(height: 20),
+
+        pw.Text(
+          'Your Visit Summary',
+          style: pw.TextStyle(fontSize: 20, fontWeight: pw.FontWeight.bold, color: PdfColors.grey800),
+        ),
+        pw.SizedBox(height: 12),
+        pw.Text(
+          'This is a simplified, patient-readable summary of your visit. '
+          'For full clinical details, consult your doctor. '
+          'Scan the QR code to import into MyPulse for your personal health timeline.',
+          style: const pw.TextStyle(fontSize: 14),
+        ),
+        pw.SizedBox(height: 20),
+
+        pw.Text('Clinical Notes', style: pw.TextStyle(fontSize: 16, fontWeight: pw.FontWeight.bold)),
+        pw.SizedBox(height: 8),
+        if (notes.isEmpty)
+          pw.Text('No notes recorded for this visit.')
+        else
+          ...notes.map((note) => pw.Column(
+                crossAxisAlignment: pw.CrossAxisAlignment.start,
+                children: [
+                  pw.Text(note.title, style: pw.TextStyle(fontWeight: pw.FontWeight.bold)),
+                  pw.Text(note.bodyText ?? ''),
+                  pw.SizedBox(height: 12),
+                ],
+              )),
+
+        pw.Spacer(),
+        pw.Container(
+          padding: const pw.EdgeInsets.all(16),
+          decoration: pw.BoxDecoration(
+            color: PdfColors.grey200,
+            borderRadius: pw.BorderRadius.circular(12),
+          ),
+          child: pw.Column(
+            children: [
+              pw.Text(
+                'Import to MyPulse',
+                style: pw.TextStyle(fontSize: 16, fontWeight: pw.FontWeight.bold),
+              ),
+              pw.SizedBox(height: 8),
+              pw.Text(
+                'Scan this QR code with the MyPulse app to securely add this visit to your personal health record.',
+                textAlign: pw.TextAlign.center,
+              ),
+            ],
+          ),
+        ),
+      ],
+    ),
+  );
+
+  // Share/print the PDF
+  await Printing.layoutPdf(
+    onLayout: (format) async => pdf.save(),
+    name: 'PulseEdge_Summary_${patient.fullName.replaceAll(' ', '_')}_${DateTime.now().toIso8601String().substring(0, 10)}.pdf',
+  );
+}
+
+/// Helper: Render QR code widget to image bytes
+Future<Uint8List?> _captureQrCode(GlobalKey key, String data) async {
+  try {
+    final boundary = key.currentContext!.findRenderObject() as RenderRepaintBoundary;
+    final image = await boundary.toImage(pixelRatio: 3.0);
+    final byteData = await image.toByteData(format: ui.ImageByteFormat.png);
+    return byteData?.buffer.asUint8List();
+  } catch (e) {
+    debugPrint('QR capture error: $e');
+    return null;
+  }
+}
+
+/// QR Code Widget (used internally for capture)
+class _QrCodeWidget extends StatelessWidget {
+  final String data;
+
+  const _QrCodeWidget({required this.data});
+
+  @override
+  Widget build(BuildContext context) {
+    return RepaintBoundary(
+      child: QrImageView(
+        data: data,
+        version: QrVersions.auto,
+        size: 200,
+        backgroundColor: Colors.white,
+        foregroundColor: const Color(0xFF755659),  // Your brand primary
+        errorCorrectionLevel: QrErrorCorrectLevel.H,
+        padding: const EdgeInsets.all(12),
+      ),
+    );
+  }
+}
+</file>
+
+<file path="lib/main-grok.dart">
+import 'dart:io';
+import 'package:flutter/material.dart';
+import 'package:drift/drift.dart'; // Add this
+import 'package:pulseedge_base/database/app_database.dart'; // Your DB file
+import 'package:speech_to_text/speech_to_text.dart' as stt;
+import 'package:permission_handler/permission_handler.dart';
+import 'package:intl/intl.dart';
+
+final db = AppDatabase.instance; // Singleton access
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await db.init(); // Seeds demo data if empty
+  await initLlm(); // Your existing LLM init
+  runApp(PulseEdgeApp());
+}
+
+// Your existing initLlm() here (unchanged)
+
+class PulseEdgeApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'PulseEdge Base (Drift DB)',
+      theme: ThemeData(primarySwatch: Colors.blue),
+      home: EncounterListScreen(),
+    );
+  }
+}
+
+class EncounterListScreen extends StatefulWidget {
+  @override
+  _EncounterListScreenState createState() => _EncounterListScreenState();
+}
+
+class _EncounterListScreenState extends State<EncounterListScreen> {
+  List<Encounter> encounters = [];
+
+  @override
+  void initState() {
+    super.initState();
+    loadEncounters();
+  }
+
+  Future<void> loadEncounters() async {
+    final results = await db.select(db.encounters).get();
+    setState(() => encounters = results);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text('PulseEdge Encounters (Offline - Drift)')),
+      body: encounters.isEmpty
+          ? Center(child: Text('No encounters. Tap + to start. (Demo unit/user seeded)'))
+          : ListView.builder(
+              itemCount: encounters.length,
+              itemBuilder: (context, index) {
+                final enc = encounters[index];
+                return ListTile(
+                  title: Text('Patient ID: ${enc.patientId} - ${enc.createdAt}'),
+                  subtitle: Text(enc.aiMetadata ?? 'Manual'),
+                );
+              },
+            ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => Navigator.push(
+          context,
+          MaterialPageRoute(builder: (_) => EncounterScreen(onSave: loadEncounters)),
+        ),
+        child: Icon(Icons.add),
+      ),
+    );
+  }
+}
+
+class EncounterScreen extends StatefulWidget {
+  final VoidCallback onSave;
+  EncounterScreen({required this.onSave});
+
+  @override
+  _EncounterScreenState createState() => _EncounterScreenState();
+}
+
+class _EncounterScreenState extends State<EncounterScreen> {
+  String patientId = 'demo-patient-1'; // In real: Search/create Patient first
+  String history = '', exam = '', treatment = '';
+  String aiMetadata = '';
+  bool isListening = false;
+  final stt.SpeechToText speech = stt.SpeechToText();
+
+  // Your existing _startVoiceAndDraft / _generateDraft (LLM) here
+
+  Future<void> saveEncounter() async {
+    final now = DateTime.now();
+    final encounterCompanion = EncountersCompanion.insert(
+      patientId: patientId,
+      status: 'open',
+      startAt: now,
+      createdAt: now,
+      updatedAt: now,
+      aiMetadata: Value(aiMetadata.isEmpty ? null : aiMetadata),
+    );
+    await db.into(db.encounters).insert(encounterCompanion);
+
+    // Future: Insert Events for notes (history/exam/treatment as separate Events)
+    widget.onSave();
+    Navigator.pop(context);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text('New Offline Encounter')),
+      body: Padding(
+        padding: EdgeInsets.all(16),
+        child: ListView(
+          children: [
+            Text('Patient ID: $patientId (Future: Patient search/create)'),
+            // Your TextFormFields + voice buttons + AI draft
+            // ...
+            ElevatedButton(onPressed: saveEncounter, child: Text('Save Offline (Drift)')),
+          ],
+        ),
+      ),
+    );
+  }
+}
+</file>
+
+<file path="lib/main.dart">
+// lib/main.dart
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
+import 'package:lottie/lottie.dart';
+
+import 'theme/app_theme.dart';
+import 'core/app_bootstrap.dart';
+import 'ui/login/login_screen.dart';
+import 'ui/login/unit_select_screen.dart';
+import 'ui/home_screen.dart';
+
+final GoRouter _router = GoRouter(
+  initialLocation: '/',
+  routes: [
+    GoRoute(path: '/', builder: (context, state) => const SplashScreen()),
+    GoRoute(path: '/login', builder: (context, state) => const LoginScreen()),
+    GoRoute(path: '/home', builder: (context, state) => const HomeScreen()),
+    GoRoute(path: '/unit/select', builder: (context, state) => const UnitSelectScreen()),
+  ],
+);
+
+void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  runApp(
+    const ProviderScope(
+      child: AppBootstrapGate(
+        child: PulseEdgeApp(),
+      ),
+    ),
+  );
+}
+
+class PulseEdgeApp extends StatelessWidget {
+  const PulseEdgeApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp.router(
+      title: 'PulseEdge',
+      theme: AppTheme.lightTheme,
+      darkTheme: AppTheme.darkTheme,
+      routerConfig: _router,
+      debugShowCheckedModeBanner: false,
+    );
+  }
+}
+
+class SplashScreen extends StatefulWidget {
+  const SplashScreen({super.key});
+
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> with TickerProviderStateMixin {
+  late final AnimationController _fadeController;
+  late final Animation<double> _fadeAnimation;
+
+  @override
+  void initState() {
+    super.initState();
+
+    _fadeController = AnimationController(
+      duration: const Duration(seconds: 2),
+      vsync: this,
+    );
+
+    _fadeAnimation = CurvedAnimation(
+      parent: _fadeController,
+      curve: Curves.easeIn,
+    );
+
+    _fadeController.forward();
+
+    Future.delayed(const Duration(seconds: 5), () {
+      if (mounted) context.go('/login');
+    });
+  }
+
+  @override
+  void dispose() {
+    _fadeController.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: AppTheme.background,
+      body: Stack(
+        fit: StackFit.expand,
+        children: [
+          CustomPaint(painter: ECGGridPainter()),
+
+          Center(
+            child: FadeTransition(
+              opacity: _fadeAnimation,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset('assets/icons/patek_logo.png', width: 100),
+                  const SizedBox(height: 40),
+                  Image.asset('assets/icons/pulseedge_logo_black.png', width: 220),
+                  const SizedBox(height: 16),
+                  Text(
+                    'Vital care at the edge',
+                    style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                          color: AppTheme.primary,
+                          fontStyle: FontStyle.italic,
+                          fontWeight: FontWeight.w500,
+                        ),
+                  ),
+                  const SizedBox(height: 60),
+                  Text(
+                    'AI-Assisted Offline Clinical Operations',
+                    textAlign: TextAlign.center,
+                    style: Theme.of(context).textTheme.titleMedium?.copyWith(color: AppTheme.darkPrimary),
+                  ),
+                ],
+              ),
+            ),
+          ),
+
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Padding(
+              padding: const EdgeInsets.only(bottom: 60),
+              child: Lottie.asset(
+                'assets/animations/heartbeat.lottie.json',
+                width: 180,
+                repeat: true,
+                delegates: LottieDelegates(
+                  values: [
+                    ValueDelegate.color(['**'], value: AppTheme.primary),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class ECGGridPainter extends CustomPainter {
+  @override
+  void paint(Canvas canvas, Size size) {
+    final paint = Paint()
+      ..color = AppTheme.primary.withOpacity(0.08)
+      ..strokeWidth = 1.0;
+
+    const gridSize = 20.0;
+    for (double x = 0; x < size.width; x += gridSize) {
+      canvas.drawLine(Offset(x, 0), Offset(x, size.height), paint);
+    }
+    for (double y = 0; y < size.height; y += gridSize) {
+      canvas.drawLine(Offset(0, y), Offset(size.width, y), paint);
+    }
+
+    final boldPaint = Paint()
+      ..color = AppTheme.primary.withOpacity(0.15)
+      ..strokeWidth = 2.0;
+
+    for (double x = 0; x < size.width; x += gridSize * 5) {
+      canvas.drawLine(Offset(x, 0), Offset(x, size.height), boldPaint);
+    }
+    for (double y = 0; y < size.height; y += gridSize * 5) {
+      canvas.drawLine(Offset(0, y), Offset(size.width, y), boldPaint);
+    }
+  }
+
+  @override
+  bool shouldRepaint(covariant CustomPainter oldDelegate) => false;
+}
+</file>
+
+<file path="linux/flutter/CMakeLists.txt">
+# This file controls Flutter-level build steps. It should not be edited.
+cmake_minimum_required(VERSION 3.10)
+
+set(EPHEMERAL_DIR "${CMAKE_CURRENT_SOURCE_DIR}/ephemeral")
+
+# Configuration provided via flutter tool.
+include(${EPHEMERAL_DIR}/generated_config.cmake)
+
+# TODO: Move the rest of this into files in ephemeral. See
+# https://github.com/flutter/flutter/issues/57146.
+
+# Serves the same purpose as list(TRANSFORM ... PREPEND ...),
+# which isn't available in 3.10.
+function(list_prepend LIST_NAME PREFIX)
+    set(NEW_LIST "")
+    foreach(element ${${LIST_NAME}})
+        list(APPEND NEW_LIST "${PREFIX}${element}")
+    endforeach(element)
+    set(${LIST_NAME} "${NEW_LIST}" PARENT_SCOPE)
+endfunction()
+
+# === Flutter Library ===
+# System-level dependencies.
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(GTK REQUIRED IMPORTED_TARGET gtk+-3.0)
+pkg_check_modules(GLIB REQUIRED IMPORTED_TARGET glib-2.0)
+pkg_check_modules(GIO REQUIRED IMPORTED_TARGET gio-2.0)
+
+set(FLUTTER_LIBRARY "${EPHEMERAL_DIR}/libflutter_linux_gtk.so")
+
+# Published to parent scope for install step.
+set(FLUTTER_LIBRARY ${FLUTTER_LIBRARY} PARENT_SCOPE)
+set(FLUTTER_ICU_DATA_FILE "${EPHEMERAL_DIR}/icudtl.dat" PARENT_SCOPE)
+set(PROJECT_BUILD_DIR "${PROJECT_DIR}/build/" PARENT_SCOPE)
+set(AOT_LIBRARY "${PROJECT_DIR}/build/lib/libapp.so" PARENT_SCOPE)
+
+list(APPEND FLUTTER_LIBRARY_HEADERS
+  "fl_basic_message_channel.h"
+  "fl_binary_codec.h"
+  "fl_binary_messenger.h"
+  "fl_dart_project.h"
+  "fl_engine.h"
+  "fl_json_message_codec.h"
+  "fl_json_method_codec.h"
+  "fl_message_codec.h"
+  "fl_method_call.h"
+  "fl_method_channel.h"
+  "fl_method_codec.h"
+  "fl_method_response.h"
+  "fl_plugin_registrar.h"
+  "fl_plugin_registry.h"
+  "fl_standard_message_codec.h"
+  "fl_standard_method_codec.h"
+  "fl_string_codec.h"
+  "fl_value.h"
+  "fl_view.h"
+  "flutter_linux.h"
+)
+list_prepend(FLUTTER_LIBRARY_HEADERS "${EPHEMERAL_DIR}/flutter_linux/")
+add_library(flutter INTERFACE)
+target_include_directories(flutter INTERFACE
+  "${EPHEMERAL_DIR}"
+)
+target_link_libraries(flutter INTERFACE "${FLUTTER_LIBRARY}")
+target_link_libraries(flutter INTERFACE
+  PkgConfig::GTK
+  PkgConfig::GLIB
+  PkgConfig::GIO
+)
+add_dependencies(flutter flutter_assemble)
+
+# === Flutter tool backend ===
+# _phony_ is a non-existent file to force this command to run every time,
+# since currently there's no way to get a full input/output list from the
+# flutter tool.
+add_custom_command(
+  OUTPUT ${FLUTTER_LIBRARY} ${FLUTTER_LIBRARY_HEADERS}
+    ${CMAKE_CURRENT_BINARY_DIR}/_phony_
+  COMMAND ${CMAKE_COMMAND} -E env
+    ${FLUTTER_TOOL_ENVIRONMENT}
+    "${FLUTTER_ROOT}/packages/flutter_tools/bin/tool_backend.sh"
+      ${FLUTTER_TARGET_PLATFORM} ${CMAKE_BUILD_TYPE}
+  VERBATIM
+)
+add_custom_target(flutter_assemble DEPENDS
+  "${FLUTTER_LIBRARY}"
+  ${FLUTTER_LIBRARY_HEADERS}
+)
+</file>
+
+<file path="linux/flutter/generated_plugin_registrant.cc">
+//
+//  Generated file. Do not edit.
+//
+
+// clang-format off
+
+#include "generated_plugin_registrant.h"
+
+#include <flutter_secure_storage_linux/flutter_secure_storage_linux_plugin.h>
+#include <printing/printing_plugin.h>
+#include <sqlite3_flutter_libs/sqlite3_flutter_libs_plugin.h>
+
+void fl_register_plugins(FlPluginRegistry* registry) {
+  g_autoptr(FlPluginRegistrar) flutter_secure_storage_linux_registrar =
+      fl_plugin_registry_get_registrar_for_plugin(registry, "FlutterSecureStorageLinuxPlugin");
+  flutter_secure_storage_linux_plugin_register_with_registrar(flutter_secure_storage_linux_registrar);
+  g_autoptr(FlPluginRegistrar) printing_registrar =
+      fl_plugin_registry_get_registrar_for_plugin(registry, "PrintingPlugin");
+  printing_plugin_register_with_registrar(printing_registrar);
+  g_autoptr(FlPluginRegistrar) sqlite3_flutter_libs_registrar =
+      fl_plugin_registry_get_registrar_for_plugin(registry, "Sqlite3FlutterLibsPlugin");
+  sqlite3_flutter_libs_plugin_register_with_registrar(sqlite3_flutter_libs_registrar);
+}
+</file>
+
+<file path="linux/flutter/generated_plugin_registrant.h">
+//
+//  Generated file. Do not edit.
+//
+
+// clang-format off
+
+#ifndef GENERATED_PLUGIN_REGISTRANT_
+#define GENERATED_PLUGIN_REGISTRANT_
+
+#include <flutter_linux/flutter_linux.h>
+
+// Registers Flutter plugins.
+void fl_register_plugins(FlPluginRegistry* registry);
+
+#endif  // GENERATED_PLUGIN_REGISTRANT_
+</file>
+
+<file path="linux/flutter/generated_plugins.cmake">
+#
+# Generated file, do not edit.
+#
+
+list(APPEND FLUTTER_PLUGIN_LIST
+  flutter_secure_storage_linux
+  printing
+  sqlite3_flutter_libs
+)
+
+list(APPEND FLUTTER_FFI_PLUGIN_LIST
+)
+
+set(PLUGIN_BUNDLED_LIBRARIES)
+
+foreach(plugin ${FLUTTER_PLUGIN_LIST})
+  add_subdirectory(flutter/ephemeral/.plugin_symlinks/${plugin}/linux plugins/${plugin})
+  target_link_libraries(${BINARY_NAME} PRIVATE ${plugin}_plugin)
+  list(APPEND PLUGIN_BUNDLED_LIBRARIES $<TARGET_FILE:${plugin}_plugin>)
+  list(APPEND PLUGIN_BUNDLED_LIBRARIES ${${plugin}_bundled_libraries})
+endforeach(plugin)
+
+foreach(ffi_plugin ${FLUTTER_FFI_PLUGIN_LIST})
+  add_subdirectory(flutter/ephemeral/.plugin_symlinks/${ffi_plugin}/linux plugins/${ffi_plugin})
+  list(APPEND PLUGIN_BUNDLED_LIBRARIES ${${ffi_plugin}_bundled_libraries})
+endforeach(ffi_plugin)
+</file>
+
+<file path="linux/runner/CMakeLists.txt">
+cmake_minimum_required(VERSION 3.13)
+project(runner LANGUAGES CXX)
+
+# Define the application target. To change its name, change BINARY_NAME in the
+# top-level CMakeLists.txt, not the value here, or `flutter run` will no longer
+# work.
+#
+# Any new source files that you add to the application should be added here.
+add_executable(${BINARY_NAME}
+  "main.cc"
+  "my_application.cc"
+  "${FLUTTER_MANAGED_DIR}/generated_plugin_registrant.cc"
+)
+
+# Apply the standard set of build settings. This can be removed for applications
+# that need different build settings.
+apply_standard_settings(${BINARY_NAME})
+
+# Add preprocessor definitions for the application ID.
+add_definitions(-DAPPLICATION_ID="${APPLICATION_ID}")
+
+# Add dependency libraries. Add any application-specific dependencies here.
+target_link_libraries(${BINARY_NAME} PRIVATE flutter)
+target_link_libraries(${BINARY_NAME} PRIVATE PkgConfig::GTK)
+
+target_include_directories(${BINARY_NAME} PRIVATE "${CMAKE_SOURCE_DIR}")
+</file>
+
+<file path="linux/runner/main.cc">
+#include "my_application.h"
+
+int main(int argc, char** argv) {
+  g_autoptr(MyApplication) app = my_application_new();
+  return g_application_run(G_APPLICATION(app), argc, argv);
+}
+</file>
+
+<file path="linux/runner/my_application.cc">
+#include "my_application.h"
+
+#include <flutter_linux/flutter_linux.h>
+#ifdef GDK_WINDOWING_X11
+#include <gdk/gdkx.h>
+#endif
+
+#include "flutter/generated_plugin_registrant.h"
+
+struct _MyApplication {
+  GtkApplication parent_instance;
+  char** dart_entrypoint_arguments;
+};
+
+G_DEFINE_TYPE(MyApplication, my_application, GTK_TYPE_APPLICATION)
+
+// Called when first Flutter frame received.
+static void first_frame_cb(MyApplication* self, FlView* view) {
+  gtk_widget_show(gtk_widget_get_toplevel(GTK_WIDGET(view)));
+}
+
+// Implements GApplication::activate.
+static void my_application_activate(GApplication* application) {
+  MyApplication* self = MY_APPLICATION(application);
+  GtkWindow* window =
+      GTK_WINDOW(gtk_application_window_new(GTK_APPLICATION(application)));
+
+  // Use a header bar when running in GNOME as this is the common style used
+  // by applications and is the setup most users will be using (e.g. Ubuntu
+  // desktop).
+  // If running on X and not using GNOME then just use a traditional title bar
+  // in case the window manager does more exotic layout, e.g. tiling.
+  // If running on Wayland assume the header bar will work (may need changing
+  // if future cases occur).
+  gboolean use_header_bar = TRUE;
+#ifdef GDK_WINDOWING_X11
+  GdkScreen* screen = gtk_window_get_screen(window);
+  if (GDK_IS_X11_SCREEN(screen)) {
+    const gchar* wm_name = gdk_x11_screen_get_window_manager_name(screen);
+    if (g_strcmp0(wm_name, "GNOME Shell") != 0) {
+      use_header_bar = FALSE;
+    }
+  }
+#endif
+  if (use_header_bar) {
+    GtkHeaderBar* header_bar = GTK_HEADER_BAR(gtk_header_bar_new());
+    gtk_widget_show(GTK_WIDGET(header_bar));
+    gtk_header_bar_set_title(header_bar, "pulseedge");
+    gtk_header_bar_set_show_close_button(header_bar, TRUE);
+    gtk_window_set_titlebar(window, GTK_WIDGET(header_bar));
+  } else {
+    gtk_window_set_title(window, "pulseedge");
+  }
+
+  gtk_window_set_default_size(window, 1280, 720);
+
+  g_autoptr(FlDartProject) project = fl_dart_project_new();
+  fl_dart_project_set_dart_entrypoint_arguments(
+      project, self->dart_entrypoint_arguments);
+
+  FlView* view = fl_view_new(project);
+  GdkRGBA background_color;
+  // Background defaults to black, override it here if necessary, e.g. #00000000
+  // for transparent.
+  gdk_rgba_parse(&background_color, "#000000");
+  fl_view_set_background_color(view, &background_color);
+  gtk_widget_show(GTK_WIDGET(view));
+  gtk_container_add(GTK_CONTAINER(window), GTK_WIDGET(view));
+
+  // Show the window when Flutter renders.
+  // Requires the view to be realized so we can start rendering.
+  g_signal_connect_swapped(view, "first-frame", G_CALLBACK(first_frame_cb),
+                           self);
+  gtk_widget_realize(GTK_WIDGET(view));
+
+  fl_register_plugins(FL_PLUGIN_REGISTRY(view));
+
+  gtk_widget_grab_focus(GTK_WIDGET(view));
+}
+
+// Implements GApplication::local_command_line.
+static gboolean my_application_local_command_line(GApplication* application,
+                                                  gchar*** arguments,
+                                                  int* exit_status) {
+  MyApplication* self = MY_APPLICATION(application);
+  // Strip out the first argument as it is the binary name.
+  self->dart_entrypoint_arguments = g_strdupv(*arguments + 1);
+
+  g_autoptr(GError) error = nullptr;
+  if (!g_application_register(application, nullptr, &error)) {
+    g_warning("Failed to register: %s", error->message);
+    *exit_status = 1;
+    return TRUE;
+  }
+
+  g_application_activate(application);
+  *exit_status = 0;
+
+  return TRUE;
+}
+
+// Implements GApplication::startup.
+static void my_application_startup(GApplication* application) {
+  // MyApplication* self = MY_APPLICATION(object);
+
+  // Perform any actions required at application startup.
+
+  G_APPLICATION_CLASS(my_application_parent_class)->startup(application);
+}
+
+// Implements GApplication::shutdown.
+static void my_application_shutdown(GApplication* application) {
+  // MyApplication* self = MY_APPLICATION(object);
+
+  // Perform any actions required at application shutdown.
+
+  G_APPLICATION_CLASS(my_application_parent_class)->shutdown(application);
+}
+
+// Implements GObject::dispose.
+static void my_application_dispose(GObject* object) {
+  MyApplication* self = MY_APPLICATION(object);
+  g_clear_pointer(&self->dart_entrypoint_arguments, g_strfreev);
+  G_OBJECT_CLASS(my_application_parent_class)->dispose(object);
+}
+
+static void my_application_class_init(MyApplicationClass* klass) {
+  G_APPLICATION_CLASS(klass)->activate = my_application_activate;
+  G_APPLICATION_CLASS(klass)->local_command_line =
+      my_application_local_command_line;
+  G_APPLICATION_CLASS(klass)->startup = my_application_startup;
+  G_APPLICATION_CLASS(klass)->shutdown = my_application_shutdown;
+  G_OBJECT_CLASS(klass)->dispose = my_application_dispose;
+}
+
+static void my_application_init(MyApplication* self) {}
+
+MyApplication* my_application_new() {
+  // Set the program name to the application ID, which helps various systems
+  // like GTK and desktop environments map this running application to its
+  // corresponding .desktop file. This ensures better integration by allowing
+  // the application to be recognized beyond its binary name.
+  g_set_prgname(APPLICATION_ID);
+
+  return MY_APPLICATION(g_object_new(my_application_get_type(),
+                                     "application-id", APPLICATION_ID, "flags",
+                                     G_APPLICATION_NON_UNIQUE, nullptr));
+}
+</file>
+
+<file path="linux/runner/my_application.h">
+#ifndef FLUTTER_MY_APPLICATION_H_
+#define FLUTTER_MY_APPLICATION_H_
+
+#include <gtk/gtk.h>
+
+G_DECLARE_FINAL_TYPE(MyApplication,
+                     my_application,
+                     MY,
+                     APPLICATION,
+                     GtkApplication)
+
+/**
+ * my_application_new:
+ *
+ * Creates a new Flutter-based application.
+ *
+ * Returns: a new #MyApplication.
+ */
+MyApplication* my_application_new();
+
+#endif  // FLUTTER_MY_APPLICATION_H_
+</file>
+
+<file path="linux/.gitignore">
+flutter/ephemeral
+</file>
+
+<file path="linux/CMakeLists.txt">
+# Project-level configuration.
+cmake_minimum_required(VERSION 3.13)
+project(runner LANGUAGES CXX)
+
+# The name of the executable created for the application. Change this to change
+# the on-disk name of your application.
+set(BINARY_NAME "pulseedge")
+# The unique GTK application identifier for this application. See:
+# https://wiki.gnome.org/HowDoI/ChooseApplicationID
+set(APPLICATION_ID "com.example.pulseedge")
+
+# Explicitly opt in to modern CMake behaviors to avoid warnings with recent
+# versions of CMake.
+cmake_policy(SET CMP0063 NEW)
+
+# Load bundled libraries from the lib/ directory relative to the binary.
+set(CMAKE_INSTALL_RPATH "$ORIGIN/lib")
+
+# Root filesystem for cross-building.
+if(FLUTTER_TARGET_PLATFORM_SYSROOT)
+  set(CMAKE_SYSROOT ${FLUTTER_TARGET_PLATFORM_SYSROOT})
+  set(CMAKE_FIND_ROOT_PATH ${CMAKE_SYSROOT})
+  set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)
+  set(CMAKE_FIND_ROOT_PATH_MODE_PACKAGE ONLY)
+  set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
+  set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
+endif()
+
+# Define build configuration options.
+if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
+  set(CMAKE_BUILD_TYPE "Debug" CACHE
+    STRING "Flutter build mode" FORCE)
+  set_property(CACHE CMAKE_BUILD_TYPE PROPERTY STRINGS
+    "Debug" "Profile" "Release")
+endif()
+
+# Compilation settings that should be applied to most targets.
+#
+# Be cautious about adding new options here, as plugins use this function by
+# default. In most cases, you should add new options to specific targets instead
+# of modifying this function.
+function(APPLY_STANDARD_SETTINGS TARGET)
+  target_compile_features(${TARGET} PUBLIC cxx_std_14)
+  target_compile_options(${TARGET} PRIVATE -Wall -Werror)
+  target_compile_options(${TARGET} PRIVATE "$<$<NOT:$<CONFIG:Debug>>:-O3>")
+  target_compile_definitions(${TARGET} PRIVATE "$<$<NOT:$<CONFIG:Debug>>:NDEBUG>")
+endfunction()
+
+# Flutter library and tool build rules.
+set(FLUTTER_MANAGED_DIR "${CMAKE_CURRENT_SOURCE_DIR}/flutter")
+add_subdirectory(${FLUTTER_MANAGED_DIR})
+
+# System-level dependencies.
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(GTK REQUIRED IMPORTED_TARGET gtk+-3.0)
+
+# Application build; see runner/CMakeLists.txt.
+add_subdirectory("runner")
+
+# Run the Flutter tool portions of the build. This must not be removed.
+add_dependencies(${BINARY_NAME} flutter_assemble)
+
+# Only the install-generated bundle's copy of the executable will launch
+# correctly, since the resources must in the right relative locations. To avoid
+# people trying to run the unbundled copy, put it in a subdirectory instead of
+# the default top-level location.
+set_target_properties(${BINARY_NAME}
+  PROPERTIES
+  RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/intermediates_do_not_run"
+)
+
+
+# Generated plugin build rules, which manage building the plugins and adding
+# them to the application.
+include(flutter/generated_plugins.cmake)
+
+
+# === Installation ===
+# By default, "installing" just makes a relocatable bundle in the build
+# directory.
+set(BUILD_BUNDLE_DIR "${PROJECT_BINARY_DIR}/bundle")
+if(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
+  set(CMAKE_INSTALL_PREFIX "${BUILD_BUNDLE_DIR}" CACHE PATH "..." FORCE)
+endif()
+
+# Start with a clean build bundle directory every time.
+install(CODE "
+  file(REMOVE_RECURSE \"${BUILD_BUNDLE_DIR}/\")
+  " COMPONENT Runtime)
+
+set(INSTALL_BUNDLE_DATA_DIR "${CMAKE_INSTALL_PREFIX}/data")
+set(INSTALL_BUNDLE_LIB_DIR "${CMAKE_INSTALL_PREFIX}/lib")
+
+install(TARGETS ${BINARY_NAME} RUNTIME DESTINATION "${CMAKE_INSTALL_PREFIX}"
+  COMPONENT Runtime)
+
+install(FILES "${FLUTTER_ICU_DATA_FILE}" DESTINATION "${INSTALL_BUNDLE_DATA_DIR}"
+  COMPONENT Runtime)
+
+install(FILES "${FLUTTER_LIBRARY}" DESTINATION "${INSTALL_BUNDLE_LIB_DIR}"
+  COMPONENT Runtime)
+
+foreach(bundled_library ${PLUGIN_BUNDLED_LIBRARIES})
+  install(FILES "${bundled_library}"
+    DESTINATION "${INSTALL_BUNDLE_LIB_DIR}"
+    COMPONENT Runtime)
+endforeach(bundled_library)
+
+# Copy the native assets provided by the build.dart from all packages.
+set(NATIVE_ASSETS_DIR "${PROJECT_BUILD_DIR}native_assets/linux/")
+install(DIRECTORY "${NATIVE_ASSETS_DIR}"
+   DESTINATION "${INSTALL_BUNDLE_LIB_DIR}"
+   COMPONENT Runtime)
+
+# Fully re-copy the assets directory on each build to avoid having stale files
+# from a previous install.
+set(FLUTTER_ASSET_DIR_NAME "flutter_assets")
+install(CODE "
+  file(REMOVE_RECURSE \"${INSTALL_BUNDLE_DATA_DIR}/${FLUTTER_ASSET_DIR_NAME}\")
+  " COMPONENT Runtime)
+install(DIRECTORY "${PROJECT_BUILD_DIR}/${FLUTTER_ASSET_DIR_NAME}"
+  DESTINATION "${INSTALL_BUNDLE_DATA_DIR}" COMPONENT Runtime)
+
+# Install the AOT library on non-Debug builds only.
+if(NOT CMAKE_BUILD_TYPE MATCHES "Debug")
+  install(FILES "${AOT_LIBRARY}" DESTINATION "${INSTALL_BUNDLE_LIB_DIR}"
+    COMPONENT Runtime)
+endif()
+</file>
+
+<file path="macos/Flutter/Flutter-Debug.xcconfig">
+#include? "Pods/Target Support Files/Pods-Runner/Pods-Runner.debug.xcconfig"
+#include "ephemeral/Flutter-Generated.xcconfig"
+</file>
+
+<file path="macos/Flutter/Flutter-Release.xcconfig">
+#include? "Pods/Target Support Files/Pods-Runner/Pods-Runner.release.xcconfig"
+#include "ephemeral/Flutter-Generated.xcconfig"
+</file>
+
+<file path="macos/Flutter/GeneratedPluginRegistrant.swift">
+//
+//  Generated file. Do not edit.
+//
+
+import FlutterMacOS
+import Foundation
+
+import connectivity_plus
+import file_picker
+import flutter_secure_storage_macos
+import printing
+import shared_preferences_foundation
+import speech_to_text
+import sqlite3_flutter_libs
+
+func RegisterGeneratedPlugins(registry: FlutterPluginRegistry) {
+  ConnectivityPlusPlugin.register(with: registry.registrar(forPlugin: "ConnectivityPlusPlugin"))
+  FilePickerPlugin.register(with: registry.registrar(forPlugin: "FilePickerPlugin"))
+  FlutterSecureStoragePlugin.register(with: registry.registrar(forPlugin: "FlutterSecureStoragePlugin"))
+  PrintingPlugin.register(with: registry.registrar(forPlugin: "PrintingPlugin"))
+  SharedPreferencesPlugin.register(with: registry.registrar(forPlugin: "SharedPreferencesPlugin"))
+  SpeechToTextPlugin.register(with: registry.registrar(forPlugin: "SpeechToTextPlugin"))
+  Sqlite3FlutterLibsPlugin.register(with: registry.registrar(forPlugin: "Sqlite3FlutterLibsPlugin"))
+}
+</file>
+
+<file path="macos/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json">
+{
+  "images" : [
+    {
+      "size" : "16x16",
+      "idiom" : "mac",
+      "filename" : "app_icon_16.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "16x16",
+      "idiom" : "mac",
+      "filename" : "app_icon_32.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "32x32",
+      "idiom" : "mac",
+      "filename" : "app_icon_32.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "32x32",
+      "idiom" : "mac",
+      "filename" : "app_icon_64.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "128x128",
+      "idiom" : "mac",
+      "filename" : "app_icon_128.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "128x128",
+      "idiom" : "mac",
+      "filename" : "app_icon_256.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "256x256",
+      "idiom" : "mac",
+      "filename" : "app_icon_256.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "256x256",
+      "idiom" : "mac",
+      "filename" : "app_icon_512.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "512x512",
+      "idiom" : "mac",
+      "filename" : "app_icon_512.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "512x512",
+      "idiom" : "mac",
+      "filename" : "app_icon_1024.png",
+      "scale" : "2x"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}
+</file>
+
+<file path="macos/Runner/Base.lproj/MainMenu.xib">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="Voe-Tx-rLC" id="GzC-gU-4Uq"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Runner" customModuleProvider="target">
+            <connections>
+                <outlet property="applicationMenu" destination="uQy-DD-JDr" id="XBo-yE-nKs"/>
+                <outlet property="mainFlutterWindow" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
+            </connections>
+        </customObject>
+        <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+        <menu title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
+            <items>
+                <menuItem title="APP_NAME" id="1Xt-HY-uBw">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="APP_NAME" systemMenu="apple" id="uQy-DD-JDr">
+                        <items>
+                            <menuItem title="About APP_NAME" id="5kV-Vb-QxS">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="orderFrontStandardAboutPanel:" target="-1" id="Exp-CZ-Vem"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
+                            <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW"/>
+                            <menuItem isSeparatorItem="YES" id="wFC-TO-SCJ"/>
+                            <menuItem title="Services" id="NMo-om-nkz">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
+                            <menuItem title="Hide APP_NAME" keyEquivalent="h" id="Olw-nP-bQN">
+                                <connections>
+                                    <action selector="hide:" target="-1" id="PnN-Uc-m68"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Hide Others" keyEquivalent="h" id="Vdr-fp-XzO">
+                                <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                <connections>
+                                    <action selector="hideOtherApplications:" target="-1" id="VT4-aY-XCT"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Show All" id="Kd2-mp-pUS">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="unhideAllApplications:" target="-1" id="Dhg-Le-xox"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
+                            <menuItem title="Quit APP_NAME" keyEquivalent="q" id="4sb-4s-VLi">
+                                <connections>
+                                    <action selector="terminate:" target="-1" id="Te7-pn-YzF"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Edit" id="5QF-Oa-p0T">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Edit" id="W48-6f-4Dl">
+                        <items>
+                            <menuItem title="Undo" keyEquivalent="z" id="dRJ-4n-Yzg">
+                                <connections>
+                                    <action selector="undo:" target="-1" id="M6e-cu-g7V"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Redo" keyEquivalent="Z" id="6dh-zS-Vam">
+                                <connections>
+                                    <action selector="redo:" target="-1" id="oIA-Rs-6OD"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="WRV-NI-Exz"/>
+                            <menuItem title="Cut" keyEquivalent="x" id="uRl-iY-unG">
+                                <connections>
+                                    <action selector="cut:" target="-1" id="YJe-68-I9s"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Copy" keyEquivalent="c" id="x3v-GG-iWU">
+                                <connections>
+                                    <action selector="copy:" target="-1" id="G1f-GL-Joy"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Paste" keyEquivalent="v" id="gVA-U4-sdL">
+                                <connections>
+                                    <action selector="paste:" target="-1" id="UvS-8e-Qdg"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Paste and Match Style" keyEquivalent="V" id="WeT-3V-zwk">
+                                <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                <connections>
+                                    <action selector="pasteAsPlainText:" target="-1" id="cEh-KX-wJQ"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Delete" id="pa3-QI-u2k">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="delete:" target="-1" id="0Mk-Ml-PaM"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Select All" keyEquivalent="a" id="Ruw-6m-B2m">
+                                <connections>
+                                    <action selector="selectAll:" target="-1" id="VNm-Mi-diN"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="uyl-h8-XO2"/>
+                            <menuItem title="Find" id="4EN-yA-p0u">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Find" id="1b7-l0-nxx">
+                                    <items>
+                                        <menuItem title="Find…" tag="1" keyEquivalent="f" id="Xz5-n4-O0W">
+                                            <connections>
+                                                <action selector="performFindPanelAction:" target="-1" id="cD7-Qs-BN4"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Find and Replace…" tag="12" keyEquivalent="f" id="YEy-JH-Tfz">
+                                            <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                            <connections>
+                                                <action selector="performFindPanelAction:" target="-1" id="WD3-Gg-5AJ"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Find Next" tag="2" keyEquivalent="g" id="q09-fT-Sye">
+                                            <connections>
+                                                <action selector="performFindPanelAction:" target="-1" id="NDo-RZ-v9R"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Find Previous" tag="3" keyEquivalent="G" id="OwM-mh-QMV">
+                                            <connections>
+                                                <action selector="performFindPanelAction:" target="-1" id="HOh-sY-3ay"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Use Selection for Find" tag="7" keyEquivalent="e" id="buJ-ug-pKt">
+                                            <connections>
+                                                <action selector="performFindPanelAction:" target="-1" id="U76-nv-p5D"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Jump to Selection" keyEquivalent="j" id="S0p-oC-mLd">
+                                            <connections>
+                                                <action selector="centerSelectionInVisibleArea:" target="-1" id="IOG-6D-g5B"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="Spelling and Grammar" id="Dv1-io-Yv7">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Spelling" id="3IN-sU-3Bg">
+                                    <items>
+                                        <menuItem title="Show Spelling and Grammar" keyEquivalent=":" id="HFo-cy-zxI">
+                                            <connections>
+                                                <action selector="showGuessPanel:" target="-1" id="vFj-Ks-hy3"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Check Document Now" keyEquivalent=";" id="hz2-CU-CR7">
+                                            <connections>
+                                                <action selector="checkSpelling:" target="-1" id="fz7-VC-reM"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="bNw-od-mp5"/>
+                                        <menuItem title="Check Spelling While Typing" id="rbD-Rh-wIN">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="toggleContinuousSpellChecking:" target="-1" id="7w6-Qz-0kB"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Check Grammar With Spelling" id="mK6-2p-4JG">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="toggleGrammarChecking:" target="-1" id="muD-Qn-j4w"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Correct Spelling Automatically" id="78Y-hA-62v">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="toggleAutomaticSpellingCorrection:" target="-1" id="2lM-Qi-WAP"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="Substitutions" id="9ic-FL-obx">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Substitutions" id="FeM-D8-WVr">
+                                    <items>
+                                        <menuItem title="Show Substitutions" id="z6F-FW-3nz">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="orderFrontSubstitutionsPanel:" target="-1" id="oku-mr-iSq"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="gPx-C9-uUO"/>
+                                        <menuItem title="Smart Copy/Paste" id="9yt-4B-nSM">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="toggleSmartInsertDelete:" target="-1" id="3IJ-Se-DZD"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Smart Quotes" id="hQb-2v-fYv">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="toggleAutomaticQuoteSubstitution:" target="-1" id="ptq-xd-QOA"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Smart Dashes" id="rgM-f4-ycn">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="toggleAutomaticDashSubstitution:" target="-1" id="oCt-pO-9gS"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Smart Links" id="cwL-P1-jid">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="toggleAutomaticLinkDetection:" target="-1" id="Gip-E3-Fov"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Data Detectors" id="tRr-pd-1PS">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="toggleAutomaticDataDetection:" target="-1" id="R1I-Nq-Kbl"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Text Replacement" id="HFQ-gK-NFA">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="toggleAutomaticTextReplacement:" target="-1" id="DvP-Fe-Py6"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="Transformations" id="2oI-Rn-ZJC">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Transformations" id="c8a-y6-VQd">
+                                    <items>
+                                        <menuItem title="Make Upper Case" id="vmV-6d-7jI">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="uppercaseWord:" target="-1" id="sPh-Tk-edu"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Make Lower Case" id="d9M-CD-aMd">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="lowercaseWord:" target="-1" id="iUZ-b5-hil"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Capitalize" id="UEZ-Bs-lqG">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="capitalizeWord:" target="-1" id="26H-TL-nsh"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="Speech" id="xrE-MZ-jX0">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Speech" id="3rS-ZA-NoH">
+                                    <items>
+                                        <menuItem title="Start Speaking" id="Ynk-f8-cLZ">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="startSpeaking:" target="-1" id="654-Ng-kyl"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Stop Speaking" id="Oyz-dy-DGm">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="stopSpeaking:" target="-1" id="dX8-6p-jy9"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="View" id="H8h-7b-M4v">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="View" id="HyV-fh-RgO">
+                        <items>
+                            <menuItem title="Enter Full Screen" keyEquivalent="f" id="4J7-dP-txa">
+                                <modifierMask key="keyEquivalentModifierMask" control="YES" command="YES"/>
+                                <connections>
+                                    <action selector="toggleFullScreen:" target="-1" id="dU3-MA-1Rq"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Window" id="aUF-d1-5bR">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Window" systemMenu="window" id="Td7-aD-5lo">
+                        <items>
+                            <menuItem title="Minimize" keyEquivalent="m" id="OY7-WF-poV">
+                                <connections>
+                                    <action selector="performMiniaturize:" target="-1" id="VwT-WD-YPe"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Zoom" id="R4o-n2-Eq4">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="performZoom:" target="-1" id="DIl-cC-cCs"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="eu3-7i-yIM"/>
+                            <menuItem title="Bring All to Front" id="LE2-aR-0XJ">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="arrangeInFront:" target="-1" id="DRN-fu-gQh"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Help" id="EPT-qC-fAb">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Help" systemMenu="help" id="rJ0-wn-3NY"/>
+                </menuItem>
+            </items>
+            <point key="canvasLocation" x="142" y="-258"/>
+        </menu>
+        <window title="APP_NAME" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g" customClass="MainFlutterWindow" customModule="Runner" customModuleProvider="target">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <rect key="contentRect" x="335" y="390" width="800" height="600"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1577"/>
+            <view key="contentView" wantsLayer="YES" id="EiT-Mj-1SZ">
+                <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
+                <autoresizingMask key="autoresizingMask"/>
+            </view>
+        </window>
+    </objects>
+</document>
+</file>
+
+<file path="macos/Runner/Configs/AppInfo.xcconfig">
+// Application-level settings for the Runner target.
+//
+// This may be replaced with something auto-generated from metadata (e.g., pubspec.yaml) in the
+// future. If not, the values below would default to using the project name when this becomes a
+// 'flutter create' template.
+
+// The application's name. By default this is also the title of the Flutter window.
+PRODUCT_NAME = pulseedge
+
+// The application's bundle identifier
+PRODUCT_BUNDLE_IDENTIFIER = com.example.pulseedge
+
+// The copyright displayed in application information
+PRODUCT_COPYRIGHT = Copyright © 2026 com.example. All rights reserved.
+</file>
+
+<file path="macos/Runner/Configs/Debug.xcconfig">
+#include "../../Flutter/Flutter-Debug.xcconfig"
+#include "Warnings.xcconfig"
+</file>
+
+<file path="macos/Runner/Configs/Release.xcconfig">
+#include "../../Flutter/Flutter-Release.xcconfig"
+#include "Warnings.xcconfig"
+</file>
+
+<file path="macos/Runner/Configs/Warnings.xcconfig">
+WARNING_CFLAGS = -Wall -Wconditional-uninitialized -Wnullable-to-nonnull-conversion -Wmissing-method-return-type -Woverlength-strings
+GCC_WARN_UNDECLARED_SELECTOR = YES
+CLANG_UNDEFINED_BEHAVIOR_SANITIZER_NULLABILITY = YES
+CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE
+CLANG_WARN__DUPLICATE_METHOD_MATCH = YES
+CLANG_WARN_PRAGMA_PACK = YES
+CLANG_WARN_STRICT_PROTOTYPES = YES
+CLANG_WARN_COMMA = YES
+GCC_WARN_STRICT_SELECTOR_MATCH = YES
+CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = YES
+CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES
+GCC_WARN_SHADOW = YES
+CLANG_WARN_UNREACHABLE_CODE = YES
+</file>
+
+<file path="macos/Runner/AppDelegate.swift">
+import Cocoa
+import FlutterMacOS
+
+@main
+class AppDelegate: FlutterAppDelegate {
+  override func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
+    return true
+  }
+
+  override func applicationSupportsSecureRestorableState(_ app: NSApplication) -> Bool {
+    return true
+  }
+}
+</file>
+
+<file path="macos/Runner/DebugProfile.entitlements">
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>com.apple.security.app-sandbox</key>
+	<true/>
+	<key>com.apple.security.cs.allow-jit</key>
+	<true/>
+	<key>com.apple.security.network.server</key>
+	<true/>
+</dict>
+</plist>
+</file>
+
+<file path="macos/Runner/Info.plist">
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIconFile</key>
+	<string></string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>$(FLUTTER_BUILD_NAME)</string>
+	<key>CFBundleVersion</key>
+	<string>$(FLUTTER_BUILD_NUMBER)</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>$(MACOSX_DEPLOYMENT_TARGET)</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>$(PRODUCT_COPYRIGHT)</string>
+	<key>NSMainNibFile</key>
+	<string>MainMenu</string>
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
+</dict>
+</plist>
+</file>
+
+<file path="macos/Runner/MainFlutterWindow.swift">
+import Cocoa
+import FlutterMacOS
+
+class MainFlutterWindow: NSWindow {
+  override func awakeFromNib() {
+    let flutterViewController = FlutterViewController()
+    let windowFrame = self.frame
+    self.contentViewController = flutterViewController
+    self.setFrame(windowFrame, display: true)
+
+    RegisterGeneratedPlugins(registry: flutterViewController)
+
+    super.awakeFromNib()
+  }
+}
+</file>
+
+<file path="macos/Runner/Release.entitlements">
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>com.apple.security.app-sandbox</key>
+	<true/>
+</dict>
+</plist>
+</file>
+
+<file path="macos/Runner.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist">
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDEDidComputeMac32BitWarning</key>
+	<true/>
+</dict>
+</plist>
+</file>
+
+<file path="macos/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme">
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   LastUpgradeVersion = "1510"
+   version = "1.3">
+   <BuildAction
+      parallelizeBuildables = "YES"
+      buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "33CC10EC2044A3C60003C045"
+               BuildableName = "pulseedge.app"
+               BlueprintName = "Runner"
+               ReferencedContainer = "container:Runner.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <TestAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      shouldUseLaunchSchemeArgsEnv = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "33CC10EC2044A3C60003C045"
+            BuildableName = "pulseedge.app"
+            BlueprintName = "Runner"
+            ReferencedContainer = "container:Runner.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+      <Testables>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "331C80D4294CF70F00263BE5"
+               BuildableName = "RunnerTests.xctest"
+               BlueprintName = "RunnerTests"
+               ReferencedContainer = "container:Runner.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+      </Testables>
+   </TestAction>
+   <LaunchAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      launchStyle = "0"
+      useCustomWorkingDirectory = "NO"
+      ignoresPersistentStateOnLaunch = "NO"
+      debugDocumentVersioning = "YES"
+      debugServiceExtension = "internal"
+      enableGPUValidationMode = "1"
+      allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "33CC10EC2044A3C60003C045"
+            BuildableName = "pulseedge.app"
+            BlueprintName = "Runner"
+            ReferencedContainer = "container:Runner.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+   </LaunchAction>
+   <ProfileAction
+      buildConfiguration = "Profile"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      savedToolIdentifier = ""
+      useCustomWorkingDirectory = "NO"
+      debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "33CC10EC2044A3C60003C045"
+            BuildableName = "pulseedge.app"
+            BlueprintName = "Runner"
+            ReferencedContainer = "container:Runner.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+   </ProfileAction>
+   <AnalyzeAction
+      buildConfiguration = "Debug">
+   </AnalyzeAction>
+   <ArchiveAction
+      buildConfiguration = "Release"
+      revealArchiveInOrganizer = "YES">
+   </ArchiveAction>
+</Scheme>
+</file>
+
+<file path="macos/Runner.xcodeproj/project.pbxproj">
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		33CC111A2044C6BA0003C045 /* Flutter Assemble */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 33CC111B2044C6BA0003C045 /* Build configuration list for PBXAggregateTarget "Flutter Assemble" */;
+			buildPhases = (
+				33CC111E2044C6BF0003C045 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = "Flutter Assemble";
+			productName = FLX;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		331C80D8294CF71000263BE5 /* RunnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331C80D7294CF71000263BE5 /* RunnerTests.swift */; };
+		335BBD1B22A9A15E00E9071D /* GeneratedPluginRegistrant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335BBD1A22A9A15E00E9071D /* GeneratedPluginRegistrant.swift */; };
+		33CC10F12044A3C60003C045 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CC10F02044A3C60003C045 /* AppDelegate.swift */; };
+		33CC10F32044A3C60003C045 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33CC10F22044A3C60003C045 /* Assets.xcassets */; };
+		33CC10F62044A3C60003C045 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33CC10F42044A3C60003C045 /* MainMenu.xib */; };
+		33CC11132044BFA00003C045 /* MainFlutterWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CC11122044BFA00003C045 /* MainFlutterWindow.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		331C80D9294CF71000263BE5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 33CC10E52044A3C60003C045 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 33CC10EC2044A3C60003C045;
+			remoteInfo = Runner;
+		};
+		33CC111F2044C79F0003C045 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 33CC10E52044A3C60003C045 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 33CC111A2044C6BA0003C045;
+			remoteInfo = FLX;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		33CC110E2044A8840003C045 /* Bundle Framework */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Bundle Framework";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		331C80D5294CF71000263BE5 /* RunnerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RunnerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		331C80D7294CF71000263BE5 /* RunnerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunnerTests.swift; sourceTree = "<group>"; };
+		333000ED22D3DE5D00554162 /* Warnings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Warnings.xcconfig; sourceTree = "<group>"; };
+		335BBD1A22A9A15E00E9071D /* GeneratedPluginRegistrant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedPluginRegistrant.swift; sourceTree = "<group>"; };
+		33CC10ED2044A3C60003C045 /* pulseedge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pulseedge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		33CC10F02044A3C60003C045 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		33CC10F22044A3C60003C045 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Runner/Assets.xcassets; sourceTree = "<group>"; };
+		33CC10F52044A3C60003C045 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		33CC10F72044A3C60003C045 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Runner/Info.plist; sourceTree = "<group>"; };
+		33CC11122044BFA00003C045 /* MainFlutterWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFlutterWindow.swift; sourceTree = "<group>"; };
+		33CEB47222A05771004F2AC0 /* Flutter-Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Flutter-Debug.xcconfig"; sourceTree = "<group>"; };
+		33CEB47422A05771004F2AC0 /* Flutter-Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Flutter-Release.xcconfig"; sourceTree = "<group>"; };
+		33CEB47722A0578A004F2AC0 /* Flutter-Generated.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Flutter-Generated.xcconfig"; path = "ephemeral/Flutter-Generated.xcconfig"; sourceTree = "<group>"; };
+		33E51913231747F40026EE4D /* DebugProfile.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DebugProfile.entitlements; sourceTree = "<group>"; };
+		33E51914231749380026EE4D /* Release.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = Release.entitlements; sourceTree = "<group>"; };
+		33E5194F232828860026EE4D /* AppInfo.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = AppInfo.xcconfig; sourceTree = "<group>"; };
+		7AFA3C8E1D35360C0083082E /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		9740EEB21CF90195004384FC /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		331C80D2294CF70F00263BE5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33CC10EA2044A3C60003C045 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		331C80D6294CF71000263BE5 /* RunnerTests */ = {
+			isa = PBXGroup;
+			children = (
+				331C80D7294CF71000263BE5 /* RunnerTests.swift */,
+			);
+			path = RunnerTests;
+			sourceTree = "<group>";
+		};
+		33BA886A226E78AF003329D5 /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				33E5194F232828860026EE4D /* AppInfo.xcconfig */,
+				9740EEB21CF90195004384FC /* Debug.xcconfig */,
+				7AFA3C8E1D35360C0083082E /* Release.xcconfig */,
+				333000ED22D3DE5D00554162 /* Warnings.xcconfig */,
+			);
+			path = Configs;
+			sourceTree = "<group>";
+		};
+		33CC10E42044A3C60003C045 = {
+			isa = PBXGroup;
+			children = (
+				33FAB671232836740065AC1E /* Runner */,
+				33CEB47122A05771004F2AC0 /* Flutter */,
+				331C80D6294CF71000263BE5 /* RunnerTests */,
+				33CC10EE2044A3C60003C045 /* Products */,
+				D73912EC22F37F3D000D13A0 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		33CC10EE2044A3C60003C045 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				33CC10ED2044A3C60003C045 /* pulseedge.app */,
+				331C80D5294CF71000263BE5 /* RunnerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		33CC11242044D66E0003C045 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				33CC10F22044A3C60003C045 /* Assets.xcassets */,
+				33CC10F42044A3C60003C045 /* MainMenu.xib */,
+				33CC10F72044A3C60003C045 /* Info.plist */,
+			);
+			name = Resources;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		33CEB47122A05771004F2AC0 /* Flutter */ = {
+			isa = PBXGroup;
+			children = (
+				335BBD1A22A9A15E00E9071D /* GeneratedPluginRegistrant.swift */,
+				33CEB47222A05771004F2AC0 /* Flutter-Debug.xcconfig */,
+				33CEB47422A05771004F2AC0 /* Flutter-Release.xcconfig */,
+				33CEB47722A0578A004F2AC0 /* Flutter-Generated.xcconfig */,
+			);
+			path = Flutter;
+			sourceTree = "<group>";
+		};
+		33FAB671232836740065AC1E /* Runner */ = {
+			isa = PBXGroup;
+			children = (
+				33CC10F02044A3C60003C045 /* AppDelegate.swift */,
+				33CC11122044BFA00003C045 /* MainFlutterWindow.swift */,
+				33E51913231747F40026EE4D /* DebugProfile.entitlements */,
+				33E51914231749380026EE4D /* Release.entitlements */,
+				33CC11242044D66E0003C045 /* Resources */,
+				33BA886A226E78AF003329D5 /* Configs */,
+			);
+			path = Runner;
+			sourceTree = "<group>";
+		};
+		D73912EC22F37F3D000D13A0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		331C80D4294CF70F00263BE5 /* RunnerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 331C80DE294CF71000263BE5 /* Build configuration list for PBXNativeTarget "RunnerTests" */;
+			buildPhases = (
+				331C80D1294CF70F00263BE5 /* Sources */,
+				331C80D2294CF70F00263BE5 /* Frameworks */,
+				331C80D3294CF70F00263BE5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				331C80DA294CF71000263BE5 /* PBXTargetDependency */,
+			);
+			name = RunnerTests;
+			productName = RunnerTests;
+			productReference = 331C80D5294CF71000263BE5 /* RunnerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		33CC10EC2044A3C60003C045 /* Runner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33CC10FB2044A3C60003C045 /* Build configuration list for PBXNativeTarget "Runner" */;
+			buildPhases = (
+				33CC10E92044A3C60003C045 /* Sources */,
+				33CC10EA2044A3C60003C045 /* Frameworks */,
+				33CC10EB2044A3C60003C045 /* Resources */,
+				33CC110E2044A8840003C045 /* Bundle Framework */,
+				3399D490228B24CF009A79C7 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				33CC11202044C79F0003C045 /* PBXTargetDependency */,
+			);
+			name = Runner;
+			productName = Runner;
+			productReference = 33CC10ED2044A3C60003C045 /* pulseedge.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		33CC10E52044A3C60003C045 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 1510;
+				ORGANIZATIONNAME = "";
+				TargetAttributes = {
+					331C80D4294CF70F00263BE5 = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = 33CC10EC2044A3C60003C045;
+					};
+					33CC10EC2044A3C60003C045 = {
+						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1100;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
+					33CC111A2044C6BA0003C045 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = 33CC10E82044A3C60003C045 /* Build configuration list for PBXProject "Runner" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 33CC10E42044A3C60003C045;
+			productRefGroup = 33CC10EE2044A3C60003C045 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				33CC10EC2044A3C60003C045 /* Runner */,
+				331C80D4294CF70F00263BE5 /* RunnerTests */,
+				33CC111A2044C6BA0003C045 /* Flutter Assemble */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		331C80D3294CF70F00263BE5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33CC10EB2044A3C60003C045 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33CC10F32044A3C60003C045 /* Assets.xcassets in Resources */,
+				33CC10F62044A3C60003C045 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3399D490228B24CF009A79C7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo \"$PRODUCT_NAME.app\" > \"$PROJECT_DIR\"/Flutter/ephemeral/.app_filename && \"$FLUTTER_ROOT\"/packages/flutter_tools/bin/macos_assemble.sh embed\n";
+		};
+		33CC111E2044C6BF0003C045 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				Flutter/ephemeral/FlutterInputs.xcfilelist,
+			);
+			inputPaths = (
+				Flutter/ephemeral/tripwire,
+			);
+			outputFileListPaths = (
+				Flutter/ephemeral/FlutterOutputs.xcfilelist,
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$FLUTTER_ROOT\"/packages/flutter_tools/bin/macos_assemble.sh && touch Flutter/ephemeral/tripwire";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		331C80D1294CF70F00263BE5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				331C80D8294CF71000263BE5 /* RunnerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33CC10E92044A3C60003C045 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33CC11132044BFA00003C045 /* MainFlutterWindow.swift in Sources */,
+				33CC10F12044A3C60003C045 /* AppDelegate.swift in Sources */,
+				335BBD1B22A9A15E00E9071D /* GeneratedPluginRegistrant.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		331C80DA294CF71000263BE5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 33CC10EC2044A3C60003C045 /* Runner */;
+			targetProxy = 331C80D9294CF71000263BE5 /* PBXContainerItemProxy */;
+		};
+		33CC11202044C79F0003C045 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 33CC111A2044C6BA0003C045 /* Flutter Assemble */;
+			targetProxy = 33CC111F2044C79F0003C045 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		33CC10F42044A3C60003C045 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				33CC10F52044A3C60003C045 /* Base */,
+			);
+			name = MainMenu.xib;
+			path = Runner;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		331C80DB294CF71000263BE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.pulseedge.RunnerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pulseedge.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/pulseedge";
+			};
+			name = Debug;
+		};
+		331C80DC294CF71000263BE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.pulseedge.RunnerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pulseedge.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/pulseedge";
+			};
+			name = Release;
+		};
+		331C80DD294CF71000263BE5 /* Profile */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.pulseedge.RunnerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pulseedge.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/pulseedge";
+			};
+			name = Profile;
+		};
+		338D0CE9231458BD00FA5F75 /* Profile */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7AFA3C8E1D35360C0083082E /* Release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Profile;
+		};
+		338D0CEA231458BD00FA5F75 /* Profile */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33E5194F232828860026EE4D /* AppInfo.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Runner/DebugProfile.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Runner/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Profile;
+		};
+		338D0CEB231458BD00FA5F75 /* Profile */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Manual;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Profile;
+		};
+		33CC10F92044A3C60003C045 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9740EEB21CF90195004384FC /* Debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		33CC10FA2044A3C60003C045 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7AFA3C8E1D35360C0083082E /* Release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		33CC10FC2044A3C60003C045 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33E5194F232828860026EE4D /* AppInfo.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Runner/DebugProfile.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Runner/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		33CC10FD2044A3C60003C045 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33E5194F232828860026EE4D /* AppInfo.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Runner/Release.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Runner/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		33CC111C2044C6BA0003C045 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Manual;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		33CC111D2044C6BA0003C045 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		331C80DE294CF71000263BE5 /* Build configuration list for PBXNativeTarget "RunnerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				331C80DB294CF71000263BE5 /* Debug */,
+				331C80DC294CF71000263BE5 /* Release */,
+				331C80DD294CF71000263BE5 /* Profile */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		33CC10E82044A3C60003C045 /* Build configuration list for PBXProject "Runner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33CC10F92044A3C60003C045 /* Debug */,
+				33CC10FA2044A3C60003C045 /* Release */,
+				338D0CE9231458BD00FA5F75 /* Profile */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		33CC10FB2044A3C60003C045 /* Build configuration list for PBXNativeTarget "Runner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33CC10FC2044A3C60003C045 /* Debug */,
+				33CC10FD2044A3C60003C045 /* Release */,
+				338D0CEA231458BD00FA5F75 /* Profile */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		33CC111B2044C6BA0003C045 /* Build configuration list for PBXAggregateTarget "Flutter Assemble" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33CC111C2044C6BA0003C045 /* Debug */,
+				33CC111D2044C6BA0003C045 /* Release */,
+				338D0CEB231458BD00FA5F75 /* Profile */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 33CC10E52044A3C60003C045 /* Project object */;
+}
+</file>
+
+<file path="macos/Runner.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist">
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDEDidComputeMac32BitWarning</key>
+	<true/>
+</dict>
+</plist>
+</file>
+
+<file path="macos/Runner.xcworkspace/contents.xcworkspacedata">
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:Runner.xcodeproj">
+   </FileRef>
+</Workspace>
+</file>
+
+<file path="macos/RunnerTests/RunnerTests.swift">
+import Cocoa
+import FlutterMacOS
+import XCTest
+
+class RunnerTests: XCTestCase {
+
+  func testExample() {
+    // If you add code to the Runner application, consider adding tests here.
+    // See https://developer.apple.com/documentation/xctest for more information about using XCTest.
+  }
+
+}
+</file>
+
+<file path="macos/.gitignore">
+# Flutter-related
+**/Flutter/ephemeral/
+**/Pods/
+
+# Xcode-related
+**/dgph
+**/xcuserdata/
+</file>
+
+<file path="macos/Podfile">
+platform :osx, '10.15'
+
+# CocoaPods analytics sends network stats synchronously affecting flutter build latency.
+ENV['COCOAPODS_DISABLE_STATS'] = 'true'
+
+project 'Runner', {
+  'Debug' => :debug,
+  'Profile' => :release,
+  'Release' => :release,
+}
+
+def flutter_root
+  generated_xcode_build_settings_path = File.expand_path(File.join('..', 'Flutter', 'ephemeral', 'Flutter-Generated.xcconfig'), __FILE__)
+  unless File.exist?(generated_xcode_build_settings_path)
+    raise "#{generated_xcode_build_settings_path} must exist. If you're running pod install manually, make sure \"flutter pub get\" is executed first"
+  end
+
+  File.foreach(generated_xcode_build_settings_path) do |line|
+    matches = line.match(/FLUTTER_ROOT\=(.*)/)
+    return matches[1].strip if matches
+  end
+  raise "FLUTTER_ROOT not found in #{generated_xcode_build_settings_path}. Try deleting Flutter-Generated.xcconfig, then run \"flutter pub get\""
+end
+
+require File.expand_path(File.join('packages', 'flutter_tools', 'bin', 'podhelper'), flutter_root)
+
+flutter_macos_podfile_setup
+
+target 'Runner' do
+  use_frameworks!
+
+  flutter_install_all_macos_pods File.dirname(File.realpath(__FILE__))
+  target 'RunnerTests' do
+    inherit! :search_paths
+  end
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    flutter_additional_macos_build_settings(target)
+  end
+end
+</file>
+
+<file path="test/widget_test.dart">
+// This is a basic Flutter widget test.
+//
+// To perform an interaction with a widget in your test, use the WidgetTester
+// utility in the flutter_test package. For example, you can send tap and scroll
+// gestures. You can also use WidgetTester to find child widgets in the widget
+// tree, read text, and verify that the values of widget properties are correct.
+
+import 'package:flutter/material.dart';
+import 'package:flutter_test/flutter_test.dart';
+
+import 'package:pulseedge/main.dart';
+
+void main() {
+  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
+    // Build our app and trigger a frame.
+    await tester.pumpWidget(const MyApp());
+
+    // Verify that our counter starts at 0.
+    expect(find.text('0'), findsOneWidget);
+    expect(find.text('1'), findsNothing);
+
+    // Tap the '+' icon and trigger a frame.
+    await tester.tap(find.byIcon(Icons.add));
+    await tester.pump();
+
+    // Verify that our counter has incremented.
+    expect(find.text('0'), findsNothing);
+    expect(find.text('1'), findsOneWidget);
+  });
+}
+</file>
+
+<file path="web/index.html">
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="$FLUTTER_BASE_HREF">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="A new Flutter project.">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="pulseedge">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>pulseedge</title>
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>
+</file>
+
+<file path="web/manifest.json">
+{
+    "name": "pulseedge",
+    "short_name": "pulseedge",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#0175C2",
+    "theme_color": "#0175C2",
+    "description": "A new Flutter project.",
+    "orientation": "portrait-primary",
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "src": "icons/Icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-maskable-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "icons/Icon-maskable-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ]
+}
+</file>
+
+<file path="windows/flutter/CMakeLists.txt">
+# This file controls Flutter-level build steps. It should not be edited.
+cmake_minimum_required(VERSION 3.14)
+
+set(EPHEMERAL_DIR "${CMAKE_CURRENT_SOURCE_DIR}/ephemeral")
+
+# Configuration provided via flutter tool.
+include(${EPHEMERAL_DIR}/generated_config.cmake)
+
+# TODO: Move the rest of this into files in ephemeral. See
+# https://github.com/flutter/flutter/issues/57146.
+set(WRAPPER_ROOT "${EPHEMERAL_DIR}/cpp_client_wrapper")
+
+# Set fallback configurations for older versions of the flutter tool.
+if (NOT DEFINED FLUTTER_TARGET_PLATFORM)
+  set(FLUTTER_TARGET_PLATFORM "windows-x64")
+endif()
+
+# === Flutter Library ===
+set(FLUTTER_LIBRARY "${EPHEMERAL_DIR}/flutter_windows.dll")
+
+# Published to parent scope for install step.
+set(FLUTTER_LIBRARY ${FLUTTER_LIBRARY} PARENT_SCOPE)
+set(FLUTTER_ICU_DATA_FILE "${EPHEMERAL_DIR}/icudtl.dat" PARENT_SCOPE)
+set(PROJECT_BUILD_DIR "${PROJECT_DIR}/build/" PARENT_SCOPE)
+set(AOT_LIBRARY "${PROJECT_DIR}/build/windows/app.so" PARENT_SCOPE)
+
+list(APPEND FLUTTER_LIBRARY_HEADERS
+  "flutter_export.h"
+  "flutter_windows.h"
+  "flutter_messenger.h"
+  "flutter_plugin_registrar.h"
+  "flutter_texture_registrar.h"
+)
+list(TRANSFORM FLUTTER_LIBRARY_HEADERS PREPEND "${EPHEMERAL_DIR}/")
+add_library(flutter INTERFACE)
+target_include_directories(flutter INTERFACE
+  "${EPHEMERAL_DIR}"
+)
+target_link_libraries(flutter INTERFACE "${FLUTTER_LIBRARY}.lib")
+add_dependencies(flutter flutter_assemble)
+
+# === Wrapper ===
+list(APPEND CPP_WRAPPER_SOURCES_CORE
+  "core_implementations.cc"
+  "standard_codec.cc"
+)
+list(TRANSFORM CPP_WRAPPER_SOURCES_CORE PREPEND "${WRAPPER_ROOT}/")
+list(APPEND CPP_WRAPPER_SOURCES_PLUGIN
+  "plugin_registrar.cc"
+)
+list(TRANSFORM CPP_WRAPPER_SOURCES_PLUGIN PREPEND "${WRAPPER_ROOT}/")
+list(APPEND CPP_WRAPPER_SOURCES_APP
+  "flutter_engine.cc"
+  "flutter_view_controller.cc"
+)
+list(TRANSFORM CPP_WRAPPER_SOURCES_APP PREPEND "${WRAPPER_ROOT}/")
+
+# Wrapper sources needed for a plugin.
+add_library(flutter_wrapper_plugin STATIC
+  ${CPP_WRAPPER_SOURCES_CORE}
+  ${CPP_WRAPPER_SOURCES_PLUGIN}
+)
+apply_standard_settings(flutter_wrapper_plugin)
+set_target_properties(flutter_wrapper_plugin PROPERTIES
+  POSITION_INDEPENDENT_CODE ON)
+set_target_properties(flutter_wrapper_plugin PROPERTIES
+  CXX_VISIBILITY_PRESET hidden)
+target_link_libraries(flutter_wrapper_plugin PUBLIC flutter)
+target_include_directories(flutter_wrapper_plugin PUBLIC
+  "${WRAPPER_ROOT}/include"
+)
+add_dependencies(flutter_wrapper_plugin flutter_assemble)
+
+# Wrapper sources needed for the runner.
+add_library(flutter_wrapper_app STATIC
+  ${CPP_WRAPPER_SOURCES_CORE}
+  ${CPP_WRAPPER_SOURCES_APP}
+)
+apply_standard_settings(flutter_wrapper_app)
+target_link_libraries(flutter_wrapper_app PUBLIC flutter)
+target_include_directories(flutter_wrapper_app PUBLIC
+  "${WRAPPER_ROOT}/include"
+)
+add_dependencies(flutter_wrapper_app flutter_assemble)
+
+# === Flutter tool backend ===
+# _phony_ is a non-existent file to force this command to run every time,
+# since currently there's no way to get a full input/output list from the
+# flutter tool.
+set(PHONY_OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/_phony_")
+set_source_files_properties("${PHONY_OUTPUT}" PROPERTIES SYMBOLIC TRUE)
+add_custom_command(
+  OUTPUT ${FLUTTER_LIBRARY} ${FLUTTER_LIBRARY_HEADERS}
+    ${CPP_WRAPPER_SOURCES_CORE} ${CPP_WRAPPER_SOURCES_PLUGIN}
+    ${CPP_WRAPPER_SOURCES_APP}
+    ${PHONY_OUTPUT}
+  COMMAND ${CMAKE_COMMAND} -E env
+    ${FLUTTER_TOOL_ENVIRONMENT}
+    "${FLUTTER_ROOT}/packages/flutter_tools/bin/tool_backend.bat"
+      ${FLUTTER_TARGET_PLATFORM} $<CONFIG>
+  VERBATIM
+)
+add_custom_target(flutter_assemble DEPENDS
+  "${FLUTTER_LIBRARY}"
+  ${FLUTTER_LIBRARY_HEADERS}
+  ${CPP_WRAPPER_SOURCES_CORE}
+  ${CPP_WRAPPER_SOURCES_PLUGIN}
+  ${CPP_WRAPPER_SOURCES_APP}
+)
+</file>
+
+<file path="windows/flutter/generated_plugin_registrant.cc">
+//
+//  Generated file. Do not edit.
+//
+
+// clang-format off
+
+#include "generated_plugin_registrant.h"
+
+#include <connectivity_plus/connectivity_plus_windows_plugin.h>
+#include <flutter_secure_storage_windows/flutter_secure_storage_windows_plugin.h>
+#include <printing/printing_plugin.h>
+#include <speech_to_text_windows/speech_to_text_windows.h>
+#include <sqlite3_flutter_libs/sqlite3_flutter_libs_plugin.h>
+
+void RegisterPlugins(flutter::PluginRegistry* registry) {
+  ConnectivityPlusWindowsPluginRegisterWithRegistrar(
+      registry->GetRegistrarForPlugin("ConnectivityPlusWindowsPlugin"));
+  FlutterSecureStorageWindowsPluginRegisterWithRegistrar(
+      registry->GetRegistrarForPlugin("FlutterSecureStorageWindowsPlugin"));
+  PrintingPluginRegisterWithRegistrar(
+      registry->GetRegistrarForPlugin("PrintingPlugin"));
+  SpeechToTextWindowsRegisterWithRegistrar(
+      registry->GetRegistrarForPlugin("SpeechToTextWindows"));
+  Sqlite3FlutterLibsPluginRegisterWithRegistrar(
+      registry->GetRegistrarForPlugin("Sqlite3FlutterLibsPlugin"));
+}
+</file>
+
+<file path="windows/flutter/generated_plugin_registrant.h">
+//
+//  Generated file. Do not edit.
+//
+
+// clang-format off
+
+#ifndef GENERATED_PLUGIN_REGISTRANT_
+#define GENERATED_PLUGIN_REGISTRANT_
+
+#include <flutter/plugin_registry.h>
+
+// Registers Flutter plugins.
+void RegisterPlugins(flutter::PluginRegistry* registry);
+
+#endif  // GENERATED_PLUGIN_REGISTRANT_
+</file>
+
+<file path="windows/flutter/generated_plugins.cmake">
+#
+# Generated file, do not edit.
+#
+
+list(APPEND FLUTTER_PLUGIN_LIST
+  connectivity_plus
+  flutter_secure_storage_windows
+  printing
+  speech_to_text_windows
+  sqlite3_flutter_libs
+)
+
+list(APPEND FLUTTER_FFI_PLUGIN_LIST
+)
+
+set(PLUGIN_BUNDLED_LIBRARIES)
+
+foreach(plugin ${FLUTTER_PLUGIN_LIST})
+  add_subdirectory(flutter/ephemeral/.plugin_symlinks/${plugin}/windows plugins/${plugin})
+  target_link_libraries(${BINARY_NAME} PRIVATE ${plugin}_plugin)
+  list(APPEND PLUGIN_BUNDLED_LIBRARIES $<TARGET_FILE:${plugin}_plugin>)
+  list(APPEND PLUGIN_BUNDLED_LIBRARIES ${${plugin}_bundled_libraries})
+endforeach(plugin)
+
+foreach(ffi_plugin ${FLUTTER_FFI_PLUGIN_LIST})
+  add_subdirectory(flutter/ephemeral/.plugin_symlinks/${ffi_plugin}/windows plugins/${ffi_plugin})
+  list(APPEND PLUGIN_BUNDLED_LIBRARIES ${${ffi_plugin}_bundled_libraries})
+endforeach(ffi_plugin)
+</file>
+
+<file path="windows/runner/CMakeLists.txt">
+cmake_minimum_required(VERSION 3.14)
+project(runner LANGUAGES CXX)
+
+# Define the application target. To change its name, change BINARY_NAME in the
+# top-level CMakeLists.txt, not the value here, or `flutter run` will no longer
+# work.
+#
+# Any new source files that you add to the application should be added here.
+add_executable(${BINARY_NAME} WIN32
+  "flutter_window.cpp"
+  "main.cpp"
+  "utils.cpp"
+  "win32_window.cpp"
+  "${FLUTTER_MANAGED_DIR}/generated_plugin_registrant.cc"
+  "Runner.rc"
+  "runner.exe.manifest"
+)
+
+# Apply the standard set of build settings. This can be removed for applications
+# that need different build settings.
+apply_standard_settings(${BINARY_NAME})
+
+# Add preprocessor definitions for the build version.
+target_compile_definitions(${BINARY_NAME} PRIVATE "FLUTTER_VERSION=\"${FLUTTER_VERSION}\"")
+target_compile_definitions(${BINARY_NAME} PRIVATE "FLUTTER_VERSION_MAJOR=${FLUTTER_VERSION_MAJOR}")
+target_compile_definitions(${BINARY_NAME} PRIVATE "FLUTTER_VERSION_MINOR=${FLUTTER_VERSION_MINOR}")
+target_compile_definitions(${BINARY_NAME} PRIVATE "FLUTTER_VERSION_PATCH=${FLUTTER_VERSION_PATCH}")
+target_compile_definitions(${BINARY_NAME} PRIVATE "FLUTTER_VERSION_BUILD=${FLUTTER_VERSION_BUILD}")
+
+# Disable Windows macros that collide with C++ standard library functions.
+target_compile_definitions(${BINARY_NAME} PRIVATE "NOMINMAX")
+
+# Add dependency libraries and include directories. Add any application-specific
+# dependencies here.
+target_link_libraries(${BINARY_NAME} PRIVATE flutter flutter_wrapper_app)
+target_link_libraries(${BINARY_NAME} PRIVATE "dwmapi.lib")
+target_include_directories(${BINARY_NAME} PRIVATE "${CMAKE_SOURCE_DIR}")
+
+# Run the Flutter tool portions of the build. This must not be removed.
+add_dependencies(${BINARY_NAME} flutter_assemble)
+</file>
+
+<file path="windows/runner/flutter_window.cpp">
+#include "flutter_window.h"
+
+#include <optional>
+
+#include "flutter/generated_plugin_registrant.h"
+
+FlutterWindow::FlutterWindow(const flutter::DartProject& project)
+    : project_(project) {}
+
+FlutterWindow::~FlutterWindow() {}
+
+bool FlutterWindow::OnCreate() {
+  if (!Win32Window::OnCreate()) {
+    return false;
+  }
+
+  RECT frame = GetClientArea();
+
+  // The size here must match the window dimensions to avoid unnecessary surface
+  // creation / destruction in the startup path.
+  flutter_controller_ = std::make_unique<flutter::FlutterViewController>(
+      frame.right - frame.left, frame.bottom - frame.top, project_);
+  // Ensure that basic setup of the controller was successful.
+  if (!flutter_controller_->engine() || !flutter_controller_->view()) {
+    return false;
+  }
+  RegisterPlugins(flutter_controller_->engine());
+  SetChildContent(flutter_controller_->view()->GetNativeWindow());
+
+  flutter_controller_->engine()->SetNextFrameCallback([&]() {
+    this->Show();
+  });
+
+  // Flutter can complete the first frame before the "show window" callback is
+  // registered. The following call ensures a frame is pending to ensure the
+  // window is shown. It is a no-op if the first frame hasn't completed yet.
+  flutter_controller_->ForceRedraw();
+
+  return true;
+}
+
+void FlutterWindow::OnDestroy() {
+  if (flutter_controller_) {
+    flutter_controller_ = nullptr;
+  }
+
+  Win32Window::OnDestroy();
+}
+
+LRESULT
+FlutterWindow::MessageHandler(HWND hwnd, UINT const message,
+                              WPARAM const wparam,
+                              LPARAM const lparam) noexcept {
+  // Give Flutter, including plugins, an opportunity to handle window messages.
+  if (flutter_controller_) {
+    std::optional<LRESULT> result =
+        flutter_controller_->HandleTopLevelWindowProc(hwnd, message, wparam,
+                                                      lparam);
+    if (result) {
+      return *result;
+    }
+  }
+
+  switch (message) {
+    case WM_FONTCHANGE:
+      flutter_controller_->engine()->ReloadSystemFonts();
+      break;
+  }
+
+  return Win32Window::MessageHandler(hwnd, message, wparam, lparam);
+}
+</file>
+
+<file path="windows/runner/flutter_window.h">
+#ifndef RUNNER_FLUTTER_WINDOW_H_
+#define RUNNER_FLUTTER_WINDOW_H_
+
+#include <flutter/dart_project.h>
+#include <flutter/flutter_view_controller.h>
+
+#include <memory>
+
+#include "win32_window.h"
+
+// A window that does nothing but host a Flutter view.
+class FlutterWindow : public Win32Window {
+ public:
+  // Creates a new FlutterWindow hosting a Flutter view running |project|.
+  explicit FlutterWindow(const flutter::DartProject& project);
+  virtual ~FlutterWindow();
+
+ protected:
+  // Win32Window:
+  bool OnCreate() override;
+  void OnDestroy() override;
+  LRESULT MessageHandler(HWND window, UINT const message, WPARAM const wparam,
+                         LPARAM const lparam) noexcept override;
+
+ private:
+  // The project to run.
+  flutter::DartProject project_;
+
+  // The Flutter instance hosted by this window.
+  std::unique_ptr<flutter::FlutterViewController> flutter_controller_;
+};
+
+#endif  // RUNNER_FLUTTER_WINDOW_H_
+</file>
+
+<file path="windows/runner/main.cpp">
+#include <flutter/dart_project.h>
+#include <flutter/flutter_view_controller.h>
+#include <windows.h>
+
+#include "flutter_window.h"
+#include "utils.h"
+
+int APIENTRY wWinMain(_In_ HINSTANCE instance, _In_opt_ HINSTANCE prev,
+                      _In_ wchar_t *command_line, _In_ int show_command) {
+  // Attach to console when present (e.g., 'flutter run') or create a
+  // new console when running with a debugger.
+  if (!::AttachConsole(ATTACH_PARENT_PROCESS) && ::IsDebuggerPresent()) {
+    CreateAndAttachConsole();
+  }
+
+  // Initialize COM, so that it is available for use in the library and/or
+  // plugins.
+  ::CoInitializeEx(nullptr, COINIT_APARTMENTTHREADED);
+
+  flutter::DartProject project(L"data");
+
+  std::vector<std::string> command_line_arguments =
+      GetCommandLineArguments();
+
+  project.set_dart_entrypoint_arguments(std::move(command_line_arguments));
+
+  FlutterWindow window(project);
+  Win32Window::Point origin(10, 10);
+  Win32Window::Size size(1280, 720);
+  if (!window.Create(L"pulseedge", origin, size)) {
+    return EXIT_FAILURE;
+  }
+  window.SetQuitOnClose(true);
+
+  ::MSG msg;
+  while (::GetMessage(&msg, nullptr, 0, 0)) {
+    ::TranslateMessage(&msg);
+    ::DispatchMessage(&msg);
+  }
+
+  ::CoUninitialize();
+  return EXIT_SUCCESS;
+}
+</file>
+
+<file path="windows/runner/resource.h">
+//{{NO_DEPENDENCIES}}
+// Microsoft Visual C++ generated include file.
+// Used by Runner.rc
+//
+#define IDI_APP_ICON                    101
+
+// Next default values for new objects
+//
+#ifdef APSTUDIO_INVOKED
+#ifndef APSTUDIO_READONLY_SYMBOLS
+#define _APS_NEXT_RESOURCE_VALUE        102
+#define _APS_NEXT_COMMAND_VALUE         40001
+#define _APS_NEXT_CONTROL_VALUE         1001
+#define _APS_NEXT_SYMED_VALUE           101
+#endif
+#endif
+</file>
+
+<file path="windows/runner/runner.exe.manifest">
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+  <application xmlns="urn:schemas-microsoft-com:asm.v3">
+    <windowsSettings>
+      <dpiAwareness xmlns="http://schemas.microsoft.com/SMI/2016/WindowsSettings">PerMonitorV2</dpiAwareness>
+    </windowsSettings>
+  </application>
+  <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
+    <application>
+      <!-- Windows 10 and Windows 11 -->
+      <supportedOS Id="{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}"/>
+    </application>
+  </compatibility>
+</assembly>
+</file>
+
+<file path="windows/runner/Runner.rc">
+// Microsoft Visual C++ generated resource script.
+//
+#pragma code_page(65001)
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE
+BEGIN
+    "#include ""winres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_APP_ICON            ICON                    "resources\\app_icon.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+#if defined(FLUTTER_VERSION_MAJOR) && defined(FLUTTER_VERSION_MINOR) && defined(FLUTTER_VERSION_PATCH) && defined(FLUTTER_VERSION_BUILD)
+#define VERSION_AS_NUMBER FLUTTER_VERSION_MAJOR,FLUTTER_VERSION_MINOR,FLUTTER_VERSION_PATCH,FLUTTER_VERSION_BUILD
+#else
+#define VERSION_AS_NUMBER 1,0,0,0
+#endif
+
+#if defined(FLUTTER_VERSION)
+#define VERSION_AS_STRING FLUTTER_VERSION
+#else
+#define VERSION_AS_STRING "1.0.0"
+#endif
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION VERSION_AS_NUMBER
+ PRODUCTVERSION VERSION_AS_NUMBER
+ FILEFLAGSMASK VS_FFI_FILEFLAGSMASK
+#ifdef _DEBUG
+ FILEFLAGS VS_FF_DEBUG
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS VOS__WINDOWS32
+ FILETYPE VFT_APP
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "com.example" "\0"
+            VALUE "FileDescription", "pulseedge" "\0"
+            VALUE "FileVersion", VERSION_AS_STRING "\0"
+            VALUE "InternalName", "pulseedge" "\0"
+            VALUE "LegalCopyright", "Copyright (C) 2026 com.example. All rights reserved." "\0"
+            VALUE "OriginalFilename", "pulseedge.exe" "\0"
+            VALUE "ProductName", "pulseedge" "\0"
+            VALUE "ProductVersion", VERSION_AS_STRING "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+</file>
+
+<file path="windows/runner/utils.cpp">
+#include "utils.h"
+
+#include <flutter_windows.h>
+#include <io.h>
+#include <stdio.h>
+#include <windows.h>
+
+#include <iostream>
+
+void CreateAndAttachConsole() {
+  if (::AllocConsole()) {
+    FILE *unused;
+    if (freopen_s(&unused, "CONOUT$", "w", stdout)) {
+      _dup2(_fileno(stdout), 1);
+    }
+    if (freopen_s(&unused, "CONOUT$", "w", stderr)) {
+      _dup2(_fileno(stdout), 2);
+    }
+    std::ios::sync_with_stdio();
+    FlutterDesktopResyncOutputStreams();
+  }
+}
+
+std::vector<std::string> GetCommandLineArguments() {
+  // Convert the UTF-16 command line arguments to UTF-8 for the Engine to use.
+  int argc;
+  wchar_t** argv = ::CommandLineToArgvW(::GetCommandLineW(), &argc);
+  if (argv == nullptr) {
+    return std::vector<std::string>();
+  }
+
+  std::vector<std::string> command_line_arguments;
+
+  // Skip the first argument as it's the binary name.
+  for (int i = 1; i < argc; i++) {
+    command_line_arguments.push_back(Utf8FromUtf16(argv[i]));
+  }
+
+  ::LocalFree(argv);
+
+  return command_line_arguments;
+}
+
+std::string Utf8FromUtf16(const wchar_t* utf16_string) {
+  if (utf16_string == nullptr) {
+    return std::string();
+  }
+  unsigned int target_length = ::WideCharToMultiByte(
+      CP_UTF8, WC_ERR_INVALID_CHARS, utf16_string,
+      -1, nullptr, 0, nullptr, nullptr)
+    -1; // remove the trailing null character
+  int input_length = (int)wcslen(utf16_string);
+  std::string utf8_string;
+  if (target_length == 0 || target_length > utf8_string.max_size()) {
+    return utf8_string;
+  }
+  utf8_string.resize(target_length);
+  int converted_length = ::WideCharToMultiByte(
+      CP_UTF8, WC_ERR_INVALID_CHARS, utf16_string,
+      input_length, utf8_string.data(), target_length, nullptr, nullptr);
+  if (converted_length == 0) {
+    return std::string();
+  }
+  return utf8_string;
+}
+</file>
+
+<file path="windows/runner/utils.h">
+#ifndef RUNNER_UTILS_H_
+#define RUNNER_UTILS_H_
+
+#include <string>
+#include <vector>
+
+// Creates a console for the process, and redirects stdout and stderr to
+// it for both the runner and the Flutter library.
+void CreateAndAttachConsole();
+
+// Takes a null-terminated wchar_t* encoded in UTF-16 and returns a std::string
+// encoded in UTF-8. Returns an empty std::string on failure.
+std::string Utf8FromUtf16(const wchar_t* utf16_string);
+
+// Gets the command line arguments passed in as a std::vector<std::string>,
+// encoded in UTF-8. Returns an empty std::vector<std::string> on failure.
+std::vector<std::string> GetCommandLineArguments();
+
+#endif  // RUNNER_UTILS_H_
+</file>
+
+<file path="windows/runner/win32_window.cpp">
+#include "win32_window.h"
+
+#include <dwmapi.h>
+#include <flutter_windows.h>
+
+#include "resource.h"
+
+namespace {
+
+/// Window attribute that enables dark mode window decorations.
+///
+/// Redefined in case the developer's machine has a Windows SDK older than
+/// version 10.0.22000.0.
+/// See: https://docs.microsoft.com/windows/win32/api/dwmapi/ne-dwmapi-dwmwindowattribute
+#ifndef DWMWA_USE_IMMERSIVE_DARK_MODE
+#define DWMWA_USE_IMMERSIVE_DARK_MODE 20
+#endif
+
+constexpr const wchar_t kWindowClassName[] = L"FLUTTER_RUNNER_WIN32_WINDOW";
+
+/// Registry key for app theme preference.
+///
+/// A value of 0 indicates apps should use dark mode. A non-zero or missing
+/// value indicates apps should use light mode.
+constexpr const wchar_t kGetPreferredBrightnessRegKey[] =
+  L"Software\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize";
+constexpr const wchar_t kGetPreferredBrightnessRegValue[] = L"AppsUseLightTheme";
+
+// The number of Win32Window objects that currently exist.
+static int g_active_window_count = 0;
+
+using EnableNonClientDpiScaling = BOOL __stdcall(HWND hwnd);
+
+// Scale helper to convert logical scaler values to physical using passed in
+// scale factor
+int Scale(int source, double scale_factor) {
+  return static_cast<int>(source * scale_factor);
+}
+
+// Dynamically loads the |EnableNonClientDpiScaling| from the User32 module.
+// This API is only needed for PerMonitor V1 awareness mode.
+void EnableFullDpiSupportIfAvailable(HWND hwnd) {
+  HMODULE user32_module = LoadLibraryA("User32.dll");
+  if (!user32_module) {
+    return;
+  }
+  auto enable_non_client_dpi_scaling =
+      reinterpret_cast<EnableNonClientDpiScaling*>(
+          GetProcAddress(user32_module, "EnableNonClientDpiScaling"));
+  if (enable_non_client_dpi_scaling != nullptr) {
+    enable_non_client_dpi_scaling(hwnd);
+  }
+  FreeLibrary(user32_module);
+}
+
+}  // namespace
+
+// Manages the Win32Window's window class registration.
+class WindowClassRegistrar {
+ public:
+  ~WindowClassRegistrar() = default;
+
+  // Returns the singleton registrar instance.
+  static WindowClassRegistrar* GetInstance() {
+    if (!instance_) {
+      instance_ = new WindowClassRegistrar();
+    }
+    return instance_;
+  }
+
+  // Returns the name of the window class, registering the class if it hasn't
+  // previously been registered.
+  const wchar_t* GetWindowClass();
+
+  // Unregisters the window class. Should only be called if there are no
+  // instances of the window.
+  void UnregisterWindowClass();
+
+ private:
+  WindowClassRegistrar() = default;
+
+  static WindowClassRegistrar* instance_;
+
+  bool class_registered_ = false;
+};
+
+WindowClassRegistrar* WindowClassRegistrar::instance_ = nullptr;
+
+const wchar_t* WindowClassRegistrar::GetWindowClass() {
+  if (!class_registered_) {
+    WNDCLASS window_class{};
+    window_class.hCursor = LoadCursor(nullptr, IDC_ARROW);
+    window_class.lpszClassName = kWindowClassName;
+    window_class.style = CS_HREDRAW | CS_VREDRAW;
+    window_class.cbClsExtra = 0;
+    window_class.cbWndExtra = 0;
+    window_class.hInstance = GetModuleHandle(nullptr);
+    window_class.hIcon =
+        LoadIcon(window_class.hInstance, MAKEINTRESOURCE(IDI_APP_ICON));
+    window_class.hbrBackground = 0;
+    window_class.lpszMenuName = nullptr;
+    window_class.lpfnWndProc = Win32Window::WndProc;
+    RegisterClass(&window_class);
+    class_registered_ = true;
+  }
+  return kWindowClassName;
+}
+
+void WindowClassRegistrar::UnregisterWindowClass() {
+  UnregisterClass(kWindowClassName, nullptr);
+  class_registered_ = false;
+}
+
+Win32Window::Win32Window() {
+  ++g_active_window_count;
+}
+
+Win32Window::~Win32Window() {
+  --g_active_window_count;
+  Destroy();
+}
+
+bool Win32Window::Create(const std::wstring& title,
+                         const Point& origin,
+                         const Size& size) {
+  Destroy();
+
+  const wchar_t* window_class =
+      WindowClassRegistrar::GetInstance()->GetWindowClass();
+
+  const POINT target_point = {static_cast<LONG>(origin.x),
+                              static_cast<LONG>(origin.y)};
+  HMONITOR monitor = MonitorFromPoint(target_point, MONITOR_DEFAULTTONEAREST);
+  UINT dpi = FlutterDesktopGetDpiForMonitor(monitor);
+  double scale_factor = dpi / 96.0;
+
+  HWND window = CreateWindow(
+      window_class, title.c_str(), WS_OVERLAPPEDWINDOW,
+      Scale(origin.x, scale_factor), Scale(origin.y, scale_factor),
+      Scale(size.width, scale_factor), Scale(size.height, scale_factor),
+      nullptr, nullptr, GetModuleHandle(nullptr), this);
+
+  if (!window) {
+    return false;
+  }
+
+  UpdateTheme(window);
+
+  return OnCreate();
+}
+
+bool Win32Window::Show() {
+  return ShowWindow(window_handle_, SW_SHOWNORMAL);
+}
+
+// static
+LRESULT CALLBACK Win32Window::WndProc(HWND const window,
+                                      UINT const message,
+                                      WPARAM const wparam,
+                                      LPARAM const lparam) noexcept {
+  if (message == WM_NCCREATE) {
+    auto window_struct = reinterpret_cast<CREATESTRUCT*>(lparam);
+    SetWindowLongPtr(window, GWLP_USERDATA,
+                     reinterpret_cast<LONG_PTR>(window_struct->lpCreateParams));
+
+    auto that = static_cast<Win32Window*>(window_struct->lpCreateParams);
+    EnableFullDpiSupportIfAvailable(window);
+    that->window_handle_ = window;
+  } else if (Win32Window* that = GetThisFromHandle(window)) {
+    return that->MessageHandler(window, message, wparam, lparam);
+  }
+
+  return DefWindowProc(window, message, wparam, lparam);
+}
+
+LRESULT
+Win32Window::MessageHandler(HWND hwnd,
+                            UINT const message,
+                            WPARAM const wparam,
+                            LPARAM const lparam) noexcept {
+  switch (message) {
+    case WM_DESTROY:
+      window_handle_ = nullptr;
+      Destroy();
+      if (quit_on_close_) {
+        PostQuitMessage(0);
+      }
+      return 0;
+
+    case WM_DPICHANGED: {
+      auto newRectSize = reinterpret_cast<RECT*>(lparam);
+      LONG newWidth = newRectSize->right - newRectSize->left;
+      LONG newHeight = newRectSize->bottom - newRectSize->top;
+
+      SetWindowPos(hwnd, nullptr, newRectSize->left, newRectSize->top, newWidth,
+                   newHeight, SWP_NOZORDER | SWP_NOACTIVATE);
+
+      return 0;
+    }
+    case WM_SIZE: {
+      RECT rect = GetClientArea();
+      if (child_content_ != nullptr) {
+        // Size and position the child window.
+        MoveWindow(child_content_, rect.left, rect.top, rect.right - rect.left,
+                   rect.bottom - rect.top, TRUE);
+      }
+      return 0;
+    }
+
+    case WM_ACTIVATE:
+      if (child_content_ != nullptr) {
+        SetFocus(child_content_);
+      }
+      return 0;
+
+    case WM_DWMCOLORIZATIONCOLORCHANGED:
+      UpdateTheme(hwnd);
+      return 0;
+  }
+
+  return DefWindowProc(window_handle_, message, wparam, lparam);
+}
+
+void Win32Window::Destroy() {
+  OnDestroy();
+
+  if (window_handle_) {
+    DestroyWindow(window_handle_);
+    window_handle_ = nullptr;
+  }
+  if (g_active_window_count == 0) {
+    WindowClassRegistrar::GetInstance()->UnregisterWindowClass();
+  }
+}
+
+Win32Window* Win32Window::GetThisFromHandle(HWND const window) noexcept {
+  return reinterpret_cast<Win32Window*>(
+      GetWindowLongPtr(window, GWLP_USERDATA));
+}
+
+void Win32Window::SetChildContent(HWND content) {
+  child_content_ = content;
+  SetParent(content, window_handle_);
+  RECT frame = GetClientArea();
+
+  MoveWindow(content, frame.left, frame.top, frame.right - frame.left,
+             frame.bottom - frame.top, true);
+
+  SetFocus(child_content_);
+}
+
+RECT Win32Window::GetClientArea() {
+  RECT frame;
+  GetClientRect(window_handle_, &frame);
+  return frame;
+}
+
+HWND Win32Window::GetHandle() {
+  return window_handle_;
+}
+
+void Win32Window::SetQuitOnClose(bool quit_on_close) {
+  quit_on_close_ = quit_on_close;
+}
+
+bool Win32Window::OnCreate() {
+  // No-op; provided for subclasses.
+  return true;
+}
+
+void Win32Window::OnDestroy() {
+  // No-op; provided for subclasses.
+}
+
+void Win32Window::UpdateTheme(HWND const window) {
+  DWORD light_mode;
+  DWORD light_mode_size = sizeof(light_mode);
+  LSTATUS result = RegGetValue(HKEY_CURRENT_USER, kGetPreferredBrightnessRegKey,
+                               kGetPreferredBrightnessRegValue,
+                               RRF_RT_REG_DWORD, nullptr, &light_mode,
+                               &light_mode_size);
+
+  if (result == ERROR_SUCCESS) {
+    BOOL enable_dark_mode = light_mode == 0;
+    DwmSetWindowAttribute(window, DWMWA_USE_IMMERSIVE_DARK_MODE,
+                          &enable_dark_mode, sizeof(enable_dark_mode));
+  }
+}
+</file>
+
+<file path="windows/runner/win32_window.h">
+#ifndef RUNNER_WIN32_WINDOW_H_
+#define RUNNER_WIN32_WINDOW_H_
+
+#include <windows.h>
+
+#include <functional>
+#include <memory>
+#include <string>
+
+// A class abstraction for a high DPI-aware Win32 Window. Intended to be
+// inherited from by classes that wish to specialize with custom
+// rendering and input handling
+class Win32Window {
+ public:
+  struct Point {
+    unsigned int x;
+    unsigned int y;
+    Point(unsigned int x, unsigned int y) : x(x), y(y) {}
+  };
+
+  struct Size {
+    unsigned int width;
+    unsigned int height;
+    Size(unsigned int width, unsigned int height)
+        : width(width), height(height) {}
+  };
+
+  Win32Window();
+  virtual ~Win32Window();
+
+  // Creates a win32 window with |title| that is positioned and sized using
+  // |origin| and |size|. New windows are created on the default monitor. Window
+  // sizes are specified to the OS in physical pixels, hence to ensure a
+  // consistent size this function will scale the inputted width and height as
+  // as appropriate for the default monitor. The window is invisible until
+  // |Show| is called. Returns true if the window was created successfully.
+  bool Create(const std::wstring& title, const Point& origin, const Size& size);
+
+  // Show the current window. Returns true if the window was successfully shown.
+  bool Show();
+
+  // Release OS resources associated with window.
+  void Destroy();
+
+  // Inserts |content| into the window tree.
+  void SetChildContent(HWND content);
+
+  // Returns the backing Window handle to enable clients to set icon and other
+  // window properties. Returns nullptr if the window has been destroyed.
+  HWND GetHandle();
+
+  // If true, closing this window will quit the application.
+  void SetQuitOnClose(bool quit_on_close);
+
+  // Return a RECT representing the bounds of the current client area.
+  RECT GetClientArea();
+
+ protected:
+  // Processes and route salient window messages for mouse handling,
+  // size change and DPI. Delegates handling of these to member overloads that
+  // inheriting classes can handle.
+  virtual LRESULT MessageHandler(HWND window,
+                                 UINT const message,
+                                 WPARAM const wparam,
+                                 LPARAM const lparam) noexcept;
+
+  // Called when CreateAndShow is called, allowing subclass window-related
+  // setup. Subclasses should return false if setup fails.
+  virtual bool OnCreate();
+
+  // Called when Destroy is called.
+  virtual void OnDestroy();
+
+ private:
+  friend class WindowClassRegistrar;
+
+  // OS callback called by message pump. Handles the WM_NCCREATE message which
+  // is passed when the non-client area is being created and enables automatic
+  // non-client DPI scaling so that the non-client area automatically
+  // responds to changes in DPI. All other messages are handled by
+  // MessageHandler.
+  static LRESULT CALLBACK WndProc(HWND const window,
+                                  UINT const message,
+                                  WPARAM const wparam,
+                                  LPARAM const lparam) noexcept;
+
+  // Retrieves a class instance pointer for |window|
+  static Win32Window* GetThisFromHandle(HWND const window) noexcept;
+
+  // Update the window frame's theme to match the system theme.
+  static void UpdateTheme(HWND const window);
+
+  bool quit_on_close_ = false;
+
+  // window handle for top level window.
+  HWND window_handle_ = nullptr;
+
+  // window handle for hosted content.
+  HWND child_content_ = nullptr;
+};
+
+#endif  // RUNNER_WIN32_WINDOW_H_
+</file>
+
+<file path="windows/.gitignore">
+flutter/ephemeral/
+
+# Visual Studio user-specific files.
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Visual Studio build-related files.
+x64/
+x86/
+
+# Visual Studio cache files
+# files ending in .cache can be ignored
+*.[Cc]ache
+# but keep track of directories ending in .cache
+!*.[Cc]ache/
+</file>
+
+<file path="windows/CMakeLists.txt">
+# Project-level configuration.
+cmake_minimum_required(VERSION 3.14)
+project(pulseedge LANGUAGES CXX)
+
+# The name of the executable created for the application. Change this to change
+# the on-disk name of your application.
+set(BINARY_NAME "pulseedge")
+
+# Explicitly opt in to modern CMake behaviors to avoid warnings with recent
+# versions of CMake.
+cmake_policy(VERSION 3.14...3.25)
+
+# Define build configuration option.
+get_property(IS_MULTICONFIG GLOBAL PROPERTY GENERATOR_IS_MULTI_CONFIG)
+if(IS_MULTICONFIG)
+  set(CMAKE_CONFIGURATION_TYPES "Debug;Profile;Release"
+    CACHE STRING "" FORCE)
+else()
+  if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
+    set(CMAKE_BUILD_TYPE "Debug" CACHE
+      STRING "Flutter build mode" FORCE)
+    set_property(CACHE CMAKE_BUILD_TYPE PROPERTY STRINGS
+      "Debug" "Profile" "Release")
+  endif()
+endif()
+# Define settings for the Profile build mode.
+set(CMAKE_EXE_LINKER_FLAGS_PROFILE "${CMAKE_EXE_LINKER_FLAGS_RELEASE}")
+set(CMAKE_SHARED_LINKER_FLAGS_PROFILE "${CMAKE_SHARED_LINKER_FLAGS_RELEASE}")
+set(CMAKE_C_FLAGS_PROFILE "${CMAKE_C_FLAGS_RELEASE}")
+set(CMAKE_CXX_FLAGS_PROFILE "${CMAKE_CXX_FLAGS_RELEASE}")
+
+# Use Unicode for all projects.
+add_definitions(-DUNICODE -D_UNICODE)
+
+# Compilation settings that should be applied to most targets.
+#
+# Be cautious about adding new options here, as plugins use this function by
+# default. In most cases, you should add new options to specific targets instead
+# of modifying this function.
+function(APPLY_STANDARD_SETTINGS TARGET)
+  target_compile_features(${TARGET} PUBLIC cxx_std_17)
+  target_compile_options(${TARGET} PRIVATE /W4 /WX /wd"4100")
+  target_compile_options(${TARGET} PRIVATE /EHsc)
+  target_compile_definitions(${TARGET} PRIVATE "_HAS_EXCEPTIONS=0")
+  target_compile_definitions(${TARGET} PRIVATE "$<$<CONFIG:Debug>:_DEBUG>")
+endfunction()
+
+# Flutter library and tool build rules.
+set(FLUTTER_MANAGED_DIR "${CMAKE_CURRENT_SOURCE_DIR}/flutter")
+add_subdirectory(${FLUTTER_MANAGED_DIR})
+
+# Application build; see runner/CMakeLists.txt.
+add_subdirectory("runner")
+
+
+# Generated plugin build rules, which manage building the plugins and adding
+# them to the application.
+include(flutter/generated_plugins.cmake)
+
+
+# === Installation ===
+# Support files are copied into place next to the executable, so that it can
+# run in place. This is done instead of making a separate bundle (as on Linux)
+# so that building and running from within Visual Studio will work.
+set(BUILD_BUNDLE_DIR "$<TARGET_FILE_DIR:${BINARY_NAME}>")
+# Make the "install" step default, as it's required to run.
+set(CMAKE_VS_INCLUDE_INSTALL_TO_DEFAULT_BUILD 1)
+if(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
+  set(CMAKE_INSTALL_PREFIX "${BUILD_BUNDLE_DIR}" CACHE PATH "..." FORCE)
+endif()
+
+set(INSTALL_BUNDLE_DATA_DIR "${CMAKE_INSTALL_PREFIX}/data")
+set(INSTALL_BUNDLE_LIB_DIR "${CMAKE_INSTALL_PREFIX}")
+
+install(TARGETS ${BINARY_NAME} RUNTIME DESTINATION "${CMAKE_INSTALL_PREFIX}"
+  COMPONENT Runtime)
+
+install(FILES "${FLUTTER_ICU_DATA_FILE}" DESTINATION "${INSTALL_BUNDLE_DATA_DIR}"
+  COMPONENT Runtime)
+
+install(FILES "${FLUTTER_LIBRARY}" DESTINATION "${INSTALL_BUNDLE_LIB_DIR}"
+  COMPONENT Runtime)
+
+if(PLUGIN_BUNDLED_LIBRARIES)
+  install(FILES "${PLUGIN_BUNDLED_LIBRARIES}"
+    DESTINATION "${INSTALL_BUNDLE_LIB_DIR}"
+    COMPONENT Runtime)
+endif()
+
+# Copy the native assets provided by the build.dart from all packages.
+set(NATIVE_ASSETS_DIR "${PROJECT_BUILD_DIR}native_assets/windows/")
+install(DIRECTORY "${NATIVE_ASSETS_DIR}"
+   DESTINATION "${INSTALL_BUNDLE_LIB_DIR}"
+   COMPONENT Runtime)
+
+# Fully re-copy the assets directory on each build to avoid having stale files
+# from a previous install.
+set(FLUTTER_ASSET_DIR_NAME "flutter_assets")
+install(CODE "
+  file(REMOVE_RECURSE \"${INSTALL_BUNDLE_DATA_DIR}/${FLUTTER_ASSET_DIR_NAME}\")
+  " COMPONENT Runtime)
+install(DIRECTORY "${PROJECT_BUILD_DIR}/${FLUTTER_ASSET_DIR_NAME}"
+  DESTINATION "${INSTALL_BUNDLE_DATA_DIR}" COMPONENT Runtime)
+
+# Install the AOT library on non-Debug builds only.
+install(FILES "${AOT_LIBRARY}" DESTINATION "${INSTALL_BUNDLE_DATA_DIR}"
+  CONFIGURATIONS Profile;Release
+  COMPONENT Runtime)
+</file>
+
+<file path=".gitignore">
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.build/
+.buildlog/
+.history
+.svn/
+.swiftpm/
+migrate_working_dir/
+
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# The .vscode folder contains launch configuration and tasks you configure in
+# VS Code which you may wish to be included in version control, so this line
+# is commented out by default.
+#.vscode/
+
+# Flutter/Dart/Pub related
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+/build/
+/coverage/
+
+# Symbolication related
+app.*.symbols
+
+# Obfuscation related
+app.*.map.json
+
+# Android Studio will place build artifacts here
+/android/app/debug
+/android/app/profile
+/android/app/release
+</file>
+
+<file path=".metadata">
+# This file tracks properties of this Flutter project.
+# Used by Flutter tool to assess capabilities and perform upgrades etc.
+#
+# This file should be version controlled and should not be manually edited.
+
+version:
+  revision: "67323de285b00232883f53b84095eb72be97d35c"
+  channel: "stable"
+
+project_type: app
+
+# Tracks metadata for the flutter migrate command
+migration:
+  platforms:
+    - platform: root
+      create_revision: 67323de285b00232883f53b84095eb72be97d35c
+      base_revision: 67323de285b00232883f53b84095eb72be97d35c
+    - platform: android
+      create_revision: 67323de285b00232883f53b84095eb72be97d35c
+      base_revision: 67323de285b00232883f53b84095eb72be97d35c
+    - platform: ios
+      create_revision: 67323de285b00232883f53b84095eb72be97d35c
+      base_revision: 67323de285b00232883f53b84095eb72be97d35c
+    - platform: linux
+      create_revision: 67323de285b00232883f53b84095eb72be97d35c
+      base_revision: 67323de285b00232883f53b84095eb72be97d35c
+    - platform: macos
+      create_revision: 67323de285b00232883f53b84095eb72be97d35c
+      base_revision: 67323de285b00232883f53b84095eb72be97d35c
+    - platform: web
+      create_revision: 67323de285b00232883f53b84095eb72be97d35c
+      base_revision: 67323de285b00232883f53b84095eb72be97d35c
+    - platform: windows
+      create_revision: 67323de285b00232883f53b84095eb72be97d35c
+      base_revision: 67323de285b00232883f53b84095eb72be97d35c
+
+  # User provided section
+
+  # List of Local paths (relative to this file) that should be
+  # ignored by the migrate tool.
+  #
+  # Files that are not part of the templates will be ignored by default.
+  unmanaged_files:
+    - 'lib/main.dart'
+    - 'ios/Runner.xcodeproj/project.pbxproj'
+</file>
+
+<file path="analysis_options.yaml">
+# This file configures the analyzer, which statically analyzes Dart code to
+# check for errors, warnings, and lints.
+#
+# The issues identified by the analyzer are surfaced in the UI of Dart-enabled
+# IDEs (https://dart.dev/tools#ides-and-editors). The analyzer can also be
+# invoked from the command line by running `flutter analyze`.
+
+# The following line activates a set of recommended lints for Flutter apps,
+# packages, and plugins designed to encourage good coding practices.
+include: package:flutter_lints/flutter.yaml
+
+linter:
+  # The lint rules applied to this project can be customized in the
+  # section below to disable rules from the `package:flutter_lints/flutter.yaml`
+  # included above or to enable additional rules. A list of all available lints
+  # and their documentation is published at https://dart.dev/lints.
+  #
+  # Instead of disabling a lint rule for the entire project in the
+  # section below, it can also be suppressed for a single line of code
+  # or a specific dart file by using the `// ignore: name_of_lint` and
+  # `// ignore_for_file: name_of_lint` syntax on the line or in the file
+  # producing the lint.
+  rules:
+    # avoid_print: false  # Uncomment to disable the `avoid_print` rule
+    # prefer_single_quotes: true  # Uncomment to enable the `prefer_single_quotes` rule
+
+# Additional information about this file can be found at
+# https://dart.dev/guides/language/analysis-options
+</file>
+
+<file path="pubspec.lock">
+# Generated by pub
+# See https://dart.dev/tools/pub/glossary#lockfile
+packages:
+  _fe_analyzer_shared:
+    dependency: transitive
+    description:
+      name: _fe_analyzer_shared
+      sha256: "8d7ff3948166b8ec5da0fbb5962000926b8e02f2ed9b3e51d1738905fbd4c98d"
+      url: "https://pub.dev"
+    source: hosted
+    version: "93.0.0"
+  analyzer:
+    dependency: transitive
+    description:
+      name: analyzer
+      sha256: de7148ed2fcec579b19f122c1800933dfa028f6d9fd38a152b04b1516cec120b
+      url: "https://pub.dev"
+    source: hosted
+    version: "10.0.1"
+  archive:
+    dependency: transitive
+    description:
+      name: archive
+      sha256: "2fde1607386ab523f7a36bb3e7edb43bd58e6edaf2ffb29d8a6d578b297fdbbd"
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.0.7"
+  args:
+    dependency: transitive
+    description:
+      name: args
+      sha256: d0481093c50b1da8910eb0bb301626d4d8eb7284aa739614d2b394ee09e3ea04
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.7.0"
+  async:
+    dependency: transitive
+    description:
+      name: async
+      sha256: "758e6d74e971c3e5aceb4110bfd6698efc7f501675bcfe0c775459a8140750eb"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.13.0"
+  barcode:
+    dependency: transitive
+    description:
+      name: barcode
+      sha256: "7b6729c37e3b7f34233e2318d866e8c48ddb46c1f7ad01ff7bb2a8de1da2b9f4"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.2.9"
+  bidi:
+    dependency: transitive
+    description:
+      name: bidi
+      sha256: "77f475165e94b261745cf1032c751e2032b8ed92ccb2bf5716036db79320637d"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.13"
+  boolean_selector:
+    dependency: transitive
+    description:
+      name: boolean_selector
+      sha256: "8aab1771e1243a5063b8b0ff68042d67334e3feab9e95b9490f9a6ebf73b42ea"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.1.2"
+  build:
+    dependency: transitive
+    description:
+      name: build
+      sha256: "275bf6bb2a00a9852c28d4e0b410da1d833a734d57d39d44f94bfc895a484ec3"
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.0.4"
+  build_config:
+    dependency: transitive
+    description:
+      name: build_config
+      sha256: "4f64382b97504dc2fcdf487d5aae33418e08b4703fc21249e4db6d804a4d0187"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.2.0"
+  build_daemon:
+    dependency: transitive
+    description:
+      name: build_daemon
+      sha256: bf05f6e12cfea92d3c09308d7bcdab1906cd8a179b023269eed00c071004b957
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.1.1"
+  build_runner:
+    dependency: "direct dev"
+    description:
+      name: build_runner
+      sha256: "39ad4ca8a2876779737c60e4228b4bcd35d4352ef7e14e47514093edc012c734"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.11.1"
+  built_collection:
+    dependency: transitive
+    description:
+      name: built_collection
+      sha256: "376e3dd27b51ea877c28d525560790aee2e6fbb5f20e2f85d5081027d94e2100"
+      url: "https://pub.dev"
+    source: hosted
+    version: "5.1.1"
+  built_value:
+    dependency: transitive
+    description:
+      name: built_value
+      sha256: "7931c90b84bc573fef103548e354258ae4c9d28d140e41961df6843c5d60d4d8"
+      url: "https://pub.dev"
+    source: hosted
+    version: "8.12.3"
+  characters:
+    dependency: transitive
+    description:
+      name: characters
+      sha256: f71061c654a3380576a52b451dd5532377954cf9dbd272a78fc8479606670803
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.4.0"
+  charcode:
+    dependency: transitive
+    description:
+      name: charcode
+      sha256: fb0f1107cac15a5ea6ef0a6ef71a807b9e4267c713bb93e00e92d737cc8dbd8a
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.4.0"
+  checked_yaml:
+    dependency: transitive
+    description:
+      name: checked_yaml
+      sha256: "959525d3162f249993882720d52b7e0c833978df229be20702b33d48d91de70f"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.4"
+  cli_util:
+    dependency: transitive
+    description:
+      name: cli_util
+      sha256: ff6785f7e9e3c38ac98b2fb035701789de90154024a75b6cb926445e83197d1c
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.4.2"
+  clock:
+    dependency: transitive
+    description:
+      name: clock
+      sha256: fddb70d9b5277016c77a80201021d40a2247104d9f4aa7bab7157b7e3f05b84b
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.1.2"
+  code_assets:
+    dependency: transitive
+    description:
+      name: code_assets
+      sha256: "83ccdaa064c980b5596c35dd64a8d3ecc68620174ab9b90b6343b753aa721687"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.0"
+  code_builder:
+    dependency: transitive
+    description:
+      name: code_builder
+      sha256: "6a6cab2ba4680d6423f34a9b972a4c9a94ebe1b62ecec4e1a1f2cba91fd1319d"
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.11.1"
+  collection:
+    dependency: transitive
+    description:
+      name: collection
+      sha256: "2f5709ae4d3d59dd8f7cd309b4e023046b57d8a6c82130785d2b0e5868084e76"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.19.1"
+  connectivity_plus:
+    dependency: "direct main"
+    description:
+      name: connectivity_plus
+      sha256: b5e72753cf63becce2c61fd04dfe0f1c430cc5278b53a1342dc5ad839eab29ec
+      url: "https://pub.dev"
+    source: hosted
+    version: "6.1.5"
+  connectivity_plus_platform_interface:
+    dependency: transitive
+    description:
+      name: connectivity_plus_platform_interface
+      sha256: "42657c1715d48b167930d5f34d00222ac100475f73d10162ddf43e714932f204"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.1"
+  convert:
+    dependency: transitive
+    description:
+      name: convert
+      sha256: b30acd5944035672bc15c6b7a8b47d773e41e2f17de064350988c5d02adb1c68
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.1.2"
+  cross_file:
+    dependency: transitive
+    description:
+      name: cross_file
+      sha256: "28bb3ae56f117b5aec029d702a90f57d285cd975c3c5c281eaca38dbc47c5937"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.3.5+2"
+  crypto:
+    dependency: "direct main"
+    description:
+      name: crypto
+      sha256: c8ea0233063ba03258fbcf2ca4d6dadfefe14f02fab57702265467a19f27fadf
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.0.7"
+  cryptography:
+    dependency: "direct main"
+    description:
+      name: cryptography
+      sha256: "3eda3029d34ec9095a27a198ac9785630fe525c0eb6a49f3d575272f8e792ef0"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.9.0"
+  cupertino_icons:
+    dependency: "direct main"
+    description:
+      name: cupertino_icons
+      sha256: ba631d1c7f7bef6b729a622b7b752645a2d076dba9976925b8f25725a30e1ee6
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.8"
+  dart_style:
+    dependency: transitive
+    description:
+      name: dart_style
+      sha256: "15a7db352c8fc6a4d2bc475ba901c25b39fe7157541da4c16eacce6f8be83e49"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.1.5"
+  dbus:
+    dependency: transitive
+    description:
+      name: dbus
+      sha256: d0c98dcd4f5169878b6cf8f6e0a52403a9dff371a3e2f019697accbf6f44a270
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.7.12"
+  dio:
+    dependency: "direct main"
+    description:
+      name: dio
+      sha256: b9d46faecab38fc8cc286f80bc4d61a3bb5d4ac49e51ed877b4d6706efe57b25
+      url: "https://pub.dev"
+    source: hosted
+    version: "5.9.1"
+  dio_web_adapter:
+    dependency: transitive
+    description:
+      name: dio_web_adapter
+      sha256: "7586e476d70caecaf1686d21eee7247ea43ef5c345eab9e0cc3583ff13378d78"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.1.1"
+  drift:
+    dependency: "direct main"
+    description:
+      name: drift
+      sha256: "970cd188fddb111b26ea6a9b07a62bf5c2432d74147b8122c67044ae3b97e99e"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.31.0"
+  drift_dev:
+    dependency: "direct dev"
+    description:
+      name: drift_dev
+      sha256: "917184b2fb867b70a548a83bf0d36268423b38d39968c06cce4905683da49587"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.31.0"
+  fake_async:
+    dependency: transitive
+    description:
+      name: fake_async
+      sha256: "5368f224a74523e8d2e7399ea1638b37aecfca824a3cc4dfdf77bf1fa905ac44"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.3.3"
+  ffi:
+    dependency: transitive
+    description:
+      name: ffi
+      sha256: "6d7fd89431262d8f3125e81b50d3847a091d846eafcd4fdb88dd06f36d705a45"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.2.0"
+  file:
+    dependency: transitive
+    description:
+      name: file
+      sha256: a3b4f84adafef897088c160faf7dfffb7696046cb13ae90b508c2cbc95d3b8d4
+      url: "https://pub.dev"
+    source: hosted
+    version: "7.0.1"
+  file_picker:
+    dependency: "direct main"
+    description:
+      name: file_picker
+      sha256: ab13ae8ef5580a411c458d6207b6774a6c237d77ac37011b13994879f68a8810
+      url: "https://pub.dev"
+    source: hosted
+    version: "8.3.7"
+  fixnum:
+    dependency: transitive
+    description:
+      name: fixnum
+      sha256: b6dc7065e46c974bc7c5f143080a6764ec7a4be6da1285ececdc37be96de53be
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.1.1"
+  flutter:
+    dependency: "direct main"
+    description: flutter
+    source: sdk
+    version: "0.0.0"
+  flutter_lints:
+    dependency: "direct dev"
+    description:
+      name: flutter_lints
+      sha256: "3f41d009ba7172d5ff9be5f6e6e6abb4300e263aab8866d2a0842ed2a70f8f0c"
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.0.0"
+  flutter_plugin_android_lifecycle:
+    dependency: transitive
+    description:
+      name: flutter_plugin_android_lifecycle
+      sha256: ee8068e0e1cd16c4a82714119918efdeed33b3ba7772c54b5d094ab53f9b7fd1
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.33"
+  flutter_riverpod:
+    dependency: "direct main"
+    description:
+      name: flutter_riverpod
+      sha256: "9532ee6db4a943a1ed8383072a2e3eeda041db5657cdf6d2acecf3c21ecbe7e1"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.6.1"
+  flutter_secure_storage:
+    dependency: "direct main"
+    description:
+      name: flutter_secure_storage
+      sha256: "9cad52d75ebc511adfae3d447d5d13da15a55a92c9410e50f67335b6d21d16ea"
+      url: "https://pub.dev"
+    source: hosted
+    version: "9.2.4"
+  flutter_secure_storage_linux:
+    dependency: transitive
+    description:
+      name: flutter_secure_storage_linux
+      sha256: be76c1d24a97d0b98f8b54bce6b481a380a6590df992d0098f868ad54dc8f688
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.2.3"
+  flutter_secure_storage_macos:
+    dependency: transitive
+    description:
+      name: flutter_secure_storage_macos
+      sha256: "6c0a2795a2d1de26ae202a0d78527d163f4acbb11cde4c75c670f3a0fc064247"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.1.3"
+  flutter_secure_storage_platform_interface:
+    dependency: transitive
+    description:
+      name: flutter_secure_storage_platform_interface
+      sha256: cf91ad32ce5adef6fba4d736a542baca9daf3beac4db2d04be350b87f69ac4a8
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.1.2"
+  flutter_secure_storage_web:
+    dependency: transitive
+    description:
+      name: flutter_secure_storage_web
+      sha256: f4ebff989b4f07b2656fb16b47852c0aab9fed9b4ec1c70103368337bc1886a9
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.2.1"
+  flutter_secure_storage_windows:
+    dependency: transitive
+    description:
+      name: flutter_secure_storage_windows
+      sha256: b20b07cb5ed4ed74fc567b78a72936203f587eba460af1df11281c9326cd3709
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.1.2"
+  flutter_test:
+    dependency: "direct dev"
+    description: flutter
+    source: sdk
+    version: "0.0.0"
+  flutter_web_plugins:
+    dependency: transitive
+    description: flutter
+    source: sdk
+    version: "0.0.0"
+  glob:
+    dependency: transitive
+    description:
+      name: glob
+      sha256: c3f1ee72c96f8f78935e18aa8cecced9ab132419e8625dc187e1c2408efc20de
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.1.3"
+  go_router:
+    dependency: "direct main"
+    description:
+      name: go_router
+      sha256: f02fd7d2a4dc512fec615529824fdd217fecb3a3d3de68360293a551f21634b3
+      url: "https://pub.dev"
+    source: hosted
+    version: "14.8.1"
+  google_fonts:
+    dependency: "direct main"
+    description:
+      name: google_fonts
+      sha256: ba03d03bcaa2f6cb7bd920e3b5027181db75ab524f8891c8bc3aa603885b8055
+      url: "https://pub.dev"
+    source: hosted
+    version: "6.3.3"
+  graphs:
+    dependency: transitive
+    description:
+      name: graphs
+      sha256: "741bbf84165310a68ff28fe9e727332eef1407342fca52759cb21ad8177bb8d0"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.3.2"
+  hooks:
+    dependency: transitive
+    description:
+      name: hooks
+      sha256: "7a08a0d684cb3b8fb604b78455d5d352f502b68079f7b80b831c62220ab0a4f6"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.1"
+  http:
+    dependency: "direct main"
+    description:
+      name: http
+      sha256: "87721a4a50b19c7f1d49001e51409bddc46303966ce89a65af4f4e6004896412"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.6.0"
+  http_multi_server:
+    dependency: transitive
+    description:
+      name: http_multi_server
+      sha256: aa6199f908078bb1c5efb8d8638d4ae191aac11b311132c3ef48ce352fb52ef8
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.2.2"
+  http_parser:
+    dependency: transitive
+    description:
+      name: http_parser
+      sha256: "178d74305e7866013777bab2c3d8726205dc5a4dd935297175b19a23a2e66571"
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.1.2"
+  image:
+    dependency: transitive
+    description:
+      name: image
+      sha256: "4e973fcf4caae1a4be2fa0a13157aa38a8f9cb049db6529aa00b4d71abc4d928"
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.5.4"
+  intl:
+    dependency: "direct main"
+    description:
+      name: intl
+      sha256: d6f56758b7d3014a48af9701c085700aac781a92a87a62b1333b46d8879661cf
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.19.0"
+  io:
+    dependency: transitive
+    description:
+      name: io
+      sha256: dfd5a80599cf0165756e3181807ed3e77daf6dd4137caaad72d0b7931597650b
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.5"
+  js:
+    dependency: transitive
+    description:
+      name: js
+      sha256: f2c445dce49627136094980615a031419f7f3eb393237e4ecd97ac15dea343f3
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.6.7"
+  json_annotation:
+    dependency: transitive
+    description:
+      name: json_annotation
+      sha256: "805fa86df56383000f640384b282ce0cb8431f1a7a2396de92fb66186d8c57df"
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.10.0"
+  leak_tracker:
+    dependency: transitive
+    description:
+      name: leak_tracker
+      sha256: "33e2e26bdd85a0112ec15400c8cbffea70d0f9c3407491f672a2fad47915e2de"
+      url: "https://pub.dev"
+    source: hosted
+    version: "11.0.2"
+  leak_tracker_flutter_testing:
+    dependency: transitive
+    description:
+      name: leak_tracker_flutter_testing
+      sha256: "1dbc140bb5a23c75ea9c4811222756104fbcd1a27173f0c34ca01e16bea473c1"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.0.10"
+  leak_tracker_testing:
+    dependency: transitive
+    description:
+      name: leak_tracker_testing
+      sha256: "8d5a2d49f4a66b49744b23b018848400d23e54caf9463f4eb20df3eb8acb2eb1"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.0.2"
+  lints:
+    dependency: transitive
+    description:
+      name: lints
+      sha256: "976c774dd944a42e83e2467f4cc670daef7eed6295b10b36ae8c85bcbf828235"
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.0.0"
+  logger:
+    dependency: "direct main"
+    description:
+      name: logger
+      sha256: a7967e31b703831a893bbc3c3dd11db08126fe5f369b5c648a36f821979f5be3
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.6.2"
+  logging:
+    dependency: transitive
+    description:
+      name: logging
+      sha256: c8245ada5f1717ed44271ed1c26b8ce85ca3228fd2ffdb75468ab01979309d61
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.3.0"
+  lottie:
+    dependency: "direct main"
+    description:
+      name: lottie
+      sha256: "8ae0be46dbd9e19641791dc12ee480d34e1fd3f84c749adc05f3ad9342b71b95"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.3.2"
+  matcher:
+    dependency: transitive
+    description:
+      name: matcher
+      sha256: dc58c723c3c24bf8d3e2d3ad3f2f9d7bd9cf43ec6feaa64181775e60190153f2
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.12.17"
+  material_color_utilities:
+    dependency: transitive
+    description:
+      name: material_color_utilities
+      sha256: f7142bb1154231d7ea5f96bc7bde4bda2a0945d2806bb11670e30b850d56bdec
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.11.1"
+  meta:
+    dependency: transitive
+    description:
+      name: meta
+      sha256: "23f08335362185a5ea2ad3a4e597f1375e78bce8a040df5c600c8d3552ef2394"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.17.0"
+  mime:
+    dependency: transitive
+    description:
+      name: mime
+      sha256: "41a20518f0cb1256669420fdba0cd90d21561e560ac240f26ef8322e45bb7ed6"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.0"
+  native_toolchain_c:
+    dependency: transitive
+    description:
+      name: native_toolchain_c
+      sha256: "89e83885ba09da5fdf2cdacc8002a712ca238c28b7f717910b34bcd27b0d03ac"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.17.4"
+  nm:
+    dependency: transitive
+    description:
+      name: nm
+      sha256: "2c9aae4127bdc8993206464fcc063611e0e36e72018696cd9631023a31b24254"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.5.0"
+  objective_c:
+    dependency: transitive
+    description:
+      name: objective_c
+      sha256: "100a1c87616ab6ed41ec263b083c0ef3261ee6cd1dc3b0f35f8ddfa4f996fe52"
+      url: "https://pub.dev"
+    source: hosted
+    version: "9.3.0"
+  package_config:
+    dependency: transitive
+    description:
+      name: package_config
+      sha256: f096c55ebb7deb7e384101542bfba8c52696c1b56fca2eb62827989ef2353bbc
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.2.0"
+  path:
+    dependency: "direct main"
+    description:
+      name: path
+      sha256: "75cca69d1490965be98c73ceaea117e8a04dd21217b37b292c9ddbec0d955bc5"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.9.1"
+  path_parsing:
+    dependency: transitive
+    description:
+      name: path_parsing
+      sha256: "883402936929eac138ee0a45da5b0f2c80f89913e6dc3bf77eb65b84b409c6ca"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.1.0"
+  path_provider:
+    dependency: "direct main"
+    description:
+      name: path_provider
+      sha256: "50c5dd5b6e1aaf6fb3a78b33f6aa3afca52bf903a8a5298f53101fdaee55bbcd"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.1.5"
+  path_provider_android:
+    dependency: transitive
+    description:
+      name: path_provider_android
+      sha256: f2c65e21139ce2c3dad46922be8272bb5963516045659e71bb16e151c93b580e
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.2.22"
+  path_provider_foundation:
+    dependency: transitive
+    description:
+      name: path_provider_foundation
+      sha256: "2a376b7d6392d80cd3705782d2caa734ca4727776db0b6ec36ef3f1855197699"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.6.0"
+  path_provider_linux:
+    dependency: transitive
+    description:
+      name: path_provider_linux
+      sha256: f7a1fe3a634fe7734c8d3f2766ad746ae2a2884abe22e241a8b301bf5cac3279
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.2.1"
+  path_provider_platform_interface:
+    dependency: transitive
+    description:
+      name: path_provider_platform_interface
+      sha256: "88f5779f72ba699763fa3a3b06aa4bf6de76c8e5de842cf6f29e2e06476c2334"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.1.2"
+  path_provider_windows:
+    dependency: transitive
+    description:
+      name: path_provider_windows
+      sha256: bd6f00dbd873bfb70d0761682da2b3a2c2fccc2b9e84c495821639601d81afe7
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.3.0"
+  pdf:
+    dependency: "direct main"
+    description:
+      name: pdf
+      sha256: "28eacad99bffcce2e05bba24e50153890ad0255294f4dd78a17075a2ba5c8416"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.11.3"
+  pdf_widget_wrapper:
+    dependency: transitive
+    description:
+      name: pdf_widget_wrapper
+      sha256: c930860d987213a3d58c7ec3b7ecf8085c3897f773e8dc23da9cae60a5d6d0f5
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.4"
+  pedantic:
+    dependency: transitive
+    description:
+      name: pedantic
+      sha256: "67fc27ed9639506c856c840ccce7594d0bdcd91bc8d53d6e52359449a1d50602"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.11.1"
+  petitparser:
+    dependency: transitive
+    description:
+      name: petitparser
+      sha256: "1a97266a94f7350d30ae522c0af07890c70b8e62c71e8e3920d1db4d23c057d1"
+      url: "https://pub.dev"
+    source: hosted
+    version: "7.0.1"
+  platform:
+    dependency: transitive
+    description:
+      name: platform
+      sha256: "5d6b1b0036a5f331ebc77c850ebc8506cbc1e9416c27e59b439f917a902a4984"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.1.6"
+  plugin_platform_interface:
+    dependency: transitive
+    description:
+      name: plugin_platform_interface
+      sha256: "4820fbfdb9478b1ebae27888254d445073732dae3d6ea81f0b7e06d5dedc3f02"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.1.8"
+  pool:
+    dependency: transitive
+    description:
+      name: pool
+      sha256: "978783255c543aa3586a1b3c21f6e9d720eb315376a915872c61ef8b5c20177d"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.5.2"
+  posix:
+    dependency: transitive
+    description:
+      name: posix
+      sha256: "6323a5b0fa688b6a010df4905a56b00181479e6d10534cecfecede2aa55add61"
+      url: "https://pub.dev"
+    source: hosted
+    version: "6.0.3"
+  printing:
+    dependency: "direct main"
+    description:
+      name: printing
+      sha256: "482cd5a5196008f984bb43ed0e47cbfdca7373490b62f3b27b3299275bf22a93"
+      url: "https://pub.dev"
+    source: hosted
+    version: "5.14.2"
+  pub_semver:
+    dependency: transitive
+    description:
+      name: pub_semver
+      sha256: "5bfcf68ca79ef689f8990d1160781b4bad40a3bd5e5218ad4076ddb7f4081585"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.2.0"
+  pubspec_parse:
+    dependency: transitive
+    description:
+      name: pubspec_parse
+      sha256: "0560ba233314abbed0a48a2956f7f022cce7c3e1e73df540277da7544cad4082"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.5.0"
+  qr:
+    dependency: transitive
+    description:
+      name: qr
+      sha256: "5a1d2586170e172b8a8c8470bbbffd5eb0cd38a66c0d77155ea138d3af3a4445"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.0.2"
+  qr_flutter:
+    dependency: "direct main"
+    description:
+      name: qr_flutter
+      sha256: "5095f0fc6e3f71d08adef8feccc8cea4f12eec18a2e31c2e8d82cb6019f4b097"
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.1.0"
+  recase:
+    dependency: transitive
+    description:
+      name: recase
+      sha256: e4eb4ec2dcdee52dcf99cb4ceabaffc631d7424ee55e56f280bc039737f89213
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.1.0"
+  riverpod:
+    dependency: transitive
+    description:
+      name: riverpod
+      sha256: "59062512288d3056b2321804332a13ffdd1bf16df70dcc8e506e411280a72959"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.6.1"
+  shared_preferences:
+    dependency: "direct main"
+    description:
+      name: shared_preferences
+      sha256: "2939ae520c9024cb197fc20dee269cd8cdbf564c8b5746374ec6cacdc5169e64"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.5.4"
+  shared_preferences_android:
+    dependency: transitive
+    description:
+      name: shared_preferences_android
+      sha256: cbc40be9be1c5af4dab4d6e0de4d5d3729e6f3d65b89d21e1815d57705644a6f
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.4.20"
+  shared_preferences_foundation:
+    dependency: transitive
+    description:
+      name: shared_preferences_foundation
+      sha256: "4e7eaffc2b17ba398759f1151415869a34771ba11ebbccd1b0145472a619a64f"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.5.6"
+  shared_preferences_linux:
+    dependency: transitive
+    description:
+      name: shared_preferences_linux
+      sha256: "580abfd40f415611503cae30adf626e6656dfb2f0cee8f465ece7b6defb40f2f"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.4.1"
+  shared_preferences_platform_interface:
+    dependency: transitive
+    description:
+      name: shared_preferences_platform_interface
+      sha256: "57cbf196c486bc2cf1f02b85784932c6094376284b3ad5779d1b1c6c6a816b80"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.4.1"
+  shared_preferences_web:
+    dependency: transitive
+    description:
+      name: shared_preferences_web
+      sha256: c49bd060261c9a3f0ff445892695d6212ff603ef3115edbb448509d407600019
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.4.3"
+  shared_preferences_windows:
+    dependency: transitive
+    description:
+      name: shared_preferences_windows
+      sha256: "94ef0f72b2d71bc3e700e025db3710911bd51a71cefb65cc609dd0d9a982e3c1"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.4.1"
+  shelf:
+    dependency: transitive
+    description:
+      name: shelf
+      sha256: e7dd780a7ffb623c57850b33f43309312fc863fb6aa3d276a754bb299839ef12
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.4.2"
+  shelf_web_socket:
+    dependency: transitive
+    description:
+      name: shelf_web_socket
+      sha256: "3632775c8e90d6c9712f883e633716432a27758216dfb61bd86a8321c0580925"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.0.0"
+  sky_engine:
+    dependency: transitive
+    description: flutter
+    source: sdk
+    version: "0.0.0"
+  source_gen:
+    dependency: transitive
+    description:
+      name: source_gen
+      sha256: "1d562a3c1f713904ebbed50d2760217fd8a51ca170ac4b05b0db490699dbac17"
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.2.0"
+  source_span:
+    dependency: transitive
+    description:
+      name: source_span
+      sha256: "56a02f1f4cd1a2d96303c0144c93bd6d909eea6bee6bf5a0e0b685edbd4c47ab"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.10.2"
+  speech_to_text:
+    dependency: "direct main"
+    description:
+      name: speech_to_text
+      sha256: c07557664974afa061f221d0d4186935bea4220728ea9446702825e8b988db04
+      url: "https://pub.dev"
+    source: hosted
+    version: "7.3.0"
+  speech_to_text_platform_interface:
+    dependency: transitive
+    description:
+      name: speech_to_text_platform_interface
+      sha256: a1935847704e41ee468aad83181ddd2423d0833abe55d769c59afca07adb5114
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.3.0"
+  speech_to_text_windows:
+    dependency: transitive
+    description:
+      name: speech_to_text_windows
+      sha256: "2c9846d18253c7bbe059a276297ef9f27e8a2745dead32192525beb208195072"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.0+beta.8"
+  sqlite3:
+    dependency: transitive
+    description:
+      name: sqlite3
+      sha256: "3145bd74dcdb4fd6f5c6dda4d4e4490a8087d7f286a14dee5d37087290f0f8a2"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.9.4"
+  sqlite3_flutter_libs:
+    dependency: "direct main"
+    description:
+      name: sqlite3_flutter_libs
+      sha256: "1e800ebe7f85a80a66adacaa6febe4d5f4d8b75f244e9838a27cb2ffc7aec08d"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.5.41"
+  sqlparser:
+    dependency: transitive
+    description:
+      name: sqlparser
+      sha256: "337e9997f7141ffdd054259128553c348635fa318f7ca492f07a4ab76f850d19"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.43.1"
+  stack_trace:
+    dependency: transitive
+    description:
+      name: stack_trace
+      sha256: "8b27215b45d22309b5cddda1aa2b19bdfec9df0e765f2de506401c071d38d1b1"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.12.1"
+  state_notifier:
+    dependency: transitive
+    description:
+      name: state_notifier
+      sha256: b8677376aa54f2d7c58280d5a007f9e8774f1968d1fb1c096adcb4792fba29bb
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.0"
+  stream_channel:
+    dependency: transitive
+    description:
+      name: stream_channel
+      sha256: "969e04c80b8bcdf826f8f16579c7b14d780458bd97f56d107d3950fdbeef059d"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.1.4"
+  stream_transform:
+    dependency: transitive
+    description:
+      name: stream_transform
+      sha256: ad47125e588cfd37a9a7f86c7d6356dde8dfe89d071d293f80ca9e9273a33871
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.1.1"
+  string_scanner:
+    dependency: transitive
+    description:
+      name: string_scanner
+      sha256: "921cd31725b72fe181906c6a94d987c78e3b98c2e205b397ea399d4054872b43"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.4.1"
+  term_glyph:
+    dependency: transitive
+    description:
+      name: term_glyph
+      sha256: "7f554798625ea768a7518313e58f83891c7f5024f88e46e7182a4558850a4b8e"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.2.2"
+  test_api:
+    dependency: transitive
+    description:
+      name: test_api
+      sha256: ab2726c1a94d3176a45960b6234466ec367179b87dd74f1611adb1f3b5fb9d55
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.7.7"
+  typed_data:
+    dependency: transitive
+    description:
+      name: typed_data
+      sha256: f9049c039ebfeb4cf7a7104a675823cd72dba8297f264b6637062516699fa006
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.4.0"
+  uuid:
+    dependency: "direct main"
+    description:
+      name: uuid
+      sha256: a11b666489b1954e01d992f3d601b1804a33937b5a8fe677bd26b8a9f96f96e8
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.5.2"
+  vector_math:
+    dependency: transitive
+    description:
+      name: vector_math
+      sha256: d530bd74fea330e6e364cda7a85019c434070188383e1cd8d9777ee586914c5b
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.2.0"
+  vm_service:
+    dependency: transitive
+    description:
+      name: vm_service
+      sha256: "45caa6c5917fa127b5dbcfbd1fa60b14e583afdc08bfc96dda38886ca252eb60"
+      url: "https://pub.dev"
+    source: hosted
+    version: "15.0.2"
+  watcher:
+    dependency: transitive
+    description:
+      name: watcher
+      sha256: "1398c9f081a753f9226febe8900fce8f7d0a67163334e1c94a2438339d79d635"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.2.1"
+  web:
+    dependency: transitive
+    description:
+      name: web
+      sha256: "868d88a33d8a87b18ffc05f9f030ba328ffefba92d6c127917a2ba740f9cfe4a"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.1.1"
+  web_socket:
+    dependency: transitive
+    description:
+      name: web_socket
+      sha256: "34d64019aa8e36bf9842ac014bb5d2f5586ca73df5e4d9bf5c936975cae6982c"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.1"
+  web_socket_channel:
+    dependency: transitive
+    description:
+      name: web_socket_channel
+      sha256: d645757fb0f4773d602444000a8131ff5d48c9e47adfe9772652dd1a4f2d45c8
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.0.3"
+  win32:
+    dependency: transitive
+    description:
+      name: win32
+      sha256: d7cb55e04cd34096cd3a79b3330245f54cb96a370a1c27adb3c84b917de8b08e
+      url: "https://pub.dev"
+    source: hosted
+    version: "5.15.0"
+  workmanager:
+    dependency: "direct main"
+    description:
+      name: workmanager
+      sha256: f3c3ce6d79cce53eee4a29dd2e8328c25db5ba5d9062fcc5e8f3c71e0af9b7e4
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.6.0"
+  xdg_directories:
+    dependency: transitive
+    description:
+      name: xdg_directories
+      sha256: "7a3f37b05d989967cdddcbb571f1ea834867ae2faa29725fd085180e0883aa15"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.1.0"
+  xml:
+    dependency: transitive
+    description:
+      name: xml
+      sha256: "971043b3a0d3da28727e40ed3e0b5d18b742fa5a68665cca88e74b7876d5e025"
+      url: "https://pub.dev"
+    source: hosted
+    version: "6.6.1"
+  yaml:
+    dependency: transitive
+    description:
+      name: yaml
+      sha256: b9da305ac7c39faa3f030eccd175340f968459dae4af175130b3fc47e40d76ce
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.1.3"
+sdks:
+  dart: ">=3.10.3 <4.0.0"
+  flutter: ">=3.38.4"
+</file>
+
+<file path="pubspec.yaml">
+name: pulseedge
+description: PulseEdge - AI-Assisted Offline Clinical Operations Platform
+publish_to: 'none'
+version: 1.1.0+3
+
+environment:
+  sdk: '>=3.6.0 <4.0.0'
+  flutter: '>=3.22.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+
+  # Core & Database
+  drift: ^2.19.1
+  sqlite3_flutter_libs: ^0.5.24
+  path_provider: ^2.1.4
+  path: ^1.9.0
+
+  # Security & Utils
+  flutter_secure_storage: ^9.2.2
+  cryptography: ^2.7.0
+  uuid: ^4.5.0
+  shared_preferences: ^2.3.2  # For session persistence
+  crypto: ^3.0.5  # Latest stable — required for Hmac/Sha256 password hashing
+
+  # State Management & Navigation
+  flutter_riverpod: ^2.5.1
+  go_router: ^14.2.7
+
+  # UI & Branding
+  google_fonts: ^6.2.1
+  lottie: ^3.1.2
+
+  # Features (MVP Core)
+  speech_to_text: ^7.3.0          # Voice dictation
+  connectivity_plus: ^6.0.5       # Offline detection
+  workmanager: ^0.6.0             # Background sync queue
+  pdf: ^3.11.1                    # Patient summaries
+  printing: ^5.13.2               # Share/print PDF
+  qr_flutter: ^4.1.0              # QR sharing
+  http: ^1.2.2                    # Groq cloud AI fallback
+  logger: ^2.4.0                  # Debug logging
+  intl: ^0.19.0
+  file_picker: ^8.1.2  # For testing model loading (remove later)
+  dio: ^5.7.0
+  #flutter_llama: ^1.1.2
+  
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+  drift_dev: ^2.19.1
+  build_runner: ^2.4.12
+
+flutter:
+  uses-material-design: true
+
+  # Assets - comments on separate lines (YAML-safe)
+  assets:
+    - assets/animations/heartbeat.lottie.json
+    - assets/icons/pulseedge_logo_black.png
+    - assets/icons/patek_logo.png
+    #- assets/models/Llama-3.2-3B-Instruct-Q5_K_M.gguf
+    # Add more assets as needed (e.g., tablet mockups, additional logos)
+</file>
+
+<file path="README.md">
+# pulseedge
+
+A new Flutter project.
+
+## Getting Started
+
+This project is a starting point for a Flutter application.
+
+A few resources to get you started if this is your first Flutter project:
+
+- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev/), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
+</file>
+
+</files>

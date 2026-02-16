@@ -1,0 +1,26 @@
+
+Showing Recent Issues
+
+Analyze target Runner of project Runner with configuration Debug
+note: Run script build phase 'Run Script' will be run during every build because the option to run the script phase "Based on dependency analysis" is unchecked. (in target 'Runner' from project 'Runner')
+note: Run script build phase 'Thin Binary' will be run during every build because the option to run the script phase "Based on dependency analysis" is unchecked. (in target 'Runner' from project 'Runner')
+
+
+Run script build phase 'Run Script' will be run during every build because the option to run the script phase "Based on dependency analysis" is unchecked.
+
+Run script build phase 'Thin Binary' will be run during every build because the option to run the script phase "Based on dependency analysis" is unchecked.
+
+PhaseScriptExecution [CP]\ Check\ Pods\ Manifest.lock /Users/joshuasiow/Library/Developer/Xcode/DerivedData/Runner-bddwlmneujrnlnhfkowyvacouolf/Build/Intermediates.noindex/Runner.build/Debug-iphonesimulator/Runner.build/Script-01DF88742A1FE4CE0FD52D5B.sh (in target 'Runner' from project 'Runner')
+    cd /Users/joshuasiow/projects/pulseedge/ios
+    /bin/sh -c /Users/joshuasiow/Library/Developer/Xcode/DerivedData/Runner-bddwlmneujrnlnhfkowyvacouolf/Build/Intermediates.noindex/Runner.build/Debug-iphonesimulator/Runner.build/Script-01DF88742A1FE4CE0FD52D5B.sh
+
+diff: /Users/joshuasiow/projects/pulseedge/ios/Pods/Manifest.lock: No such file or directory
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+
+diff: /Users/joshuasiow/projects/pulseedge/ios/Pods/Manifest.lock: No such file or directory
+
+The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+
+
+
+Build failed    15/02/2026, 8:47 PM    0.2 seconds

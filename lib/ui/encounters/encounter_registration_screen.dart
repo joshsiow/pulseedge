@@ -1,257 +1,507 @@
+// lib/ui/encounters/encounter_registration_screen.dart
+import 'dart:async';
+
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:drift/drift.dart' as drift;
+import 'package:uuid/uuid.dart';
 
-import '../../core/auth/auth_service.dart';
-import '../../core/patients/patient_encounter_service.dart';
-import '../../core/session/session_context_store.dart';
-import 'encounter_workspace_screen.dart';
+import 'package:pulseedge/core/database/app_database.dart';
+import 'package:pulseedge/core/session/session_context_store.dart';
+import 'package:pulseedge/ui/encounters/encounter_workspace_screen.dart';
 
-class EncounterRegistrationScreen extends ConsumerStatefulWidget {
+class EncounterRegistrationScreen extends StatefulWidget {
   const EncounterRegistrationScreen({super.key});
 
   @override
-  ConsumerState<EncounterRegistrationScreen> createState() =>
+  State<EncounterRegistrationScreen> createState() =>
       _EncounterRegistrationScreenState();
 }
 
-class _EncounterRegistrationScreenState
-    extends ConsumerState<EncounterRegistrationScreen> {
-  final _searchCtrl = TextEditingController();
-  final _nameCtrl = TextEditingController();
-  final _idCtrl = TextEditingController();
+class _EncounterRegistrationScreenState extends State<EncounterRegistrationScreen> {
+  final _db = AppDatabase.instance;
+  final _sessionStore = SessionContextStore();
 
-  List<PatientSearchHit> _results = const [];
+  SessionContext? _ctx;
+
+  // Search / create
+  final _searchCtrl = TextEditingController();
+  Timer? _searchDebounce;
+  String _searchText = '';
   bool _searching = false;
-  bool _creating = false;
-  String? _error;
+  List<_PatientHit> _patientHits = [];
+
+  // “Fast create” fields
+  final _fullNameCtrl = TextEditingController();
+  final _nricCtrl = TextEditingController();
+
+  // Encounters list
+  bool _loadingEncounters = true;
+  List<_EncounterRow> _encounters = [];
+  String? _encountersError;
+
+  @override
+  void initState() {
+    super.initState();
+    _bootstrap();
+  }
 
   @override
   void dispose() {
+    _searchDebounce?.cancel();
     _searchCtrl.dispose();
-    _nameCtrl.dispose();
-    _idCtrl.dispose();
+    _fullNameCtrl.dispose();
+    _nricCtrl.dispose();
     super.dispose();
   }
 
-  // ---------------------------------------------------------------------------
-  // Search patients (offline-first)
-  // ---------------------------------------------------------------------------
-  Future<void> _searchPatients(String q) async {
-    final query = q.trim();
-    if (query.length < 2) {
-      setState(() => _results = const []);
+  Future<void> _bootstrap() async {
+    final ctx = await _sessionStore.getActive();
+    if (!mounted) return;
+
+    setState(() => _ctx = ctx);
+
+    // If no active session context, we still allow the screen to render,
+    // but encounter creation will fall back to "Default Unit".
+    await _autoCloseOvernightOpd();
+    await _loadEncounters();
+  }
+
+  DateTime _todayStartLocal() {
+    final now = DateTime.now();
+    return DateTime(now.year, now.month, now.day);
+  }
+
+  /// Rule: OPD is same-day. If encounter is still open after midnight, close it.
+  Future<void> _autoCloseOvernightOpd() async {
+    final ctx = _ctx;
+    if (ctx == null) return;
+
+    final todayStart = _todayStartLocal();
+
+    final q = _db.update(_db.encounters)
+      ..where((e) =>
+          e.unitId.equals(ctx.unitId) &
+          e.type.equals('OPD') &
+          e.endAt.isNull() &
+          e.startAt.isSmallerThanValue(todayStart));
+
+    await q.write(
+      EncountersCompanion(
+        status: const drift.Value('closed'),
+        endAt: drift.Value(todayStart),
+        updatedAt: drift.Value(DateTime.now()),
+      ),
+    );
+  }
+
+  Future<void> _loadEncounters() async {
+    setState(() {
+      _loadingEncounters = true;
+      _encountersError = null;
+    });
+
+    try {
+      final ctx = _ctx;
+      final todayStart = _todayStartLocal();
+
+      final encounters = _db.encounters;
+      final patients = _db.patients;
+
+      final join = _db.select(encounters).join([
+        drift.innerJoin(patients, patients.id.equalsExp(encounters.patientId)),
+      ]);
+
+      if (ctx != null) {
+        join.where(
+          encounters.unitId.equals(ctx.unitId) &
+              (
+                // open encounters any day
+                encounters.endAt.isNull() |
+                // today's encounters
+                encounters.startAt.isBiggerOrEqualValue(todayStart)
+              ),
+        );
+      } else {
+        // Fallback (no session): just show today's encounters across all units
+        join.where(encounters.startAt.isBiggerOrEqualValue(todayStart));
+      }
+
+      join.orderBy([
+        drift.OrderingTerm.desc(encounters.startAt),
+        drift.OrderingTerm.desc(encounters.createdAt),
+      ]);
+
+      final rows = await join.get();
+
+      // Optional debug:
+      // debugPrint('Encounter join rows=${rows.length}, ctx.unitId=${ctx?.unitId}, ctx.unitName=${ctx?.unitName}');
+
+      final list = rows.map((r) {
+        final e = r.readTable(encounters);
+        final p = r.readTable(patients);
+        return _EncounterRow(encounter: e, patient: p);
+      }).toList();
+
+      if (!mounted) return;
+      setState(() {
+        _encounters = list;
+        _loadingEncounters = false;
+      });
+    } catch (e) {
+      if (!mounted) return;
+      setState(() {
+        _encountersError = e.toString();
+        _loadingEncounters = false;
+        _encounters = [];
+      });
+    }
+  }
+
+  void _onSearchChanged(String v) {
+    _searchText = v;
+    _searchDebounce?.cancel();
+    _searchDebounce = Timer(const Duration(milliseconds: 250), () async {
+      if (!mounted) return;
+      await _runPatientSearch(_searchText);
+    });
+  }
+
+  String _norm(String s) => s.trim().toLowerCase();
+
+  Future<void> _runPatientSearch(String raw) async {
+    final q = _norm(raw);
+    if (q.isEmpty) {
+      if (!mounted) return;
+      setState(() {
+        _patientHits = [];
+        _searching = false;
+      });
       return;
     }
 
-    setState(() {
-      _searching = true;
-      _error = null;
-    });
+    if (!mounted) return;
+    setState(() => _searching = true);
 
-    try {
-      final svc = ref.read(patientEncounterServiceProvider);
-      final hits = await svc.searchPatients(query: query);
-      setState(() => _results = hits);
-    } catch (e) {
-      setState(() => _error = e.toString());
-    } finally {
-      setState(() => _searching = false);
-    }
+    final patients = _db.patients;
+
+    final query = _db.select(patients)
+      ..where((p) {
+        final like = '%$q%';
+        return p.fullNameNorm.like(like) |
+            p.nric.like(like) |
+            p.phone.like(like);
+      })
+      ..orderBy([
+        (p) => drift.OrderingTerm.asc(p.fullNameNorm),
+        (p) => drift.OrderingTerm.desc(p.updatedAt),
+      ])
+      ..limit(30);
+
+    final hits = await query.get();
+
+    if (!mounted) return;
+    setState(() {
+      _patientHits = hits.map((p) => _PatientHit.fromPatient(p)).toList();
+      _searching = false;
+    });
   }
 
-  // ---------------------------------------------------------------------------
-  // Start encounter for existing patient
-  // ---------------------------------------------------------------------------
-  Future<void> _startEncounterForPatient(String patientId) async {
-    setState(() {
-      _creating = true;
-      _error = null;
-    });
+  String _unitLabel() => _ctx?.unitName ?? 'Default Unit';
 
-    try {
-      final session =
-          await ref.read(sessionContextStoreProvider).getActive();
-      if (session == null) {
-        throw Exception('Session required');
-      }
+  Future<void> _openEncounter(String encounterId) async {
+    await Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (_) => EncounterWorkspaceScreen(encounterId: encounterId),
+      ),
+    );
 
-      final auth = ref.read(authServiceProvider);
-      final user = auth.currentUser!;
-      final svc = ref.read(patientEncounterServiceProvider);
+    // After returning, refresh list (status might change)
+    if (!mounted) return;
+    await _loadEncounters();
+  }
 
-      final encounterId = await svc.createEncounter(
-        CreateEncounterInput(
-          patientId: patientId,
-          unitId: session.unitId,
-          unitName: session.unitName,
-          providerUserId: user.id,
-          providerName: _providerNameFromUser(user),
-        ),
-      );
+  Future<String?> _findActiveEncounterForPatientInUnit(String patientId) async {
+    final ctx = _ctx;
+    if (ctx == null) return null;
 
+    final q = _db.select(_db.encounters)
+      ..where((e) =>
+          e.patientId.equals(patientId) &
+          e.unitId.equals(ctx.unitId) &
+          e.endAt.isNull() &
+          e.status.equals('open'))
+      ..orderBy([(e) => drift.OrderingTerm.desc(e.startAt)])
+      ..limit(1);
+
+    final existing = await q.getSingleOrNull();
+    return existing?.id;
+  }
+
+  Future<void> _startEncounterForExistingPatient(String patientId) async {
+    final ctx = _ctx;
+
+    // Enforce: only one active encounter per patient per unit.
+    final existingId = await _findActiveEncounterForPatientInUnit(patientId);
+    if (existingId != null) {
       if (!mounted) return;
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(
-          builder: (_) =>
-              EncounterWorkspaceScreen(encounterId: encounterId),
-        ),
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Active encounter found. Resuming…')),
       );
-    } catch (e) {
-      setState(() => _error = e.toString());
-    } finally {
-      setState(() => _creating = false);
-    }
-  }
-
-  // ---------------------------------------------------------------------------
-  // Create patient stub + start encounter (with duplicate-risk confirmation)
-  // ---------------------------------------------------------------------------
-  Future<void> _createStubAndStart() async {
-    final fullName = _nameCtrl.text.trim();
-    if (fullName.isEmpty) {
-      setState(() => _error = 'Patient name is required');
+      await _openEncounter(existingId);
       return;
     }
 
-    setState(() {
-      _creating = true;
-      _error = null;
-    });
+    // Create new encounter.
+    final now = DateTime.now();
+    final encounterId = const Uuid().v4();
 
-    try {
-      final svc = ref.read(patientEncounterServiceProvider);
+    final unitId = ctx?.unitId;
+    final unitName = ctx?.unitName ?? 'Default Unit';
 
-      // 1️⃣ Duplicate-risk check
-      final possibles = await svc.findPossibleDuplicates(
-        fullName: fullName,
-        nricOrOldId: _idCtrl.text.trim(),
-      );
+    await _db.into(_db.encounters).insert(
+      EncountersCompanion(
+        id: drift.Value(encounterId),
+        patientId: drift.Value(patientId),
+        encounterNo: const drift.Value.absent(),
+        status: const drift.Value('open'),
+        type: const drift.Value('OPD'),
+        unitId: drift.Value(unitId),
+        unitName: drift.Value(unitName),
+        providerUserId: const drift.Value.absent(),
+        providerName: const drift.Value.absent(),
+        chiefComplaint: const drift.Value.absent(),
+        triageCategory: const drift.Value.absent(),
+        startAt: drift.Value(now),
+        endAt: const drift.Value.absent(),
+        synced: const drift.Value(0),
+        syncState: const drift.Value('pending'),
+        aiMetadata: const drift.Value.absent(),
+        createdAt: drift.Value(now),
+        updatedAt: drift.Value(now),
+      ),
+    );
 
-      if (possibles.isNotEmpty) {
-        final decision = await _showDuplicateDialog(possibles);
-        if (!mounted) return;
-
-        if (decision == _DuplicateDecision.useExisting) {
-          await _startEncounterForPatient(possibles.first.patientId);
-          return;
-        }
-
-        if (decision == _DuplicateDecision.cancel) {
-          setState(() => _creating = false);
-          return;
-        }
-        // else: Create anyway
-      }
-
-      // 2️⃣ Create stub + encounter
-      final session =
-          await ref.read(sessionContextStoreProvider).getActive();
-      if (session == null) {
-        throw Exception('Session required');
-      }
-
-      final auth = ref.read(authServiceProvider);
-      final user = auth.currentUser!;
-
-      final encounterId = await svc.createStubAndStartEncounter(
-        patient: CreatePatientStubInput(
-          fullName: fullName,
-          nricOrOldId:
-              _idCtrl.text.trim().isEmpty ? null : _idCtrl.text.trim(),
-        ),
-        unitId: session.unitId,
-        unitName: session.unitName,
-        providerUserId: user.id,
-        providerName: _providerNameFromUser(user),
-      );
-
-      if (!mounted) return;
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(
-          builder: (_) =>
-              EncounterWorkspaceScreen(encounterId: encounterId),
-        ),
-      );
-    } catch (e) {
-      setState(() => _error = e.toString());
-    } finally {
-      setState(() => _creating = false);
-    }
+    if (!mounted) return;
+    await _openEncounter(encounterId);
   }
 
-  // ---------------------------------------------------------------------------
-  // UI
-  // ---------------------------------------------------------------------------
+  Future<void> _startEncounterFastCreate() async {
+    final name = _fullNameCtrl.text.trim();
+    if (name.isEmpty) return;
+
+    final now = DateTime.now();
+    final patientId = const Uuid().v4();
+
+    final nric = _nricCtrl.text.trim();
+
+    await _db.into(_db.patients).insert(
+      PatientsCompanion(
+        id: drift.Value(patientId),
+        mrn: const drift.Value.absent(),
+        fullName: drift.Value(name),
+        fullNameNorm: drift.Value(_norm(name)),
+        nric: drift.Value(nric.isEmpty ? '-' : nric),
+        nricHash: const drift.Value(''), // keep non-null if required in schema
+        gender: const drift.Value.absent(),
+        dob: const drift.Value.absent(),
+        phone: const drift.Value.absent(),
+        address: const drift.Value.absent(),
+        allergies: const drift.Value.absent(),
+        consentStatus: const drift.Value('unknown'),
+        source: const drift.Value('local'),
+        createdAt: drift.Value(now),
+        updatedAt: drift.Value(now),
+      ),
+    );
+
+    _fullNameCtrl.clear();
+    _nricCtrl.clear();
+
+    if (!mounted) return;
+    await _startEncounterForExistingPatient(patientId);
+  }
+
+  String _maskId(String? nric) {
+    if (nric == null) return '';
+    final s = nric.trim();
+    if (s.isEmpty || s == '-') return '';
+    if (s.length <= 4) return '****$s';
+    return '****${s.substring(s.length - 4)}';
+  }
+
+  String _formatTime(DateTime dt) {
+    final hh = dt.hour.toString().padLeft(2, '0');
+    final mm = dt.minute.toString().padLeft(2, '0');
+    return '$hh:$mm';
+  }
+
+  Widget _sectionTitle(String text) {
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(8, 12, 8, 8),
+      child: Text(
+        text,
+        style: Theme.of(context).textTheme.titleMedium?.copyWith(
+              fontWeight: FontWeight.w700,
+            ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
+    final ctx = _ctx;
 
     return Scaffold(
-      appBar: AppBar(title: const Text('New Encounter')),
-      body: Padding(
-        padding: const EdgeInsets.all(16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
+      appBar: AppBar(
+        title: const Text('New Encounter'),
+        centerTitle: true,
+        actions: [
+          IconButton(
+            tooltip: 'Refresh',
+            onPressed: _loadEncounters,
+            icon: const Icon(Icons.refresh),
+          ),
+        ],
+      ),
+      body: SafeArea(
+        child: ListView(
+          padding: const EdgeInsets.fromLTRB(16, 12, 16, 24),
           children: [
-            TextField(
-              controller: _searchCtrl,
-              decoration: const InputDecoration(
-                labelText: 'Search patient (NRIC / phone / name)',
-                prefixIcon: Icon(Icons.search),
-              ),
-              onChanged: _searchPatients,
-            ),
-            const SizedBox(height: 12),
-            if (_searching)
-              const LinearProgressIndicator(minHeight: 2),
-            if (_error != null)
+            // Header hint
+            if (ctx == null)
+              _infoBanner(
+                'No active session context found. '
+                'Select a unit on the home screen to enable per-unit encounter rules.',
+              )
+            else
+              _infoBanner('Unit: ${ctx.unitName}'),
+
+            _sectionTitle('Encounters (tap to continue)'),
+
+            if (_encountersError != null)
               Padding(
-                padding: const EdgeInsets.only(top: 8),
+                padding: const EdgeInsets.symmetric(vertical: 8),
                 child: Text(
-                  _error!,
-                  style:
-                      theme.textTheme.bodyMedium?.copyWith(color: Colors.red),
+                  'Failed to load encounters: $_encountersError',
+                  style: const TextStyle(color: Colors.red),
                 ),
               ),
-            const SizedBox(height: 12),
-            Expanded(
-              child: _results.isEmpty
-                  ? _buildCreateStubCard()
-                  : ListView.builder(
-                      itemCount: _results.length,
-                      itemBuilder: (context, i) {
-                        final p = _results[i];
-                        return Card(
-                          elevation: 0,
-                          child: ListTile(
-                            title: Text(
-                              p.fullName,
-                              style: const TextStyle(
-                                  fontWeight: FontWeight.w700),
-                            ),
-                            subtitle: Text(
-                              '${p.nricMasked}'
-                              '${p.lastSeenAt != null ? ' • Last seen ${_fmt(p.lastSeenAt!)}' : ''}',
-                            ),
-                            trailing: p.isIncomplete
-                                ? const Icon(Icons.warning_amber,
-                                    color: Colors.orange)
-                                : null,
-                            onTap: _creating
-                                ? null
-                                : () =>
-                                    _startEncounterForPatient(p.patientId),
-                          ),
-                        );
-                      },
-                    ),
-            ),
-            if (_creating)
+
+            _loadingEncounters
+                ? const Padding(
+                    padding: EdgeInsets.all(16),
+                    child: Center(child: CircularProgressIndicator()),
+                  )
+                : _encounters.isEmpty
+                    ? Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 12),
+                        child: Text(
+                          'No encounters found for ${_unitLabel()}.',
+                          style: Theme.of(context).textTheme.bodyMedium,
+                        ),
+                      )
+                    : Column(
+                        children: _encounters.map(_encounterTile).toList(),
+                      ),
+
+            const SizedBox(height: 16),
+
+            _sectionTitle('Find existing patient'),
+            _searchBox(),
+
+            if (_searching)
               const Padding(
-                padding: EdgeInsets.only(top: 8),
-                child: LinearProgressIndicator(minHeight: 2),
+                padding: EdgeInsets.all(12),
+                child: Center(child: CircularProgressIndicator()),
+              )
+            else if (_patientHits.isNotEmpty)
+              Column(
+                children: _patientHits.map(_patientHitTile).toList(),
+              ),
+
+            const SizedBox(height: 16),
+
+            _sectionTitle('Create new patient (fast)'),
+            _fastCreateCard(),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _infoBanner(String text) {
+    return Container(
+      margin: const EdgeInsets.only(bottom: 12),
+      padding: const EdgeInsets.all(12),
+      decoration: BoxDecoration(
+        color:
+            Theme.of(context).colorScheme.surfaceContainerHighest.withOpacity(0.35),
+        borderRadius: BorderRadius.circular(14),
+        border: Border.all(
+          color: Theme.of(context).dividerColor.withOpacity(0.2),
+        ),
+      ),
+      child: Text(text),
+    );
+  }
+
+  Widget _encounterTile(_EncounterRow row) {
+    final e = row.encounter;
+    final p = row.patient;
+
+    final open = e.endAt == null && e.status == 'open';
+    final subtitleParts = <String>[];
+    final masked = _maskId(p.nric);
+    if (masked.isNotEmpty) subtitleParts.add(masked);
+
+    subtitleParts.add('${e.type} • ${_formatTime(e.startAt)}');
+
+    if (!open && e.endAt != null) {
+      subtitleParts.add('Closed ${_formatTime(e.endAt!)}');
+    } else {
+      subtitleParts.add('OPEN');
+    }
+
+    return Card(
+      margin: const EdgeInsets.only(bottom: 10),
+      child: ListTile(
+        title: Text(
+          p.fullName,
+          style: const TextStyle(fontWeight: FontWeight.w700),
+        ),
+        subtitle: Text(subtitleParts.join(' • ')),
+        trailing: const Icon(Icons.chevron_right),
+        onTap: () => _openEncounter(e.id),
+      ),
+    );
+  }
+
+  Widget _searchBox() {
+    return Card(
+      margin: EdgeInsets.zero,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+        child: Row(
+          children: [
+            const Icon(Icons.search),
+            const SizedBox(width: 10),
+            Expanded(
+              child: TextField(
+                controller: _searchCtrl,
+                onChanged: _onSearchChanged,
+                decoration: const InputDecoration(
+                  hintText: 'Search patient (NRIC / phone / name)',
+                  border: InputBorder.none,
+                ),
+              ),
+            ),
+            if (_searchCtrl.text.isNotEmpty)
+              IconButton(
+                onPressed: () {
+                  _searchCtrl.clear();
+                  _onSearchChanged('');
+                },
+                icon: const Icon(Icons.close),
               ),
           ],
         ),
@@ -259,134 +509,102 @@ class _EncounterRegistrationScreenState
     );
   }
 
-  // ---------------------------------------------------------------------------
-  // Create stub UI
-  // ---------------------------------------------------------------------------
-  Widget _buildCreateStubCard() {
+  Widget _patientHitTile(_PatientHit hit) {
     return Card(
-      elevation: 0,
+      margin: const EdgeInsets.only(top: 10),
+      child: ListTile(
+        title: Text(
+          hit.fullName,
+          style: const TextStyle(fontWeight: FontWeight.w700),
+        ),
+        subtitle: Text(hit.subtitle),
+        trailing: const Icon(Icons.play_arrow),
+        onTap: () => _startEncounterForExistingPatient(hit.id),
+      ),
+    );
+  }
+
+  Widget _fastCreateCard() {
+    return Card(
+      margin: EdgeInsets.zero,
       child: Padding(
-        padding: const EdgeInsets.all(16),
+        padding: const EdgeInsets.all(14),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text(
-              'Create new patient (fast)',
-              style:
-                  TextStyle(fontSize: 16, fontWeight: FontWeight.w800),
-            ),
-            const SizedBox(height: 8),
-            const Text(
+            Text(
               'Start the encounter now. You can complete registration later.',
+              style: Theme.of(context).textTheme.bodyMedium,
             ),
-            const SizedBox(height: 12),
+            const SizedBox(height: 14),
             TextField(
-              controller: _nameCtrl,
-              decoration: const InputDecoration(labelText: 'Full name'),
+              controller: _fullNameCtrl,
+              decoration: const InputDecoration(
+                labelText: 'Full name',
+              ),
             ),
-            const SizedBox(height: 8),
+            const SizedBox(height: 10),
             TextField(
-              controller: _idCtrl,
+              controller: _nricCtrl,
               decoration: const InputDecoration(
                 labelText: 'NRIC / Old ID (optional)',
               ),
-              keyboardType: TextInputType.number,
             ),
-            const SizedBox(height: 16),
-            ElevatedButton.icon(
-              onPressed: _creating ? null : _createStubAndStart,
-              icon: const Icon(Icons.play_arrow),
-              label: const Text('Start encounter'),
+            const SizedBox(height: 14),
+            SizedBox(
+              width: double.infinity,
+              child: ElevatedButton.icon(
+                icon: const Icon(Icons.play_arrow),
+                label: const Text('Start encounter'),
+                onPressed: _startEncounterFastCreate,
+              ),
             ),
           ],
         ),
       ),
     );
   }
-
-  // ---------------------------------------------------------------------------
-  // Duplicate confirmation dialog
-  // ---------------------------------------------------------------------------
-  Future<_DuplicateDecision> _showDuplicateDialog(
-    List<PatientSearchHit> hits,
-  ) async {
-    return await showDialog<_DuplicateDecision>(
-          context: context,
-          barrierDismissible: false,
-          builder: (ctx) {
-            return AlertDialog(
-              title: const Text('Possible duplicate patient'),
-              content: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  const Text(
-                    'We found patients with similar names. '
-                    'Please confirm before creating a new record.',
-                  ),
-                  const SizedBox(height: 12),
-                  ...hits.map(
-                    (p) => ListTile(
-                      title: Text(p.fullName),
-                      subtitle: Text(
-                        '${p.nricMasked}'
-                        '${p.lastSeenAt != null ? ' • Last seen ${_fmt(p.lastSeenAt!)}' : ''}',
-                      ),
-                      onTap: () => Navigator.of(ctx)
-                          .pop(_DuplicateDecision.useExisting),
-                    ),
-                  ),
-                ],
-              ),
-              actions: [
-                TextButton(
-                  onPressed: () => Navigator.of(ctx)
-                      .pop(_DuplicateDecision.cancel),
-                  child: const Text('Cancel'),
-                ),
-                ElevatedButton(
-                  onPressed: () => Navigator.of(ctx)
-                      .pop(_DuplicateDecision.createAnyway),
-                  child: const Text('Create anyway'),
-                ),
-              ],
-            );
-          },
-        ) ??
-        _DuplicateDecision.cancel;
-  }
-
-  // ---------------------------------------------------------------------------
-  // Helpers
-  // ---------------------------------------------------------------------------
-  String _providerNameFromUser(dynamic user) {
-    try {
-      final u = user as dynamic;
-      if (u.fullName != null && (u.fullName as String).isNotEmpty) {
-        return u.fullName as String;
-      }
-      if (u.displayName != null &&
-          (u.displayName as String).isNotEmpty) {
-        return u.displayName as String;
-      }
-      if (u.username != null && (u.username as String).isNotEmpty) {
-        return u.username as String;
-      }
-      if (u.email != null && (u.email as String).isNotEmpty) {
-        return u.email as String;
-      }
-    } catch (_) {}
-    return 'Provider ${user.id}';
-  }
-
-  String _fmt(DateTime d) =>
-      '${d.day}/${d.month}/${d.year}';
 }
 
-// ---------------------------------------------------------------------------
-// Internal enums
-// ---------------------------------------------------------------------------
-enum _DuplicateDecision {
-  useExisting,
-  createAnyway,
-  cancel,
+class _EncounterRow {
+  final Encounter encounter;
+  final Patient patient;
+
+  _EncounterRow({required this.encounter, required this.patient});
+}
+
+class _PatientHit {
+  final String id;
+  final String fullName;
+  final String subtitle;
+
+  _PatientHit({
+    required this.id,
+    required this.fullName,
+    required this.subtitle,
+  });
+
+  factory _PatientHit.fromPatient(Patient p) {
+    final parts = <String>[];
+
+    // These fields exist in your new schema (gender/dob/phone); if null, it’s fine.
+    if (p.gender != null && p.gender!.trim().isNotEmpty) parts.add(p.gender!);
+    if (p.dob != null) {
+      final d = p.dob!.toIso8601String().split('T').first;
+      parts.add('DOB: $d');
+    }
+    if (p.phone != null && p.phone!.trim().isNotEmpty) {
+      parts.add('Phone: ${p.phone}');
+    }
+    if (p.nric.trim().isNotEmpty && p.nric != '-') {
+      final s = p.nric.trim();
+      parts.add(s.length <= 4 ? '****$s' : '****${s.substring(s.length - 4)}');
+    }
+
+    return _PatientHit(
+      id: p.id,
+      fullName: p.fullName,
+      subtitle: parts.isEmpty ? '—' : parts.join(' • '),
+    );
+  }
 }

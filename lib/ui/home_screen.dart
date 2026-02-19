@@ -97,7 +97,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     setState(() => _msgs.add(m));
     _scrollChatToBottom();
   }
-
+/*
   Future<void> _sendChat(String prompt) async {
   _addMsg(_ChatMsg(
     role: _ChatRole.assistant,
@@ -105,7 +105,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     at: DateTime.now(),
   ));
 }
-/*
+*/
   Future<void> _sendChat(String prompt) async {
     const uiOnlyActions = {
       'start a new encounter workflow.',
@@ -141,7 +141,21 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       final ai = ref.read(aiServiceProvider);
 
       // THIS matches your ai_service.dart
-      final response = await ai.runRawPrompt(trimmed);
+      final response = await ai.runRawPrompt(
+        trimmed,
+        unitId: _activeSession?.unitId,
+      );
+
+      if (!response.handled) {
+        _addMsg(_ChatMsg(
+          role: _ChatRole.assistant,
+          text: response.answer.isNotEmpty
+              ? response.answer
+              : 'I''m not able to help with that yet.',
+          at: DateTime.now(),
+        ));
+        return;
+      }
 
       _addMsg(_ChatMsg(
         role: _ChatRole.assistant,
@@ -157,9 +171,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       if (mounted) setState(() => _sending = false);
     }
   }
-
   
-  */
   Future<void> _logout() async {
     // clear session context on logout
     await ref.read(sessionContextStoreProvider).clear();

@@ -47,6 +47,7 @@ dependencies:
   dio: ^5.7.0
   #flutter_llama: ^1.1.2
   fllama: any
+  provider: ^6.1.2
   
 dev_dependencies:
   flutter_test:

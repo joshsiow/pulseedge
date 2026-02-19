@@ -3,10 +3,8 @@
 import 'ai_query.dart';
 import 'ai_tool_response.dart';
 import 'ai_tools.dart';
-//import 'ai_backend.dart';
-//import 'package:pulseedge/core/ai/ai_tool_response.dart';
 import 'backends/ai_backend.dart';
-
+import 'ai_backend_provider.dart';
 
 /// AiService
 ///
@@ -15,16 +13,23 @@ import 'backends/ai_backend.dart';
 /// Responsibilities:
 /// - Accept free-text input
 /// - Run deterministic, offline-first tools
-/// - Optionally delegate to cloud AI backend (Groq)
+/// - Optionally delegate to AI backend (local / cloud / hybrid)
 /// - Keep UI and storage layers decoupled
 ///
 /// Design rules:
 /// - Deterministic tools FIRST
-/// - Cloud AI is assistive-only
+/// - AI backend is assistive-only
 /// - Offline-safe by default
 class AiService {
   final AiTools tools;
+
+  /// Optional: inject a backend directly (e.g. tests, custom wiring).
   final AiBackend? backend;
+
+  /// Optional: provide a lazy async backend resolver (preferred for hybrid/local/cloud).
+  ///
+  /// If null, we fall back to [backend]. If both null, AI assistive features are disabled.
+  final Future<AiBackend?> Function()? backendProvider;
 
   /// Optional formatter for UI / chat rendering.
   final AiResponseFormatter? formatter;
@@ -36,10 +41,32 @@ class AiService {
   AiService({
     required this.tools,
     this.backend,
+    this.backendProvider,
     this.formatter,
     this.auth,
     this.sessionStore,
   });
+
+  /// A convenience constructor for the “normal app path”:
+  /// uses AiBackendProvider.get() (cached) under the hood.
+  factory AiService.withProvider({
+    required AiTools tools,
+    AiResponseFormatter? formatter,
+    Object? auth,
+    Object? sessionStore,
+  }) {
+    return AiService(
+      tools: tools,
+      formatter: formatter,
+      auth: auth,
+      sessionStore: sessionStore,
+      backendProvider: () async {
+        // AiBackendProvider.get() returns AiBackend (non-null)
+        // but we keep AiService flexible with nullable.
+        return AiBackendProvider.get();
+      },
+    );
+  }
 
   // ---------------------------------------------------------------------------
   // Deterministic pipeline
@@ -64,16 +91,6 @@ class AiService {
 
   /// Run AI pipeline from a prepared query.
   Future<AiToolResponse> run(AiQuery query) async {
-    final response = await tools.run(query); // ✅ await
-
-    if (formatter != null && response.handled) {
-      return formatter!.format(response);
-    }
-
-    return response;
-  }
-
-  /*Future<AiToolResponse> run(AiQuery query) async {
     final AiToolResponse response = await tools.run(query);
 
     // Apply optional formatting (UI polish only)
@@ -82,10 +99,18 @@ class AiService {
     }
 
     return response;
-  }*/
+  }
+
   // ---------------------------------------------------------------------------
-  // Assistive cloud drafting (optional)
+  // Assistive AI drafting (optional)
   // ---------------------------------------------------------------------------
+
+  Future<AiBackend?> _resolveBackend() async {
+    if (backend != null) return backend;
+    final p = backendProvider;
+    if (p == null) return null;
+    return await p();
+  }
 
   /// Stream an assistive clinical note draft.
   ///
@@ -94,20 +119,36 @@ class AiService {
   Stream<String> draftNote({
     required String transcript,
     required String patientContext,
-  }) {
-    final b = backend;
+  }) async* {
+    final b = await _resolveBackend();
 
     if (b == null) {
-      return Stream.value(
-        'Cloud AI backend not configured.',
-      );
+      yield 'AI backend not configured. (Check local model + Groq key in settings)';
+      return;
     }
 
-    return b.draftNote(
+    // Delegate to backend stream
+    yield* b.draftNote(
       transcript: transcript,
       patientContext: patientContext,
     );
   }
+
+  /// Intake extraction via backend (optional helper).
+  /// Keep tools deterministic-first; use this only for "copilot" style extraction.
+  /*Future<Map<String, dynamic>> extractIntake({
+    required String freeText,
+    List<String> missingFields = const [],
+  }) async {
+    final b = await _resolveBackend();
+    if (b == null) {
+      throw Exception('AI backend not configured.');
+    }
+    return b.extractIntake(
+      freeText: freeText,
+      missingFields: missingFields,
+    );
+  }*/
 }
 
 /// Optional response formatter interface.

@@ -1,3 +1,4 @@
+// lib/ui/setting/settings_screen.dart
 import 'dart:async';
 import 'dart:io';
 
@@ -12,6 +13,10 @@ import '../../core/auth/auth_service.dart';
 import '../../core/session/session_context_store.dart';
 import '../../core/database/app_database.dart';
 import '../../core/ai/model_store.dart';
+import 'package:pulseedge/core/ai/pulse_ai_providers.dart';
+
+import '../../core/settings/ai_prefs.dart';
+import 'package:pulseedge/core/ai/ai_backend_provider.dart';
 
 /// Local provider for ModelStore
 final modelStoreProvider = Provider<ModelStore>((ref) {
@@ -37,28 +42,60 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
   double? _modelProgress;
   String? _modelError;
 
+  late Future<List<Object?>> _modelInfoFuture;
+  bool _showGroqKey = true; // ✅ default: show while typing; you can hide later
+
   // URL editing
   late TextEditingController _urlController;
   final _urlFocus = FocusNode();
   bool _urlEditing = false;
-  //String? _savedCustomUrl;
 
-  static const _defaultDevUrl = 'http://127.0.0.1:8000/Llama-3.2-3B-Instruct-Q4_K_M.gguf';
+  static const _defaultDevUrl =
+      'http://127.0.0.1:8000/Llama-3.2-3B-Instruct-Q4_K_M.gguf';
+
+  // Groq key
+  final _groqKeyController = TextEditingController();
+  bool _savingGroqKey = false;
+  bool _groqKeyLoaded = false;
 
   @override
   void initState() {
     super.initState();
     _loadSavedUrl();
+    _loadGroqKey();
+    _modelInfoFuture = _loadModelInfo();
+  }
+
+  Future<List<Object?>> _loadModelInfo() async {
+    final store = ref.read(modelStoreProvider);
+    return Future.wait([
+      store.modelPath(),
+      store.isModelReady(),
+      store.modelSizeBytes(),
+    ]);
+  }
+
+  @override
+  void dispose() {
+    _groqKeyController.dispose();
+    _urlFocus.dispose();
+    _urlController.dispose();
+    super.dispose();
   }
 
   Future<void> _loadSavedUrl() async {
     final prefs = await SharedPreferences.getInstance();
     final saved = prefs.getString(_kCustomModelUrlKey);
-    setState(() {
-      _urlController = TextEditingController(
-        text: saved ?? _defaultDevUrl,
-      );
-    });
+    if (!mounted) return;
+    _urlController = TextEditingController(text: saved ?? _defaultDevUrl);
+    setState(() {});
+  }
+
+  Future<void> _loadGroqKey() async {
+    final key = await AiPrefs().readGroqApiKey();
+    if (!mounted) return;
+    _groqKeyController.text = key ?? '';
+    setState(() => _groqKeyLoaded = true);
   }
 
   Future<void> _saveUrl(String url) async {
@@ -72,14 +109,18 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
 
   void _refreshModelStatus() {
     if (!mounted) return;
-    setState(() {});
+    setState(() {
+      _modelInfoFuture = _loadModelInfo();
+    });
   }
 
   Future<void> _downloadOrVerifyModel() async {
+    final messenger = ScaffoldMessenger.of(context);
     final store = ref.read(modelStoreProvider);
+
     final url = _urlController.text.trim();
     if (url.isEmpty) {
-      ScaffoldMessenger.of(context).showSnackBar(
+      messenger.showSnackBar(
         const SnackBar(content: Text('Please enter a valid URL')),
       );
       return;
@@ -94,74 +135,77 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
     try {
       final path = await _downloadWithProgress(url, store.modelFileName);
 
-      // Apply iOS do-not-backup
+      // Apply iOS do-not-backup (optional; your channel must exist)
       if (Platform.isIOS) {
         const channel = MethodChannel('com.yourapp/modelmanager');
-        await channel.invokeMethod('setDoNotBackup', {'path': path});
+        try {
+          await channel.invokeMethod('setDoNotBackup', {'path': path});
+        } catch (_) {
+          // ignore on iOS if you haven't implemented the native side yet
+        }
       }
 
-      if (!mounted) return;
-      ScaffoldMessenger.of(context).showSnackBar(
+      messenger.showSnackBar(
         SnackBar(content: Text('Offline AI model ready: $path')),
       );
+
+      // local model became available, backend wiring might change
+      AiBackendProvider.invalidate();
+      ref.invalidate(aiBackendProvider);
     } catch (e) {
       if (!mounted) return;
       setState(() => _modelError = e.toString());
-      ScaffoldMessenger.of(context).showSnackBar(
+      messenger.showSnackBar(
         SnackBar(content: Text('Model setup failed: $e')),
       );
     } finally {
-      if (mounted) {
-        setState(() {
-          _modelBusy = false;
-          _modelProgress = null;
-        });
-        _refreshModelStatus();
-      }
+      if (!mounted) return;
+      setState(() {
+        _modelBusy = false;
+        _modelProgress = null;
+      });
+      _refreshModelStatus();
     }
   }
 
-  /// Safe resumable download - saves to 'models/' subfolder, prevents bloat
+  /// Safe download - saves to 'models/' subfolder
   Future<String> _downloadWithProgress(String url, String fileName) async {
     final dir = await getApplicationSupportDirectory();
     final modelsDir = Directory(p.join(dir.path, 'models'));
-    await modelsDir.create(recursive: true); // Ensure subfolder exists
+    await modelsDir.create(recursive: true);
 
     final path = p.join(modelsDir.path, fileName);
     final file = File(path);
 
-    // HEAD request for accurate total size
-    final headClient = HttpClient();
-    final headRequest = await headClient.headUrl(Uri.parse(url));
-    final headResponse = await headRequest.close();
-    final totalStr = headResponse.headers.value('content-length');
-    final totalBytes = totalStr != null ? int.tryParse(totalStr) ?? 0 : 0;
-    headClient.close();
+    // HEAD for total size (best effort)
+    int totalBytes = 0;
+    try {
+      final headClient = HttpClient();
+      final headRequest = await headClient.headUrl(Uri.parse(url));
+      final headResponse = await headRequest.close();
+      final totalStr = headResponse.headers.value('content-length');
+      totalBytes = totalStr != null ? int.tryParse(totalStr) ?? 0 : 0;
+      headClient.close();
+    } catch (_) {
+      totalBytes = 0;
+    }
 
-    // Check existing file
+    // If existing and size matches, skip
     if (await file.exists()) {
       final currentSize = await file.length();
       if (totalBytes > 0 && currentSize == totalBytes) {
-        // Already complete - skip
-        if (mounted) {
-          ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(content: Text('Model already fully downloaded')),
-          );
-        }
         return path;
-      } else {
-        // Partial/corrupted - delete and restart
-        await file.delete();
-        debugPrint('Deleted incomplete file ($currentSize bytes) - starting fresh');
       }
+      await file.delete();
     }
 
-    // Proceed with download
     final client = HttpClient();
     final request = await client.getUrl(Uri.parse(url));
     final response = await request.close();
 
-    if (response.statusCode != HttpStatus.ok && response.statusCode != HttpStatus.partialContent) {
+    if (response.statusCode != HttpStatus.ok &&
+        response.statusCode != HttpStatus.partialContent) {
+      client.close();
       throw Exception('HTTP ${response.statusCode}');
     }
 
@@ -173,15 +217,12 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
       received += chunk.length;
 
       final progress = totalBytes > 0 ? received / totalBytes : null;
-      if (mounted) {
-        setState(() => _modelProgress = progress);
-      }
+      if (mounted) setState(() => _modelProgress = progress);
     }
 
     await sink.close();
     client.close();
 
-    // Final size check
     final finalSize = await file.length();
     if (totalBytes > 0 && finalSize != totalBytes) {
       throw Exception('Download incomplete: $finalSize / $totalBytes bytes');
@@ -191,6 +232,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
   }
 
   Future<void> _deleteModel() async {
+    final messenger = ScaffoldMessenger.of(context);
     final store = ref.read(modelStoreProvider);
 
     setState(() {
@@ -201,31 +243,152 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
 
     try {
       await store.deleteModelIfExists();
+      messenger.showSnackBar(
+        const SnackBar(content: Text('Offline AI model deleted')),
+      );
+
+      AiBackendProvider.invalidate();
+      ref.invalidate(aiBackendProvider);
     } catch (e) {
       if (!mounted) return;
-
       setState(() => _modelError = e.toString());
+      messenger.showSnackBar(SnackBar(content: Text('Delete failed: $e')));
+    } finally {
+      if (!mounted) return;
+      setState(() {
+        _modelBusy = false;
+        _modelProgress = null;
+      });
+      _refreshModelStatus();
+    }
+  }
 
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Delete failed: $e')),
+  Future<void> _saveGroqKey() async {
+    final messenger = ScaffoldMessenger.of(context);
+    final key = _groqKeyController.text.trim();
+
+    if (key.isEmpty) {
+      messenger.showSnackBar(
+        const SnackBar(content: Text('API key cannot be empty')),
       );
-      return; // ✅ allowed here
+      return;
     }
 
-    if (!mounted) return;
+    setState(() => _savingGroqKey = true);
+    try {
+      await AiPrefs().setGroqApiKey(key);
+      AiBackendProvider.invalidate();
+      ref.invalidate(aiBackendProvider);
 
-    // Success path
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(content: Text('Offline AI model deleted')),
-    );
+      messenger.showSnackBar(
+        const SnackBar(content: Text('Groq API key saved')),
+      );
+    } catch (e) {
+      messenger.showSnackBar(
+        SnackBar(content: Text('Save failed: $e')),
+      );
+    } finally {
+      if (mounted) setState(() => _savingGroqKey = false);
+    }
+  }
 
-    // Cleanup (no finally needed)
-    setState(() {
-      _modelBusy = false;
-      _modelProgress = null;
-    });
+  Future<void> _clearGroqKey() async {
+    final messenger = ScaffoldMessenger.of(context);
 
-    _refreshModelStatus();
+    setState(() => _savingGroqKey = true);
+    try {
+      await AiPrefs().setGroqApiKey(null);
+      AiBackendProvider.invalidate();
+      ref.invalidate(aiBackendProvider);
+
+      _groqKeyController.clear();
+      messenger.showSnackBar(
+        const SnackBar(content: Text('Groq API key cleared')),
+      );
+    } catch (e) {
+      messenger.showSnackBar(
+        SnackBar(content: Text('Clear failed: $e')),
+      );
+    } finally {
+      if (mounted) setState(() => _savingGroqKey = false);
+    }
+  }
+
+  Future<void> _testGroqOrBackend() async {
+    final messenger = ScaffoldMessenger.of(context);
+    final nav = Navigator.of(context);
+
+    setState(() => _savingGroqKey = true);
+    try {
+      // ensure new key is picked up
+      AiBackendProvider.invalidate();
+      ref.invalidate(aiBackendProvider);
+
+      final backend = await ref.read(aiBackendProvider.future);
+
+      final buf = StringBuffer();
+      await for (final c in backend.draftNote(
+        transcript: 'Patient with 2 days fever and mild cough.',
+        patientContext: 'Adult male, no known allergies.',
+      )) {
+        buf.write(c);
+      }
+
+      if (!mounted) return;
+      final out = buf.toString().trim();
+      showDialog(
+        context: nav.context,
+        builder: (_) => AlertDialog(
+          title: const Text('Groq / Backend Test Result'),
+          content: SingleChildScrollView(
+            child: Text(out.isEmpty ? '(No output)' : out),
+          ),
+          actions: [
+            TextButton(
+              onPressed: () => nav.pop(),
+              child: const Text('OK'),
+            ),
+          ],
+        ),
+      );
+    } catch (e) {
+      if (!mounted) return;
+      messenger.showSnackBar(
+        SnackBar(content: Text('Test failed: $e')),
+      );
+    } finally {
+      if (mounted) setState(() => _savingGroqKey = false);
+    }
+  }
+
+  Future<void> _testLocalToolChat() async {
+    final messenger = ScaffoldMessenger.of(context);
+
+    setState(() => _modelBusy = true);
+    try {
+      final ai = ref.read(aiServiceProvider);
+      final resp = await ai.runRawPrompt(
+        'Say "Hello from PulseEdge!" in Bahasa Malaysia.',
+      );
+      if (!mounted) return;
+      messenger.showSnackBar(
+        SnackBar(
+          content: Text('AI Response: ${resp.answer.trim()}'),
+          duration: const Duration(seconds: 6),
+        ),
+      );
+    } catch (e) {
+      if (!mounted) return;
+      messenger.showSnackBar(
+        SnackBar(
+          content: Text('Test failed: $e'),
+          backgroundColor: Colors.red,
+          duration: const Duration(seconds: 6),
+        ),
+      );
+    } finally {
+      if (mounted) setState(() => _modelBusy = false);
+    }
   }
 
   @override
@@ -233,6 +396,8 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
     final auth = ref.watch(authServiceProvider);
     final sessionStore = ref.watch(sessionContextStoreProvider);
     final store = ref.watch(modelStoreProvider);
+
+    //final hasGroqKey = _groqKeyController.text.trim().isNotEmpty;
 
     return Scaffold(
       appBar: AppBar(title: const Text('Settings')),
@@ -323,7 +488,8 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                   store.modelSizeBytes(),
                 ]),
                 builder: (context, snap) {
-                  if (snap.connectionState == ConnectionState.waiting) {
+                  if (snap.connectionState == ConnectionState.waiting ||
+                      !_groqKeyLoaded) {
                     return const Padding(
                       padding: EdgeInsets.all(12),
                       child: LinearProgressIndicator(),
@@ -343,12 +509,123 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                   final path = data[0] as String;
                   final ready = data[1] as bool;
                   final sizeBytes = data[2] as int?;
-
-                  final sizeLabel = sizeBytes == null ? '—' : _fmtBytes(sizeBytes);
+                  final sizeLabel =
+                      sizeBytes == null ? '—' : _fmtBytes(sizeBytes);
 
                   return Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
+                      // Groq field
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(12, 16, 12, 0),
+                        child: TextField(
+                          controller: _groqKeyController,
+                          //obscureText: true,
+                          obscureText: !_showGroqKey, // allow showing temporarily
+                          keyboardType: TextInputType.visiblePassword,
+                          enableSuggestions: false,
+                          autocorrect: false,
+                          enabled: !_savingGroqKey,
+                          onChanged: (_) {
+                          // only rebuild icons; safe now because it's NOT inside FutureBuilder
+                            if (mounted) setState(() {});
+                          },
+                          decoration: InputDecoration(
+                            labelText: 'Groq API Key (cloud fallback)',
+                            hintText: 'gsk_...',
+                            suffixIconConstraints: const BoxConstraints(minWidth: 160),
+                            suffixIcon: _savingGroqKey
+                                ? const Padding(
+                                    padding: EdgeInsets.all(12),
+                                    child: SizedBox(
+                                      width: 16,
+                                      height: 16,
+                                      child: CircularProgressIndicator(strokeWidth: 2),
+                                    ),
+                                  )
+                                : Row(
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: [
+                                      IconButton(
+                                        tooltip: _showGroqKey ? 'Hide' : 'Show',
+                                        icon: Icon(_showGroqKey ? Icons.visibility_off : Icons.visibility),
+                                        onPressed: () => setState(() => _showGroqKey = !_showGroqKey),
+                                      ),
+                                      IconButton(
+                                        tooltip: 'Save',
+                                        icon: const Icon(Icons.save),
+                                        onPressed: _saveGroqKey,
+                                      ),
+                                      if (_groqKeyController.text.trim().isNotEmpty)
+                                        IconButton(
+                                          tooltip: 'Test Groq',
+                                          icon: const Icon(Icons.cloud_outlined),
+                                          onPressed: () async {
+                                            // ensure persisted first
+                                            await _saveGroqKey();
+
+                                            final nav = Navigator.of(context);
+                                            final messenger = ScaffoldMessenger.of(context);
+
+                                            setState(() => _savingGroqKey = true);
+                                            try {
+                                              final groq = ref.read(groqBackendProvider); // groq-only
+                                              final buf = StringBuffer();
+
+                                              await for (final chunk in groq.draftNote(
+                                                transcript: '''
+                                                Patient reports 2 days fever and mild cough.
+                                                No chest pain, no shortness of breath.
+                                                No known medical problems. No medications.
+                                                No known drug allergies.
+                                                ''',
+                                                patientContext: 'Adult male.',
+                                              )) {
+                                                buf.write(chunk);
+                                              }
+
+                                              if (!mounted) return;
+                                              final out = buf.toString().trim();
+                                              showDialog(
+                                                context: nav.context,
+                                                builder: (_) => AlertDialog(
+                                                  title: const Text('Groq Test Result'),
+                                                  content: SingleChildScrollView(
+                                                    child: Text(out.isEmpty ? '(No output)' : out),
+                                                  ),
+                                                  actions: [
+                                                    TextButton(
+                                                      onPressed: () => nav.pop(),
+                                                      child: const Text('OK'),
+                                                    ),
+                                                  ],
+                                                ),
+                                              );
+                                            } catch (e) {
+                                              if (!mounted) return;
+                                              messenger.showSnackBar(
+                                                SnackBar(
+                                                  content: Text('Groq test failed: $e'),
+                                                  backgroundColor: Colors.red,
+                                                ),
+                                              );
+                                            } finally {
+                                              if (mounted) setState(() => _savingGroqKey = false);
+                                            }
+                                          },
+                                        ),
+                                      if (_groqKeyController.text.trim().isNotEmpty)
+                                        IconButton(
+                                          tooltip: 'Clear',
+                                          icon: const Icon(Icons.delete_outline),
+                                          onPressed: _clearGroqKey,
+                                        ),
+                                    ],
+                                  ),
+                          ),
+                        ),
+                      ),
+
                       ListTile(
                         leading: Icon(
                           ready ? Icons.check_circle : Icons.cloud_download,
@@ -359,11 +636,13 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                           'File: ${store.modelFileName}\n'
                           'Size: $sizeLabel\n'
                           'Path: $path',
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
                         ),
                         isThreeLine: true,
                       ),
 
-                      // Editable URL field
+                      // URL field
                       Padding(
                         padding: const EdgeInsets.fromLTRB(12, 8, 12, 0),
                         child: TextField(
@@ -399,7 +678,10 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                           padding: const EdgeInsets.fromLTRB(12, 8, 12, 10),
                           child: Text(
                             _modelError!,
-                            style: const TextStyle(color: Colors.red, fontWeight: FontWeight.w600),
+                            style: const TextStyle(
+                              color: Colors.red,
+                              fontWeight: FontWeight.w600,
+                            ),
                           ),
                         ),
 
@@ -426,9 +708,12 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                           runSpacing: 10,
                           children: [
                             ElevatedButton.icon(
-                              onPressed: _modelBusy ? null : _downloadOrVerifyModel,
+                              onPressed:
+                                  _modelBusy ? null : _downloadOrVerifyModel,
                               icon: Icon(ready ? Icons.verified : Icons.download),
-                              label: Text(ready ? 'Re-download / Repair' : 'Install from URL'),
+                              label: Text(
+                                ready ? 'Re-download / Repair' : 'Install from URL',
+                              ),
                             ),
                             OutlinedButton.icon(
                               onPressed: _modelBusy ? null : _deleteModel,
@@ -444,12 +729,29 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                         ),
                       ),
 
+                      // One simple test button (tool path)
                       Padding(
                         padding: const EdgeInsets.fromLTRB(12, 0, 12, 12),
+                        child: ElevatedButton.icon(
+                          onPressed: _modelBusy ? null : _testLocalToolChat,
+                          icon: _modelBusy
+                              ? const SizedBox(
+                                  width: 20,
+                                  height: 20,
+                                  child: CircularProgressIndicator(strokeWidth: 2),
+                                )
+                              : const Icon(Icons.smart_toy),
+                          label: Text(_modelBusy ? 'Testing...' : 'Test AI (Hello World)'),
+                        ),
+                      ),
+
+                      const Padding(
+                        padding: EdgeInsets.fromLTRB(12, 0, 12, 12),
                         child: Text(
                           'Dev note: Default URL points to local server (127.0.0.1:8000). '
-                          'Change and save for production CDN. Model stored in app-private Application Support directory.',
-                          style: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.black54),
+                          'Change and save for production CDN. Model stored in app-private '
+                          'Application Support directory.',
+                          style: TextStyle(color: Colors.black54, fontSize: 12),
                         ),
                       ),
                     ],
@@ -471,18 +773,19 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                 trailing: OutlinedButton(
                   child: const Text('Stats'),
                   onPressed: () async {
+                    final nav = Navigator.of(context);
                     final db = AppDatabase.instance;
                     final counts = await _dbStats(db);
-                    if (!context.mounted) return;
+                    if (!nav.context.mounted) return;
 
                     showDialog(
-                      context: context,
+                      context: nav.context,
                       builder: (_) => AlertDialog(
                         title: const Text('Local data stats'),
                         content: Text(counts),
                         actions: [
                           TextButton(
-                            onPressed: () => Navigator.pop(context),
+                            onPressed: () => nav.pop(),
                             child: const Text('Close'),
                           ),
                         ],
@@ -505,7 +808,6 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
           ),
           const SizedBox(height: 16),
 
-          // Security
           const _Section(
             title: 'Security',
             children: [
@@ -523,7 +825,6 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
           ),
           const SizedBox(height: 16),
 
-          // About
           const _Section(
             title: 'About',
             children: [
@@ -534,7 +835,6 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
           ),
           const SizedBox(height: 24),
 
-          // Logout
           OutlinedButton.icon(
             icon: const Icon(Icons.logout),
             label: const Text('Log out'),
@@ -551,9 +851,13 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
   }
 
   static Future<String> _dbStats(AppDatabase db) async {
-    final patients = await db.customSelect('SELECT COUNT(*) AS c FROM patients').getSingle();
-    final encounters = await db.customSelect('SELECT COUNT(*) AS c FROM encounters').getSingle();
-    final events = await db.customSelect('SELECT COUNT(*) AS c FROM events').getSingle();
+    final patients =
+        await db.customSelect('SELECT COUNT(*) AS c FROM patients').getSingle();
+    final encounters = await db
+        .customSelect('SELECT COUNT(*) AS c FROM encounters')
+        .getSingle();
+    final events =
+        await db.customSelect('SELECT COUNT(*) AS c FROM events').getSingle();
 
     return '''
 Patients: ${patients.data['c']}

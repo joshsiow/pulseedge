@@ -1,20 +1,16 @@
-import 'dart:io';
+// lib/core/ai/backends/hybrid_ai_backend.dart
+import 'dart:async';
 
 import 'ai_backend.dart';
 import 'local_ai_backend.dart';
 import 'groq_ai_backend.dart';
 
-/// Hybrid AI backend.
+/// Hybrid backend:
+/// - preferLocal=true: try local first; fallback to cloud
+/// - preferLocal=false: try cloud first; fallback to local
 ///
-/// Routing rules (in priority order):
-/// 1. If local backend is preferred AND ready → use local
-/// 2. Else if cloud backend exists → use cloud
-/// 3. Else if local backend is ready → use local
-/// 4. Else → error
-///
-/// Notes:
-/// - Simulator defaults to cloud (local GGUF is unstable there)
-/// - Real devices prefer local when model is ready
+/// Key rule: DO NOT depend on local readiness getters.
+/// Just attempt and fallback on exceptions.
 class HybridAiBackend implements AiBackend {
   HybridAiBackend({
     required this.local,
@@ -26,67 +22,175 @@ class HybridAiBackend implements AiBackend {
   final GroqAiBackend? cloud;
   final bool preferLocal;
 
-  /// Determine if we should even attempt local inference on this platform.
-  bool get _localAllowed {
-    if (!Platform.isIOS && !Platform.isAndroid) return false;
+  //bool get _hasLocal => local != null;
+  //bool get _hasCloud => cloud != null;
 
-    // Avoid local inference on iOS Simulator
-    if (Platform.isIOS &&
-        Platform.environment.containsKey('SIMULATOR_DEVICE_NAME')) {
-      return false;
+  Never _noBackend() => throw StateError('No AI backend available.');
+
+  // Pick ordering only (not readiness)
+  (AiBackend?, AiBackend?) _ordered() {
+    if (preferLocal) {
+      return (local, cloud);
+    } else {
+      return (cloud, local);
     }
-
-    return true;
-  }
-
-  AiBackend _selectBackend({required bool localReady}) {
-    // Prefer local if explicitly enabled and safe
-    if (preferLocal && _localAllowed && localReady && local != null) {
-      return local!;
-    }
-
-    // Fallback to cloud if available
-    if (cloud != null) {
-      return cloud!;
-    }
-
-    // Last resort: local if available
-    if (_localAllowed && localReady && local != null) {
-      return local!;
-    }
-
-    throw StateError('No AI backend available.');
   }
 
   // ---------------------------------------------------------------------------
-  // AiBackend interface
+  // generate (one-shot)
   // ---------------------------------------------------------------------------
+  @override
+  Future<String> generate(
+    String prompt, {
+    int maxTokens = 512,
+    double temperature = 0.7,
+  }) async {
+    final (primary, fallback) = _ordered();
 
+    if (primary == null && fallback == null) _noBackend();
+
+    // Try primary
+    if (primary != null) {
+      try {
+        return await primary.generate(
+          prompt,
+          maxTokens: maxTokens,
+          temperature: temperature,
+        );
+      } catch (_) {
+        // fall through
+      }
+    }
+
+    // Try fallback
+    if (fallback != null) {
+      return await fallback.generate(
+        prompt,
+        maxTokens: maxTokens,
+        temperature: temperature,
+      );
+    }
+
+    _noBackend();
+  }
+
+  // ---------------------------------------------------------------------------
+  // draftNote (streaming)
+  // ---------------------------------------------------------------------------
   @override
   Stream<String> draftNote({
     required String transcript,
     required String patientContext,
-  }) {
-    final backend = _selectBackend(
-      localReady: local != null,
-    );
+  }) async* {
+    final (primary, fallback) = _ordered();
 
-    return backend.draftNote(
-      transcript: transcript,
-      patientContext: patientContext,
-    );
+    if (primary == null && fallback == null) {
+      yield 'No AI backend available.';
+      return;
+    }
+
+    // Streaming fallback is tricky: once you yield tokens, you can't “undo”.
+    // Strategy: probe the stream by trying to read the FIRST event.
+    // If it fails before first token, fallback to other backend.
+    if (primary != null) {
+      final primaryStream = _probeStream(
+        () => primary.draftNote(
+          transcript: transcript,
+          patientContext: patientContext,
+        ),
+      );
+
+      try {
+        yield* primaryStream;
+        return;
+      } catch (_) {
+        // fall through to fallback
+      }
+    }
+
+    if (fallback != null) {
+      yield* fallback.draftNote(
+        transcript: transcript,
+        patientContext: patientContext,
+      );
+      return;
+    }
+
+    yield 'No AI backend available.';
   }
 
+  /// Probe: subscribe and pull the first token/event.
+  /// If it throws before first event, treat as “failed fast” and allow fallback.
+  Stream<String> _probeStream(Stream<String> Function() make) async* {
+    late final StreamSubscription<String> sub;
+    final controller = StreamController<String>();
+
+    final first = Completer<void>();
+    Object? firstError;
+
+    sub = make().listen(
+      (chunk) {
+        if (!first.isCompleted) first.complete();
+        controller.add(chunk);
+      },
+      onError: (e, st) {
+        if (!first.isCompleted) {
+          firstError = e;
+          first.complete();
+        } else {
+          controller.addError(e, st);
+        }
+      },
+      onDone: () {
+        if (!first.isCompleted) first.complete();
+        controller.close();
+      },
+      cancelOnError: false,
+    );
+
+    // Wait until we either get first token, or error, or done.
+    await first.future;
+
+    if (firstError != null) {
+      await sub.cancel();
+      await controller.close();
+      throw firstError!;
+    }
+
+    yield* controller.stream;
+
+    await sub.cancel();
+  }
+
+  // ---------------------------------------------------------------------------
+  // extractIntakeJson (one-shot)
+  // ---------------------------------------------------------------------------
   @override
   Future<Map<String, dynamic>> extractIntakeJson({
     required String rawText,
   }) async {
-    final backend = _selectBackend(
-      localReady: local != null,
-    );
+    final (primary, fallback) = _ordered();
 
-    return backend.extractIntakeJson(
-      rawText: rawText,
-    );
+    if (primary == null && fallback == null) _noBackend();
+
+    if (primary != null) {
+      try {
+        return await primary.extractIntakeJson(rawText: rawText);
+      } catch (_) {
+        // fall through
+      }
+    }
+
+    if (fallback != null) {
+      return await fallback.extractIntakeJson(rawText: rawText);
+    }
+
+    _noBackend();
+  }
+
+  void dispose() {
+    // Only dispose if you own these instances (your provider should decide ownership).
+    local?.dispose();
+    cloud?.dispose();
   }
 }

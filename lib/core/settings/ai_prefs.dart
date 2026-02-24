@@ -1,66 +1,60 @@
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 /// Low-level persistence for AI preferences.
-/// No business logic here.
+/// - preferLocal: SharedPreferences (non-sensitive)
+/// - groqApiKey: FlutterSecureStorage (sensitive)
 class AiPrefs {
   static const _kPreferLocal = 'ai_prefer_local';
-  static const _kGroqApiKey = 'ai_groq_api_key';
+
+  // Must match GroqAiBackend:
+  static const _kGroqApiKeySecure = 'groq_api_key';
+
+  final FlutterSecureStorage _secure;
+
+  AiPrefs({FlutterSecureStorage? secure})
+      : _secure = secure ?? const FlutterSecureStorage();
 
   // ---------------------------------------------------------------------------
-  // Prefer local (llama.cpp)
+  // Prefer local
   // ---------------------------------------------------------------------------
 
-  /// Canonical read
   Future<bool> readPreferLocal() async {
     final prefs = await SharedPreferences.getInstance();
     return prefs.getBool(_kPreferLocal) ?? true;
   }
 
-  /// Backward-compatible alias
-  Future<bool> getPreferLocal() async {
-    return readPreferLocal();
-  }
+  Future<bool> getPreferLocal() => readPreferLocal();
 
-  /// Write
   Future<void> setPreferLocal(bool value) async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setBool(_kPreferLocal, value);
   }
 
   // ---------------------------------------------------------------------------
-  // Groq API key
+  // Groq API key (SECURE)
   // ---------------------------------------------------------------------------
 
-  /// Canonical read
   Future<String?> readGroqApiKey() async {
-    final prefs = await SharedPreferences.getInstance();
-    final v = prefs.getString(_kGroqApiKey);
-    return (v == null || v.trim().isEmpty) ? null : v;
+    final v = await _secure.read(key: _kGroqApiKeySecure);
+    final t = v?.trim();
+    return (t == null || t.isEmpty) ? null : t;
   }
 
-  /// Backward-compatible alias
-  Future<String?> getGroqApiKey() async {
-    return readGroqApiKey();
-  }
+  Future<String?> getGroqApiKey() => readGroqApiKey();
 
-  /// Write
   Future<void> setGroqApiKey(String? key) async {
-    final prefs = await SharedPreferences.getInstance();
-    if (key == null || key.trim().isEmpty) {
-      await prefs.remove(_kGroqApiKey);
+    final t = key?.trim();
+    if (t == null || t.isEmpty) {
+      await _secure.delete(key: _kGroqApiKeySecure);
     } else {
-      await prefs.setString(_kGroqApiKey, key.trim());
+      await _secure.write(key: _kGroqApiKeySecure, value: t);
     }
   }
 
-  // ---------------------------------------------------------------------------
-  // Utilities
-  // ---------------------------------------------------------------------------
-
-  /// Clear all AI-related preferences (debug / reset)
   Future<void> clear() async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.remove(_kPreferLocal);
-    await prefs.remove(_kGroqApiKey);
+    await _secure.delete(key: _kGroqApiKeySecure);
   }
 }
